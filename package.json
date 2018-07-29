@@ -20,17 +20,17 @@
     "prop-styles"
   ],
   "scripts": {
+    "dev": "docz dev",
+    "docs": "docz build",
     "build": "run-s build:*",
     "build:esm": "cross-env NODE_ENV=production babel src -d esm",
     "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=modules babel src -d cjs",
-    "build:docs": "documentation build -c ./.documentation.yml src/** -f md -o docs/api.md",
     "prebuild": "npm run cleanup",
     "watch": "run-p \"build:* -- -w\" \"test:unit -- -w\"",
     "prewatch": "npm run cleanup",
     "test": "run-s test:*",
     "test:unit": "cross-env BABEL_ENV=modules ava test",
     "test:lint": "eslint src test",
-    "test:types": "flow check",
     "deploy": "np --no-cleanup",
     "cleanup": "rimraf cjs esm",
     "version": "auto-changelog -p && git add CHANGELOG.md",
@@ -49,11 +49,7 @@
     "parser": "babel-eslint",
     "extends": [
       "standard",
-      "standard-react",
-      "plugin:flowtype/recommended"
-    ],
-    "plugins": [
-      "flowtype"
+      "standard-react"
     ],
     "rules": {
       "no-shadow": 2
@@ -64,11 +60,7 @@
     "template": ".changelog.hbs"
   },
   "ava": {
-    "babel": "inherit",
-    "verbose": true,
-    "require": [
-      "babel-register"
-    ]
+    "verbose": true
   },
   "peerDependencies": {
     "prop-types": "^15.0.0",
@@ -85,20 +77,16 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-flow": "^6.23.0",
-    "babel-register": "^6.26.0",
     "cross-env": "5.1.6",
-    "documentation": "^8.0.0",
+    "docz": "^0.8.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
-    "eslint-plugin-flowtype": "^2.49.3",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-standard": "^3.1.0",
-    "flow-bin": "^0.75.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.3",
     "np": "3.0.4",
@@ -109,5 +97,11 @@
     "react-test-renderer": "^16.4.1",
     "rimraf": "^2.6.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "emotion": "^9.2.6",
+    "emotion-theming": "^9.2.6",
+    "macro-components": "^2.0.0",
+    "pss": "^2.0.0",
+    "react-emotion": "^9.2.6"
+  }
 }

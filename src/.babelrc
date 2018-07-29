@@ -7,7 +7,6 @@
     }
   },
   "presets": [
-    "flow",
     [ "env", {
       "modules": false,
       "useBuiltIns": true,
