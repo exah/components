@@ -60,7 +60,11 @@
     "template": ".changelog.hbs"
   },
   "ava": {
-    "verbose": true
+    "verbose": true,
+    "require": "babel-register",
+    "babel": {
+      "extends": "src/.babelrc"
+    }
   },
   "peerDependencies": {
     "prop-types": "^15.0.0",
@@ -77,6 +81,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "cross-env": "5.1.6",
     "docz": "^0.8.0",
     "eslint": "^4.19.1",
