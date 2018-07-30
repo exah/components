@@ -1,9 +1,11 @@
 {
-  "vendors.js": "/components/static/js/vendors.cdd5a51e.js",
-  "app.js": "/components/static/js/app.ba0c792c.js",
-  "box-about.js": "/components/static/js/box-about.548c1f2c.js",
-  "flex-box-about.js": "/components/static/js/flex-box-about.ec2abe18.js",
-  "layout-about.js": "/components/static/js/layout-about.7723c079.js",
-  "runtime~app.js": "/components/static/js/runtime~app.6eaeb17fe6c9aa1c86f5.js",
+  "vendors.js": "/components/static/js/vendors.e4f18830.js",
+  "app.js": "/components/static/js/app.14e7d6e1.js",
+  "about.js": "/components/static/js/about.afde8c43.js",
+  "box-about.js": "/components/static/js/box-about.164fea91.js",
+  "flex-box-about.js": "/components/static/js/flex-box-about.6cf90f8f.js",
+  "layout-about.js": "/components/static/js/layout-about.76190835.js",
+  "media-object-about.js": "/components/static/js/media-object-about.8f06b686.js",
+  "runtime~app.js": "/components/static/js/runtime~app.a9f9b29ad426edf861df.js",
   "index.html": "/components/index.html"
 }
