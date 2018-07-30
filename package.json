@@ -105,7 +105,6 @@
   "dependencies": {
     "emotion": "^9.2.6",
     "emotion-theming": "^9.2.6",
-    "macro-components": "^2.0.0",
     "pss": "^2.0.0",
     "react-emotion": "^9.2.6"
   }

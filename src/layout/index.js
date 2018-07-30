@@ -1,5 +1,4 @@
 import React from 'react'
-import Macro from 'macro-components'
 import styled from 'react-emotion'
 import { flexItemPropStyles } from 'pss'
 
@@ -11,26 +10,26 @@ const LayoutContent = styled(Box)(
   flexItemPropStyles
 )
 
-const createLayout = Macro({
+const LayoutBody = styled(FlexBox)(
+  { display: 'flex', flexGrow: 1, flexShrink: 0, flexBasis: 'auto' },
+  flexItemPropStyles
+)
+
+const Layout = (props) => (
+  <FlexBox column minHt {...props} />
+)
+
+Object.assign(Layout, {
   Header: FlexBoxItem.withComponent('header'),
   Content: LayoutContent.withComponent('main'),
-  Footer: FlexBoxItem.withComponent('footer')
+  Footer: FlexBoxItem.withComponent('footer'),
+  Item: FlexBoxItem,
+  Body: LayoutBody
 })
-
-const Layout = createLayout(({
-  Header,
-  Content,
-  Footer
-}, { children, ...rest }) => (
-  <FlexBox column minHt {...rest}>
-    {Header}
-    {Content}
-    {Footer}
-  </FlexBox>
-))
 
 export {
   Layout,
   FlexBoxItem as LayoutItem,
-  LayoutContent
+  LayoutContent,
+  LayoutBody
 }
