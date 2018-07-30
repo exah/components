@@ -10,5 +10,12 @@ export {
 export {
   Layout,
   LayoutItem,
+  LayoutBody,
   LayoutContent
 } from './layout'
+
+export {
+  MediaObject,
+  MediaObjectSide,
+  MediaObjectContent
+} from './media-object'

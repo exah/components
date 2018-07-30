@@ -6,5 +6,9 @@ export default {
   base: process.env.BASENAME || '/',
   hashRouter: true,
   propsParser: false,
-  themeConfig: createTheme()
+  themeConfig: createTheme({
+    space: {
+      default: [ 0, 8, 16, 32, 64 ]
+    }
+  })
 }

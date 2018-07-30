@@ -4,6 +4,7 @@ import {
 } from 'pss'
 
 import styled from 'react-emotion'
+
 import { Box } from '../box'
 
 const FlexBox = styled(Box)({ display: 'flex' }, flexPropStyles)

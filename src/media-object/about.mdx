@@ -1,0 +1,60 @@
+---
+name: MediaObject
+route: /media-object
+---
+
+import { Playground } from 'docz'
+import { Image as ImageIcon } from 'react-feather'
+import { MediaObject } from './index'
+import { Box } from '../box'
+
+# MediaObject
+
+Implements [Media Object](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code) with [`FlexBox`](#/flex-box) - one of most useful layout components.
+
+- Content expands to take available space
+- Side can be placed on left or right and take content size
+
+<Playground>
+  <MediaObject bg='#eee' pd>
+    <MediaObject.Side bg='#ff0' mgr>
+      Side
+    </MediaObject.Side>
+    <MediaObject.Content bg='#f00' fg='#fff'>
+      Content
+    </MediaObject.Content>
+  </MediaObject>
+</Playground>
+
+<Playground>
+  <MediaObject>
+    <MediaObject.Side mgr>
+      <img src='http://placekitten.com/80' alt='' />
+    </MediaObject.Side>
+    <MediaObject.Content bg='#eee'>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu libero libero, sit amet commodo sem. Proin a quam vulputate enim consequat sollicitudin. Etiam vitae nunc augue. Sed ac arcu nibh. Suspendisse a lobortis nulla. Maecenas nunc erat, consectetur quis sagittis et, sodales ac nisl. Proin vitae nibh sed massa blandit commodo. Sed ornare tincidunt nibh, vel malesuada orci pellentesque sit amet. Pellentesque velit urna, porttitor a eleifend sit amet, feugiat ac velit. Nulla ut nunc sit amet lorem dictum suscipit. Maecenas ullamcorper feugiat erat nec ornare.</div>
+    </MediaObject.Content>
+  </MediaObject>
+</Playground>
+
+<Playground>
+  <MediaObject>
+    <MediaObject.Content bg='#eee'>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu libero libero, sit amet commodo sem. Proin a quam vulputate enim consequat sollicitudin. Etiam vitae nunc augue. Sed ac arcu nibh. Suspendisse a lobortis nulla. Maecenas nunc erat, consectetur quis sagittis et, sodales ac nisl. Proin vitae nibh sed massa blandit commodo. Sed ornare tincidunt nibh, vel malesuada orci pellentesque sit amet. Pellentesque velit urna, porttitor a eleifend sit amet, feugiat ac velit. Nulla ut nunc sit amet lorem dictum suscipit. Maecenas ullamcorper feugiat erat nec ornare.</div>
+    </MediaObject.Content>
+    <MediaObject.Side mgl>
+      <img src='http://placekitten.com/80' alt='' />
+    </MediaObject.Side>
+  </MediaObject>
+</Playground>
+
+<Playground>
+  <MediaObject align='center'>
+    <MediaObject.Side mgr>
+      <ImageIcon size={32} />
+    </MediaObject.Side>
+    <MediaObject.Content>
+      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu libero libero, sit amet commodo sem. Proin a quam vulputate enim consequat sollicitudin. Etiam vitae nunc augue. Sed ac arcu nibh. Suspendisse a lobortis nulla. Maecenas nunc erat, consectetur quis sagittis et, sodales ac nisl. Proin vitae nibh sed massa blandit commodo. Sed ornare tincidunt nibh, vel malesuada orci pellentesque sit amet. Pellentesque velit urna, porttitor a eleifend sit amet, feugiat ac velit. Nulla ut nunc sit amet lorem dictum suscipit. Maecenas ullamcorper feugiat erat nec ornare.</div>
+    </MediaObject.Content>
+  </MediaObject>
+</Playground>

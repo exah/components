@@ -1,6 +1,6 @@
 import test from 'ava'
 import React from 'react'
-import { Box, FlexBox, Layout } from '../src'
+import { Box, FlexBox, Layout, MediaObject } from '../src'
 import { renderJSON } from './_helpers.js'
 
 test('Box', (t) => {
@@ -38,6 +38,21 @@ test('Layout', (t) => {
         Footer
       </Layout.Footer>
     </Layout>
+  )
+
+  t.snapshot(result)
+})
+
+test('MediaObject', (t) => {
+  const result = renderJSON(
+    <MediaObject>
+      <MediaObject.Side>
+        Side
+      </MediaObject.Side>
+      <MediaObject.Content>
+        Content
+      </MediaObject.Content>
+    </MediaObject>
   )
 
   t.snapshot(result)
