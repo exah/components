@@ -1,0 +1,56 @@
+---
+name: Layout
+---
+
+import { Playground } from 'docz'
+import { Layout } from './index'
+
+# Layout Component
+
+Implements [Holy Grail Layout](https://alistapart.com/article/holygrail) with `FlexBox`.
+
+Key features:
+
+- Header is on top of page
+- Footer is stick to "bottom" of page
+- Content is expands to take available space
+- Body can be used as container to equal height columns (like navs) and main Content
+
+<Playground style={{ height: '500px' }}>
+  <Layout>
+    <Layout.Header>
+      Header
+    </Layout.Header>
+    <Layout.Content>
+      Content
+    </Layout.Content>
+    <Layout.Footer>
+      Footer
+    </Layout.Footer>
+  </Layout>
+</Playground>
+
+<Playground style={{ height: '500px' }}>
+  <Layout>
+    <Layout.Header>
+      Header
+    </Layout.Header>
+    <Layout.Item>
+      Some / Breadcrumbs / Path
+    </Layout.Item>
+    <Layout.Body>
+      <Layout.Content>
+        Content
+      </Layout.Content>
+      <Layout.Item bg='#ccc' wd={( 1 / 6 )} order={-1}>
+        Left Nav
+      </Layout.Item>
+      <Layout.Item bg='#ccc' wd={( 1 / 6 )}>
+        Right Nav
+      </Layout.Item>
+    </Layout.Body>
+    <Layout.Footer>
+      Footer
+    </Layout.Footer>
+  </Layout>
+</Playground>
