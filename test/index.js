@@ -1,6 +1,8 @@
 import test from 'ava'
-import React from 'react'
-import { Box, FlexBox, Layout, MediaObject } from '../src'
+import { ThemeProvider } from 'emotion-theming'
+import React, { Fragment } from 'react'
+import { theme } from '../src/theme'
+import { Box, FlexBox, Layout, MediaObject, Grid } from '../src'
 import { renderJSON } from './_helpers.js'
 
 test('Box', (t) => {
@@ -53,6 +55,48 @@ test('MediaObject', (t) => {
         Content
       </MediaObject.Content>
     </MediaObject>
+  )
+
+  t.snapshot(result)
+})
+
+const renderGridItems = (length, col) =>
+  Array.from({ length })
+    .fill(true)
+    .map((_, index) => (
+      <Grid.Item col={col} key={index}>
+        <Grid.Content>
+          {col}
+        </Grid.Content>
+      </Grid.Item>
+    ))
+
+test('Grid → Basic', (t) => {
+  const result = renderJSON(
+    <ThemeProvider theme={theme}>
+      <Fragment>
+        <Grid>
+          {renderGridItems(12, 1)}
+        </Grid>
+      </Fragment>
+    </ThemeProvider>
+  )
+
+  t.snapshot(result)
+})
+
+test('Grid → Vertical and Horizontal Space', (t) => {
+  const result = renderJSON(
+    <ThemeProvider theme={theme}>
+      <Grid space={2}>
+        {renderGridItems(12, 1)}
+        {renderGridItems(6, 2)}
+        {renderGridItems(4, 3)}
+        {renderGridItems(3, 4)}
+        {renderGridItems(2, 6)}
+        {renderGridItems(1, 12)}
+      </Grid>
+    </ThemeProvider>
   )
 
   t.snapshot(result)

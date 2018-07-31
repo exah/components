@@ -19,3 +19,9 @@ export {
   MediaObjectSide,
   MediaObjectContent
 } from './media-object'
+
+export {
+  Grid,
+  GridItem,
+  GridContent
+} from './grid'
