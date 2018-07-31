@@ -39,6 +39,8 @@ import { MediaObject } from 'pss-components'
 
 ## Examples
 
+### Basic
+
 <Playground>
   <MediaObject bg='gray.0' pd>
     <MediaObject.Side bg='gray.1' pd mgr>
@@ -49,6 +51,8 @@ import { MediaObject } from 'pss-components'
     </MediaObject.Content>
   </MediaObject>
 </Playground>
+
+### Center items with 'flex' props
 
 <Playground>
   <MediaObject align='center'>
@@ -61,9 +65,11 @@ import { MediaObject } from 'pss-components'
   </MediaObject>
 </Playground>
 
+### Comment box
+
 <Playground>
-  <MediaObject bg='gray.0' pd>
-    <MediaObject.Side mgr>
+  <MediaObject bg='gray.0' pd={2}>
+    <MediaObject.Side mgr={2}>
       <img src='http://placekitten.com/80' alt='' />
     </MediaObject.Side>
     <MediaObject.Content>
@@ -72,12 +78,14 @@ import { MediaObject } from 'pss-components'
   </MediaObject>
 </Playground>
 
+### Side can be placed before and after Content
+
 <Playground>
-  <MediaObject bg='gray.0' pd>
+  <MediaObject bg='gray.0' pd={2}>
     <MediaObject.Content>
       <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu libero libero, sit amet commodo sem. Proin a quam vulputate enim consequat sollicitudin. Etiam vitae nunc augue. Sed ac arcu nibh. Suspendisse a lobortis nulla. Maecenas nunc erat, consectetur quis sagittis et, sodales ac nisl. Proin vitae nibh sed massa blandit commodo. Sed ornare tincidunt nibh, vel malesuada orci pellentesque sit amet. Pellentesque velit urna, porttitor a eleifend sit amet, feugiat ac velit. Nulla ut nunc sit amet lorem dictum suscipit. Maecenas ullamcorper feugiat erat nec ornare.</div>
     </MediaObject.Content>
-    <MediaObject.Side mgl>
+    <MediaObject.Side mgl={2}>
       <img src='http://placekitten.com/80' alt='' />
     </MediaObject.Side>
   </MediaObject>

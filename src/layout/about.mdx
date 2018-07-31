@@ -10,11 +10,11 @@ import { Layout } from './index'
 
 ## Description
 
-Implements [Holy Grail Layout](https://alistapart.com/article/holygrail) with [`FlexBox`](#/flex-box).
+Implements [Holy Grail Layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) with [`FlexBox`](#/flex-box).
 
 - Header is on top of page
 - Footer is stick to "bottom" of page
-- Content is expands to take available space
+- Content expands to take available space
 - Body can be used as container to equal height columns (like navs) and main Content
 
 Components:
@@ -50,6 +50,8 @@ import { Layout } from 'pss-components'
 
 ## Examples
 
+### Basic
+
 <Playground style={{ height: '500px' }}>
   <Layout>
     <Layout.Header>
@@ -63,6 +65,8 @@ import { Layout } from 'pss-components'
     </Layout.Footer>
   </Layout>
 </Playground>
+
+### All components
 
 <Playground style={{ height: '500px' }}>
   <Layout bg='gray.0' pd>
