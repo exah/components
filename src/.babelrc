@@ -2,16 +2,26 @@
   "env": {
     "modules": {
       "plugins": [
-        "transform-es2015-modules-commonjs"
+        "transform-es2015-modules-commonjs",
+        [ "emotion", { "hoist": true } ]
+      ]
+    },
+    "production": {
+      "plugins": [
+        [ "emotion", { "hoist": true } ]
+      ]
+    },
+    "development": {
+      "plugins": [
+        ["emotion", { "sourceMap": true }]
       ]
     }
   },
   "presets": [
     [ "env", {
-      "modules": false,
       "useBuiltIns": true,
-      "loose": true,
-      "exclude": [ "transform-regenerator" ]
+      "modules": false,
+      "loose": true
     } ]
   ],
   "plugins": [
