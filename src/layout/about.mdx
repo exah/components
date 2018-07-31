@@ -6,25 +6,58 @@ route: /layout
 import { Playground } from 'docz'
 import { Layout } from './index'
 
-# Layout Component
+# Layout
+
+## Description
 
 Implements [Holy Grail Layout](https://alistapart.com/article/holygrail) with [`FlexBox`](#/flex-box).
-
-Key features:
 
 - Header is on top of page
 - Footer is stick to "bottom" of page
 - Content is expands to take available space
 - Body can be used as container to equal height columns (like navs) and main Content
 
+Components:
+
+- `Layout` — Container that takes space of page (add `minHt='100vh'` prop, default to `100%`)
+- `Layout.Content` — Main component, that expands to take available space
+- `Layout.Body` — Can be used inside `Layout` as main container of vertical columns and content
+- `Layout.Item` — Basic component that can be used for horizontal sections inside `Layout` or vertical in `Layout.Body`
+
+Additional:
+
+- `Layout.Main` — Same as `Layout.Content`, but renders `main` tag
+- `Layout.Header` — Same as `Layout.Item`, but renders `header` tag
+- `Layout.Footer` — Same as `Layout.Item`, but renders `footer` tag
+
+
+## Usage
+
+```js
+import { Layout } from 'pss-components'
+```
+
+```js
+<Layout>
+  <Layout.Item>Top</Layout.Item>
+  <Layout.Body>
+    <Layout.Content>Content</Layout.Content>
+    <Layout.Item>Side Nav</Layout.Item>
+  </Layout.Body>
+  <Layout.Item>Bottom</Layout.Item>
+</Layout>
+```
+
+## Examples
+
 <Playground style={{ height: '500px' }}>
   <Layout>
     <Layout.Header>
       Header
     </Layout.Header>
-    <Layout.Content>
-      Content
-    </Layout.Content>
+    <Layout.Main>
+      Main
+    </Layout.Main>
     <Layout.Footer>
       Footer
     </Layout.Footer>
@@ -32,25 +65,25 @@ Key features:
 </Playground>
 
 <Playground style={{ height: '500px' }}>
-  <Layout>
-    <Layout.Header>
+  <Layout bg='gray.0' pd>
+    <Layout.Header bg='gray.1' pd mgb>
       Header
     </Layout.Header>
-    <Layout.Item>
+    <Layout.Item bg='gray.1' pd mgb>
       Some / Breadcrumbs / Path
     </Layout.Item>
-    <Layout.Body>
-      <Layout.Content>
+    <Layout.Body bg='gray.1' pd mgb>
+      <Layout.Content bg='gray.2' pd mgx>
         Content
       </Layout.Content>
-      <Layout.Item bg='#ccc' wd={( 1 / 6 )} order={-1}>
+      <Layout.Item bg='gray.2' pd wd={( 1 / 6 )} order={-1}>
         Left Nav
       </Layout.Item>
-      <Layout.Item bg='#ccc' wd={( 1 / 6 )}>
+      <Layout.Item bg='gray.2' pd wd={( 1 / 6 )}>
         Right Nav
       </Layout.Item>
     </Layout.Body>
-    <Layout.Footer>
+    <Layout.Footer bg='gray.1' pd>
       Footer
     </Layout.Footer>
   </Layout>
