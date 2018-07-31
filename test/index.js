@@ -31,9 +31,9 @@ test('Layout', (t) => {
       <Layout.Header>
         Header
       </Layout.Header>
-      <Layout.Content>
-        Content
-      </Layout.Content>
+      <Layout.Main>
+        Main
+      </Layout.Main>
       <Layout.Footer>
         Footer
       </Layout.Footer>
