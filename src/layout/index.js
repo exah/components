@@ -20,11 +20,12 @@ const Layout = (props) => (
 )
 
 Object.assign(Layout, {
-  Header: FlexBoxItem.withComponent('header'),
-  Content: LayoutContent.withComponent('main'),
-  Footer: FlexBoxItem.withComponent('footer'),
+  Content: LayoutContent,
   Item: FlexBoxItem,
-  Body: LayoutBody
+  Body: LayoutBody,
+  Header: FlexBoxItem.withComponent('header'),
+  Footer: FlexBoxItem.withComponent('footer'),
+  Main: LayoutContent.withComponent('main')
 })
 
 export {
