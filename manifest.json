@@ -1,11 +1,11 @@
 {
-  "vendors.js": "/components/static/js/vendors.e4f18830.js",
-  "app.js": "/components/static/js/app.65e8bfab.js",
-  "index.js": "/components/static/js/index.511cfcd9.js",
+  "vendors.js": "/components/static/js/vendors.2eb18a82.js",
+  "app.js": "/components/static/js/app.eef3d3dc.js",
+  "about.js": "/components/static/js/about.afde8c43.js",
   "box-about.js": "/components/static/js/box-about.164fea91.js",
   "flex-box-about.js": "/components/static/js/flex-box-about.6cf90f8f.js",
-  "layout-about.js": "/components/static/js/layout-about.76190835.js",
-  "media-object-about.js": "/components/static/js/media-object-about.8f06b686.js",
-  "runtime~app.js": "/components/static/js/runtime~app.a8f629778d4dc510bd85.js",
+  "layout-about.js": "/components/static/js/layout-about.7c8891b8.js",
+  "media-object-about.js": "/components/static/js/media-object-about.50c07a4f.js",
+  "runtime~app.js": "/components/static/js/runtime~app.09d56e501e04c8dd7362.js",
   "index.html": "/components/index.html"
 }
