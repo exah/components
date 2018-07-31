@@ -15,7 +15,7 @@ const MediaObject = styled(Box)({
 const MediaObjectSide = styled(Box)({
   flexGrow: 0,
   flexShrink: 0,
-  '& img': {
+  '& img, & svg': {
     display: 'block'
   }
 }, flexItemPropStyles)
