@@ -1,4 +1,6 @@
 import { createTheme } from 'pss'
+import { createElement } from 'react'
+import { ThemeProvider } from 'emotion-theming'
 
 const theme = createTheme({
   grid: 12,
@@ -18,3 +20,6 @@ const theme = createTheme({
 export {
   theme
 }
+
+export default ({ children }) =>
+  createElement(ThemeProvider, { theme }, children)
