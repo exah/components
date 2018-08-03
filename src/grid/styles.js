@@ -7,10 +7,10 @@ const fallbackTo = (...args) =>
 const gridItemPropStyles = createPropStyles({
   size: [
     sizeProp('flexBasis', 'auto'),
-    sizeProp('maxWidth', 'auto')
+    sizeProp('maxWidth', '100%')
   ],
   col (value, props, mediaKey) {
-    if (value === 'auto') {
+    if (value === 'auto' || value === true) {
       return {
         flexGrow: 1,
         flexShrink: 1,
