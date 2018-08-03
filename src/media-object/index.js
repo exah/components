@@ -1,8 +1,8 @@
 import styled from 'react-emotion'
 
 import {
-  flexPropStyles,
-  flexItemPropStyles
+  flex,
+  flexItem
 } from 'pss'
 
 import { Box } from '../box'
@@ -10,7 +10,7 @@ import { Box } from '../box'
 const MediaObject = styled(Box)({
   display: 'flex',
   alignItems: 'flex-start'
-}, flexPropStyles)
+}, flex)
 
 const MediaObjectSide = styled(Box)({
   flexGrow: 0,
@@ -18,11 +18,11 @@ const MediaObjectSide = styled(Box)({
   '& img, & svg': {
     display: 'block'
   }
-}, flexItemPropStyles)
+}, flexItem)
 
 const MediaObjectContent = styled(Box)({
   flexGrow: 1
-}, flexItemPropStyles)
+}, flexItem)
 
 Object.assign(MediaObject, {
   Side: MediaObjectSide,

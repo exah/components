@@ -1,49 +1,26 @@
 import styled from 'react-emotion'
+import { system, flex, flexItem } from 'pss'
+import { gridItem, gridRow } from './styles'
 
-import {
-  space,
-  sizes,
-  colors,
-  utilityPropStyles,
-  flexPropStyles,
-  flexItemPropStyles
-} from 'pss'
-
-import {
-  gridItemPropStyles,
-  gridRowPropStyles
-} from './styles'
-
-const GridContent = styled('div')(
-  space,
-  sizes,
-  colors,
-  utilityPropStyles
-)
+const GridContent = styled('div')(system)
 
 const GridItem = styled('div')(
   { flexGrow: 0, flexShrink: 0, minHeight: 1 },
-  gridItemPropStyles,
-  space,
-  sizes,
-  colors,
-  utilityPropStyles,
-  flexItemPropStyles
+  system,
+  flexItem,
+  gridItem
 )
 
 const Grid = styled('div')(
   { display: 'flex', flexWrap: 'wrap' },
-  gridRowPropStyles({
+  gridRow({
     rowSelector: () => `${Grid} + &`,
     childSelector: (props) => props.spaceContent
       ? `& > ${GridItem} > ${GridContent}`
       : `& > ${GridItem}`
   }),
-  space,
-  sizes,
-  colors,
-  utilityPropStyles,
-  flexPropStyles
+  system,
+  flex
 )
 
 Object.assign(Grid, {

@@ -1,18 +1,17 @@
 import React from 'react'
 import styled from 'react-emotion'
-import { flexItemPropStyles } from 'pss'
-
+import { flexItem } from 'pss'
 import { Box } from '../box'
 import { FlexBox, FlexBoxItem } from '../flex-box'
 
 const LayoutContent = styled(Box)(
   { flexGrow: 1, flexShrink: 0, flexBasis: 'auto' },
-  flexItemPropStyles
+  flexItem
 )
 
 const LayoutBody = styled(FlexBox)(
   { display: 'flex', flexGrow: 1, flexShrink: 0, flexBasis: 'auto' },
-  flexItemPropStyles
+  flexItem
 )
 
 const Layout = (props) => (

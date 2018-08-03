@@ -1,10 +1,6 @@
-import { themePath, getSpace, sizeProp, createPropStyles } from 'pss'
+import { themePath, getSpace, sizeProp, createPropStyles, fallbackTo } from 'pss'
 
-// TODO: replace with export from `pss`
-const fallbackTo = (...args) =>
-  args.reduce((prev, val) => prev == null ? val : prev, null)
-
-const gridItemPropStyles = createPropStyles({
+const gridItem = createPropStyles({
   size: [
     sizeProp('flexBasis', 'auto'),
     sizeProp('maxWidth', '100%')
@@ -66,13 +62,13 @@ const getItemsSpaceStyles = (axis, {
   }
 }
 
-const gridRowPropStyles = (selectors) => createPropStyles({
+const gridRow = (selectors) => createPropStyles({
   space: getItemsSpaceStyles({ x: true, y: true }, selectors),
   spacex: getItemsSpaceStyles({ x: true }, selectors),
   spacey: getItemsSpaceStyles({ y: true }, selectors)
 })
 
 export {
-  gridItemPropStyles,
-  gridRowPropStyles
+  gridItem,
+  gridRow
 }

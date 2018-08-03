@@ -7909,9 +7909,9 @@ pseudomap@^1.0.1, pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
-pss@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/pss/-/pss-2.0.0.tgz#b6e62def6d266ef5d695235cafe2018a6c8f81e0"
+pss@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/pss/-/pss-2.1.1.tgz#7348881a10e98d6f4ea2a93644129913b7c02047"
 
 public-encrypt@^4.0.0:
   version "4.0.2"
