@@ -1,0 +1,70 @@
+---
+name: CurrentMediaProvider
+route: /current-media-provider
+order: -11
+---
+
+import { Playground } from 'docz'
+import { CurrentMediaProvider, CurrentMediaConsumer } from './index'
+import { Box } from '../box'
+
+# CurrentMediaProvider
+
+## Description
+
+Watch `media` defined in `theme` for changes and pass currently active media as `currentMediaKey` prop.
+
+
+## Usage
+
+```js
+import { CurrentMediaProvider, CurrentMediaConsumer, withCurrentMedia } from 'pss-components'
+```
+
+```js
+import { ThemeProvider } from 'emotion-theming'
+import { createTheme } from 'pss'
+
+<ThemeProvider theme={createTheme({ media: { M: '(max-width: 600px)' } })}>
+  <CurrentMediaProvider>
+    {/* components */}
+  </CurrentMediaProvider>
+</ThemeProvider>
+```
+
+```js
+import { withCurrentMedia } from 'pss-components'
+
+const MediaComponent = withCurrentMedia(Component)
+```
+
+## Examples
+
+With values from `media` prop:
+
+<Playground>
+  <CurrentMediaProvider media={{ Mobile: '(max-width: 600px)', Desktop: '(min-width: 601px)' }}>
+    <CurrentMediaConsumer>
+      {(state) => (
+        <Box>
+          Current media: {state.currentMediaKey}
+        </Box>
+      )}
+    </CurrentMediaConsumer>
+  </CurrentMediaProvider>
+</Playground>
+
+From `theme`:
+
+<Playground>
+  <CurrentMediaProvider>
+    <CurrentMediaConsumer>
+      {(state) => (
+        <Box>
+          Current media: {state.currentMediaKey}
+        </Box>
+      )}
+    </CurrentMediaConsumer>
+  </CurrentMediaProvider>
+</Playground>
+

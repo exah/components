@@ -5,7 +5,9 @@ import { ThemeProvider } from 'emotion-theming'
 const theme = createTheme({
   grid: 12,
   media: {
-    M: '(max-width: 600px)'
+    M: '(max-width: 600px)',
+    T: '(min-width: 601px) and (max-width: 1024px)',
+    D: '(min-width: 1025px)'
   },
   space: {
     default: [ 0, 8, 16, 32, 64 ]
