@@ -6,12 +6,37 @@ route: /box
 import { Playground } from 'docz'
 import { Box } from './index'
 
-# Box Component
+# Box
 
-Most basic element and most re-usable.
+## Description
+
+Basic component, that renders as `<div>` and most universal.
+
+
+## Usage
+
+```js
+import { Box } from 'pss-components'
+```
+
+```js
+<Box>
+  <Box>1</Box>
+  <Box>2</Box>
+</Box>
+```
+
+
+## Examples
 
 <Playground>
-  <Box bg='#000000' fg='#ffffff' ht='200px'>
-    Hello World
+  <Box bg='gray.0'>
+    Box
+  </Box>
+</Playground>
+
+<Playground>
+  <Box bg='gray.0' ratio={16 / 9}>
+    Box
   </Box>
 </Playground>
