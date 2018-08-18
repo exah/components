@@ -25,3 +25,7 @@ export {
   GridItem,
   GridContent
 } from './grid'
+
+export {
+  ThemeDefaultsProvider
+} from './theme-defaults-provider'

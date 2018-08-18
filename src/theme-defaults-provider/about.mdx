@@ -1,0 +1,37 @@
+---
+name: ThemeDefaultsProvider
+route: /theme-defaults-provider
+order: -10
+---
+
+import { Playground } from 'docz'
+import { ThemeDefaultsProvider } from './index'
+import { Box } from '../box'
+
+# ThemeDefaultsProvider
+
+## Description
+
+Change `theme.defaults` with props.
+
+
+## Usage
+
+```js
+import { ThemeDefaultsProvider } from 'pss-components'
+```
+
+## Examples
+
+<Playground>
+  <Box bg='gray.0' pd>
+    <Box tm ratio={16 / 9} pd mgb>
+      Content
+    </Box>
+    <ThemeDefaultsProvider palette='inverted'>
+      <Box tm ratio={16 / 9} pd>
+        Content
+      </Box>
+    </ThemeDefaultsProvider>
+  </Box>
+</Playground>

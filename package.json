@@ -111,6 +111,7 @@
     "emotion": "^9.2.6",
     "emotion-theming": "^9.2.6",
     "pss": "^2.2.0",
-    "react-emotion": "^9.2.6"
+    "react-emotion": "^9.2.6",
+    "recompose": "^0.28.2"
   }
 }
