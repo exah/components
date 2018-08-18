@@ -14,6 +14,20 @@ const theme = createTheme({
     black: '#000',
     gray: [ '#eee', '#ddd', '#ccc', '#bbb', '#aaa' ],
     white: '#fff'
+  },
+  palette: {
+    default: {
+      bg: '#fff',
+      fg: '#000'
+    },
+    gray: {
+      bg: '#eee',
+      fg: '#000'
+    },
+    inverted: {
+      bg: '#000',
+      fg: '#fff'
+    }
   }
 })
 
