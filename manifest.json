@@ -1,12 +1,14 @@
 {
-  "vendors.js": "/components/static/js/vendors.9a5730e4.js",
-  "app.js": "/components/static/js/app.190d8c02.js",
+  "vendors.js": "/components/static/js/vendors.6b896ba4.js",
+  "app.js": "/components/static/js/app.125204d3.js",
   "about.js": "/components/static/js/about.667317c4.js",
-  "box-about.js": "/components/static/js/box-about.7f332f9e.js",
-  "grid-about.js": "/components/static/js/grid-about.fbeb37ff.js",
-  "flex-box-about.js": "/components/static/js/flex-box-about.7cd4f302.js",
-  "layout-about.js": "/components/static/js/layout-about.2dbf341c.js",
-  "media-object-about.js": "/components/static/js/media-object-about.719ad394.js",
-  "runtime~app.js": "/components/static/js/runtime~app.0264292d008dbbda1e46.js",
+  "box-about.js": "/components/static/js/box-about.3094be41.js",
+  "current-media-provider-about.js": "/components/static/js/current-media-provider-about.502b8470.js",
+  "flex-box-about.js": "/components/static/js/flex-box-about.f967bbc9.js",
+  "grid-about.js": "/components/static/js/grid-about.ec1bc902.js",
+  "layout-about.js": "/components/static/js/layout-about.33b1ac7b.js",
+  "media-object-about.js": "/components/static/js/media-object-about.3bc4df5f.js",
+  "theme-defaults-provider-about.js": "/components/static/js/theme-defaults-provider-about.3c2ee30c.js",
+  "runtime~app.js": "/components/static/js/runtime~app.c1432b01eb2dc31e4c4f.js",
   "index.html": "/components/index.html"
 }
