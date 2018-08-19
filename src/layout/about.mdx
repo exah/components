@@ -25,13 +25,6 @@ Components:
 - `Layout.Body` — Can be used inside `Layout` as main container of vertical columns and content
 - `Layout.Item` — Basic component that can be used for horizontal sections inside `Layout` or vertical in `Layout.Body`
 
-Additional:
-
-- `Layout.Main` — Same as `Layout.Content`, but renders `main` tag
-- `Layout.Header` — Same as `Layout.Item`, but renders `header` tag
-- `Layout.Footer` — Same as `Layout.Item`, but renders `footer` tag
-
-
 ## Usage
 
 ```js
@@ -55,15 +48,15 @@ import { Layout } from 'pss-components'
 
 <Playground style={{ height: '500px' }}>
   <Layout>
-    <Layout.Header>
+    <Layout.Item comp='header'>
       Header
-    </Layout.Header>
-    <Layout.Main>
+    </Layout.Item>
+    <Layout.Content comp='main'>
       Main
-    </Layout.Main>
-    <Layout.Footer>
+    </Layout.Content>
+    <Layout.Item comp='footer'>
       Footer
-    </Layout.Footer>
+    </Layout.Item>
   </Layout>
 </Playground>
 
@@ -71,9 +64,9 @@ import { Layout } from 'pss-components'
 
 <Playground style={{ height: '500px' }}>
   <Layout bg='gray.0' pd>
-    <Layout.Header bg='gray.1' pd mgb>
+    <Layout.Item bg='gray.1' pd mgb>
       Header
-    </Layout.Header>
+    </Layout.Item>
     <Layout.Item bg='gray.1' pd mgb>
       Some / Breadcrumbs / Path
     </Layout.Item>
@@ -88,8 +81,8 @@ import { Layout } from 'pss-components'
         Right Nav
       </Layout.Item>
     </Layout.Body>
-    <Layout.Footer bg='gray.1' pd>
+    <Layout.Item bg='gray.1' pd>
       Footer
-    </Layout.Footer>
+    </Layout.Item>
   </Layout>
 </Playground>
