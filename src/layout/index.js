@@ -1,15 +1,15 @@
 import React from 'react'
-import styled from 'react-emotion'
 import { flexItem } from 'pss'
+import { createComp } from '../create-comp'
 import { Box } from '../box'
 import { FlexBox, FlexBoxItem } from '../flex-box'
 
-const LayoutContent = styled(Box)(
+const LayoutContent = createComp(Box)(
   { flexGrow: 1, flexShrink: 0, flexBasis: 'auto' },
   flexItem
 )
 
-const LayoutBody = styled(FlexBox)(
+const LayoutBody = createComp(FlexBox)(
   { display: 'flex', flexGrow: 1, flexShrink: 0, flexBasis: 'auto' },
   flexItem
 )

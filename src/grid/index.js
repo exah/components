@@ -1,17 +1,17 @@
-import styled from 'react-emotion'
 import { system, flex, flexItem } from 'pss'
+import { createComp } from '../create-comp'
 import { gridItem, gridRow } from './styles'
 
-const GridContent = styled('div')(system)
+const GridContent = createComp('div')(system)
 
-const GridItem = styled('div')(
+const GridItem = createComp('div', [ 'order', 'size' ])(
   { flexGrow: 0, flexShrink: 0, minHeight: 1 },
   system,
   flexItem,
   gridItem
 )
 
-const Grid = styled('div')(
+const Grid = createComp('div')(
   { display: 'flex', flexWrap: 'wrap' },
   gridRow({
     rowSelector: () => `${Grid} + &`,

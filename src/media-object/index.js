@@ -1,18 +1,17 @@
-import styled from 'react-emotion'
-
 import {
   flex,
   flexItem
 } from 'pss'
 
+import { createComp } from '../create-comp'
 import { Box } from '../box'
 
-const MediaObject = styled(Box)({
+const MediaObject = createComp(Box)({
   display: 'flex',
   alignItems: 'flex-start'
 }, flex)
 
-const MediaObjectSide = styled(Box)({
+const MediaObjectSide = createComp(Box)({
   flexGrow: 0,
   flexShrink: 0,
   '& img, & svg': {
@@ -20,7 +19,7 @@ const MediaObjectSide = styled(Box)({
   }
 }, flexItem)
 
-const MediaObjectContent = styled(Box)({
+const MediaObjectContent = createComp(Box)({
   flexGrow: 1
 }, flexItem)
 
