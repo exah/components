@@ -3,7 +3,7 @@
 ## Install
 
 ```sh
-$ yarn add @exah/components
+$ yarn add pss-components
 ```
 
 ## [API](./docs/api.md)
