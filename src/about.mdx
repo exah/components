@@ -5,3 +5,90 @@ order: 0
 ---
 
 # Getting Started
+
+## Install
+
+```sh
+$ yarn add pss-components
+```
+
+This package is depended on [`pss`](https://github.com/exah/pss), [`emotion`](https://emotion.sh) and [`recompose`](https://github.com/acdlite/recompose) so you don't need to install them.
+
+
+## Import components
+
+```
+import React from 'react'
+import { Layout } from 'pss-components'
+
+const MyApp = () => (
+  <Layout>
+    <Layout.Item>
+      Header
+    </Layout.Item>
+    <Layout.Content>
+      Content
+    </Layout.Content>
+    <Layout.Item>
+      Footer
+    </Layout.Item>
+  </Layout>
+)
+```
+
+
+## Provide custom theme
+
+```
+import React from 'react'
+import { createTheme } from 'pss'
+import { ThemeProvider } from 'emotion-theming'
+
+const myTheme = createTheme({
+  grid: 12,
+  media: {
+    M: '(max-width: 600px)',
+    T: '(min-width: 601px) and (max-width: 1024px)',
+    D: '(min-width: 1025px)'
+  },
+  space: {
+    default: [ 0, 8, 16, 32, 64 ]
+  },
+  color: {
+    black: '#000',
+    gray: [ '#eee', '#ddd', '#ccc', '#bbb', '#aaa' ],
+    white: '#fff'
+  },
+  palette: {
+    default: {
+      bg: '#fff',
+      fg: '#000'
+    },
+    gray: {
+      bg: '#eee',
+      fg: '#000'
+    },
+    inverted: {
+      bg: '#000',
+      fg: '#fff'
+    }
+  }
+})
+
+const MyApp = () => (
+  <ThemeProvider theme={myTheme}>
+    <Layout>
+      <Layout.Item>
+        Header
+      </Layout.Item>
+      <Layout.Content>
+        Content
+      </Layout.Content>
+      <Layout.Item>
+        Footer
+      </Layout.Item>
+    </Layout>
+  </ThemeProvider>
+)
+```
+

@@ -1,18 +1,27 @@
-# 🚧 components
+# 📐 pss-components
 
-## Install
+> Most basic components for building web apps and sites
+
+- [x] Only essential components, suitable for most projects
+- [x] Customizable with `theme`
+- [x] Responsive
+
+Created with [`pss`](https://github.com/exah/pss).
+
+## 📦 Install
 
 ```sh
 $ yarn add pss-components
 ```
 
-## [API](./docs/api.md)
+
+## 🌏 [Demo](http://johngrish.in/components)
 
 
-## Links
+## 🔗 Links
 
+- [pss](https://github.com/exah/pss) - Prop Styles System inside of components
 - [emotion](https://emotion.sh) - CSS-in-JS library
-- [prop-styles-system](https://github.com/exah/prop-styles-system)
 
 ---
 
