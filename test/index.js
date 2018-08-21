@@ -3,7 +3,7 @@ import { ThemeProvider } from 'emotion-theming'
 import React, { Fragment } from 'react'
 import { theme } from '../src/theme'
 import { Box, FlexBox, Layout, MediaObject, Grid } from '../src'
-import { renderJSON } from './_helpers.js'
+import { renderJSON } from './_helpers'
 
 test('Box', (t) => {
   const result = renderJSON(
