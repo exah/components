@@ -7,7 +7,12 @@ import { Grid, GridItem, GridContent } from '../grid'
 const groupChildren = (children = [], length = 3) => {
   const placeholder = Array.from({ length }).fill(true).map(() => [])
   return children.reduce((groups, value, index) => {
-    groups[(index % length)].push(value)
+    const key = Math.floor(index % length)
+
+    if (groups[key]) {
+      groups[key].push(value)
+    }
+
     return groups
   }, placeholder)
 }

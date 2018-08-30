@@ -38,44 +38,46 @@ import { Feed } from 'pss-components'
 ## Examples
 
 <Playground>
-  <CurrentMediaProvider>
-    <Feed space={2} col={3} colT={6} colM={12}>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={200}>1</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={150}>2</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={300}>3</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={500}>4</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={200}>5</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={300}>6</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={200}>7</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={150}>8</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={300}>9</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={500}>10</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={200}>11</Box>
-      </Feed.Item>
-      <Feed.Item>
-        <Box bg='gray.0' minHt={300}>12</Box>
-      </Feed.Item>
-    </Feed>
-  </CurrentMediaProvider>
+  <ThemeProvider theme={{ grid: 12 }}>
+    <CurrentMediaProvider>
+      <Feed space={2} col={3} colT={6} colM={12}>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={200}>1</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={150}>2</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={300}>3</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={500}>4</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={200}>5</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={300}>6</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={200}>7</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={150}>8</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={300}>9</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={500}>10</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={200}>11</Box>
+        </Feed.Item>
+        <Feed.Item>
+          <Box bg='gray.0' minHt={300}>12</Box>
+        </Feed.Item>
+      </Feed>
+    </CurrentMediaProvider>
+  </ThemeProvider>
 </Playground>
