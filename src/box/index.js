@@ -1,7 +1,8 @@
 import { system } from 'pss'
-import { createComp } from '../create-comp'
+import styled from 'react-emotion'
+import { Base } from '../base'
 
-const Box = createComp('div')(system)
+const Box = styled(Base)(system)
 
 export {
   Box

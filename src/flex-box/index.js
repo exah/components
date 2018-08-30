@@ -1,9 +1,9 @@
 import { flex, flexItem } from 'pss'
-import { createComp } from '../create-comp'
+import styled from 'react-emotion'
 import { Box } from '../box'
 
-const FlexBox = createComp(Box)({ display: 'flex' }, flex)
-const FlexBoxItem = createComp(Box)(flexItem)
+const FlexBox = styled(Box)({ display: 'flex' }, flex)
+const FlexBoxItem = styled(Box)(flexItem)
 
 FlexBox.Item = FlexBoxItem
 
