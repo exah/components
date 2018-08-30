@@ -1,0 +1,65 @@
+---
+name: Base
+route: /base
+order: -8
+---
+
+import { Playground } from 'docz'
+import { Base } from './index'
+
+# Base, createBaseComponent
+
+## Description
+
+Component without any styles, that filters unkown props. Underlying component can be changed with `comp` prop. By default renders `<div>`.
+
+
+## Usage
+
+```js
+import { Base, createBaseComponent } from 'pss-components'
+```
+
+```js
+<Base>
+  {/* children */}
+</Base>
+```
+
+
+```js
+const Heading = createBaseComponent('h1')
+```
+
+```js
+<Heading>
+  {/* children */}
+</Heading>
+<Heading comp='h2'>
+  {/* children */}
+</Heading>
+```
+
+## Examples
+
+<Playground>
+  <Base>
+    Base
+  </Base>
+</Playground>
+
+Filters any none-valid prop.
+
+<Playground>
+  <Base filter_any_weird_prop='value'>
+    Base
+  </Base>
+</Playground>
+
+Change underlying component with `comp` prop.
+
+<Playground>
+  <Base comp='span'>
+    Span
+  </Base>
+</Playground>
