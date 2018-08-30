@@ -1,4 +1,9 @@
 export {
+  Base,
+  createBaseComponent
+} from './base'
+
+export {
   Box
 } from './box'
 
