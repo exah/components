@@ -30,6 +30,24 @@ const theme = createTheme({
       bg: '#000',
       fg: '#fff'
     }
+  },
+  font: {
+    default: 'Helvetica, system-ui, sans-serif',
+    serif: 'Times New Roman, serif'
+  },
+  textStyle: {
+    root: {
+      fontFamily: 'Helvetica, system-ui, sans-serif',
+      fontSize: 16,
+      lineHeight: 1.2
+    },
+    default: {
+      fontSize: '1rem'
+    },
+    heading: {
+      fontSize: '1.5rem',
+      fontWeight: 'bold'
+    }
   }
 })
 

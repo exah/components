@@ -37,6 +37,10 @@ export {
 } from './feed'
 
 export {
+  Text
+} from './text'
+
+export {
   ThemeDefaultsProvider
 } from './theme-defaults-provider'
 

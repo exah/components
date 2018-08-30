@@ -1,0 +1,77 @@
+---
+name: Text
+route: /text
+order: -7
+---
+
+import { Playground } from 'docz'
+import { ThemeProvider } from 'emotion-theming'
+import { theme } from '../theme'
+import { Text } from './index'
+
+# Text
+
+## Description
+
+Text component, that renders as `<div>` with [typography prop styles](https://github.com/exah/pss/blob/master/docs/api.md#typography) and [base prop styles](https://github.com/exah/pss/blob/master/docs/api.md#base). Component inside can be changed with `comp` prop.
+
+
+## Usage
+
+### Basic
+
+```js
+import { Text } from 'pss-components'
+```
+
+```js
+<Text comp='p' align='center'>
+  Text
+</Text>
+```
+
+### Provide Global Text Styles
+
+See [textStyle](https://github.com/exah/pss/blob/master/docs/api.md#textstyle) docs.
+
+```js
+import { createTheme } from 'pss-components'
+
+const theme = createTheme({
+  font: {
+    default: 'Helvetica, system-ui, sans-serif',
+    serif: 'Times New Roman, serif'
+  },
+  textStyle: {
+    root: {
+      fontFamily: 'Helvetica, system-ui, sans-serif',
+      fontSize: 16,
+      lineHeight: 1.2
+    },
+    default: {
+      fontSize: '1rem'
+    },
+    heading: {
+      fontSize: '1.5rem',
+      fontWeight: 'bold'
+    }
+  }
+})
+```
+
+## Examples
+
+<Playground>
+  <Text comp='p' align='center'>
+    Text
+  </Text>
+</Playground>
+
+
+<Playground>
+  <ThemeProvider theme={theme}>
+    <Text comp='h1' textStyle='heading' align='center'>
+      Text
+    </Text>
+  </ThemeProvider>
+</Playground>
