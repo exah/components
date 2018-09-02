@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import createContext from 'create-react-context'
+import React, { createContext, Component } from 'react'
 import { withTheme } from 'emotion-theming'
 
 const INITIAL_STATE = {

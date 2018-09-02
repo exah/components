@@ -113,7 +113,6 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "create-react-context": "^0.2.3",
     "emotion": "^9.2.8",
     "emotion-theming": "^9.2.6",
     "pss": "^2.3.0",
