@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { compose, setStatic } from 'recompose'
 import { withTheme } from 'emotion-theming'
+import { compose } from '../utils'
 import { withCurrentMedia } from '../current-media-provider'
 import { Grid, GridItem, GridContent } from '../grid'
 
@@ -74,10 +74,11 @@ class FeedContainer extends Component {
 }
 
 const Feed = compose(
-  setStatic('Item', GridContent),
   withCurrentMedia,
   withTheme
 )(FeedContainer)
+
+Feed.Item = GridContent
 
 export {
   Feed,
