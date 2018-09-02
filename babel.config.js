@@ -1,34 +1,21 @@
+const IS_DEV = process.env.NODE_ENV !== 'production'
+const IS_ESM = process.env.MODULES !== 'cjs'
+
 module.exports = {
-  env: {
-    modules: {
-      plugins: [
-        '@babel/plugin-transform-modules-commonjs',
-        [ 'emotion', { hoist: true } ]
-      ]
-    },
-    production: {
-      plugins: [
-        [ 'emotion', { hoist: true } ]
-      ]
-    },
-    development: {
-      plugins: [
-        [ 'emotion', { sourceMap: true } ]
-      ]
-    }
-  },
   presets: [
+    '@babel/preset-react',
     [
       '@babel/preset-env',
       {
-        modules: false,
+        modules: IS_ESM ? false : 'commonjs',
         loose: true
       }
     ]
   ],
   plugins: [
-    '@babel/plugin-transform-react-jsx',
     '@babel/plugin-proposal-class-properties',
-    [ '@babel/plugin-proposal-object-rest-spread', { 'useBuiltIns': true } ]
+    [ '@babel/plugin-transform-runtime', { useESModules: IS_ESM } ],
+    [ '@babel/plugin-proposal-object-rest-spread', { useBuiltIns: true, loose: true } ],
+    [ 'emotion', { sourceMap: IS_DEV, hoist: !IS_DEV } ]
   ]
 }
