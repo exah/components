@@ -49,3 +49,9 @@ export {
   CurrentMediaConsumer,
   withCurrentMedia
 } from './current-media-provider'
+
+export {
+  mapProps,
+  defaultProps,
+  withProps
+} from './utils'
