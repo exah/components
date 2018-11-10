@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { withTheme } from 'emotion-theming'
-import { compose } from '../utils'
+import { compose } from '@exah/utils'
 import { withCurrentMedia } from '../current-media-provider'
 import { Grid, GridItem, GridContent } from '../grid'
 
 const groupChildren = (children = [], length = 3) => {
-  const placeholder = Array.from({ length }).fill(true).map(() => [])
+  const placeholder = [ ...Array(length) ].map(() => [])
   return children.reduce((groups, value, index) => {
     const key = Math.floor(index % length)
 

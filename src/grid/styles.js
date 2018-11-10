@@ -1,4 +1,5 @@
-import { themePath, getSpace, sizeProp, createPropStyles, fallbackTo } from 'pss'
+import { themePath, getSpace, sizeProp, createPropStyles } from 'pss'
+import { fallbackTo } from '@exah/utils'
 
 const gridItem = createPropStyles({
   size: [

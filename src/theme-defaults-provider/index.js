@@ -1,5 +1,6 @@
 import { ThemeProvider, withTheme } from 'emotion-theming'
-import { compose, withProps } from '../utils'
+import { compose } from '@exah/utils'
+import { withProps } from '../utils'
 
 const ThemeDefaultsProvider = compose(
   withTheme,

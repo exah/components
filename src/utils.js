@@ -1,11 +1,5 @@
 import React from 'react'
-
-const isFn = (val) => typeof val === 'function'
-
-const identity = (val) => val
-
-const compose = (...fns) =>
-  fns.reduce((a, b) => (...args) => a(b(...args)), identity)
+import { isFn } from '@exah/utils'
 
 const mapProps = (fn) => (Comp) => (props) => (
   <Comp {...fn(props)} />
@@ -22,8 +16,6 @@ const withProps = (data) => mapProps((props) => ({
 }))
 
 export {
-  identity,
-  compose,
   mapProps,
   defaultProps,
   withProps
