@@ -30,13 +30,13 @@ test('FlexBox', (t) => {
 test('Layout', (t) => {
   const result = renderJSON(
     <Layout>
-      <Layout.Item comp='header'>
+      <Layout.Item as='header'>
         Header
       </Layout.Item>
-      <Layout.Content comp='main'>
+      <Layout.Content as='main'>
         Main
       </Layout.Content>
-      <Layout.Item comp='footer'>
+      <Layout.Item as='footer'>
         Footer
       </Layout.Item>
     </Layout>

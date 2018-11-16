@@ -7,17 +7,19 @@ order: -8
 import { Playground } from 'docz'
 import { Base } from './index'
 
-# Base, createBaseComponent
+# Base, createBase
 
 ## Description
 
 Component without any styles, that filters unkown props. Underlying component can be changed with `comp` prop. By default renders `<div>`.
+  
+For more info see [@exah/react-base-component](https://github.com/exah/react-base-component) docs.
 
 
 ## Usage
 
 ```js
-import { Base, createBaseComponent } from 'pss-components'
+import { Base, createBase } from 'pss-components'
 ```
 
 ```js
@@ -28,14 +30,14 @@ import { Base, createBaseComponent } from 'pss-components'
 
 
 ```js
-const Heading = createBaseComponent('h1')
+const Heading = createBase('h1')
 ```
 
 ```js
 <Heading>
   {/* children */}
 </Heading>
-<Heading comp='h2'>
+<Heading as='h2'>
   {/* children */}
 </Heading>
 ```
@@ -59,7 +61,7 @@ Filters any none-valid prop.
 Change underlying component with `comp` prop.
 
 <Playground>
-  <Base comp='span'>
+  <Base as='span'>
     Span
   </Base>
 </Playground>

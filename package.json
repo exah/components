@@ -118,6 +118,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7",
+    "@exah/react-base-component": "^1.0.1",
     "@exah/utils": "^1.5",
     "emotion": "^9.2",
     "emotion-theming": "^9.2",

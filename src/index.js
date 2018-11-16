@@ -1,6 +1,6 @@
 export {
   Base,
-  createBaseComponent
+  createBase
 } from './base'
 
 export {
