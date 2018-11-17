@@ -2,8 +2,13 @@ import { system } from 'pss'
 import styled from 'react-emotion'
 import { Base } from '../base'
 
-const Box = styled(Base)(system)
+const BaseBox = styled(Base)`
+  box-sizing: border-box;
+`
+
+const Box = styled(BaseBox)(system)
 
 export {
-  Box
+  Box,
+  BaseBox
 }
