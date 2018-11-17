@@ -1,8 +1,7 @@
-import { createTheme } from 'pss'
 import { createElement } from 'react'
 import { ThemeProvider } from 'emotion-theming'
 
-const theme = createTheme({
+const theme = {
   grid: 12,
   media: {
     M: '(max-width: 600px)',
@@ -49,7 +48,7 @@ const theme = createTheme({
       fontWeight: 'bold'
     }
   }
-})
+}
 
 export {
   theme

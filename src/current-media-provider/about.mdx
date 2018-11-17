@@ -23,9 +23,8 @@ import { CurrentMediaProvider, CurrentMediaConsumer, withCurrentMedia } from 'ps
 
 ```js
 import { ThemeProvider } from 'emotion-theming'
-import { createTheme } from 'pss'
 
-<ThemeProvider theme={createTheme({ media: { M: '(max-width: 600px)' } })}>
+<ThemeProvider theme={{ media: { M: '(max-width: 600px)' } }}>
   <CurrentMediaProvider>
     {/* components */}
   </CurrentMediaProvider>

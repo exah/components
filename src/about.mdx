@@ -41,10 +41,9 @@ const MyApp = () => (
 
 ```
 import React from 'react'
-import { createTheme } from 'pss'
 import { ThemeProvider } from 'emotion-theming'
 
-const myTheme = createTheme({
+const myTheme = {
   grid: 12,
   media: {
     M: '(max-width: 600px)',
@@ -73,7 +72,7 @@ const myTheme = createTheme({
       fg: '#fff'
     }
   }
-})
+}
 
 const MyApp = () => (
   <ThemeProvider theme={myTheme}>
