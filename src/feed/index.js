@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { withTheme } from 'emotion-theming'
 import { compose } from '@exah/utils'
 import { withCurrentMedia } from '../current-media-provider'
@@ -17,7 +17,7 @@ const groupChildren = (children = [], length = 3) => {
   }, placeholder)
 }
 
-class FeedContainer extends Component {
+class FeedContainer extends PureComponent {
   static defaultProps = {
     theme: { grid: 12 },
     spaceContent: true,
