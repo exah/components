@@ -29,7 +29,7 @@
     "watch": "run-p \"build:* -- -w\" \"test:unit -- -w\"",
     "prewatch": "npm run cleanup",
     "test": "run-s test:*",
-    "test:unit": "cross-env MODULES=cjs ava test",
+    "test:unit": "jest",
     "test:lint": "eslint src test",
     "deploy": "run-s deploy:*",
     "deploy:npm": "np --no-cleanup",
@@ -65,16 +65,13 @@
     "commitLimit": 10,
     "template": ".changelog.hbs"
   },
-  "ava": {
-    "verbose": true,
-    "require": [
-      "@babel/register"
+  "jest": {
+    "snapshotSerializers": [
+      "jest-emotion/serializer"
     ],
-    "babel": {
-      "testOptions": {
-        "extends": "./babel.config.js"
-      }
-    }
+    "testMatch": [
+      "**/test/*.js"
+    ]
   },
   "peerDependencies": {
     "prop-types": "^15.0.0",
@@ -91,8 +88,9 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "auto-changelog": "^1.10.1",
-    "ava": "^1.0.0-beta.8",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "babel-plugin-emotion": "^9.2.10",
     "cross-env": "5.2.0",
     "docz": "^0.12.12",

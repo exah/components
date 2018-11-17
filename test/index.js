@@ -1,21 +1,26 @@
-import test from 'ava'
+/* eslint-env jest */
+
+import expect from 'expect'
 import { ThemeProvider } from 'emotion-theming'
 import React, { Fragment } from 'react'
+import renderer from 'react-test-renderer'
 import { theme } from '../src/theme'
 import { Box, FlexBox, Layout, MediaObject, Grid } from '../src'
-import { renderJSON } from './_helpers'
 
-test('Box', (t) => {
+const renderJSON = (element) =>
+  renderer.create(element).toJSON()
+
+test('Box', () => {
   const result = renderJSON(
     <Box ht='300' mgx='auto' bg='#000' fg='#fff'>
       Box
     </Box>
   )
 
-  t.snapshot(result)
+  expect(result).toMatchSnapshot()
 })
 
-test('FlexBox', (t) => {
+test('FlexBox', () => {
   const result = renderJSON(
     <FlexBox tm wd={(1 / 2)} justify='space-between'>
       <FlexBox.Item>Item</FlexBox.Item>
@@ -24,10 +29,10 @@ test('FlexBox', (t) => {
     </FlexBox>
   )
 
-  t.snapshot(result)
+  expect(result).toMatchSnapshot()
 })
 
-test('Layout', (t) => {
+test('Layout', () => {
   const result = renderJSON(
     <Layout>
       <Layout.Item as='header'>
@@ -42,10 +47,10 @@ test('Layout', (t) => {
     </Layout>
   )
 
-  t.snapshot(result)
+  expect(result).toMatchSnapshot()
 })
 
-test('MediaObject', (t) => {
+test('MediaObject', () => {
   const result = renderJSON(
     <MediaObject>
       <MediaObject.Side>
@@ -57,7 +62,7 @@ test('MediaObject', (t) => {
     </MediaObject>
   )
 
-  t.snapshot(result)
+  expect(result).toMatchSnapshot()
 })
 
 const renderGridItems = (length, col) =>
@@ -71,7 +76,7 @@ const renderGridItems = (length, col) =>
       </Grid.Item>
     ))
 
-test('Grid → Basic', (t) => {
+test('Grid → Basic', () => {
   const result = renderJSON(
     <ThemeProvider theme={theme}>
       <Fragment>
@@ -82,10 +87,10 @@ test('Grid → Basic', (t) => {
     </ThemeProvider>
   )
 
-  t.snapshot(result)
+  expect(result).toMatchSnapshot()
 })
 
-test('Grid → Vertical and Horizontal Space', (t) => {
+test('Grid → Vertical and Horizontal Space', () => {
   const result = renderJSON(
     <ThemeProvider theme={theme}>
       <Grid space={2}>
@@ -99,5 +104,5 @@ test('Grid → Vertical and Horizontal Space', (t) => {
     </ThemeProvider>
   )
 
-  t.snapshot(result)
+  expect(result).toMatchSnapshot()
 })

@@ -1,0 +1,672 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box 1`] = `
+.emotion-0 {
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  background-color: #000;
+  color: #fff;
+}
+
+<div
+  className="emotion-0 emotion-1"
+>
+  Box
+</div>
+`;
+
+exports[`FlexBox 1`] = `
+.emotion-6 {
+  width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emotion-4 {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+<div
+  className="emotion-6 emotion-7"
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    Item
+  </div>
+  <div
+    className="emotion-2 emotion-1"
+  >
+    Item
+  </div>
+  <div
+    className="emotion-4 emotion-1"
+  >
+    Item
+  </div>
+</div>
+`;
+
+exports[`Grid → Basic 1`] = `
+.emotion-48 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  -webkit-flex-basis: 8.333333333333332%;
+  -ms-flex-preferred-size: 8.333333333333332%;
+  flex-basis: 8.333333333333332%;
+  max-width: 8.333333333333332%;
+}
+
+<div
+  className="emotion-48 emotion-49"
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Grid → Vertical and Horizontal Space 1`] = `
+.emotion-2 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  -webkit-flex-basis: 8.333333333333332%;
+  -ms-flex-preferred-size: 8.333333333333332%;
+  flex-basis: 8.333333333333332%;
+  max-width: 8.333333333333332%;
+}
+
+.emotion-112 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-top: -8px;
+  margin-bottom: -8px;
+}
+
+.emotion-113 + .emotion-112 {
+  margin-top: 8px;
+}
+
+.emotion-112 > .emotion-3 {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.emotion-50 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  -webkit-flex-basis: 16.666666666666664%;
+  -ms-flex-preferred-size: 16.666666666666664%;
+  flex-basis: 16.666666666666664%;
+  max-width: 16.666666666666664%;
+}
+
+.emotion-74 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  -webkit-flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.emotion-90 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  -webkit-flex-basis: 33.33333333333333%;
+  -ms-flex-preferred-size: 33.33333333333333%;
+  flex-basis: 33.33333333333333%;
+  max-width: 33.33333333333333%;
+}
+
+.emotion-102 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.emotion-110 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+<div
+  className="emotion-112 emotion-113"
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      1
+    </div>
+  </div>
+  <div
+    className="emotion-50 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      2
+    </div>
+  </div>
+  <div
+    className="emotion-50 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      2
+    </div>
+  </div>
+  <div
+    className="emotion-50 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      2
+    </div>
+  </div>
+  <div
+    className="emotion-50 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      2
+    </div>
+  </div>
+  <div
+    className="emotion-50 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      2
+    </div>
+  </div>
+  <div
+    className="emotion-50 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      2
+    </div>
+  </div>
+  <div
+    className="emotion-74 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      3
+    </div>
+  </div>
+  <div
+    className="emotion-74 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      3
+    </div>
+  </div>
+  <div
+    className="emotion-74 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      3
+    </div>
+  </div>
+  <div
+    className="emotion-74 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      3
+    </div>
+  </div>
+  <div
+    className="emotion-90 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      4
+    </div>
+  </div>
+  <div
+    className="emotion-90 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      4
+    </div>
+  </div>
+  <div
+    className="emotion-90 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      4
+    </div>
+  </div>
+  <div
+    className="emotion-102 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      6
+    </div>
+  </div>
+  <div
+    className="emotion-102 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      6
+    </div>
+  </div>
+  <div
+    className="emotion-110 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      12
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Layout 1`] = `
+.emotion-6 {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+}
+
+<div
+  className="emotion-6 emotion-7"
+>
+  <header
+    className="emotion-0 emotion-1"
+  >
+    Header
+  </header>
+  <main
+    className="emotion-2 emotion-3"
+  >
+    Main
+  </main>
+  <footer
+    className="emotion-0 emotion-1"
+  >
+    Footer
+  </footer>
+</div>
+`;
+
+exports[`MediaObject 1`] = `
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.emotion-0 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-0 img,
+.emotion-0 svg {
+  display: block;
+}
+
+.emotion-2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    Side
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    Content
+  </div>
+</div>
+`;
