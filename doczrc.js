@@ -5,5 +5,6 @@ export default {
   base: process.env.BASENAME || '/',
   hashRouter: true,
   propsParser: false,
-  wrapper: 'src/theme'
+  wrapper: 'src/theme',
+  themeConfig: { showPlaygroundEditor: true }
 }
