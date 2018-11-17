@@ -15,8 +15,13 @@ const withProps = (data) => mapProps((props) => ({
   ...isFn(data) ? data(props) : data
 }))
 
+const withDisplayName = (Comp, name) => Object.assign(Comp, {
+  displayName: name
+})
+
 export {
   mapProps,
   defaultProps,
-  withProps
+  withProps,
+  withDisplayName
 }

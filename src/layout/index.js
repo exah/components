@@ -1,21 +1,32 @@
-import React from 'react'
-import { flexItem } from 'pss'
 import styled from 'react-emotion'
-import { Box } from '../box'
+import { flexItem } from 'pss'
+import { defaultProps, withDisplayName } from '../utils'
 import { FlexBox, FlexBoxItem } from '../flex-box'
 
-const LayoutContent = styled(Box)(
-  { flexGrow: 1, flexShrink: 0, flexBasis: 'auto' },
-  flexItem
+const withLayoutProps = defaultProps({
+  column: true,
+  minHt: true
+})
+
+const withLayoutContentProps = defaultProps({
+  grow: 1,
+  shrink: 1,
+  basis: '100%'
+})
+
+const Layout = withDisplayName(
+  withLayoutProps(FlexBox),
+  'Layout'
 )
 
-const LayoutBody = styled(FlexBox)(
-  { display: 'flex', flexGrow: 1, flexShrink: 0, flexBasis: 'auto' },
-  flexItem
+const LayoutContent = withDisplayName(
+  withLayoutContentProps(FlexBoxItem),
+  'LayoutContent'
 )
 
-const Layout = (props) => (
-  <FlexBox column minHt {...props} />
+const LayoutBody = withDisplayName(
+  withLayoutContentProps(styled(FlexBox)(flexItem)),
+  'LayoutBody'
 )
 
 Object.assign(Layout, {
