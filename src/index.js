@@ -26,10 +26,10 @@ export {
 } from './layout'
 
 export {
-  Grid,
-  GridItem,
-  GridContent
-} from './grid'
+  FlexGrid,
+  FlexGridItem,
+  FlexGridContent
+} from './flex-grid'
 
 export {
   Feed,

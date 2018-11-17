@@ -1,0 +1,198 @@
+---
+name: FlexGrid
+route: /flex-grid
+order: -5
+---
+
+import { Playground } from 'docz'
+import { ThemeProvider } from 'emotion-theming'
+import { Box } from '../box'
+import { FlexGrid } from './index'
+
+
+# FlexGrid
+
+## Description
+
+FlexGrid component created with [`FlexBox`](#/flex-box).
+
+- Default to `12` columns. Must be defined in `theme.grid`
+- Item size can be set with `col` or `size` prop in `FlexGrid.Item` component
+- Space between items can be set with `space`, `spacex` and `spacey` props
+
+Components:
+
+- `FlexGrid` — Container component. Control space between items with props:
+  + Possible values can be set in `theme.space`, see [space docs](https://github.com/exah/pss/blob/master/docs/api.md#space)
+  + `space` — setting horizontal and vertical space
+  + `spacex` — setting horizontal space
+  + `spacey` — setting vertical space
+  + `spaceContent` — apply space to `FlexGrid.Content` instead of `FlexGrid.Item`
+- `FlexGrid.Item` — Item / column component, size can be set with props:
+  + `col` — Number in range `1...theme.grid`, result is precentage size. (`col / theme.grid`, i.e. `3 / 12 = 25%`)
+  + `size` — Number from `0...1`, result is percentage (`0.5` is `50%`)
+- `FlexGrid.Content` — Content wrapper same as [`Box`](#/box)
+
+## Usage
+
+```js
+import { FlexGrid } from 'pss-components'
+```
+
+```js
+<ThemeProvider theme={{ grid: 12 }}>
+  <FlexGrid space={2}>
+    <FlexGrid.Item col={6}>
+      <FlexGrid.Content>
+        Content
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={4}>
+      <FlexGrid.Content>
+        Content
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={2}>
+      <FlexGrid.Content>
+        Content
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+  </FlexGrid>
+</ThemeProvider>
+```
+
+
+## Examples
+
+### Basic
+
+<Playground>
+  <FlexGrid spacex={1}>
+    <FlexGrid.Item col={2}>
+      <FlexGrid.Content bg='gray.0'>
+        2
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={2}>
+      <FlexGrid.Content bg='gray.0'>
+        2
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={2}>
+      <FlexGrid.Content bg='gray.0'>
+        2
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={2}>
+      <FlexGrid.Content bg='gray.0'>
+        2
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={2}>
+      <FlexGrid.Content bg='gray.0'>
+        2
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={2}>
+      <FlexGrid.Content bg='gray.0'>
+        2
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+  </FlexGrid>
+</Playground>
+
+### Vertical and horizontal space between items
+
+<Playground>
+  <ThemeProvider theme={{ grid: 12 }}>
+    <FlexGrid space={1}>
+      <FlexGrid.Item col={1}>
+        <FlexGrid.Content bg='gray.0'>
+          1
+        </FlexGrid.Content>
+      </FlexGrid.Item>
+      <FlexGrid.Item col={2}>
+        <FlexGrid.Content bg='gray.0'>
+          2
+        </FlexGrid.Content>
+      </FlexGrid.Item>
+      <FlexGrid.Item col={3}>
+        <FlexGrid.Content bg='gray.0'>
+          3
+        </FlexGrid.Content>
+      </FlexGrid.Item>
+      <FlexGrid.Item col={6}>
+        <FlexGrid.Content bg='gray.0'>
+          6
+        </FlexGrid.Content>
+      </FlexGrid.Item>
+      <FlexGrid.Item col={12}>
+        <FlexGrid.Content bg='gray.0'>
+          12
+        </FlexGrid.Content>
+      </FlexGrid.Item>
+      <FlexGrid.Item col={4}>
+        <FlexGrid.Content bg='gray.0'>
+          4
+        </FlexGrid.Content>
+      </FlexGrid.Item>
+      <FlexGrid.Item col={4}>
+        <FlexGrid.Content bg='gray.0'>
+          4
+        </FlexGrid.Content>
+      </FlexGrid.Item>
+      <FlexGrid.Item col={4}>
+        <FlexGrid.Content bg='gray.0'>
+          4
+        </FlexGrid.Content>
+      </FlexGrid.Item>
+    </FlexGrid>
+  </ThemeProvider>
+</Playground>
+
+### Dynamic 'size' prop
+
+<Playground>
+  <FlexGrid space={1}>
+    <FlexGrid.Item size={1 / 12}>
+      <FlexGrid.Content bg='gray.0'>
+        1
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item size={2 / 12}>
+      <FlexGrid.Content bg='gray.0'>
+        2
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item size={3 / 12}>
+      <FlexGrid.Content bg='gray.0'>
+        3
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item size={6 / 12}>
+      <FlexGrid.Content bg='gray.0'>
+        6
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item size={12 / 12}>
+      <FlexGrid.Content bg='gray.0'>
+        12
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item size={4 / 12}>
+      <FlexGrid.Content bg='gray.0'>
+        4
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item size={4 / 12}>
+      <FlexGrid.Content bg='gray.0'>
+        4
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item size={4 / 12}>
+      <FlexGrid.Content bg='gray.0'>
+        4
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+  </FlexGrid>
+</Playground>

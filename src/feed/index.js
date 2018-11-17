@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import { withTheme } from 'emotion-theming'
 import { compose } from '@exah/utils'
 import { withCurrentMedia } from '../current-media-provider'
-import { Grid, GridItem, GridContent } from '../grid'
+import { FlexGrid, FlexGridItem, FlexGridContent } from '../flex-grid'
 
 const groupChildren = (children = [], length = 3) => {
   const placeholder = [ ...Array(length) ].map(() => [])
@@ -62,13 +62,13 @@ class FeedContainer extends PureComponent {
       : childrenArr
 
     return (
-      <Grid {...rest}>
+      <FlexGrid {...rest}>
         {childrenGroups.map((child, index) => (
-          <GridItem key={`feed-item-${index}`} {...rest}>
+          <FlexGridItem key={`feed-item-${index}`} {...rest}>
             {child}
-          </GridItem>
+          </FlexGridItem>
         ))}
-      </Grid>
+      </FlexGrid>
     )
   }
 }
@@ -78,9 +78,9 @@ const Feed = compose(
   withTheme
 )(FeedContainer)
 
-Feed.Item = GridContent
+Feed.Item = FlexGridContent
 
 export {
   Feed,
-  GridContent as FeedItem
+  FlexGridContent as FeedItem
 }

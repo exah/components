@@ -5,7 +5,14 @@ import { ThemeProvider } from 'emotion-theming'
 import React, { Fragment } from 'react'
 import renderer from 'react-test-renderer'
 import { theme } from '../src/theme'
-import { Box, FlexBox, Layout, MediaObject, Grid } from '../src'
+
+import {
+  Box,
+  FlexBox,
+  Layout,
+  MediaObject,
+  FlexGrid
+} from '../src'
 
 const renderJSON = (element) =>
   renderer.create(element).toJSON()
@@ -65,24 +72,24 @@ test('MediaObject', () => {
   expect(result).toMatchSnapshot()
 })
 
-const renderGridItems = (length, col) =>
+const renderFlexGridItems = (length, col) =>
   Array.from({ length })
     .fill(true)
     .map((_, index) => (
-      <Grid.Item col={col} key={index}>
-        <Grid.Content>
+      <FlexGrid.Item col={col} key={index}>
+        <FlexGrid.Content>
           {col}
-        </Grid.Content>
-      </Grid.Item>
+        </FlexGrid.Content>
+      </FlexGrid.Item>
     ))
 
-test('Grid → Basic', () => {
+test('FlexGrid / Basic', () => {
   const result = renderJSON(
     <ThemeProvider theme={theme}>
       <Fragment>
-        <Grid>
-          {renderGridItems(12, 1)}
-        </Grid>
+        <FlexGrid>
+          {renderFlexGridItems(12, 1)}
+        </FlexGrid>
       </Fragment>
     </ThemeProvider>
   )
@@ -90,17 +97,17 @@ test('Grid → Basic', () => {
   expect(result).toMatchSnapshot()
 })
 
-test('Grid → Vertical and Horizontal Space', () => {
+test('FlexGrid / Vertical and Horizontal Space', () => {
   const result = renderJSON(
     <ThemeProvider theme={theme}>
-      <Grid space={2}>
-        {renderGridItems(12, 1)}
-        {renderGridItems(6, 2)}
-        {renderGridItems(4, 3)}
-        {renderGridItems(3, 4)}
-        {renderGridItems(2, 6)}
-        {renderGridItems(1, 12)}
-      </Grid>
+      <FlexGrid space={2}>
+        {renderFlexGridItems(12, 1)}
+        {renderFlexGridItems(6, 2)}
+        {renderFlexGridItems(4, 3)}
+        {renderFlexGridItems(3, 4)}
+        {renderFlexGridItems(2, 6)}
+        {renderFlexGridItems(1, 12)}
+      </FlexGrid>
     </ThemeProvider>
   )
 
