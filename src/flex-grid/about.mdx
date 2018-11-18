@@ -14,24 +14,31 @@ import { FlexGrid } from './index'
 
 ## Description
 
-FlexGrid component created with [`FlexBox`](#/flex-box).
+Grid component based on [`FlexBox`](#/flex-box).
 
-- Default to `12` columns. Must be defined in `theme.grid`
-- Item size can be set with `col` or `size` prop in `FlexGrid.Item` component
-- Space between items can be set with `space`, `spacex` and `spacey` props
+- Default to `12` columns. Can be defined in `theme.grid`
+- Item size conrolled with `col` or `size` prop in `FlexGrid.Item` component
+- Space between items conrolled with `space`, `spacex` and `spacey` props
 
-Components:
+### Components:
 
-- `FlexGrid` — Container component. Control space between items with props:
-  + Possible values can be set in `theme.space`, see [space docs](https://github.com/exah/pss/blob/master/docs/api.md#space)
-  + `space` — setting horizontal and vertical space
-  + `spacex` — setting horizontal space
-  + `spacey` — setting vertical space
-  + `spaceContent` — apply space to `FlexGrid.Content` instead of `FlexGrid.Item`
-- `FlexGrid.Item` — Item / column component, size can be set with props:
-  + `col` — Number in range `1...theme.grid`, result is precentage size. (`col / theme.grid`, i.e. `3 / 12 = 25%`)
-  + `size` — Number from `0...1`, result is percentage (`0.5` is `50%`)
-- `FlexGrid.Content` — Content wrapper same as [`Box`](#/box)
+
+#### `FlexGrid` — Container component. Control space between items with props:
+
+- Possible values in `theme.space`. See [space docs](https://github.com/exah/pss/blob/master/docs/api.md#space)
+- `space` — horizontal and vertical space
+- `spacex` — horizontal space
+- `spacey` — vertical space
+- `spaceContent` — apply space to `FlexGrid.Content` instead of `FlexGrid.Item`
+
+#### `FlexGrid.Item` — Item / column component, size can be set with props:
+
+- `col` — Number in range `1...theme.grid`
+- `size` — Number in range `0...1`, result is percentage (`0.5` is `50%`)
+- `offset` — Number in range `1...theme.grid` — move item by number of columns
+
+
+#### `FlexGrid.Content` — Content wrapper same as [`Box`](#/box)
 
 ## Usage
 
@@ -150,7 +157,34 @@ import { FlexGrid } from 'pss-components'
   </ThemeProvider>
 </Playground>
 
-### Dynamic 'size' prop
+### Offset items
+
+<Playground>
+  <FlexGrid space={1}>
+    <FlexGrid.Item col={3} mgr='75%'>
+      <FlexGrid.Content bg='gray.0'>
+        3
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={3} offset={3}>
+      <FlexGrid.Content bg='gray.0'>
+        3
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={3} offset={6}>
+      <FlexGrid.Content bg='gray.0'>
+        3
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+    <FlexGrid.Item col={3} offset={9}>
+      <FlexGrid.Content bg='gray.0'>
+        3
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+  </FlexGrid>
+</Playground>
+
+### Dynamic size
 
 <Playground>
   <FlexGrid space={1}>

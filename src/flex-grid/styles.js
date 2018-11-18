@@ -1,12 +1,34 @@
 import { themePath, getSpace, sizeProp, createPropStyles } from 'pss'
-import { fallbackTo } from '@exah/utils'
+import { isNum, fallbackTo } from '@exah/utils'
+
+function getSize (value, props) {
+  const grid = themePath('grid', 12)(props)
+  const cols = Number(fallbackTo(value, 1))
+
+  if (!isNum(cols) && !isNum(grid)) {
+    return null
+  }
+
+  return ((cols / grid) * 100) + '%'
+}
 
 const gridItem = createPropStyles({
   size: [
     sizeProp('flexBasis', 'auto'),
     sizeProp('maxWidth', '100%')
   ],
-  col (value, props, mediaKey) {
+  offset (value, props) {
+    const size = getSize(value, props)
+
+    if (size == null) {
+      return {}
+    }
+
+    return {
+      marginLeft: size
+    }
+  },
+  col (value, props) {
     if (value === 'auto' || value === true) {
       return {
         flexGrow: 1,
@@ -16,13 +38,11 @@ const gridItem = createPropStyles({
       }
     }
 
-    if (typeof value !== 'number') {
+    const size = getSize(value, props)
+
+    if (size == null) {
       return {}
     }
-
-    const grid = themePath('grid', 12)(props.theme)
-    const cols = fallbackTo(value, 1)
-    const size = ((cols / grid) * 100) + '%'
 
     return {
       flexBasis: size,
