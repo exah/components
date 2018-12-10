@@ -13,7 +13,7 @@ import { Text } from './index'
 
 ## Description
 
-Text component, that renders as `<div>` with [typography prop styles](https://github.com/exah/pss/blob/master/docs/api.md#typography) and [base prop styles](https://github.com/exah/pss/blob/master/docs/api.md#base). Component inside can be changed with `comp` prop.
+Text component, that renders as `<div>` with [typography prop styles](https://github.com/exah/pss/blob/master/docs/api.md#typography) and [base prop styles](https://github.com/exah/pss/blob/master/docs/api.md#base). Component inside can be changed with `as` prop.
 
 
 ## Usage
@@ -36,7 +36,7 @@ See [textStyle](https://github.com/exah/pss/blob/master/docs/api.md#textstyle) d
 
 ```js
 const theme = {
-  font: {
+  fontFamily: {
     default: 'Helvetica, system-ui, sans-serif',
     serif: 'Times New Roman, serif'
   },
@@ -60,7 +60,7 @@ const theme = {
 ## Examples
 
 <Playground>
-  <Text as='p' align='center'>
+  <Text as='p' textAlign='center'>
     Text
   </Text>
 </Playground>
@@ -68,7 +68,7 @@ const theme = {
 
 <Playground>
   <ThemeProvider theme={theme}>
-    <Text as='h1' textStyle='heading' align='center'>
+    <Text as='h1' fontFamily='serif' textStyle='heading' textAlign='center'>
       Text
     </Text>
   </ThemeProvider>

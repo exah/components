@@ -43,9 +43,9 @@ exports[`FlexBox 1`] = `
 
 .emotion-4 {
   box-sizing: border-box;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
+  -webkit-flex: 0 1;
+  -ms-flex: 0 1;
+  flex: 0 1;
 }
 
 <div
@@ -619,16 +619,9 @@ exports[`Layout 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
 }
 
 <div

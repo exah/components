@@ -1,12 +1,11 @@
 import React, { PureComponent } from 'react'
 import { withTheme } from 'emotion-theming'
-import { compose } from '@exah/utils'
+import { compose, fallbackTo, isObj } from '@exah/utils'
 import { withCurrentMedia } from '../current-media-provider'
 import { FlexGrid, FlexGridItem, FlexGridContent } from '../flex-grid'
 
-const groupChildren = (children = [], length = 3) => {
-  const placeholder = [ ...Array(length) ].map(() => [])
-  return children.reduce((groups, value, index) => {
+const groupChildren = (children = [], length = 3) =>
+  children.reduce((groups, value, index) => {
     const key = Math.floor(index % length)
 
     if (groups[key]) {
@@ -14,8 +13,11 @@ const groupChildren = (children = [], length = 3) => {
     }
 
     return groups
-  }, placeholder)
-}
+  }, Array.from({ length }, () => []))
+
+const getCol = (props, mediaKey) => isObj(props.col)
+  ? fallbackTo(props.col[mediaKey], props.col.all, props.theme.grid)
+  : (props.col || props.theme.grid)
 
 class FeedContainer extends PureComponent {
   static defaultProps = {
@@ -30,7 +32,7 @@ class FeedContainer extends PureComponent {
       return null
     }
 
-    const col = props['col' + mediaKey] || props.col
+    const col = getCol(props, mediaKey)
     const size = (props.theme.grid / col)
 
     if (size === state.size) {
@@ -38,6 +40,7 @@ class FeedContainer extends PureComponent {
     }
 
     return {
+      col,
       size,
       mediaKey
     }
@@ -45,6 +48,7 @@ class FeedContainer extends PureComponent {
   state = {
     isMounted: false,
     size: null,
+    col: getCol(this.props),
     mediaKey: ''
   }
   componentDidMount () {
@@ -54,7 +58,7 @@ class FeedContainer extends PureComponent {
   }
   render () {
     const { children, ...rest } = this.props
-    const { isMounted, size } = this.state
+    const { isMounted, col, size } = this.state
 
     const childrenArr = React.Children.toArray(children)
     const childrenGroups = isMounted && size !== 1
@@ -64,7 +68,7 @@ class FeedContainer extends PureComponent {
     return (
       <FlexGrid {...rest}>
         {childrenGroups.map((child, index) => (
-          <FlexGridItem key={`feed-item-${index}`} {...rest}>
+          <FlexGridItem key={`feed-item-${index}`} {...rest} col={col}>
             {child}
           </FlexGridItem>
         ))}

@@ -4,14 +4,12 @@ import { defaultProps, withDisplayName } from '../utils'
 import { FlexBox, FlexBoxItem } from '../flex-box'
 
 const withLayoutProps = defaultProps({
-  column: true,
-  minHt: true
+  flexDirection: 'column',
+  minHeight: '100%'
 })
 
 const withLayoutContentProps = defaultProps({
-  grow: 1,
-  shrink: 1,
-  basis: '100%'
+  flex: '1 1 100%'
 })
 
 const Layout = withDisplayName(
