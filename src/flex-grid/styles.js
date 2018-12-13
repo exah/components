@@ -61,11 +61,11 @@ const gridItem = createPropStyles({
 const getItemsSpaceStyles = (axis, {
   childSelector,
   rowSelector
-}) => (step, props, mediaKey = 'default') => {
+}) => (step, props, mediaKey) => {
   let spaces = themePath([ 'space' ], [])(props)
 
   if (!isArr(spaces)) {
-    spaces = path(mediaKey, path('default')(spaces))(spaces)
+    spaces = path(mediaKey, path('all')(spaces))(spaces)
   }
 
   const value = path(step, 0)(spaces)

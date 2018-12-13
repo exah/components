@@ -119,10 +119,10 @@
   "dependencies": {
     "@babel/runtime": "7.2.0",
     "@exah/react-base-component": "^1.3.0",
-    "@exah/utils": "^1.9.0",
+    "@exah/utils": "^2.0.0",
     "emotion": "^9.2",
     "emotion-theming": "^9.2",
-    "pss": "^3.0.0-1",
+    "pss": "^3.0.0-3",
     "react-emotion": "^9.2"
   }
 }
