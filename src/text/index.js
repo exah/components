@@ -1,8 +1,16 @@
-import { base, typography } from 'pss'
 import styled from 'react-emotion'
-import { Base } from '../base'
+import { base, typography } from 'pss'
+import { BorderBox } from '../Box'
 
-const Text = styled(Base)(base, typography)
+const Text = styled(BorderBox)(base, typography)
+
+Text.displayName = 'Text'
+
+Text.propTypes = {
+  ...BorderBox.propTypes,
+  ...base.propTypes,
+  ...typography.propTypes
+}
 
 export {
   Text

@@ -1,33 +1,62 @@
 import { system, flex, flexItem } from 'pss'
 import styled from 'react-emotion'
-import { BaseBox } from '../box'
+import { BorderBox } from '../box'
 import { gridItem, gridRow } from './styles'
 
-const FlexGridContent = styled(BaseBox)(system)
+const FlexGridContent = styled(BorderBox)(
+  system
+)
 
-const FlexGridItem = styled(BaseBox)(
-  { flexGrow: 0, flexShrink: 0, minHeight: 1 },
+const FlexGridItem = styled(BorderBox)(
+  { flexGrow: 0, flexShrink: 0, minHeight: 1, minWidth: 0 },
   system,
   flexItem,
   gridItem
 )
 
-const FlexGrid = styled(BaseBox)(
+const flexGridStyle = gridRow({
+  rowSelector: () => `${FlexGrid} + &`,
+  childSelector: (props) => props.spaceContent
+    ? `& > ${FlexGridItem} > ${FlexGridContent}`
+    : `& > ${FlexGridItem}`
+})
+
+const FlexGrid = styled(BorderBox)(
   { display: 'flex', flexWrap: 'wrap' },
-  gridRow({
-    rowSelector: () => `${FlexGrid} + &`,
-    childSelector: (props) => props.spaceContent
-      ? `& > ${FlexGridItem} > ${FlexGridContent}`
-      : `& > ${FlexGridItem}`
-  }),
   system,
-  flex
+  flex,
+  flexGridStyle
 )
 
-Object.assign(FlexGrid, {
-  Item: FlexGridItem,
-  Content: FlexGridContent
-})
+FlexGrid.displayName = 'FlexGrid'
+
+FlexGrid.propTypes = {
+  ...system.propTypes,
+  ...flex.propTypes,
+  ...flexGridStyle.propTypes
+}
+
+FlexGrid.Item = FlexGridItem
+FlexGrid.Item.displayName = 'FlexGrid.Item'
+
+FlexGrid.Item.propTypes = {
+  ...system.propTypes,
+  ...flexItem.propTypes,
+  ...gridItem.propTypes
+}
+
+FlexGrid.Item.propTypes = {
+  ...system.propTypes,
+  ...flexItem.propTypes,
+  ...gridItem.propTypes
+}
+
+FlexGrid.Content = FlexGridContent
+FlexGrid.Content.displayName = 'FlexGrid.Content'
+
+FlexGrid.Content.propTypes = {
+  ...system.propTypes
+}
 
 export {
   FlexGrid,

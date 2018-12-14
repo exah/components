@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React, { createContext, Component } from 'react'
 import { withTheme } from 'emotion-theming'
 
@@ -9,7 +10,12 @@ const { Provider, Consumer } = createContext(INITIAL_STATE)
 
 class CurrentMediaProvider extends Component {
   static defaultProps = {
-    theme: {}
+    theme: {},
+    media: null
+  }
+  static propTypes = {
+    theme: PropTypes.object.isRequired,
+    media: PropTypes.object
   }
   state = INITIAL_STATE
   listeners = []

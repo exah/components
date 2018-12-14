@@ -42,7 +42,7 @@ const MediaComponent = withCurrentMedia(Component)
 With values from `media` prop:
 
 <Playground>
-  <CurrentMediaProvider media={{ Mobile: '(max-width: 600px)', Desktop: '(min-width: 601px)' }}>
+  <CurrentMediaProvider media={{ mobile: '(max-width: 600px)', desktop: '(min-width: 601px)' }}>
     <CurrentMediaConsumer>
       {(state) => (
         <Box>
