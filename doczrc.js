@@ -4,7 +4,7 @@ export default {
   dest: './dist',
   base: process.env.BASENAME || '/',
   hashRouter: true,
-  propsParser: false,
+  propsParser: true,
   wrapper: 'src/theme',
   themeConfig: { showPlaygroundEditor: true }
 }

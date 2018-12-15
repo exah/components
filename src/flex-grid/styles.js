@@ -5,7 +5,7 @@ import {
   rule,
   boolValue,
   sizeValue,
-  createPropStyles
+  createStyles
 } from 'pss'
 
 function getSize (value, props) {
@@ -19,7 +19,7 @@ function getSize (value, props) {
   return ((cols / grid) * 100) + '%'
 }
 
-const gridItem = createPropStyles({
+const gridItem = createStyles({
   size: [
     rule('flexBasis', sizeValue(boolValue('auto'))),
     rule('maxWidth', sizeValue(boolValue('100%')))
@@ -96,7 +96,7 @@ const getItemsSpaceStyles = (axis, {
   }
 }
 
-const gridRow = (selectors) => createPropStyles({
+const gridRow = (selectors) => createStyles({
   space: getItemsSpaceStyles({ x: true, y: true }, selectors),
   spacex: getItemsSpaceStyles({ x: true }, selectors),
   spacey: getItemsSpaceStyles({ y: true }, selectors)
