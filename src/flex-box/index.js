@@ -1,5 +1,5 @@
 import { flex, flexItem } from 'pss'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { Box } from '../box'
 
 const FlexBox = styled(Box)({ display: 'flex' }, flex, flexItem)

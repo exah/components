@@ -1,5 +1,5 @@
 import { system, flex, flexItem } from 'pss'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { BorderBox } from '../box'
 import { gridItem, gridRow } from './styles'
 

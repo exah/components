@@ -19,7 +19,7 @@ const renderJSON = (element) =>
 
 test('Box', () => {
   const result = renderJSON(
-    <Box height='300' mgx='auto' bg='#000' fg='#fff'>
+    <Box height='300px' mgx='auto' bg='#000' fg='#fff'>
       Box
     </Box>
   )

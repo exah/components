@@ -1,6 +1,6 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { base, typography } from 'pss'
-import { BorderBox } from '../Box'
+import { BorderBox } from '../box'
 
 const Text = styled(BorderBox)(base, typography)
 
