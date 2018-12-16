@@ -8768,10 +8768,10 @@ psl@^1.1.24, psl@^1.1.28:
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.31.tgz#e9aa86d0101b5b105cbe93ac6b784cd547276184"
   integrity sha512-/6pt4+C+T+wZUieKR620OpzN/LlnNKuWjy1iFLQ/UG35JqHlR/89MP1d96dUfkf6Dne3TuLQzOYEYshJ+Hx8mw==
 
-pss@^3.0.0-6:
-  version "3.0.0-6"
-  resolved "https://registry.yarnpkg.com/pss/-/pss-3.0.0-6.tgz#b5304a86131eb818b9aed39247b7ee021325f74c"
-  integrity sha512-hHKpQYL143j1k3OMIbhZTbLDgyUlvltGjk3M5VLnRnSiHn8vjPctIZf5+TeNolsfcg6QGvl0uQerTpmCZ79DyA==
+pss@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/pss/-/pss-3.0.1.tgz#dcf171304d0b163a80c44ff76450da20aa9cbc9c"
+  integrity sha512-go39tpJy3dONz3+6iYoFtTNhMHdoGdGyWQVG+5ctaJvpvwxO037CWdMgXUlBNmiHA7HydCrXEuIPKbvOhXaZbA==
   dependencies:
     "@exah/utils" "^2.0.0"
     prop-types "^15.6.2"
