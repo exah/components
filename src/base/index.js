@@ -1,4 +1,4 @@
-import Base, { createBase } from '@exah/react-base-component'
+import Base, { createBase } from 'react-styled-base'
 
 export {
   Base,

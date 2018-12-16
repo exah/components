@@ -122,9 +122,9 @@
     "@babel/runtime": "7.2.0",
     "@emotion/core": "^10.0.5",
     "@emotion/styled": "^10.0.5",
-    "@exah/react-base-component": "^1.3.0",
     "@exah/utils": "^2.0.0",
     "emotion-theming": "^10.0.5",
-    "pss": "^3.0.0-5"
+    "pss": "^3.0.0-5",
+    "react-styled-base": "^2.0.0"
   }
 }

@@ -756,7 +756,7 @@
     pirates "^4.0.0"
     source-map-support "^0.5.9"
 
-"@babel/runtime@7", "@babel/runtime@7.2.0", "@babel/runtime@^7.0.0", "@babel/runtime@^7.2.0":
+"@babel/runtime@7.2.0", "@babel/runtime@^7.0.0", "@babel/runtime@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.2.0.tgz#b03e42eeddf5898e00646e4c840fa07ba8dcad7f"
   integrity sha512-oouEibCbHMVdZSDlJBO6bZmID/zA/G/Qx3H1d3rSNPTD+L8UNKvCat7aKWSJ74zYbm5zWGh0GQN0hKj8zYFTCg==
@@ -896,19 +896,6 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
-
-"@exah/react-base-component@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@exah/react-base-component/-/react-base-component-1.3.0.tgz#e74e8f68a7e43cb04586d3878aee94269970adcc"
-  integrity sha512-QBGbNudAN6ISt7/7nCuGCGigx2LCjN5zGqRNLG3/UNFtbmMD9s4ZId6VnzytpkABpf2wMjHszcCI+BCLbWMizw==
-  dependencies:
-    "@babel/runtime" "7"
-    "@exah/utils" "^1.6.0"
-
-"@exah/utils@^1.6.0":
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/@exah/utils/-/utils-1.9.0.tgz#8a15a15c91d34091498316d553e1028bd6c06237"
-  integrity sha512-nHSLMDqse2n/dMM/rAffZcTv7ZcFayvNOpAyT+pUlPP5N88CBckKS9WCIhg8AnM+GoNoo9dL62Z9O9w2xaTjpA==
 
 "@exah/utils@^2.0.0":
   version "2.0.0"
@@ -9177,6 +9164,15 @@ react-sizes@^1.0.4:
   dependencies:
     lodash.throttle "^4.1.1"
     prop-types "^15.6.0"
+
+react-styled-base@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-styled-base/-/react-styled-base-2.0.0.tgz#594fe288f67f0484894790e263cafa0c824445d3"
+  integrity sha512-yGSfgc+/K0597WMUBkWzIdAo8tF8eZDglJcYfBvKnJC/QxRl8sgtlxsEd+w7xgg5Ig+atjTwLd57pewkPzaa0w==
+  dependencies:
+    "@babel/runtime" "7.2.0"
+    "@exah/utils" "^2.0.0"
+    prop-types "^15.6.2"
 
 react-test-renderer@^16.6.3:
   version "16.6.3"

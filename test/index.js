@@ -1,9 +1,8 @@
 /* eslint-env jest */
 
-import expect from 'expect'
+import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'emotion-theming'
 import React, { Fragment } from 'react'
-import renderer from 'react-test-renderer'
 import { theme } from '../src/theme'
 
 import {
