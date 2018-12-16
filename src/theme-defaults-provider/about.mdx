@@ -24,12 +24,12 @@ import { ThemeDefaultsProvider } from 'pss-components'
 ## Examples
 
 <Playground>
-  <Box bg='gray.0' pd>
-    <Box tm ratio={16 / 9} pd mgb>
+  <Box>
+    <Box tm={true} ratio={16 / 9} pd={1} mgb={1}>
       Content
     </Box>
     <ThemeDefaultsProvider palette='inverted'>
-      <Box tm ratio={16 / 9} pd>
+      <Box tm={true} ratio={16 / 9} pd={1}>
         Content
       </Box>
     </ThemeDefaultsProvider>
