@@ -4,8 +4,9 @@ route: /text
 order: -7
 ---
 
-import { Playground, PropsTable } from 'docz'
+import { Playground } from 'docz'
 import { ThemeProvider } from 'emotion-theming'
+import { PropsTable } from '../props-table'
 import { theme } from '../theme'
 import { Text } from './index'
 
@@ -14,8 +15,6 @@ import { Text } from './index'
 ## Description
 
 Text component, that renders as `<div>` with [typography prop styles](https://github.com/exah/pss/blob/master/docs/api.md#typography) and [base prop styles](https://github.com/exah/pss/blob/master/docs/api.md#base). Component inside can be changed with `as` prop.
-
-<PropsTable of={Text} />
 
 ## Usage
 
@@ -26,7 +25,7 @@ import { Text } from 'pss-components'
 ```
 
 ```js
-<Text as='p' align='center'>
+<Text as='p' textAlign='center'>
   Text
 </Text>
 ```
@@ -74,3 +73,7 @@ const theme = {
     </Text>
   </ThemeProvider>
 </Playground>
+
+## Props
+
+<PropsTable of={Text} />

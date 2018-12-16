@@ -31,30 +31,27 @@ const FlexGrid = styled(BorderBox)(
 FlexGrid.displayName = 'FlexGrid'
 
 FlexGrid.propTypes = {
-  ...system.propTypes,
+  ...BorderBox.propTypes,
+  ...flexGridStyle.propTypes,
   ...flex.propTypes,
-  ...flexGridStyle.propTypes
+  ...system.propTypes
 }
 
 FlexGrid.Item = FlexGridItem
 FlexGrid.Item.displayName = 'FlexGrid.Item'
 
 FlexGrid.Item.propTypes = {
-  ...system.propTypes,
+  ...BorderBox.propTypes,
+  ...gridItem.propTypes,
   ...flexItem.propTypes,
-  ...gridItem.propTypes
-}
-
-FlexGrid.Item.propTypes = {
-  ...system.propTypes,
-  ...flexItem.propTypes,
-  ...gridItem.propTypes
+  ...system.propTypes
 }
 
 FlexGrid.Content = FlexGridContent
 FlexGrid.Content.displayName = 'FlexGrid.Content'
 
 FlexGrid.Content.propTypes = {
+  ...BorderBox.propTypes,
   ...system.propTypes
 }
 

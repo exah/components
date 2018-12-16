@@ -7,6 +7,7 @@ order: -6
 import { Playground } from 'docz'
 import { ThemeProvider } from 'emotion-theming'
 import { CurrentMediaProvider } from '../current-media-provider'
+import { PropsTable } from '../props-table'
 import { Box } from '../box'
 import { Feed } from './index'
 
@@ -81,3 +82,13 @@ import { Feed } from 'pss-components'
     </CurrentMediaProvider>
   </ThemeProvider>
 </Playground>
+
+## Props
+
+### Feed
+
+<PropsTable of={Feed} />
+
+### Feed.Item
+
+<PropsTable of={Feed.Item} />
