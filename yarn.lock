@@ -9165,10 +9165,10 @@ react-sizes@^1.0.4:
     lodash.throttle "^4.1.1"
     prop-types "^15.6.0"
 
-react-styled-base@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-styled-base/-/react-styled-base-2.0.0.tgz#594fe288f67f0484894790e263cafa0c824445d3"
-  integrity sha512-yGSfgc+/K0597WMUBkWzIdAo8tF8eZDglJcYfBvKnJC/QxRl8sgtlxsEd+w7xgg5Ig+atjTwLd57pewkPzaa0w==
+react-styled-base@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-styled-base/-/react-styled-base-2.0.1.tgz#8c9dfc0ca20515e2d693cee048d79c5b4880b43d"
+  integrity sha512-3YyvNW75Q9tcWVwRECiwXrGBrGkWhaiVLPzaTqCF9FQMkq4Kmi87gFzOfpK7dXTtvUwPLa26DQszt03pM0oqXw==
   dependencies:
     "@babel/runtime" "7.2.0"
     "@exah/utils" "^2.0.0"
