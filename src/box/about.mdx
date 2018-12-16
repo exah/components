@@ -32,13 +32,23 @@ import { Box } from 'pss-components'
 ## Examples
 
 <Playground>
-  <Box bg='gray.0'>
+  <Box bg='gray'>
     Box
   </Box>
 </Playground>
 
 <Playground>
-  <Box bg='gray.0' ratio={16 / 9}>
+  <Box bg='gray' mgb={1}>
+    Box
+  </Box>
+  <Box bg='gray'>
+    Box
+  </Box>
+</Playground>
+
+
+<Playground>
+  <Box bg='gray' ratio={{ all: 16 / 9, sm: 1 }}>
     Box
   </Box>
 </Playground>
