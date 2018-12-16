@@ -63,25 +63,25 @@ import { Layout } from 'pss-components'
 ### All components
 
 <Playground style={{ height: '500px' }}>
-  <Layout bg='gray.0' pd>
-    <Layout.Item bg='gray.1' pd mgb>
+  <Layout outline='1px solid' pd>
+    <Layout.Item outline='debug' pd mgb>
       Header
     </Layout.Item>
-    <Layout.Item bg='gray.1' pd mgb>
+    <Layout.Item outline='debug' pd mgb>
       Some / Breadcrumbs / Path
     </Layout.Item>
-    <Layout.Body bg='gray.1' pd mgb>
-      <Layout.Content bg='gray.2' pd mgx>
+    <Layout.Body outline='debug' pd mgb>
+      <Layout.Content outline='debug' pd mgx>
         Content
       </Layout.Content>
-      <Layout.Item bg='gray.2' pd wd={( 1 / 6 )} order={-1}>
+      <Layout.Item outline='debug' pd width={( 1 / 6 )} order={-1}>
         Left Nav
       </Layout.Item>
-      <Layout.Item bg='gray.2' pd wd={( 1 / 6 )}>
+      <Layout.Item outline='debug' pd width={( 1 / 6 )}>
         Right Nav
       </Layout.Item>
     </Layout.Body>
-    <Layout.Item bg='gray.1' pd>
+    <Layout.Item outline='debug' pd>
       Footer
     </Layout.Item>
   </Layout>

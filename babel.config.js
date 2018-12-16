@@ -17,6 +17,6 @@ module.exports = {
     '@babel/plugin-proposal-class-properties',
     [ '@babel/plugin-transform-runtime', { useESModules: IS_ESM } ],
     [ '@babel/plugin-proposal-object-rest-spread', { useBuiltIns: true, loose: true } ],
-    [ 'emotion', { sourceMap: IS_DEV, hoist: !IS_DEV } ]
+    [ 'emotion', { sourceMap: IS_DEV } ]
   ]
 }

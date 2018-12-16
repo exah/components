@@ -4,13 +4,11 @@ import { ThemeProvider } from 'emotion-theming'
 const theme = {
   grid: 12,
   media: {
-    M: '(max-width: 600px)',
-    T: '(min-width: 601px) and (max-width: 1024px)',
-    D: '(min-width: 1025px)'
+    sm: '(max-width: 600px)',
+    md: '(min-width: 601px) and (max-width: 1024px)',
+    lg: '(min-width: 1025px)'
   },
-  space: {
-    default: [ 0, 8, 16, 32, 64 ]
-  },
+  space: [ 0, 8, 16, 32, 64 ],
   color: {
     black: '#000',
     gray: [ '#eee', '#ddd', '#ccc', '#bbb', '#aaa' ],
@@ -30,7 +28,7 @@ const theme = {
       fg: '#fff'
     }
   },
-  font: {
+  fontFamily: {
     default: 'Helvetica, system-ui, sans-serif',
     serif: 'Times New Roman, serif'
   },

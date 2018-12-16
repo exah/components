@@ -6,6 +6,7 @@ order: -3
 
 import { Playground } from 'docz'
 import { Info as InfoIcon } from 'react-feather'
+import { Image } from '../image'
 import { MediaObject } from './index'
 
 # MediaObject
@@ -43,11 +44,11 @@ import { MediaObject } from 'pss-components'
 ### Basic
 
 <Playground>
-  <MediaObject bg='gray.0' pd>
-    <MediaObject.Side bg='gray.1' pd mgr>
+  <MediaObject outline='debug' pd={1}>
+    <MediaObject.Side outline='debug' pd={1} mgr={1}>
       Side
     </MediaObject.Side>
-    <MediaObject.Content bg='gray.1' pd>
+    <MediaObject.Content outline='debug' pd={1}>
       Content
     </MediaObject.Content>
   </MediaObject>
@@ -56,9 +57,9 @@ import { MediaObject } from 'pss-components'
 ### Center items with 'flex' props
 
 <Playground>
-  <MediaObject align='center'>
+  <MediaObject alignItems='center'>
     <MediaObject.Side mgr>
-      <InfoIcon />
+      <InfoIcon style={{ display: 'block' }} />
     </MediaObject.Side>
     <MediaObject.Content>
       <div>Centered icon and content</div>
@@ -69,9 +70,9 @@ import { MediaObject } from 'pss-components'
 ### Comment box
 
 <Playground>
-  <MediaObject bg='gray.0' pd={2}>
+  <MediaObject outline='1px solid' pd={2}>
     <MediaObject.Side mgr={2}>
-      <img src='http://placekitten.com/80' alt='' />
+      <Image src='http://placekitten.com/80' alt='' />
     </MediaObject.Side>
     <MediaObject.Content>
       <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu libero libero, sit amet commodo sem. Proin a quam vulputate enim consequat sollicitudin. Etiam vitae nunc augue. Sed ac arcu nibh. Suspendisse a lobortis nulla. Maecenas nunc erat, consectetur quis sagittis et, sodales ac nisl. Proin vitae nibh sed massa blandit commodo. Sed ornare tincidunt nibh, vel malesuada orci pellentesque sit amet. Pellentesque velit urna, porttitor a eleifend sit amet, feugiat ac velit. Nulla ut nunc sit amet lorem dictum suscipit. Maecenas ullamcorper feugiat erat nec ornare.</div>
@@ -82,12 +83,13 @@ import { MediaObject } from 'pss-components'
 ### Side can be placed before and after Content
 
 <Playground>
-  <MediaObject bg='gray.0' pd={2}>
+  <MediaObject outline='1px solid' pd={2}>
     <MediaObject.Content>
       <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu libero libero, sit amet commodo sem. Proin a quam vulputate enim consequat sollicitudin. Etiam vitae nunc augue. Sed ac arcu nibh. Suspendisse a lobortis nulla. Maecenas nunc erat, consectetur quis sagittis et, sodales ac nisl. Proin vitae nibh sed massa blandit commodo. Sed ornare tincidunt nibh, vel malesuada orci pellentesque sit amet. Pellentesque velit urna, porttitor a eleifend sit amet, feugiat ac velit. Nulla ut nunc sit amet lorem dictum suscipit. Maecenas ullamcorper feugiat erat nec ornare.</div>
     </MediaObject.Content>
     <MediaObject.Side mgl={2}>
-      <img src='http://placekitten.com/80' alt='' />
+      <Image src='http://placekitten.com/80' alt='' />
     </MediaObject.Side>
   </MediaObject>
 </Playground>
+

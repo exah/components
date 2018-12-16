@@ -1,10 +1,11 @@
 export default {
-  title: 'Components',
+  title: 'PSS Components',
   src: './src',
   dest: './dist',
   base: process.env.BASENAME || '/',
   hashRouter: true,
   propsParser: false,
+  codeSandbox: false,
   wrapper: 'src/theme',
-  themeConfig: { showPlaygroundEditor: true }
+  themeConfig: { showPlaygroundEditor: true, mode: 'dark' }
 }

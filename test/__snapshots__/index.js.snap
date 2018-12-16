@@ -43,9 +43,9 @@ exports[`FlexBox 1`] = `
 
 .emotion-4 {
   box-sizing: border-box;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
+  -webkit-flex: 0 1;
+  -ms-flex: 0 1;
+  flex: 0 1;
 }
 
 <div
@@ -70,10 +70,6 @@ exports[`FlexBox 1`] = `
 `;
 
 exports[`FlexGrid / Basic 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-}
-
 .emotion-48 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -95,10 +91,15 @@ exports[`FlexGrid / Basic 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   min-height: 1px;
+  min-width: 0;
   -webkit-flex-basis: 8.333333333333332%;
   -ms-flex-preferred-size: 8.333333333333332%;
   flex-basis: 8.333333333333332%;
   max-width: 8.333333333333332%;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
 }
 
 <div
@@ -216,10 +217,6 @@ exports[`FlexGrid / Basic 1`] = `
 `;
 
 exports[`FlexGrid / Vertical and Horizontal Space 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-}
-
 .emotion-2 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
@@ -230,10 +227,15 @@ exports[`FlexGrid / Vertical and Horizontal Space 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   min-height: 1px;
+  min-width: 0;
   -webkit-flex-basis: 8.333333333333332%;
   -ms-flex-preferred-size: 8.333333333333332%;
   flex-basis: 8.333333333333332%;
   max-width: 8.333333333333332%;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
 }
 
 .emotion-112 {
@@ -272,6 +274,7 @@ exports[`FlexGrid / Vertical and Horizontal Space 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   min-height: 1px;
+  min-width: 0;
   -webkit-flex-basis: 16.666666666666664%;
   -ms-flex-preferred-size: 16.666666666666664%;
   flex-basis: 16.666666666666664%;
@@ -288,6 +291,7 @@ exports[`FlexGrid / Vertical and Horizontal Space 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   min-height: 1px;
+  min-width: 0;
   -webkit-flex-basis: 25%;
   -ms-flex-preferred-size: 25%;
   flex-basis: 25%;
@@ -304,6 +308,7 @@ exports[`FlexGrid / Vertical and Horizontal Space 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   min-height: 1px;
+  min-width: 0;
   -webkit-flex-basis: 33.33333333333333%;
   -ms-flex-preferred-size: 33.33333333333333%;
   flex-basis: 33.33333333333333%;
@@ -320,6 +325,7 @@ exports[`FlexGrid / Vertical and Horizontal Space 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   min-height: 1px;
+  min-width: 0;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
@@ -336,6 +342,7 @@ exports[`FlexGrid / Vertical and Horizontal Space 1`] = `
   -ms-flex-negative: 0;
   flex-shrink: 0;
   min-height: 1px;
+  min-width: 0;
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -619,16 +626,9 @@ exports[`Layout 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
 }
 
 <div
@@ -667,26 +667,17 @@ exports[`MediaObject 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.emotion-0 img,
-.emotion-0 svg {
-  display: block;
+  -webkit-flex: 0 0;
+  -ms-flex: 0 0;
+  flex: 0 0;
 }
 
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+  min-width: 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <div
@@ -698,7 +689,7 @@ exports[`MediaObject 1`] = `
     Side
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-1"
   >
     Content
   </div>

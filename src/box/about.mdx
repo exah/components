@@ -5,13 +5,14 @@ order: -1
 ---
 
 import { Playground } from 'docz'
+import { PropsTable } from '../props-table'
 import { Box } from './index'
 
 # Box
 
 ## Description
 
-Basic component, that renders as `<div>` with [system prop styles](https://github.com/exah/pss/blob/master/docs/api.md#system). Component inside can be changed with `comp` prop.
+Basic component, that renders as `<div>` with [system prop styles](https://github.com/exah/pss/blob/master/docs/api.md#system). Component inside can be changed with `as` prop.
 
 
 ## Usage
@@ -31,13 +32,27 @@ import { Box } from 'pss-components'
 ## Examples
 
 <Playground>
-  <Box bg='gray.0'>
+  <Box>
     Box
   </Box>
 </Playground>
 
 <Playground>
-  <Box bg='gray.0' ratio={16 / 9}>
+  <Box bg='hotpink' mgb={1}>
+    Box
+  </Box>
+  <Box bg='coral'>
     Box
   </Box>
 </Playground>
+
+
+<Playground>
+  <Box bg='royalblue' ratio={{ all: 16 / 9, sm: 1 }}>
+    Box
+  </Box>
+</Playground>
+
+## Props
+
+<PropsTable of={Box} />

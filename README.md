@@ -15,13 +15,14 @@ $ yarn add pss-components
 ```
 
 
-## 🌏 [Demo](http://johngrish.in/components)
+## 🌏 [Docs](http://johngrish.in/components)
 
 
 ## 🔗 Links
 
-- [pss](https://github.com/exah/pss) - Prop Styles System inside of components
-- [emotion](https://emotion.sh) - CSS-in-JS library
+- [`pss`](https://github.com/exah/pss) - Prop Styles System inside of components
+- [`emotion`](https://emotion.sh) - CSS-in-JS library
+- [`react-styled-base`](https://github.com/exah/react-styled-base)
 
 ---
 

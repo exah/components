@@ -1,5 +1,12 @@
-import { themePath, getSpace, sizeProp, createPropStyles } from 'pss'
-import { isNum, fallbackTo } from '@exah/utils'
+import { isNum, isArr, path, fallbackTo } from '@exah/utils'
+
+import {
+  themePath,
+  rule,
+  boolValue,
+  sizeValue,
+  createStyles
+} from 'pss'
 
 function getSize (value, props) {
   const grid = themePath('grid', 12)(props)
@@ -12,10 +19,10 @@ function getSize (value, props) {
   return ((cols / grid) * 100) + '%'
 }
 
-const gridItem = createPropStyles({
+const gridItem = createStyles({
   size: [
-    sizeProp('flexBasis', 'auto'),
-    sizeProp('maxWidth', '100%')
+    rule('flexBasis', sizeValue(boolValue('auto'))),
+    rule('maxWidth', sizeValue(boolValue('100%')))
   ],
   offset (value, props) {
     const size = getSize(value, props)
@@ -55,7 +62,13 @@ const getItemsSpaceStyles = (axis, {
   childSelector,
   rowSelector
 }) => (step, props, mediaKey) => {
-  const value = getSpace(props.theme, step)(mediaKey)
+  let spaces = themePath([ 'space' ], [])(props)
+
+  if (!isArr(spaces)) {
+    spaces = path(mediaKey, path('all')(spaces))(spaces)
+  }
+
+  const value = path(step, 0)(spaces)
   const size = step === 0 ? 0 : value / 2
 
   return {
@@ -83,7 +96,7 @@ const getItemsSpaceStyles = (axis, {
   }
 }
 
-const gridRow = (selectors) => createPropStyles({
+const gridRow = (selectors) => createStyles({
   space: getItemsSpaceStyles({ x: true, y: true }, selectors),
   spacex: getItemsSpaceStyles({ x: true }, selectors),
   spacey: getItemsSpaceStyles({ y: true }, selectors)
