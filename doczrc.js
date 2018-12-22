@@ -7,5 +7,9 @@ export default {
   propsParser: false,
   codeSandbox: false,
   wrapper: 'src/theme',
-  themeConfig: { showPlaygroundEditor: true, mode: 'dark' }
+  themeConfig: {
+    mode: 'dark',
+    linesToScrollEditor: 100,
+    showPlaygroundEditor: true
+  }
 }
