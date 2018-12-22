@@ -41,6 +41,10 @@ export {
 } from './text'
 
 export {
+  Image
+} from './image'
+
+export {
   ThemeDefaultsProvider
 } from './theme-defaults-provider'
 
