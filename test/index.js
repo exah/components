@@ -3,14 +3,19 @@
 import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'emotion-theming'
 import React, { Fragment } from 'react'
+import { initArr } from '@exah/utils'
 import { theme } from '../src/theme'
 
 import {
   Box,
   FlexBox,
   Layout,
+  CurrentMediaProvider,
   MediaObject,
-  FlexGrid
+  FlexGrid,
+  Feed,
+  Text,
+  Image
 } from '../src'
 
 const renderJSON = (element) =>
@@ -71,44 +76,139 @@ test('MediaObject', () => {
   expect(result).toMatchSnapshot()
 })
 
-const renderFlexGridItems = (length, col) =>
-  Array.from({ length })
-    .fill(true)
-    .map((_, index) => (
-      <FlexGrid.Item col={col} key={index}>
-        <FlexGrid.Content>
-          {col}
-        </FlexGrid.Content>
-      </FlexGrid.Item>
-    ))
+describe('FlexGrid', () => {
+  const renderFlexGridItems = (length, col) => initArr(length, (index) => (
+    <FlexGrid.Item col={col} key={index}>
+      <FlexGrid.Content>
+        {col}
+      </FlexGrid.Content>
+    </FlexGrid.Item>
+  ))
 
-test('FlexGrid / Basic', () => {
-  const result = renderJSON(
-    <ThemeProvider theme={theme}>
-      <Fragment>
-        <FlexGrid>
+  test('basic', () => {
+    const result = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Fragment>
+          <FlexGrid>
+            {renderFlexGridItems(12, 1)}
+          </FlexGrid>
+        </Fragment>
+      </ThemeProvider>
+    )
+
+    expect(result).toMatchSnapshot()
+  })
+
+  test('vertical and horizontal space', () => {
+    const result = renderJSON(
+      <ThemeProvider theme={theme}>
+        <FlexGrid space={2}>
           {renderFlexGridItems(12, 1)}
+          {renderFlexGridItems(6, 2)}
+          {renderFlexGridItems(4, 3)}
+          {renderFlexGridItems(3, 4)}
+          {renderFlexGridItems(2, 6)}
+          {renderFlexGridItems(1, 12)}
         </FlexGrid>
-      </Fragment>
-    </ThemeProvider>
-  )
+      </ThemeProvider>
+    )
 
-  expect(result).toMatchSnapshot()
+    expect(result).toMatchSnapshot()
+  })
 })
 
-test('FlexGrid / Vertical and Horizontal Space', () => {
-  const result = renderJSON(
-    <ThemeProvider theme={theme}>
-      <FlexGrid space={2}>
-        {renderFlexGridItems(12, 1)}
-        {renderFlexGridItems(6, 2)}
-        {renderFlexGridItems(4, 3)}
-        {renderFlexGridItems(3, 4)}
-        {renderFlexGridItems(2, 6)}
-        {renderFlexGridItems(1, 12)}
-      </FlexGrid>
-    </ThemeProvider>
-  )
+describe('Feed', () => {
+  beforeAll(() => {
+    Object.defineProperty(window, 'matchMedia', {
+      value: jest.fn(() => ({
+        matches: true,
+        addListener () {},
+        removeListener () {}
+      }))
+    })
+  })
 
-  expect(result).toMatchSnapshot()
+  test('empty', () => {
+    const result = renderJSON(<Feed />)
+
+    expect(result).toMatchSnapshot()
+  })
+
+  test('basic', () => {
+    const result = renderJSON(
+      <Feed col={3}>
+        <Feed.Item>
+          Item
+        </Feed.Item>
+        <Feed.Item>
+          Item
+        </Feed.Item>
+        <Feed.Item>
+          Item
+        </Feed.Item>
+      </Feed>
+    )
+
+    expect(result).toMatchSnapshot()
+  })
+
+  test('with theme', () => {
+    const result = renderJSON(
+      <ThemeProvider theme={theme}>
+        <CurrentMediaProvider>
+          <Feed space={2} col={{ all: 3, md: 6, sm: 12 }}>
+            <Feed.Item>
+              Item
+            </Feed.Item>
+          </Feed>
+        </CurrentMediaProvider>
+      </ThemeProvider>
+    )
+
+    expect(result).toMatchSnapshot()
+  })
+})
+
+describe('Text', () => {
+  test('empty', () => {
+    const result = renderJSON(<Text />)
+
+    expect(result).toMatchSnapshot()
+  })
+
+  test('with text', () => {
+    const result = renderJSON(<Text>Hello</Text>)
+
+    expect(result).toMatchSnapshot()
+  })
+
+  test('with theme', () => {
+    const result = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Text variant>Hello</Text>
+      </ThemeProvider>
+    )
+
+    expect(result).toMatchSnapshot()
+  })
+})
+
+describe('Image', () => {
+  test('empty', () => {
+    const result = renderJSON(<Image />)
+
+    expect(result).toMatchSnapshot()
+  })
+
+  test('with image', () => {
+    const result = renderJSON(
+      <Image
+        src='http://placekitten.com/500'
+        width={1 / 2}
+        alt=''
+      />
+    )
+
+    expect(result).toMatchSnapshot()
+  })
 })

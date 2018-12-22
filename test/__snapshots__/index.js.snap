@@ -17,6 +17,152 @@ exports[`Box 1`] = `
 </div>
 `;
 
+exports[`Feed basic 1`] = `
+.emotion-12 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  min-width: 0;
+  -webkit-flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+<div
+  className="emotion-12 emotion-13"
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      Item
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      Item
+    </div>
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      Item
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Feed empty 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+<div
+  className="emotion-0 emotion-1"
+/>
+`;
+
+exports[`Feed with theme 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  min-width: 0;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-top: -8px;
+  margin-bottom: -8px;
+}
+
+.emotion-5 + .emotion-4 {
+  margin-top: 8px;
+}
+
+.emotion-4 > .emotion-3 > .emotion-1 {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      Item
+    </div>
+  </div>
+</div>
+`;
+
 exports[`FlexBox 1`] = `
 .emotion-6 {
   box-sizing: border-box;
@@ -69,7 +215,7 @@ exports[`FlexBox 1`] = `
 </div>
 `;
 
-exports[`FlexGrid / Basic 1`] = `
+exports[`FlexGrid basic 1`] = `
 .emotion-48 {
   box-sizing: border-box;
   display: -webkit-box;
@@ -216,7 +362,7 @@ exports[`FlexGrid / Basic 1`] = `
 </div>
 `;
 
-exports[`FlexGrid / Vertical and Horizontal Space 1`] = `
+exports[`FlexGrid vertical and horizontal space 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
@@ -607,6 +753,29 @@ exports[`FlexGrid / Vertical and Horizontal Space 1`] = `
 </div>
 `;
 
+exports[`Image empty 1`] = `
+.emotion-0 {
+  display: block;
+}
+
+<img
+  className="emotion-0 emotion-1"
+/>
+`;
+
+exports[`Image with image 1`] = `
+.emotion-0 {
+  display: block;
+  width: 50%;
+}
+
+<img
+  alt=""
+  className="emotion-0 emotion-1"
+  src="http://placekitten.com/500"
+/>
+`;
+
 exports[`Layout 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -693,5 +862,42 @@ exports[`MediaObject 1`] = `
   >
     Content
   </div>
+</div>
+`;
+
+exports[`Text empty 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+}
+
+<div
+  className="emotion-0 emotion-1"
+/>
+`;
+
+exports[`Text with text 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+}
+
+<div
+  className="emotion-0 emotion-1"
+>
+  Hello
+</div>
+`;
+
+exports[`Text with theme 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  font-family: Helvetica,system-ui,sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+<div
+  className="emotion-0 emotion-1"
+>
+  Hello
 </div>
 `;

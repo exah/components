@@ -39,7 +39,9 @@ const theme = {
       lineHeight: 1.2
     },
     default: {
-      fontSize: '1rem'
+      fontFamily: 'Helvetica, system-ui, sans-serif',
+      fontSize: '1rem',
+      lineHeight: 1.2
     },
     heading: {
       fontSize: '1.5rem',
