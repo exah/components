@@ -12,7 +12,7 @@ import { FlexBox } from './index'
 
 ## Description
 
-Like [`Box`](#/box) component, but extended with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) specific [prop styles](https://github.com/exah/pss/blob/master/docs/api.md#flex).
+Like [`Box`](#/box) component, but extended with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) specific [prop styles](https://github.com/exah/pss/blob/master/docs/api.md#flex). `FlexBox.Item` is alias for `Box`
 
 
 ## Usage
@@ -32,13 +32,13 @@ import { FlexBox } from 'pss-components'
 
 <Playground>
   <FlexBox>
-    <FlexBox.Item>
+    <FlexBox.Item outline='debug' order={0}>
       Item
     </FlexBox.Item>
-    <FlexBox.Item flex='1'>
+    <FlexBox.Item outline='debug' order={1} flex='1'>
       Item
     </FlexBox.Item>
-    <FlexBox.Item>
+    <FlexBox.Item outline='debug' order={2}>
       Item
     </FlexBox.Item>
   </FlexBox>
@@ -49,7 +49,3 @@ import { FlexBox } from 'pss-components'
 ### FlexBox
 
 <PropsTable of={FlexBox} />
-
-### FlexBox.Item
-
-<PropsTable of={FlexBox.Item} />
