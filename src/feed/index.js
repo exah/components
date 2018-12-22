@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { withTheme } from 'emotion-theming'
-import { compose, fallbackTo, isObj } from '@exah/utils'
+import { compose, fallbackTo, isObj, initArr } from '@exah/utils'
 import { withCurrentMedia } from '../current-media-provider'
 import { FlexGrid, FlexGridItem, FlexGridContent } from '../flex-grid'
 
@@ -14,7 +14,7 @@ const groupChildren = (children = [], length = 3) =>
     }
 
     return groups
-  }, Array.from({ length }, () => []))
+  }, initArr(length, () => []))
 
 const getCol = (props, mediaKey) => isObj(props.col)
   ? fallbackTo(props.col[mediaKey], props.col.all, props.theme.grid)
@@ -28,7 +28,7 @@ class FeedContainer extends PureComponent {
 
   static propTypes = {
     spaceContent: PropTypes.bool.isRequired,
-    col: PropTypes.oneOf([ PropTypes.object, PropTypes.number ])
+    col: PropTypes.oneOfType([ PropTypes.object, PropTypes.number ])
   }
 
   static getDerivedStateFromProps (props, state) {
@@ -70,7 +70,7 @@ class FeedContainer extends PureComponent {
     const { isMounted, col, size } = this.state
 
     const childrenArr = React.Children.toArray(children)
-    const childrenGroups = isMounted && size !== 1
+    const childrenGroups = isMounted && size > 1
       ? groupChildren(childrenArr, size)
       : childrenArr
 
