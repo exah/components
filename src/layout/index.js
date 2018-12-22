@@ -1,6 +1,7 @@
 import { compose } from '@exah/utils'
 import { defaultProps, withDisplayName, withPropTypes } from '../utils'
-import { FlexBox, FlexBoxItem } from '../flex-box'
+import { FlexBox } from '../flex-box'
+import { Box } from '../box'
 
 const withLayoutProps = defaultProps({
   flexDirection: 'column',
@@ -19,9 +20,9 @@ const Layout = compose(
 
 const LayoutContent = compose(
   withDisplayName('Layout.Content'),
-  withPropTypes(FlexBoxItem),
+  withPropTypes(Box),
   withLayoutContentProps
-)(FlexBoxItem)
+)(Box)
 
 const LayoutBody = compose(
   withDisplayName('Layout.Body'),
@@ -31,13 +32,13 @@ const LayoutBody = compose(
 
 Object.assign(Layout, {
   Content: LayoutContent,
-  Item: FlexBoxItem,
+  Item: Box,
   Body: LayoutBody
 })
 
 export {
   Layout,
-  FlexBoxItem as LayoutItem,
+  Box as LayoutItem,
   LayoutContent,
   LayoutBody
 }

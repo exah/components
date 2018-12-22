@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { createBase } from '../base'
 
 import {
-  combine,
+  combineStyles,
   cursor,
   display,
   flexItem,
@@ -15,7 +15,7 @@ import {
   transform
 } from 'pss'
 
-const image = combine(
+const image = combineStyles(
   cursor,
   display,
   flexItem,

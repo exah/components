@@ -1,6 +1,7 @@
 import { compose } from '@exah/utils'
 import { defaultProps, withDisplayName, withPropTypes } from '../utils'
-import { FlexBox, FlexBoxItem } from '../flex-box'
+import { FlexBox } from '../flex-box'
+import { Box } from '../box'
 
 const MediaObject = compose(
   withDisplayName('MediaObject'),
@@ -10,15 +11,15 @@ const MediaObject = compose(
 
 const MediaObjectSide = compose(
   withDisplayName('MediaObject.Side'),
-  withPropTypes(FlexBoxItem),
+  withPropTypes(Box),
   defaultProps({ flex: '0 0' })
-)(FlexBoxItem)
+)(Box)
 
 const MediaObjectContent = compose(
   withDisplayName('MediaObject.Content'),
-  withPropTypes(FlexBoxItem),
+  withPropTypes(Box),
   defaultProps({ flex: '1', minWidth: 0 })
-)(FlexBoxItem)
+)(Box)
 
 Object.assign(MediaObject, {
   Side: MediaObjectSide,
