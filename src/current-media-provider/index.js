@@ -1,6 +1,14 @@
 import PropTypes from 'prop-types'
 import React, { createContext, Component } from 'react'
 import { withTheme } from 'emotion-theming'
+import { reduceObj } from '@exah/utils'
+
+const listenForChanges = (target, fn) => {
+  fn()
+
+  target.addListener(fn)
+  return () => target.removeListener(fn)
+}
 
 const INITIAL_STATE = {
   currentMediaKey: []
@@ -19,14 +27,14 @@ class CurrentMediaProvider extends Component {
   }
   state = INITIAL_STATE
   listeners = []
-  setCurrentMedia = (mediaKey, mediaQueryList) => {
+  setCurrentMedia = (key, mediaQueryList) => {
     this.setState((prevState) => {
       const nextMediaKey = prevState.currentMediaKey.slice(0)
 
       if (mediaQueryList.matches) {
-        nextMediaKey.push(mediaKey)
+        nextMediaKey.push(key)
       } else {
-        const index = nextMediaKey.indexOf(mediaKey)
+        const index = nextMediaKey.indexOf(key)
         if (index === -1) return
         nextMediaKey.splice(index, 1)
       }
@@ -37,19 +45,14 @@ class CurrentMediaProvider extends Component {
     })
   }
   componentDidMount () {
-    const { media, theme } = this.props
+    const media = this.props.media || this.props.theme.media || {}
 
-    const mediaList = Object.entries(media || theme.media || {}).map(
-      ([ mediaKey, mediaQuery ]) => [ mediaKey, window.matchMedia(mediaQuery) ]
-    )
+    this.listeners = reduceObj((acc, key, query) => {
+      const mediaQueryList = window.matchMedia(query)
+      const listener = () => this.setCurrentMedia(key, mediaQueryList)
 
-    this.listeners = mediaList.map(([ mediaKey, mediaQueryList ]) => {
-      this.setCurrentMedia(mediaKey, mediaQueryList)
-      const listener = () => this.setCurrentMedia(mediaKey, mediaQueryList)
-
-      mediaQueryList.addListener(listener)
-      return () => mediaQueryList.removeListener(listener)
-    })
+      return [ ...acc, listenForChanges(mediaQueryList, listener) ]
+    }, [], media)
   }
   componentWillUnmount () {
     this.listeners.map((fn) => fn())
