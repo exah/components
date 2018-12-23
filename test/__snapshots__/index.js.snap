@@ -756,6 +756,8 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 exports[`Image empty 1`] = `
 .emotion-0 {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 <img
@@ -766,6 +768,8 @@ exports[`Image empty 1`] = `
 exports[`Image with image 1`] = `
 .emotion-0 {
   display: block;
+  max-width: 100%;
+  height: auto;
   width: 50%;
 }
 

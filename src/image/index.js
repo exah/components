@@ -29,7 +29,7 @@ const image = combineStyles(
 )
 
 const Image = styled(createBase('img', { blacklist: [ 'width', 'height' ] }))(
-  { display: 'block' },
+  { display: 'block', maxWidth: '100%', height: 'auto' },
   image
 )
 
