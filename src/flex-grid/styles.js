@@ -1,11 +1,14 @@
-import { isNum, isArr, path, fallbackTo } from '@exah/utils'
+import { isNum, fallbackTo } from '@exah/utils'
 
 import {
-  themePath,
-  rule,
   boolValue,
+  createSpaceValue,
+  createStyles,
+  px,
+  rule,
   sizeValue,
-  createStyles
+  style,
+  themePath
 } from 'pss'
 
 function getSize (value, props) {
@@ -61,40 +64,36 @@ const gridItem = createStyles({
 const getItemsSpaceStyles = (axis, {
   childSelector,
   rowSelector
-}) => (step, props, mediaKey) => {
-  let spaces = themePath([ 'space' ], [])(props)
+}) => style({
+  getValue: createSpaceValue()(),
+  getStyle (value, step, props) {
+    const size = px(step === 0 ? 0 : value / 2)
 
-  if (!isArr(spaces)) {
-    spaces = path(mediaKey, path('all')(spaces))(spaces)
-  }
-
-  const value = path(step, 0)(spaces)
-  const size = step === 0 ? 0 : value / 2
-
-  return {
-    ...(axis.x && {
-      marginLeft: size * -1,
-      marginRight: size * -1
-    }),
-    ...(axis.y && {
-      marginTop: size * -1,
-      marginBottom: size * -1,
-      [rowSelector(props)]: {
-        marginTop: size
-      }
-    }),
-    [childSelector(props)]: {
+    return {
       ...(axis.x && {
-        paddingLeft: size,
-        paddingRight: size
+        marginLeft: `-${size}`,
+        marginRight: `-${size}`
       }),
       ...(axis.y && {
-        paddingTop: size,
-        paddingBottom: size
-      })
+        marginTop: `-${size}`,
+        marginBottom: `-${size}`,
+        [rowSelector(props)]: {
+          marginTop: size
+        }
+      }),
+      [childSelector(props)]: {
+        ...(axis.x && {
+          paddingLeft: size,
+          paddingRight: size
+        }),
+        ...(axis.y && {
+          paddingTop: size,
+          paddingBottom: size
+        })
+      }
     }
   }
-}
+})
 
 const gridRow = (selectors) => createStyles({
   space: getItemsSpaceStyles({ x: true, y: true }, selectors),
