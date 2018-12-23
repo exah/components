@@ -8,8 +8,7 @@ export {
 } from './box'
 
 export {
-  FlexBox,
-  FlexBoxItem
+  FlexBox
 } from './flex-box'
 
 export {
