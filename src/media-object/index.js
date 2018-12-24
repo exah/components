@@ -12,7 +12,7 @@ const MediaObject = compose(
 const MediaObjectSide = compose(
   withDisplayName('MediaObject.Side'),
   withPropTypes(Box),
-  defaultProps({ flex: '0 0' })
+  defaultProps({ flex: '0 0 auto' })
 )(Box)
 
 const MediaObjectContent = compose(
