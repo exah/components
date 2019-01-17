@@ -1,15 +1,15 @@
-import { isNum, fallbackTo } from '@exah/utils'
-
+import { isNum, isStr, fallbackTo } from '@exah/utils'
 import {
   boolValue,
   createSpaceValue,
   createStyles,
-  px,
   rule,
   sizeValue,
   style,
   themePath
 } from 'pss'
+
+const NUMBER_WITH_UNITS_REGEXP = /^(\d+(?:\.\d+)?)((px|%|rem)?)$/
 
 function getSize (value, props) {
   const grid = themePath('grid', 12)(props)
@@ -61,14 +61,26 @@ const gridItem = createStyles({
   }
 })
 
+const getNumericValueAndUnits = (value, step) => {
+  const [ numericValue = 0, units = 'px' ] =
+    value == null
+      ? isStr(step)
+        ? step.match(NUMBER_WITH_UNITS_REGEXP).slice(1)
+        : [ 0, 'px' ]
+      : isNum(value)
+        ? [ value, 'px' ]
+        : value.match(NUMBER_WITH_UNITS_REGEXP).slice(1)
+  return [ numericValue, units ]
+}
+
 const getItemsSpaceStyles = (axis, {
   childSelector,
   rowSelector
 }) => style({
   getValue: createSpaceValue()(),
   getStyle (value, step, props) {
-    const size = px(step === 0 ? 0 : value / 2)
-
+    const [ numericValue, units ] = getNumericValueAndUnits(value, step)
+    const size = `${numericValue / 2}${units}`
     return {
       ...(axis.x && {
         marginLeft: `-${size}`,

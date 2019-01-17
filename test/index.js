@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'emotion-theming'
 import React, { Fragment } from 'react'
 import { initArr } from '@exah/utils'
-import { theme } from '../src/theme'
+import { theme, themeWithRems } from '../src/theme'
 
 import {
   Box,
@@ -113,6 +113,46 @@ describe('FlexGrid', () => {
       </ThemeProvider>
     )
 
+    expect(result).toMatchSnapshot()
+  })
+
+  test('rem spaces', () => {
+    const result = renderJSON(
+      <ThemeProvider theme={themeWithRems}>
+        <Fragment>
+          <FlexGrid space={2}>
+            {renderFlexGridItems(12, 1)}
+          </FlexGrid>
+        </Fragment>
+      </ThemeProvider>
+    )
+
+    expect(result).toMatchSnapshot()
+  })
+
+  test('non-integer rem spaces', () => {
+    const result = renderJSON(
+      <ThemeProvider theme={themeWithRems}>
+        <Fragment>
+          <FlexGrid space={1}>
+            {renderFlexGridItems(12, 1)}
+          </FlexGrid>
+        </Fragment>
+      </ThemeProvider>
+    )
+    expect(result).toMatchSnapshot()
+  })
+
+  test('non-integer space', () => {
+    const result = renderJSON(
+      <ThemeProvider theme={themeWithRems}>
+        <Fragment>
+          <FlexGrid space='2px'>
+            {renderFlexGridItems(12, 1)}
+          </FlexGrid>
+        </Fragment>
+      </ThemeProvider>
+    )
     expect(result).toMatchSnapshot()
   })
 })
