@@ -62,14 +62,15 @@ const gridItem = createStyles({
 })
 
 const getNumericValueAndUnits = (value, step) => {
-  const [ numericValue = 0, units = 'px' ] =
+  /* eslint no-unused-vars: 0 */
+  const [ unused, numericValue = 0, units = 'px' ] =
     value == null
       ? isStr(step)
-        ? step.match(NUMBER_WITH_UNITS_REGEXP).slice(1)
-        : [ 0, 'px' ]
+        ? step.match(NUMBER_WITH_UNITS_REGEXP) || []
+        : [ null, 0, 'px' ]
       : isNum(value)
-        ? [ value, 'px' ]
-        : value.match(NUMBER_WITH_UNITS_REGEXP).slice(1)
+        ? [ null, value, 'px' ]
+        : value.match(NUMBER_WITH_UNITS_REGEXP) || []
   return [ numericValue, units ]
 }
 
