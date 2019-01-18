@@ -50,8 +50,14 @@ const theme = {
   }
 }
 
+const themeWithRems = {
+  ...theme,
+  space: theme.space.map(s => `${s / theme.textStyle.root.fontSize}rem`)
+}
+
 export {
-  theme
+  theme,
+  themeWithRems
 }
 
 export default ({ children }) =>
