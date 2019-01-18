@@ -6,10 +6,9 @@ import {
   rule,
   sizeValue,
   style,
-  themePath
+  themePath,
+  splitUnit
 } from 'pss'
-
-const NUMBER_WITH_UNITS_REGEXP = /^(\d+(?:\.\d+)?)((px|%|rem)?)$/
 
 function getSize (value, props) {
   const grid = themePath('grid', 12)(props)
@@ -62,15 +61,14 @@ const gridItem = createStyles({
 })
 
 const getNumericValueAndUnits = (value, step) => {
-  /* eslint no-unused-vars: 0 */
-  const [ unused, numericValue = 0, units = 'px' ] =
+  const [ numericValue = 0, units = 'px' ] =
     value == null
       ? isStr(step)
-        ? step.match(NUMBER_WITH_UNITS_REGEXP) || []
-        : [ null, 0, 'px' ]
+        ? splitUnit(step)
+        : [ 0, 'px' ]
       : isNum(value)
-        ? [ null, value, 'px' ]
-        : value.match(NUMBER_WITH_UNITS_REGEXP) || []
+        ? [ value, 'px' ]
+        : splitUnit(value)
   return [ numericValue, units ]
 }
 
