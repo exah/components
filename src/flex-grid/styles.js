@@ -1,4 +1,5 @@
-import { isNum, isStr, fallbackTo } from '@exah/utils'
+import { isNum, fallbackTo, identity } from '@exah/utils'
+
 import {
   boolValue,
   createSpaceValue,
@@ -60,26 +61,15 @@ const gridItem = createStyles({
   }
 })
 
-const getNumericValueAndUnits = (value, step) => {
-  const [ numericValue = 0, units = 'px' ] =
-    value == null
-      ? isStr(step)
-        ? splitUnit(step)
-        : [ 0, 'px' ]
-      : isNum(value)
-        ? [ value, 'px' ]
-        : splitUnit(value)
-  return [ numericValue, units ]
-}
-
 const getItemsSpaceStyles = (axis, {
   childSelector,
   rowSelector
 }) => style({
-  getValue: createSpaceValue()(),
+  getValue: createSpaceValue()(sizeValue(identity)),
   getStyle (value, step, props) {
-    const [ numericValue, units ] = getNumericValueAndUnits(value, step)
-    const size = `${numericValue / 2}${units}`
+    const [ num, unit ] = splitUnit(value)
+    const size = `${num / 2}${unit || 'px'}`
+
     return {
       ...(axis.x && {
         marginLeft: `-${size}`,
