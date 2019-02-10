@@ -67,8 +67,8 @@ const getItemsSpaceStyles = (axis, {
 }) => style({
   getValue: createSpaceValue()(sizeValue(identity)),
   getStyle (value, step, props) {
-    const [ num, unit ] = splitUnit(value)
-    const size = `${num / 2}${unit || 'px'}`
+    const [ num, unit = 'px' ] = splitUnit(value)
+    const size = `${num / 2}${unit}`
 
     return {
       ...(axis.x && {
