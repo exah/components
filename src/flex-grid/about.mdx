@@ -30,7 +30,6 @@ Grid component based on [`FlexBox`](#/flex-box).
 - `space` — horizontal and vertical space
 - `spacex` — horizontal space
 - `spacey` — vertical space
-- `spaceContent` — apply space to `FlexGrid.Content` instead of `FlexGrid.Item`
 
 #### `FlexGrid.Item` — Item / column component, size can be set with props:
 
@@ -38,8 +37,6 @@ Grid component based on [`FlexBox`](#/flex-box).
 - `size` — Number in range `0...1`, result is percentage (`0.5` is `50%`)
 - `offset` — Number in range `1...theme.grid` — move item by number of columns
 
-
-#### `FlexGrid.Content` — Content wrapper same as [`Box`](#/box)
 
 ## Usage
 
@@ -51,19 +48,19 @@ import { FlexGrid } from 'pss-components'
 <ThemeProvider theme={{ grid: 12 }}>
   <FlexGrid space={2}>
     <FlexGrid.Item col={6}>
-      <FlexGrid.Content>
+      <Box>
         Content
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={4}>
-      <FlexGrid.Content>
+      <Box>
         Content
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={2}>
-      <FlexGrid.Content>
+      <Box>
         Content
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
   </FlexGrid>
 </ThemeProvider>
@@ -77,34 +74,34 @@ import { FlexGrid } from 'pss-components'
 <Playground>
   <FlexGrid spacex={1}>
     <FlexGrid.Item col={2}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         2
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={2}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         2
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={2}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         2
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={2}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         2
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={2}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         2
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={2}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         2
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
   </FlexGrid>
 </Playground>
@@ -115,44 +112,44 @@ import { FlexGrid } from 'pss-components'
   <ThemeProvider theme={{ grid: 12 }}>
     <FlexGrid space={1}>
       <FlexGrid.Item col={1}>
-        <FlexGrid.Content outline='1px solid' pd={1}>
+        <Box outline='1px solid' pd={1}>
           1
-        </FlexGrid.Content>
+        </Box>
       </FlexGrid.Item>
       <FlexGrid.Item col={2}>
-        <FlexGrid.Content outline='1px solid' pd={1}>
+        <Box outline='1px solid' pd={1}>
           2
-        </FlexGrid.Content>
+        </Box>
       </FlexGrid.Item>
       <FlexGrid.Item col={3}>
-        <FlexGrid.Content outline='1px solid' pd={1}>
+        <Box outline='1px solid' pd={1}>
           3
-        </FlexGrid.Content>
+        </Box>
       </FlexGrid.Item>
       <FlexGrid.Item col={6}>
-        <FlexGrid.Content outline='1px solid' pd={1}>
+        <Box outline='1px solid' pd={1}>
           6
-        </FlexGrid.Content>
+        </Box>
       </FlexGrid.Item>
       <FlexGrid.Item col={12}>
-        <FlexGrid.Content outline='1px solid' pd={1}>
+        <Box outline='1px solid' pd={1}>
           12
-        </FlexGrid.Content>
+        </Box>
       </FlexGrid.Item>
       <FlexGrid.Item col={4}>
-        <FlexGrid.Content outline='1px solid' pd={1}>
+        <Box outline='1px solid' pd={1}>
           4
-        </FlexGrid.Content>
+        </Box>
       </FlexGrid.Item>
       <FlexGrid.Item col={4}>
-        <FlexGrid.Content outline='1px solid' pd={1}>
+        <Box outline='1px solid' pd={1}>
           4
-        </FlexGrid.Content>
+        </Box>
       </FlexGrid.Item>
       <FlexGrid.Item col={4}>
-        <FlexGrid.Content outline='1px solid' pd={1}>
+        <Box outline='1px solid' pd={1}>
           4
-        </FlexGrid.Content>
+        </Box>
       </FlexGrid.Item>
     </FlexGrid>
   </ThemeProvider>
@@ -163,24 +160,24 @@ import { FlexGrid } from 'pss-components'
 <Playground>
   <FlexGrid space={1}>
     <FlexGrid.Item col={3} mgr='75%'>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         3
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={3} offset={3}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         3
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={3} offset={6}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         3
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item col={3} offset={9}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         3
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
   </FlexGrid>
 </Playground>
@@ -190,44 +187,44 @@ import { FlexGrid } from 'pss-components'
 <Playground>
   <FlexGrid space={1}>
     <FlexGrid.Item size={1 / 12}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         1
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item size={2 / 12}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         2
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item size={3 / 12}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         3
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item size={6 / 12}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         6
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item size={12 / 12}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         12
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item size={4 / 12}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         4
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item size={4 / 12}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         4
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
     <FlexGrid.Item size={4 / 12}>
-      <FlexGrid.Content outline='1px solid' pd={1}>
+      <Box outline='1px solid' pd={1}>
         4
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
   </FlexGrid>
 </Playground>
