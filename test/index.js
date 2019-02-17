@@ -8,14 +8,15 @@ import { theme, themeWithRems } from '../src/theme'
 
 import {
   Box,
-  FlexBox,
-  Layout,
   CurrentMediaProvider,
-  MediaObject,
-  FlexGrid,
   Feed,
-  Text,
-  Image
+  FlexBox,
+  FlexGrid,
+  Grid,
+  Image,
+  Layout,
+  MediaObject,
+  Text
 } from '../src'
 
 const renderJSON = (element) =>
@@ -153,6 +154,28 @@ describe('FlexGrid', () => {
         </Fragment>
       </ThemeProvider>
     )
+    expect(result).toMatchSnapshot()
+  })
+})
+
+describe('Grid', () => {
+  const renderGridItems = (length, col, row) => initArr(length, (index) => (
+    <Grid.Item col={col} row={row} key={index}>
+      {col}
+    </Grid.Item>
+  ))
+
+  test('basic', () => {
+    const result = renderJSON(
+      <ThemeProvider theme={theme}>
+        <Grid templateCols='repeat(12, 1fr)'>
+          {renderGridItems(12, 'span 1', 1)}
+          {renderGridItems(6, 'span 2', 2)}
+          {renderGridItems(3, 'span 4', 3)}
+        </Grid>
+      </ThemeProvider>
+    )
+
     expect(result).toMatchSnapshot()
   })
 })

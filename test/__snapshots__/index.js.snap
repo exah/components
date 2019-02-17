@@ -1239,6 +1239,142 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 </div>
 `;
 
+exports[`Grid basic 1`] = `
+.emotion-42 {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  grid-column: span 1;
+  grid-row: 1;
+}
+
+.emotion-24 {
+  box-sizing: border-box;
+  grid-column: span 2;
+  grid-row: 2;
+}
+
+.emotion-36 {
+  box-sizing: border-box;
+  grid-column: span 4;
+  grid-row: 3;
+}
+
+<div
+  className="emotion-42 emotion-43"
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    span 1
+  </div>
+  <div
+    className="emotion-24 emotion-1"
+  >
+    span 2
+  </div>
+  <div
+    className="emotion-24 emotion-1"
+  >
+    span 2
+  </div>
+  <div
+    className="emotion-24 emotion-1"
+  >
+    span 2
+  </div>
+  <div
+    className="emotion-24 emotion-1"
+  >
+    span 2
+  </div>
+  <div
+    className="emotion-24 emotion-1"
+  >
+    span 2
+  </div>
+  <div
+    className="emotion-24 emotion-1"
+  >
+    span 2
+  </div>
+  <div
+    className="emotion-36 emotion-1"
+  >
+    span 4
+  </div>
+  <div
+    className="emotion-36 emotion-1"
+  >
+    span 4
+  </div>
+  <div
+    className="emotion-36 emotion-1"
+  >
+    span 4
+  </div>
+</div>
+`;
+
 exports[`Image empty 1`] = `
 .emotion-0 {
   display: block;
