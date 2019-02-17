@@ -27,13 +27,18 @@ export {
 export {
   FlexGrid,
   FlexGridItem,
-  FlexGridContent
+  FlexGridContent // COMPAT
 } from './flex-grid'
 
 export {
   Feed,
   FeedItem
 } from './feed'
+
+export {
+  Grid,
+  GridItem
+} from './grid/'
 
 export {
   Text

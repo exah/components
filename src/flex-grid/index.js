@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { BorderBox } from '../box'
 import { gridItem, gridRow } from './styles'
 
-const FlexGridContent = styled(BorderBox)(
+const FlexGridContent = styled(BorderBox)( // COMPAT
   system
 )
 
