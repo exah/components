@@ -31,6 +31,11 @@ export {
 } from './flex-grid'
 
 export {
+  FlexList,
+  FlexListItem
+} from './flex-list'
+
+export {
   Feed,
   FeedItem
 } from './feed'
