@@ -35,9 +35,9 @@ test('Box', () => {
 test('FlexBox', () => {
   const result = renderJSON(
     <FlexBox tm width={(1 / 2)} justifyContent='space-between'>
-      <FlexBox.Item>Item</FlexBox.Item>
-      <FlexBox.Item mgx='auto'>Item</FlexBox.Item>
-      <FlexBox.Item flex='0 1'>Item</FlexBox.Item>
+      <Box>Item</Box>
+      <Box mgx='auto'>Item</Box>
+      <Box flex='0 1'>Item</Box>
     </FlexBox>
   )
 
@@ -80,9 +80,9 @@ test('MediaObject', () => {
 describe('FlexGrid', () => {
   const renderFlexGridItems = (length, col) => initArr(length, (index) => (
     <FlexGrid.Item col={col} key={index}>
-      <FlexGrid.Content>
+      <Box>
         {col}
-      </FlexGrid.Content>
+      </Box>
     </FlexGrid.Item>
   ))
 

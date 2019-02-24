@@ -31,8 +31,6 @@ FlexBox.propTypes = {
   ...Box.propTypes
 }
 
-FlexBox.Item = Box // COMPAT
-
 export {
   FlexBox
 }
