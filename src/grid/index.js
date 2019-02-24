@@ -1,18 +1,15 @@
-import styled from '@emotion/styled'
-
 import {
-  system,
   createStyles,
   spaceRule,
   createGridStyle,
   createGridItemStyle,
   boxContentAlignment,
-  boxItemsAlignment,
-  boxSelfAlignment,
-  order
+  boxItemsAlignment
 } from 'pss'
 
-import { BorderBox } from '../box'
+import React from 'react'
+import styled from '@emotion/styled'
+import { Box } from '../box'
 
 const gridGap = createStyles({
   gap: [ spaceRule('gridGap'), spaceRule('gap') ],
@@ -23,40 +20,37 @@ const gridGap = createStyles({
 const gridStyle = createGridStyle({ isShortPropNames: true })
 const gridItemStyle = createGridItemStyle({ isShortPropNames: true })
 
-const Grid = styled(BorderBox)(
-  { display: 'grid' },
-  system,
+const StyledGrid = styled(Box)(
   gridGap,
   gridStyle,
   boxContentAlignment,
   boxItemsAlignment
 )
 
-const GridItem = styled(BorderBox)(
-  system,
-  gridItemStyle,
-  boxSelfAlignment,
-  order
+const Grid = (props) => (
+  <StyledGrid
+    display='grid'
+    {...props}
+  />
 )
 
-Grid.displayName = 'Grid'
+const GridItem = styled(Box)(
+  gridItemStyle
+)
 
 Grid.propTypes = {
-  ...BorderBox.propTypes,
   ...gridStyle.propTypes,
   ...boxContentAlignment.propTypes,
   ...boxItemsAlignment.propTypes,
-  ...system.propTypes
+  ...gridGap.propTypes,
+  ...Box.propTypes
 }
 
 Grid.Item = GridItem
-Grid.Item.displayName = 'Grid.Item'
 
 Grid.Item.propTypes = {
-  ...BorderBox.propTypes,
   ...gridItemStyle.propTypes,
-  ...boxSelfAlignment.propTypes,
-  ...system.propTypes
+  ...Box.propTypes
 }
 
 export {

@@ -1,5 +1,29 @@
+import {
+  combineStyles,
+  border,
+  boxSelfAlignment,
+  boxStyle,
+  clearFix,
+  colors,
+  cursor,
+  display,
+  flex,
+  float,
+  hideOn,
+  opacity,
+  outline,
+  position,
+  positionOffset,
+  radius,
+  ratio,
+  sizes,
+  space,
+  transform,
+  transition,
+  zIndex
+} from 'pss'
+
 import styled from '@emotion/styled'
-import { system } from 'pss'
 import { Base } from '../base'
 
 const BorderBox = styled(Base)(
@@ -10,10 +34,36 @@ const BorderBox = styled(Base)(
 BorderBox.displayName = 'BorderBox'
 BorderBox.propTypes = { ...Base.propTypes }
 
-const Box = styled(BorderBox)(system)
+const styles = combineStyles(
+  border,
+  boxSelfAlignment,
+  boxStyle,
+  clearFix,
+  colors,
+  cursor,
+  display,
+  flex,
+  float,
+  hideOn,
+  opacity,
+  outline,
+  position,
+  positionOffset,
+  radius,
+  ratio,
+  sizes,
+  space,
+  transform,
+  transition,
+  zIndex
+)
 
-Box.displayName = 'Box'
-Box.propTypes = { ...BorderBox.propTypes, ...system.propTypes }
+const Box = styled(BorderBox)(styles)
+
+Box.propTypes = {
+  ...BorderBox.propTypes,
+  ...styles.propTypes
+}
 
 export {
   Box,

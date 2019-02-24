@@ -1,14 +1,34 @@
-import { flex, flexItem } from 'pss'
+import {
+  boxContentAlignment,
+  boxItemsAlignment,
+  flexBox,
+  gap
+} from 'pss'
+
+import React from 'react'
 import styled from '@emotion/styled'
 import { Box } from '../box'
 
-const FlexBox = styled(Box)({ display: 'flex' }, flex, flexItem)
+const StyledFlexBox = styled(Box)(
+  gap,
+  flexBox,
+  boxContentAlignment,
+  boxItemsAlignment
+)
 
-FlexBox.displayName = 'FlexBox'
+const FlexBox = (props) => (
+  <StyledFlexBox
+    display='flex'
+    {...props}
+  />
+)
 
 FlexBox.propTypes = {
-  ...Box.propTypes,
-  ...flex.propTypes
+  ...flexBox.propTypes,
+  ...boxContentAlignment.propTypes,
+  ...boxItemsAlignment.propTypes,
+  ...gap.propTypes,
+  ...Box.propTypes
 }
 
 FlexBox.Item = Box // COMPAT
