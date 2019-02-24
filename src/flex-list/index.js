@@ -8,7 +8,7 @@ const FlexList = (props) => (
     mg={0}
     pd={0}
     flexDirection='column'
-    css={{ listStyle: 'none' }}
+    initialCSS={{ listStyle: 'none' }}
     {...props}
   />
 )

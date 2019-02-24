@@ -23,16 +23,20 @@ import {
   zIndex
 } from 'pss'
 
+import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { Base } from '../base'
 
 const BorderBox = styled(Base)(
   { boxSizing: 'border-box' },
-  (props) => props.css
+  (props) => props.initialCSS
 )
 
 BorderBox.displayName = 'BorderBox'
-BorderBox.propTypes = { ...Base.propTypes }
+BorderBox.propTypes = {
+  ...Base.propTypes,
+  initialCSS: PropTypes.object
+}
 
 const styles = combineStyles(
   border,
