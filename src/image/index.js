@@ -17,7 +17,7 @@ import {
   transform
 } from 'pss'
 
-const image = combineStyles(
+const imageStyle = combineStyles(
   cursor,
   display,
   flex,
@@ -34,11 +34,11 @@ const image = combineStyles(
 
 const Image = styled(createBase('img', { blacklist: [ 'width', 'height' ] }))(
   { display: 'block', maxWidth: '100%', height: 'auto' },
-  image
+  imageStyle
 )
 
 Image.displayName = 'Image'
-Image.propTypes = { ...image.propTypes }
+Image.propTypes = { ...imageStyle.propTypes }
 
 export {
   Image
