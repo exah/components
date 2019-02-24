@@ -18,7 +18,7 @@ exports[`Box 1`] = `
 `;
 
 exports[`Feed basic 1`] = `
-.emotion-12 {
+.emotion-13 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -29,20 +29,12 @@ exports[`Feed basic 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-0 {
-  box-sizing: border-box;
-}
-
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 25%;
   -ms-flex-preferred-size: 25%;
@@ -50,8 +42,12 @@ exports[`Feed basic 1`] = `
   max-width: 25%;
 }
 
+.emotion-0 {
+  box-sizing: border-box;
+}
+
 <div
-  className="emotion-12 emotion-13"
+  className="emotion-12 emotion-13 emotion-14"
 >
   <div
     className="emotion-2 emotion-3"
@@ -84,7 +80,7 @@ exports[`Feed basic 1`] = `
 `;
 
 exports[`Feed empty 1`] = `
-.emotion-0 {
+.emotion-1 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -96,25 +92,17 @@ exports[`Feed empty 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
+  className="emotion-0 emotion-1 emotion-2"
 />
 `;
 
 exports[`Feed with theme 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-}
-
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
@@ -122,7 +110,11 @@ exports[`Feed with theme 1`] = `
   max-width: 100%;
 }
 
-.emotion-4 {
+.emotion-0 {
+  box-sizing: border-box;
+}
+
+.emotion-5 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -137,11 +129,11 @@ exports[`Feed with theme 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-5 + .emotion-4 {
+.emotion-4 + .emotion-5 {
   margin-top: 8px;
 }
 
-.emotion-4 > .emotion-3 > .emotion-1 {
+.emotion-5 > .emotion-3 > .emotion-1 {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 8px;
@@ -149,7 +141,7 @@ exports[`Feed with theme 1`] = `
 }
 
 <div
-  className="emotion-4 emotion-5"
+  className="emotion-4 emotion-5 emotion-6"
 >
   <div
     className="emotion-2 emotion-3"
@@ -166,11 +158,11 @@ exports[`Feed with theme 1`] = `
 exports[`FlexBox 1`] = `
 .emotion-6 {
   box-sizing: border-box;
-  width: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 50%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -216,7 +208,11 @@ exports[`FlexBox 1`] = `
 `;
 
 exports[`FlexGrid basic 1`] = `
-.emotion-48 {
+.emotion-0 {
+  box-sizing: border-box;
+}
+
+.emotion-49 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -229,14 +225,10 @@ exports[`FlexGrid basic 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 8.333333333333332%;
   -ms-flex-preferred-size: 8.333333333333332%;
@@ -244,12 +236,8 @@ exports[`FlexGrid basic 1`] = `
   max-width: 8.333333333333332%;
 }
 
-.emotion-0 {
-  box-sizing: border-box;
-}
-
 <div
-  className="emotion-48 emotion-49"
+  className="emotion-48 emotion-49 emotion-50"
 >
   <div
     className="emotion-2 emotion-3"
@@ -363,16 +351,16 @@ exports[`FlexGrid basic 1`] = `
 `;
 
 exports[`FlexGrid non-integer rem spaces 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+}
+
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 8.333333333333332%;
   -ms-flex-preferred-size: 8.333333333333332%;
@@ -380,11 +368,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   max-width: 8.333333333333332%;
 }
 
-.emotion-0 {
-  box-sizing: border-box;
-}
-
-.emotion-48 {
+.emotion-49 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -399,11 +383,11 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   margin-bottom: -0.25rem;
 }
 
-.emotion-49 + .emotion-48 {
+.emotion-48 + .emotion-49 {
   margin-top: 0.25rem;
 }
 
-.emotion-48 > .emotion-3 {
+.emotion-49 > .emotion-3 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   padding-top: 0.25rem;
@@ -411,7 +395,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49"
+  className="emotion-48 emotion-49 emotion-50"
 >
   <div
     className="emotion-2 emotion-3"
@@ -525,16 +509,16 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
 `;
 
 exports[`FlexGrid non-integer space 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+}
+
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 8.333333333333332%;
   -ms-flex-preferred-size: 8.333333333333332%;
@@ -542,11 +526,7 @@ exports[`FlexGrid non-integer space 1`] = `
   max-width: 8.333333333333332%;
 }
 
-.emotion-0 {
-  box-sizing: border-box;
-}
-
-.emotion-48 {
+.emotion-49 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -561,11 +541,11 @@ exports[`FlexGrid non-integer space 1`] = `
   margin-bottom: -1px;
 }
 
-.emotion-49 + .emotion-48 {
+.emotion-48 + .emotion-49 {
   margin-top: 1px;
 }
 
-.emotion-48 > .emotion-3 {
+.emotion-49 > .emotion-3 {
   padding-left: 1px;
   padding-right: 1px;
   padding-top: 1px;
@@ -573,7 +553,7 @@ exports[`FlexGrid non-integer space 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49"
+  className="emotion-48 emotion-49 emotion-50"
 >
   <div
     className="emotion-2 emotion-3"
@@ -687,16 +667,16 @@ exports[`FlexGrid non-integer space 1`] = `
 `;
 
 exports[`FlexGrid rem spaces 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+}
+
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 8.333333333333332%;
   -ms-flex-preferred-size: 8.333333333333332%;
@@ -704,11 +684,7 @@ exports[`FlexGrid rem spaces 1`] = `
   max-width: 8.333333333333332%;
 }
 
-.emotion-0 {
-  box-sizing: border-box;
-}
-
-.emotion-48 {
+.emotion-49 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -723,11 +699,11 @@ exports[`FlexGrid rem spaces 1`] = `
   margin-bottom: -0.5rem;
 }
 
-.emotion-49 + .emotion-48 {
+.emotion-48 + .emotion-49 {
   margin-top: 0.5rem;
 }
 
-.emotion-48 > .emotion-3 {
+.emotion-49 > .emotion-3 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
@@ -735,7 +711,7 @@ exports[`FlexGrid rem spaces 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49"
+  className="emotion-48 emotion-49 emotion-50"
 >
   <div
     className="emotion-2 emotion-3"
@@ -849,16 +825,16 @@ exports[`FlexGrid rem spaces 1`] = `
 `;
 
 exports[`FlexGrid vertical and horizontal space 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+}
+
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 8.333333333333332%;
   -ms-flex-preferred-size: 8.333333333333332%;
@@ -866,11 +842,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   max-width: 8.333333333333332%;
 }
 
-.emotion-0 {
-  box-sizing: border-box;
-}
-
-.emotion-112 {
+.emotion-113 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -885,11 +857,11 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-113 + .emotion-112 {
+.emotion-112 + .emotion-113 {
   margin-top: 8px;
 }
 
-.emotion-112 > .emotion-3 {
+.emotion-113 > .emotion-3 {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 8px;
@@ -898,14 +870,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-50 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 16.666666666666664%;
   -ms-flex-preferred-size: 16.666666666666664%;
@@ -915,14 +883,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-74 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 25%;
   -ms-flex-preferred-size: 25%;
@@ -932,14 +896,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-90 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 33.33333333333333%;
   -ms-flex-preferred-size: 33.33333333333333%;
@@ -949,14 +909,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-102 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 50%;
   -ms-flex-preferred-size: 50%;
@@ -966,14 +922,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-110 {
   box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  min-height: 1px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 100%;
   min-width: 0;
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
@@ -982,7 +934,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 }
 
 <div
-  className="emotion-112 emotion-113"
+  className="emotion-112 emotion-113 emotion-114"
 >
   <div
     className="emotion-2 emotion-3"
@@ -1409,11 +1361,11 @@ exports[`Layout 1`] = `
 
 .emotion-6 {
   box-sizing: border-box;
-  min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  min-height: 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;

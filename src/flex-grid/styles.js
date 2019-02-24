@@ -1,12 +1,11 @@
 import { isNum, fallbackTo, identity } from '@exah/utils'
 
 import {
-  boolValue,
   createSpaceValue,
   createStyles,
-  rule,
   sizeValue,
-  style,
+  sizeRule,
+  createRule,
   themePath,
   splitUnit
 } from 'pss'
@@ -22,10 +21,10 @@ function getSize (value, props) {
   return ((cols / grid) * 100) + '%'
 }
 
-const gridItem = createStyles({
+const flexGridItemStyle = createStyles({
   size: [
-    rule('flexBasis', sizeValue(boolValue('auto'))),
-    rule('maxWidth', sizeValue(boolValue('100%')))
+    sizeRule('flexBasis', 'auto'),
+    sizeRule('maxWidth', '100%')
   ],
   offset (value, props) {
     const size = getSize(value, props)
@@ -64,7 +63,7 @@ const gridItem = createStyles({
 const getItemsSpaceStyles = (axis, {
   childSelector,
   rowSelector
-}) => style({
+}) => createRule({
   getValue: createSpaceValue()(sizeValue(identity)),
   getStyle (value, step, props) {
     const [ num, unit = 'px' ] = splitUnit(value)
@@ -96,13 +95,13 @@ const getItemsSpaceStyles = (axis, {
   }
 })
 
-const gridRow = (selectors) => createStyles({
+const createFlexGridStyle = (selectors) => createStyles({
   space: getItemsSpaceStyles({ x: true, y: true }, selectors),
   spacex: getItemsSpaceStyles({ x: true }, selectors),
   spacey: getItemsSpaceStyles({ y: true }, selectors)
 })
 
 export {
-  gridItem,
-  gridRow
+  createFlexGridStyle,
+  flexGridItemStyle
 }
