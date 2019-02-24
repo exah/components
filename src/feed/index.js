@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
+import styled from '@emotion/styled'
 import { withTheme } from 'emotion-theming'
 import { compose, fallbackTo } from '@exah/utils'
 import { withCurrentMedia } from '../current-media-provider'
-import { FlexGrid, FlexGridItem, FlexGridContent } from '../flex-grid'
 import { useIsMounted, groupArr } from '../utils'
+import { FlexGrid, FlexGridItem } from '../flex-grid'
+import { Box } from '../box'
 
 const DEFAULT_GRID = 12
 
@@ -37,7 +39,7 @@ function FeedContainer ({
   const childrenGroups = useGroupChildren(groupSize, children)
 
   return (
-    <FlexGrid spaceContent {...rest}>
+    <FlexGrid spaceTarget={FeedItem.toString()} {...rest}>
       {childrenGroups.map((child, index) => (
         <FlexGridItem key={`feed-item-${index}`} {...item} col={itemCol}>
           {child}
@@ -67,9 +69,10 @@ Feed.propTypes = {
   col: PropTypes.oneOfType([ PropTypes.number, PropTypes.objectOf(PropTypes.number) ])
 }
 
-Feed.Item = FlexGridContent
+const FeedItem = styled(Box)``
+Feed.Item = FeedItem
 
 export {
   Feed,
-  FlexGridContent as FeedItem
+  FeedItem
 }

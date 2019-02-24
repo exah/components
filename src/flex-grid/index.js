@@ -1,62 +1,53 @@
-import { system, flex, flexItem } from 'pss'
+import React from 'react'
 import styled from '@emotion/styled'
-import { BorderBox } from '../box'
-import { gridItem, gridRow } from './styles'
+import { Box } from '../box'
+import { FlexBox } from '../flex-box'
+import { createFlexGridStyle, flexGridItemStyle } from './styles'
 
-const FlexGridContent = styled(BorderBox)( // COMPAT
-  system
-)
-
-const FlexGridItem = styled(BorderBox)(
-  { flexGrow: 0, flexShrink: 0, minHeight: 1, minWidth: 0 },
-  system,
-  flexItem,
-  gridItem
-)
-
-const flexGridStyle = gridRow({
-  rowSelector: () => `${FlexGrid} + &`,
-  childSelector: (props) => props.spaceContent
-    ? `& > ${FlexGridItem} > ${FlexGridContent}`
-    : `& > ${FlexGridItem}`
+const flexGridStyle = createFlexGridStyle({
+  rowSelector: () => `${StyledFlexGrid} + &`,
+  childSelector: (props) => props.spaceTarget
+    ? `& > ${StyledFlexGridItem} > ${props.spaceTarget}`
+    : `& > ${StyledFlexGridItem}`
 })
 
-const FlexGrid = styled(BorderBox)(
-  { display: 'flex', flexWrap: 'wrap' },
-  system,
-  flex,
+const StyledFlexGrid = styled(FlexBox)(
   flexGridStyle
 )
 
-FlexGrid.displayName = 'FlexGrid'
+const FlexGrid = (props) => (
+  <StyledFlexGrid
+    flexWrap='wrap'
+    {...props}
+  />
+)
 
 FlexGrid.propTypes = {
-  ...BorderBox.propTypes,
-  ...flexGridStyle.propTypes,
-  ...flex.propTypes,
-  ...system.propTypes
+  ...FlexBox.propTypes,
+  ...flexGridStyle.propTypes
 }
+
+const StyledFlexGridItem = styled(Box)(
+  flexGridItemStyle
+)
+
+const FlexGridItem = (props) => (
+  <StyledFlexGridItem
+    flex='1 1 auto'
+    minHeight={1}
+    minWidth={0}
+    {...props}
+  />
+)
 
 FlexGrid.Item = FlexGridItem
-FlexGrid.Item.displayName = 'FlexGrid.Item'
 
 FlexGrid.Item.propTypes = {
-  ...BorderBox.propTypes,
-  ...gridItem.propTypes,
-  ...flexItem.propTypes,
-  ...system.propTypes
-}
-
-FlexGrid.Content = FlexGridContent
-FlexGrid.Content.displayName = 'FlexGrid.Content'
-
-FlexGrid.Content.propTypes = {
-  ...BorderBox.propTypes,
-  ...system.propTypes
+  ...Box.propTypes,
+  ...flexGridItemStyle.propTypes
 }
 
 export {
   FlexGrid,
-  FlexGridItem,
-  FlexGridContent
+  FlexGridItem
 }
