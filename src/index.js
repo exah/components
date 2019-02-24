@@ -19,15 +19,13 @@ export {
 
 export {
   Layout,
-  LayoutItem,
   LayoutBody,
   LayoutContent
 } from './layout'
 
 export {
   FlexGrid,
-  FlexGridItem,
-  FlexGridContent // COMPAT
+  FlexGridItem
 } from './flex-grid'
 
 export {

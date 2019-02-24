@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React, { createContext, useLayoutEffect, useState } from 'react'
 import { withTheme } from 'emotion-theming'
 import { reduceObj } from '@exah/utils'
-import { withDisplayName } from '../utils'
 
 const listenForChanges = (target, fn) => {
   fn()
@@ -65,7 +64,8 @@ const withCurrentMedia = (Comp) => {
     </Consumer>
   )
 
-  return withDisplayName(`withCurrentMedia(${Comp.displayName || 'Component'})`)(HOC)
+  HOC.displayName = `withCurrentMedia(${Comp.displayName || 'Component'})`
+  return HOC
 }
 
 export {

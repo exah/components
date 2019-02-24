@@ -5,6 +5,7 @@ order: -4
 ---
 
 import { Playground } from 'docz'
+import { Box } from '../box'
 import { Layout } from './index'
 
 # Layout
@@ -23,22 +24,21 @@ Components:
 - `Layout` — Container that takes space of page (add `minHt='100vh'` prop, default to `100%`)
 - `Layout.Content` — Main component, that expands to take available space
 - `Layout.Body` — Can be used inside `Layout` as main container of vertical columns and content
-- `Layout.Item` — Basic component that can be used for horizontal sections inside `Layout` or vertical in `Layout.Body`
 
 ## Usage
 
 ```js
-import { Layout } from 'pss-components'
+import { Layout, Box } from 'pss-components'
 ```
 
 ```js
 <Layout>
-  <Layout.Item>Top</Layout.Item>
+  <Box>Top</Box>
   <Layout.Body>
     <Layout.Content>Content</Layout.Content>
-    <Layout.Item>Side Nav</Layout.Item>
+    <Box>Side Nav</Box>
   </Layout.Body>
-  <Layout.Item>Bottom</Layout.Item>
+  <Box>Bottom</Box>
 </Layout>
 ```
 
@@ -48,15 +48,15 @@ import { Layout } from 'pss-components'
 
 <Playground style={{ height: '500px' }}>
   <Layout>
-    <Layout.Item as='header'>
+    <Box as='header'>
       Header
-    </Layout.Item>
+    </Box>
     <Layout.Content as='main'>
       Main
     </Layout.Content>
-    <Layout.Item as='footer'>
+    <Box as='footer'>
       Footer
-    </Layout.Item>
+    </Box>
   </Layout>
 </Playground>
 
@@ -64,25 +64,25 @@ import { Layout } from 'pss-components'
 
 <Playground style={{ height: '500px' }}>
   <Layout outline='1px solid' pd>
-    <Layout.Item outline='debug' pd mgb>
+    <Box outline='debug' pd mgb>
       Header
-    </Layout.Item>
-    <Layout.Item outline='debug' pd mgb>
+    </Box>
+    <Box outline='debug' pd mgb>
       Some / Breadcrumbs / Path
-    </Layout.Item>
+    </Box>
     <Layout.Body outline='debug' pd mgb>
       <Layout.Content outline='debug' pd mgx>
         Content
       </Layout.Content>
-      <Layout.Item outline='debug' pd width={( 1 / 6 )} order={-1}>
+      <Box outline='debug' pd width={( 1 / 6 )} order={-1}>
         Left Nav
-      </Layout.Item>
-      <Layout.Item outline='debug' pd width={( 1 / 6 )}>
+      </Box>
+      <Box outline='debug' pd width={( 1 / 6 )}>
         Right Nav
-      </Layout.Item>
+      </Box>
     </Layout.Body>
-    <Layout.Item outline='debug' pd>
+    <Box outline='debug' pd>
       Footer
-    </Layout.Item>
+    </Box>
   </Layout>
 </Playground>

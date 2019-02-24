@@ -1,25 +1,28 @@
-import { compose } from '@exah/utils'
-import { defaultProps, withDisplayName, withPropTypes } from '../utils'
+import React from 'react'
 import { FlexBox } from '../flex-box'
 import { Box } from '../box'
 
-const MediaObject = compose(
-  withDisplayName('MediaObject'),
-  withPropTypes(FlexBox),
-  defaultProps({ alignItems: 'flex-start' })
-)(FlexBox)
+const MediaObject = (props) => (
+  <FlexBox
+    alignItems='flex-start'
+    {...props}
+  />
+)
 
-const MediaObjectSide = compose(
-  withDisplayName('MediaObject.Side'),
-  withPropTypes(Box),
-  defaultProps({ flex: '0 0 auto' })
-)(Box)
+const MediaObjectSide = (props) => (
+  <Box
+    flex='0 0 auto'
+    {...props}
+  />
+)
 
-const MediaObjectContent = compose(
-  withDisplayName('MediaObject.Content'),
-  withPropTypes(Box),
-  defaultProps({ flex: '1', minWidth: 0 })
-)(Box)
+const MediaObjectContent = (props) => (
+  <Box
+    flex='1 1 auto'
+    minWidth={0}
+    {...props}
+  />
+)
 
 Object.assign(MediaObject, {
   Side: MediaObjectSide,

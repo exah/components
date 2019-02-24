@@ -15,14 +15,6 @@ const withProps = (data) => mapProps((props) => ({
   ...isFn(data) ? data(props) : data
 }))
 
-const withDisplayName = (name) => (Comp) => Object.assign(Comp, {
-  displayName: name
-})
-
-const withPropTypes = (Base) => (Comp) => Object.assign(Comp, {
-  propTypes: { ...Base.propTypes }
-})
-
 function useIsMounted () {
   const [ isMounted, setIsMounted ] = useState(false)
 
@@ -46,8 +38,6 @@ export {
   mapProps,
   defaultProps,
   withProps,
-  withPropTypes,
-  withDisplayName,
   useIsMounted,
   groupArr
 }
