@@ -18,7 +18,7 @@ import { Grid } from './index'
 [Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 
 - Item conrolled with `col`, `row` prop in `Grid.Item` component
-- [Space](https://github.com/exah/pss/blob/master/docs/api.md#space) between items conrolled with `gap`, `gapx` and `gapy` props
+- [Space](https://github.com/exah/pss/blob/master/docs/api.md#space) between items conrolled with `gap`, `columnGap` and `rowGap` props
 - [Box alignment](https://rachelandrew.co.uk/css/cheatsheets/box-alignment) styles
 
 
@@ -27,12 +27,12 @@ import { Grid } from './index'
 #### `Grid` — Grid layout container
 
 - `gap` — `grid-gap`
-- `gapx` — `grid-column-gap`
-- `gapy` — `grid-row-gap`
+- `columnGap` — `grid-column-gap`
+- `rowGap` — `grid-row-gap`
 - `autoFlow` — `grid-auto-flow`
-- `autoCols` — `grid-auto-columns`
+- `autoColumns` — `grid-auto-columns`
 - `autoRows` — `grid-auto-rows`
-- `templateCols` — `grid-template-columns`
+- `templateColumns` — `grid-template-columns`
 - `templateRows` — `grid-template-rows`
 - `templateAreas` — `grid-template-areas`
 - `alignItems` — `align-items`
@@ -43,7 +43,7 @@ import { Grid } from './index'
 
 #### `Grid.Item`
 
-- `col` — `grid-column`
+- `column` — `grid-column`
 - `row` — `grid-row`
 - `area` — `grod-area`
 - `justifySelf` — `justify-self`
@@ -59,13 +59,13 @@ import { Grid } from 'pss-components'
 
 ```js
 <Grid gap={2}>
-  <Grid.Item col='span 6'>
+  <Grid.Item column='span 6'>
     Content
   </Grid.Item>
-  <Grid.Item col='span 4'>
+  <Grid.Item column='span 4'>
     Content
   </Grid.Item>
-  <Grid.Item col='span 2'>
+  <Grid.Item column='span 2'>
     Content
   </Grid.Item>
 </Grid>
@@ -77,23 +77,23 @@ import { Grid } from 'pss-components'
 ### Basic
 
 <Playground>
-  <Grid templateCols='repeat(12, 1fr)' gapx={1}>
-    <Grid.Item col='span 2' outline='1px solid' pd={1}>
+  <Grid templateColumns='repeat(12, 1fr)' columnGap={1}>
+    <Grid.Item column='span 2' pd={1} outline='1px solid'>
         2
     </Grid.Item>
-    <Grid.Item col='span 2' outline='1px solid' pd={1}>
+    <Grid.Item column='span 2' pd={1} outline='1px solid'>
         2
     </Grid.Item>
-    <Grid.Item col='span 2' outline='1px solid' pd={1}>
+    <Grid.Item column='span 2' pd={1} outline='1px solid'>
         2
     </Grid.Item>
-    <Grid.Item col='span 2' outline='1px solid' pd={1}>
+    <Grid.Item column='span 2' pd={1} outline='1px solid'>
         2
     </Grid.Item>
-    <Grid.Item col='span 2' outline='1px solid' pd={1}>
+    <Grid.Item column='span 2' pd={1} outline='1px solid'>
         2
     </Grid.Item>
-    <Grid.Item col='span 2' outline='1px solid' pd={1}>
+    <Grid.Item column='span 2' pd={1} outline='1px solid'>
         2
     </Grid.Item>
   </Grid>
@@ -102,29 +102,29 @@ import { Grid } from 'pss-components'
 ### Vertical and horizontal space between items
 
 <Playground>
-  <Grid templateCols='repeat(12, 1fr)' gap={1}>
-    <Grid.Item col='span 1' outline='1px solid' pd={1}>
+  <Grid templateColumns='repeat(12, 1fr)' gap={1}>
+    <Grid.Item column='span 1' pd={1} outline='1px solid'>
         1
     </Grid.Item>
-    <Grid.Item col='span 2' outline='1px solid' pd={1}>
+    <Grid.Item column='span 2' pd={1} outline='1px solid'>
         2
     </Grid.Item>
-    <Grid.Item col='span 3' outline='1px solid' pd={1}>
+    <Grid.Item column='span 3' pd={1} outline='1px solid'>
         3
     </Grid.Item>
-    <Grid.Item col='span 6' outline='1px solid' pd={1}>
+    <Grid.Item column='span 6' pd={1} outline='1px solid'>
         6
     </Grid.Item>
-    <Grid.Item col='span 12' outline='1px solid' pd={1}>
+    <Grid.Item column='span 12' pd={1} outline='1px solid'>
         12
     </Grid.Item>
-    <Grid.Item col='span 4' outline='1px solid' pd={1}>
+    <Grid.Item column='span 4' pd={1} outline='1px solid'>
         4
     </Grid.Item>
-    <Grid.Item col='span 4' outline='1px solid' pd={1}>
+    <Grid.Item column='span 4' pd={1} outline='1px solid'>
         4
     </Grid.Item>
-    <Grid.Item col='span 4' outline='1px solid' pd={1}>
+    <Grid.Item column='span 4' pd={1} outline='1px solid'>
         4
     </Grid.Item>
   </Grid>
@@ -133,17 +133,17 @@ import { Grid } from 'pss-components'
 ### Control each item `col` and `row` props
 
 <Playground>
-  <Grid templateCols='repeat(12, 1fr)' gap={1}>
-    <Grid.Item row='1' col='1 / span 3' outline='1px solid' pd={1}>
+  <Grid templateColumns='repeat(12, 1fr)' gap={1}>
+    <Grid.Item row='1' column='1 / span 3' pd={1} outline='1px solid'>
         1
     </Grid.Item>
-    <Grid.Item row='2' col='4 / span 3' outline='1px solid' pd={1}>
+    <Grid.Item row='2' column='4 / span 3' pd={1} outline='1px solid'>
         2
     </Grid.Item>
-    <Grid.Item row='3' col='7 / span 3' outline='1px solid' pd={1}>
+    <Grid.Item row='3' column='7 / span 3' pd={1} outline='1px solid'>
         3
     </Grid.Item>
-    <Grid.Item row='4' col='10 / span 3' outline='1px solid' pd={1}>
+    <Grid.Item row='4' column='10 / span 3' pd={1} outline='1px solid'>
         4
     </Grid.Item>
   </Grid>

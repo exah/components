@@ -79,7 +79,7 @@ test('MediaObject', () => {
 
 describe('FlexGrid', () => {
   const renderFlexGridItems = (length, col) => initArr(length, (index) => (
-    <FlexGrid.Item col={col} key={index}>
+    <FlexGrid.Item column={col} key={index}>
       <Box>
         {col}
       </Box>
@@ -160,7 +160,7 @@ describe('FlexGrid', () => {
 
 describe('Grid', () => {
   const renderGridItems = (length, col, row) => initArr(length, (index) => (
-    <Grid.Item col={col} row={row} key={index}>
+    <Grid.Item column={col} row={row} key={index}>
       {col}
     </Grid.Item>
   ))
@@ -168,7 +168,7 @@ describe('Grid', () => {
   test('basic', () => {
     const result = renderJSON(
       <ThemeProvider theme={theme}>
-        <Grid templateCols='repeat(12, 1fr)'>
+        <Grid templateColumns='repeat(12, 1fr)'>
           {renderGridItems(12, 'span 1', 1)}
           {renderGridItems(6, 'span 2', 2)}
           {renderGridItems(3, 'span 4', 3)}
@@ -199,7 +199,7 @@ describe('Feed', () => {
 
   test('basic', () => {
     const result = renderJSON(
-      <Feed col={3}>
+      <Feed column={3}>
         <Feed.Item>
           Item
         </Feed.Item>
@@ -219,7 +219,7 @@ describe('Feed', () => {
     const result = renderJSON(
       <ThemeProvider theme={theme}>
         <CurrentMediaProvider>
-          <Feed space={2} col={{ all: 3, md: 6, sm: 12 }}>
+          <Feed space={2} column={{ all: 3, md: 6, sm: 12 }}>
             <Feed.Item>
               Item
             </Feed.Item>

@@ -37,7 +37,7 @@ const flexGridItemStyle = createStyles({
       marginLeft: size
     }
   },
-  col (value, props) {
+  column (value, props) {
     if (value === 'auto' || value === true) {
       return {
         flexGrow: 1,
