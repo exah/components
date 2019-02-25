@@ -8708,10 +8708,10 @@ psl@^1.1.24, psl@^1.1.28:
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.31.tgz#e9aa86d0101b5b105cbe93ac6b784cd547276184"
   integrity sha512-/6pt4+C+T+wZUieKR620OpzN/LlnNKuWjy1iFLQ/UG35JqHlR/89MP1d96dUfkf6Dne3TuLQzOYEYshJ+Hx8mw==
 
-pss@^5.0.0-0:
-  version "5.0.0-0"
-  resolved "https://registry.yarnpkg.com/pss/-/pss-5.0.0-0.tgz#9a161514c81c73798ca3eafeb1894c17bf1c158f"
-  integrity sha512-cLrr1XNdXCgngunNXT+fVAwfHn7m9rcXs0DXVpPqReMKwkiqUFuHPHam8IHIpTlDX8VYbHqBlAF5LvAnHVMPgw==
+pss@^5.0.0-1:
+  version "5.0.0-1"
+  resolved "https://registry.yarnpkg.com/pss/-/pss-5.0.0-1.tgz#fca2aa3412788d6a132a2d89429bf61d547f8424"
+  integrity sha512-S24VOjANxvxZPhBi/If1IPy8hz09O4GfVfVKrPhKjM9UHynMtoFBsmFOEZSDXuh43NNpzC8gnm6dldybI5iENA==
   dependencies:
     "@exah/utils" "^2.0.0"
     prop-types "^15.6.2"
