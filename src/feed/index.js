@@ -27,12 +27,12 @@ function FeedContainer ({
   currentMediaKey,
   theme = {},
   grid = theme.grid || DEFAULT_GRID,
-  col = DEFAULT_GRID,
+  column = DEFAULT_GRID,
   item,
   ...rest
 }) {
   const itemCol = fallbackTo(
-    col && fallbackTo(col[currentMediaKey[0]], col.all, col),
+    column && fallbackTo(column[currentMediaKey[0]], column.all, column),
     grid
   )
   const groupSize = (grid / itemCol)
@@ -41,7 +41,7 @@ function FeedContainer ({
   return (
     <FlexGrid spaceTarget={FeedItem.toString()} {...rest}>
       {childrenGroups.map((child, index) => (
-        <FlexGridItem key={`feed-item-${index}`} {...item} col={itemCol}>
+        <FlexGridItem key={`feed-item-${index}`} {...item} column={itemCol}>
           {child}
         </FlexGridItem>
       ))}
@@ -66,10 +66,11 @@ const Feed = compose(
 
 Feed.propTypes = {
   grid: PropTypes.number,
-  col: PropTypes.oneOfType([ PropTypes.number, PropTypes.objectOf(PropTypes.number) ])
+  column: PropTypes.oneOfType([ PropTypes.number, PropTypes.objectOf(PropTypes.number) ])
 }
 
 const FeedItem = styled(Box)``
+FeedItem.propTypes = { ...Box.propTypes }
 Feed.Item = FeedItem
 
 export {

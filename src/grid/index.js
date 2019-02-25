@@ -1,27 +1,20 @@
 import {
-  createStyles,
-  spaceRule,
   createGridStyle,
   createGridItemStyle,
   boxContentAlignment,
-  boxItemsAlignment
+  boxItemsAlignment,
+  gap
 } from 'pss'
 
 import React from 'react'
 import styled from '@emotion/styled'
 import { Box } from '../box'
 
-const gridGap = createStyles({
-  gap: [ spaceRule('gridGap'), spaceRule('gap') ],
-  gapx: [ spaceRule('gridColumnGap'), spaceRule('columnGap') ],
-  gapy: [ spaceRule('gridRowGap'), spaceRule('rowGap') ]
-})
-
-const gridStyle = createGridStyle({ isShortPropNames: true })
-const gridItemStyle = createGridItemStyle({ isShortPropNames: true })
+const gridStyle = createGridStyle()
+const gridItemStyle = createGridItemStyle()
 
 const StyledGrid = styled(Box)(
-  gridGap,
+  gap,
   gridStyle,
   boxContentAlignment,
   boxItemsAlignment
@@ -42,7 +35,7 @@ Grid.propTypes = {
   ...gridStyle.propTypes,
   ...boxContentAlignment.propTypes,
   ...boxItemsAlignment.propTypes,
-  ...gridGap.propTypes,
+  ...gap.propTypes,
   ...Box.propTypes
 }
 
