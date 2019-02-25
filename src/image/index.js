@@ -8,7 +8,6 @@ import {
   flex,
   boxSelfAlignment,
   order,
-  float,
   margin,
   opacity,
   position,
@@ -17,13 +16,12 @@ import {
   transform
 } from 'pss'
 
-const imageStyle = combineStyles(
+const styles = combineStyles(
   cursor,
   display,
   flex,
   boxSelfAlignment,
   order,
-  float,
   margin,
   opacity,
   position,
@@ -34,11 +32,11 @@ const imageStyle = combineStyles(
 
 const Image = styled(createBase('img', { blacklist: [ 'width', 'height' ] }))(
   { display: 'block', maxWidth: '100%', height: 'auto' },
-  imageStyle
+  styles
 )
 
 Image.displayName = 'Image'
-Image.propTypes = { ...imageStyle.propTypes }
+Image.propTypes = { ...styles.propTypes }
 
 export {
   Image
