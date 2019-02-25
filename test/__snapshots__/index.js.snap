@@ -1421,9 +1421,9 @@ exports[`MediaObject 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
 }
 
