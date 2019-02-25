@@ -1,27 +1,14 @@
 import {
-  combineStyles,
-  border,
-  boxSelfAlignment,
+  box,
   boxStyle,
-  clearFix,
-  colors,
+  combineStyles,
   cursor,
-  display,
-  flex,
-  float,
   hideOn,
   opacity,
-  order,
-  outline,
-  position,
-  positionOffset,
   radius,
   ratio,
-  sizes,
-  space,
   transform,
-  transition,
-  zIndex
+  transition
 } from 'pss'
 
 import PropTypes from 'prop-types'
@@ -40,28 +27,15 @@ BorderBox.propTypes = {
 }
 
 const styles = combineStyles(
-  border,
-  boxSelfAlignment,
+  box,
   boxStyle,
-  clearFix,
-  colors,
   cursor,
-  display,
-  flex,
-  float,
   hideOn,
   opacity,
-  order,
-  outline,
-  position,
-  positionOffset,
   radius,
   ratio,
-  sizes,
-  space,
   transform,
-  transition,
-  zIndex
+  transition
 )
 
 const Box = styled(BorderBox)(styles)
