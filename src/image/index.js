@@ -42,7 +42,7 @@ const Image = styled(ImageBase)(
 Image.displayName = 'Image'
 
 Image.propTypes = {
-  ...Image.propTypes,
+  ...ImageBase.propTypes,
   ...styles.propTypes
 }
 
