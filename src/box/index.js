@@ -40,7 +40,7 @@ const Box = styled(BoxBase)(
 Box.displayName = 'Box'
 
 Box.propTypes = {
-  ...Box.propTypes,
+  ...BoxBase.propTypes,
   ...styles.propTypes,
   initialCSS: PropTypes.object
 }
