@@ -1,7 +1,7 @@
 import {
+  combineStyles,
   box,
   boxStyle,
-  combineStyles,
   cursor,
   hideOn,
   opacity,
@@ -13,18 +13,7 @@ import {
 
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
-import { Base } from '../base'
-
-const BorderBox = styled(Base)(
-  { boxSizing: 'border-box' },
-  (props) => props.initialCSS
-)
-
-BorderBox.displayName = 'BorderBox'
-BorderBox.propTypes = {
-  ...Base.propTypes,
-  initialCSS: PropTypes.object
-}
+import { createBase, blacklistOf } from '../utils'
 
 const styles = combineStyles(
   box,
@@ -38,14 +27,24 @@ const styles = combineStyles(
   transition
 )
 
-const Box = styled(BorderBox)(styles)
+const BoxBase = createBase('div', {
+  blacklist: [ 'initialCSS', ...blacklistOf(styles) ]
+})
+
+const Box = styled(BoxBase)(
+  { boxSizing: 'border-box' },
+  (props) => props.initialCSS,
+  styles
+)
+
+Box.displayName = 'Box'
 
 Box.propTypes = {
-  ...BorderBox.propTypes,
-  ...styles.propTypes
+  ...Box.propTypes,
+  ...styles.propTypes,
+  initialCSS: PropTypes.object
 }
 
 export {
-  Box,
-  BorderBox
+  Box
 }

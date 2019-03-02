@@ -1,6 +1,3 @@
-import styled from '@emotion/styled'
-import { createBase } from '../base'
-
 import {
   combineStyles,
   cursor,
@@ -16,6 +13,9 @@ import {
   transform
 } from 'pss'
 
+import styled from '@emotion/styled'
+import { createBase, blacklistOf } from '../utils'
+
 const styles = combineStyles(
   cursor,
   display,
@@ -30,13 +30,21 @@ const styles = combineStyles(
   transform
 )
 
-const Image = styled(createBase('img', { blacklist: [ 'width', 'height' ] }))(
+const ImageBase = createBase('img', {
+  blacklist: blacklistOf(styles)
+})
+
+const Image = styled(ImageBase)(
   { display: 'block', maxWidth: '100%', height: 'auto' },
   styles
 )
 
 Image.displayName = 'Image'
-Image.propTypes = { ...styles.propTypes }
+
+Image.propTypes = {
+  ...Image.propTypes,
+  ...styles.propTypes
+}
 
 export {
   Image

@@ -1444,29 +1444,32 @@ exports[`MediaObject 1`] = `
 `;
 
 exports[`Text empty 1`] = `
-.emotion-0 {
+.emotion-2 {
+  box-sizing: border-box;
   box-sizing: border-box;
 }
 
 <div
-  className="emotion-0 emotion-1"
+  className="emotion-0 emotion-1 emotion-2 emotion-1"
 />
 `;
 
 exports[`Text with text 1`] = `
-.emotion-0 {
+.emotion-2 {
+  box-sizing: border-box;
   box-sizing: border-box;
 }
 
 <div
-  className="emotion-0 emotion-1"
+  className="emotion-0 emotion-1 emotion-2 emotion-1"
 >
   Hello
 </div>
 `;
 
 exports[`Text with theme 1`] = `
-.emotion-0 {
+.emotion-2 {
+  box-sizing: border-box;
   box-sizing: border-box;
   font-family: Helvetica,system-ui,sans-serif;
   font-size: 1rem;
@@ -1474,7 +1477,7 @@ exports[`Text with theme 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
+  className="emotion-0 emotion-1 emotion-2 emotion-1"
 >
   Hello
 </div>
