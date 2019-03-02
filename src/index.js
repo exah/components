@@ -1,9 +1,4 @@
 export {
-  Base,
-  createBase
-} from './base'
-
-export {
   Box
 } from './box'
 
@@ -62,6 +57,7 @@ export {
 } from './current-media-provider'
 
 export {
+  createBase,
   mapProps,
   defaultProps,
   withProps

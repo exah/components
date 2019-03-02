@@ -23,11 +23,13 @@ const FlexBox = (props) => (
   />
 )
 
+FlexBox.displayName = 'FlexBox'
+
 FlexBox.propTypes = {
+  ...gap.propTypes,
   ...flexBox.propTypes,
   ...boxContentAlignment.propTypes,
   ...boxItemsAlignment.propTypes,
-  ...gap.propTypes,
   ...Box.propTypes
 }
 
