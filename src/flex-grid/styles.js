@@ -1,6 +1,7 @@
 import { isNum, fallbackTo, identity } from '@exah/utils'
 
 import {
+  DEFAULT_KEY,
   createSpaceValue,
   createStyles,
   sizeValue,
@@ -10,8 +11,14 @@ import {
   splitUnit
 } from 'pss'
 
+import { THEME_COMPONENT_KEY, DEFAULT_GRID } from './constants'
+
 function getSize (value, props) {
-  const grid = themePath('grid', 12)(props)
+  const grid = themePath(
+    [ DEFAULT_KEY, THEME_COMPONENT_KEY, 'grid' ],
+    DEFAULT_GRID
+  )(props)
+
   const cols = Number(fallbackTo(value, 1))
 
   if (!isNum(cols) && !isNum(grid)) {

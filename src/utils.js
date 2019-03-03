@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react'
+import { isFn, isStr, initArr } from '@exah/utils'
 import isPropValid from '@emotion/is-prop-valid'
 import { createBaseFactory } from 'react-styled-base'
-import { isFn, initArr } from '@exah/utils'
 
 export const createBase = createBaseFactory({ filter: isPropValid })
 export const blacklistOf = (styles) => Object.keys(styles.propTypes || {})
 
-export const mapProps = (fn) => (Comp) => (props) => (
-  <Comp {...fn(props)} />
-)
+export const getDisplayName = (comp, fallback = 'Component') =>
+  (isStr(comp) ? comp : (comp.displayName || comp.name || fallback))
+
+export const mapProps = (fn) => (Comp) => {
+  const HOC = (props) => (
+    <Comp {...fn(props)} />
+  )
+
+  HOC.displayName = `mapProps(${getDisplayName(Comp)})`
+  return HOC
+}
 
 export const defaultProps = (data) => mapProps((props) => ({
   ...isFn(data) ? data(props) : data,

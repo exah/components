@@ -7,6 +7,7 @@ order: -5
 import { Playground } from 'docz'
 import { ThemeProvider } from 'emotion-theming'
 import { PropsTable } from '../props-table'
+import { ThemeDefaultsProvider } from '../theme-defaults'
 import { Box } from '../box'
 import { Grid } from './index'
 
@@ -149,6 +150,75 @@ import { Grid } from 'pss-components'
   </Grid>
 </Playground>
 
+
+### Set defaults in `theme`
+
+```js
+
+const theme = {
+  default: {
+    Grid: {
+      templateColumns: 'repeat(12, 1fr)',
+      gap: 1
+    }
+    // other defaults
+  }
+  // rest is the same
+}
+```
+
+Here [`ThemeDefaultsProvider`](#/theme-defaults-provider) used to change defaults in runtime:
+
+<Playground>
+  <ThemeDefaultsProvider Grid={{ templateColumns: 'repeat(12, 1fr)', gap: 1 }}>
+    <Grid>
+      <Grid.Item column='span 1' pd={1} outline='1px solid'>
+          1
+      </Grid.Item>
+      <Grid.Item column='span 2' pd={1} outline='1px solid'>
+          2
+      </Grid.Item>
+      <Grid.Item column='span 3' pd={1} outline='1px solid'>
+          3
+      </Grid.Item>
+      <Grid.Item column='span 6' pd={1} outline='1px solid'>
+          6
+      </Grid.Item>
+      <Grid.Item column='span 12' pd={1} outline='1px solid'>
+        <Box mgb={1}>Nested `Grid`</Box>
+        
+        <Grid>
+          <Grid.Item column='span 6' pd={1} outline='1px solid'>
+              6
+          </Grid.Item>
+          <Grid.Item column='span 3' pd={1} outline='1px solid'>
+              3
+          </Grid.Item>
+          <Grid.Item column='span 2' pd={1} outline='1px solid'>
+              2
+          </Grid.Item>
+          <Grid.Item column='span 1' pd={1} outline='1px solid'>
+              1
+          </Grid.Item>
+        </Grid>
+      </Grid.Item>
+    </Grid>
+  </ThemeDefaultsProvider>
+</Playground>
+
+Alternatively you can just create your own `Grid` component:
+
+```js
+
+const MyGrid = (props) => (
+  <Grid
+    templateColumns='repeat(12, 1fr)' 
+    gap={1}
+    {...props}
+  />
+)
+
+```
 
 ## Props
 

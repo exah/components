@@ -47,8 +47,9 @@ export {
 } from './image'
 
 export {
-  ThemeDefaultsProvider
-} from './theme-defaults-provider'
+  ThemeDefaultsProvider,
+  withThemeDefaults
+} from './theme-defaults'
 
 export {
   CurrentMediaProvider,
