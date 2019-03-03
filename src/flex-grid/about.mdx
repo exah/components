@@ -7,6 +7,7 @@ order: -5
 import { Playground } from 'docz'
 import { ThemeProvider } from 'emotion-theming'
 import { PropsTable } from '../props-table'
+import { ThemeDefaultsProvider } from '../theme-defaults'
 import { Box } from '../box'
 import { FlexGrid } from './index'
 
@@ -45,8 +46,19 @@ import { FlexGrid } from 'pss-components'
 ```
 
 ```js
-<ThemeProvider theme={{ grid: 12 }}>
-  <FlexGrid space={2}>
+const theme = {
+  default: {
+    FlexGrid: {
+      grid: 12,
+      space: 1
+    }
+  }
+}
+```
+
+```js
+<ThemeProvider theme={theme}>
+  <FlexGrid>
     <FlexGrid.Item column={6}>
       <Box>
         Content
@@ -109,50 +121,48 @@ import { FlexGrid } from 'pss-components'
 ### Vertical and horizontal space between items
 
 <Playground>
-  <ThemeProvider theme={{ grid: 12 }}>
-    <FlexGrid space={1}>
-      <FlexGrid.Item column={1}>
-        <Box outline='1px solid' pd={1}>
-          1
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={2}>
-        <Box outline='1px solid' pd={1}>
-          2
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={3}>
-        <Box outline='1px solid' pd={1}>
-          3
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={6}>
-        <Box outline='1px solid' pd={1}>
-          6
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={12}>
-        <Box outline='1px solid' pd={1}>
-          12
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={4}>
-        <Box outline='1px solid' pd={1}>
-          4
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={4}>
-        <Box outline='1px solid' pd={1}>
-          4
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={4}>
-        <Box outline='1px solid' pd={1}>
-          4
-        </Box>
-      </FlexGrid.Item>
-    </FlexGrid>
-  </ThemeProvider>
+  <FlexGrid space={1}>
+    <FlexGrid.Item column={1}>
+      <Box outline='1px solid' pd={1}>
+        1
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item column={2}>
+      <Box outline='1px solid' pd={1}>
+        2
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item column={3}>
+      <Box outline='1px solid' pd={1}>
+        3
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item column={6}>
+      <Box outline='1px solid' pd={1}>
+        6
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item column={12}>
+      <Box outline='1px solid' pd={1}>
+        12
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item column={4}>
+      <Box outline='1px solid' pd={1}>
+        4
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item column={4}>
+      <Box outline='1px solid' pd={1}>
+        4
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item column={4}>
+      <Box outline='1px solid' pd={1}>
+        4
+      </Box>
+    </FlexGrid.Item>
+  </FlexGrid>
 </Playground>
 
 ### Offset items
@@ -227,6 +237,69 @@ import { FlexGrid } from 'pss-components'
       </Box>
     </FlexGrid.Item>
   </FlexGrid>
+</Playground>
+
+### Set defaults in `theme`
+
+```js
+
+const theme = {
+  default: {
+    FlexGrid: {
+      grid: 16,
+      space: 1,
+      justifyContent: 'flex-end'
+    }
+    // other defaults
+  }
+  // rest is the same
+}
+```
+
+[`ThemeDefaultsProvider`](#/theme-defaults-provider) can be used to change defaults in runtime:
+
+<Playground>
+  <ThemeDefaultsProvider 
+    FlexGrid={{ grid: 16, space: 1, justifyContent: 'flex-end' }}
+  >
+    <FlexGrid>
+      <FlexGrid.Item column={1}>
+        <Box outline='1px solid' pd={1}>
+          1
+        </Box>
+      </FlexGrid.Item>
+      <FlexGrid.Item column={2}>
+        <Box outline='1px solid' pd={1}>
+          2
+        </Box>
+      </FlexGrid.Item>
+      <FlexGrid.Item column={3}>
+        <Box outline='1px solid' pd={1}>
+          3
+        </Box>
+      </FlexGrid.Item>
+      <FlexGrid.Item column={4}>
+        <Box outline='1px solid' pd={1}>
+          4
+        </Box>
+      </FlexGrid.Item>
+      <FlexGrid.Item column={6}>
+        <Box outline='1px solid' pd={1}>
+          6
+        </Box>
+      </FlexGrid.Item>
+      <FlexGrid.Item column={16}>
+        <Box outline='1px solid' pd={1}>
+          16
+        </Box>
+      </FlexGrid.Item>
+      <FlexGrid.Item column={8}>
+        <Box outline='1px solid' pd={1}>
+          8
+        </Box>
+      </FlexGrid.Item>
+    </FlexGrid>
+  </ThemeDefaultsProvider>
 </Playground>
 
 
