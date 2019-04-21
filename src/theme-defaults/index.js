@@ -1,7 +1,6 @@
 import { ThemeProvider, withTheme } from 'emotion-theming'
-import { DEFAULT_KEY } from 'pss'
-import { compose, path } from '@exah/utils'
-import { defaultProps, withProps, getDisplayName } from '../utils'
+import { compose } from '@exah/utils'
+import { withProps } from '../utils'
 
 const mergeTheme = withProps(({ theme, children, ...rest }) => ({
   theme: {
@@ -18,14 +17,3 @@ export const ThemeDefaultsProvider = compose(
 )(ThemeProvider)
 
 ThemeDefaultsProvider.displayName = 'ThemeDefaultsProvider'
-
-export const withThemeDefaults = (key, Comp) => {
-  const HOC = compose(
-    withTheme,
-    defaultProps(path([ 'theme', DEFAULT_KEY, key ]))
-  )(Comp)
-
-  Comp.displayName = getDisplayName(Comp, key)
-  HOC.displayName = `withThemeDefaults(${Comp.displayName})`
-  return HOC
-}

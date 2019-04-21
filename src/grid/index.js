@@ -9,7 +9,6 @@ import {
 import React from 'react'
 import styled from '@emotion/styled'
 import { Box } from '../box'
-import { withThemeDefaults } from '../theme-defaults'
 
 const gridStyle = createGridStyle()
 const gridItemStyle = createGridItemStyle()
@@ -21,12 +20,12 @@ const StyledGrid = styled(Box)(
   boxItemsAlignment
 )
 
-const Grid = withThemeDefaults('Grid', (props) => (
+const Grid = (props) => (
   <StyledGrid
     display='grid'
     {...props}
   />
-))
+)
 
 Grid.propTypes = {
   ...gridStyle.propTypes,
