@@ -2,9 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Box } from '../box'
 import { FlexBox } from '../flex-box'
-import { withThemeDefaults } from '../theme-defaults'
 import { createFlexGridStyle, flexGridItemStyle } from './styles'
-import { THEME_COMPONENT_KEY } from './constants'
 
 const flexGridStyle = createFlexGridStyle({
   rowSelector: () => `${StyledFlexGrid} + &`,
@@ -17,12 +15,12 @@ const StyledFlexGrid = styled(FlexBox)(
   flexGridStyle
 )
 
-const FlexGrid = withThemeDefaults(THEME_COMPONENT_KEY, (props) => (
+const FlexGrid = (props) => (
   <StyledFlexGrid
     flexWrap='wrap'
     {...props}
   />
-))
+)
 
 FlexGrid.propTypes = {
   ...FlexBox.propTypes,

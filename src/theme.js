@@ -2,7 +2,7 @@ import { createElement } from 'react'
 import { ThemeProvider } from 'emotion-theming'
 
 const theme = {
-  grid: 12,
+  flexGridSize: 12,
   media: {
     sm: '(max-width: 600px)',
     md: '(min-width: 601px) and (max-width: 1024px)',

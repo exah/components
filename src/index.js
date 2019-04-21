@@ -47,8 +47,7 @@ export {
 } from './image'
 
 export {
-  ThemeDefaultsProvider,
-  withThemeDefaults
+  ThemeDefaultsProvider
 } from './theme-defaults'
 
 export {
