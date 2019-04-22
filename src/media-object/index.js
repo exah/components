@@ -3,25 +3,15 @@ import { FlexBox } from '../flex-box'
 import { Box } from '../box'
 
 const MediaObject = (props) => (
-  <FlexBox
-    alignItems='flex-start'
-    {...props}
-  />
+  <FlexBox {...props} />
 )
 
 const MediaObjectSide = (props) => (
-  <Box
-    flex='0 0 auto'
-    {...props}
-  />
+  <Box flex='0 0 auto' {...props} />
 )
 
 const MediaObjectContent = (props) => (
-  <Box
-    flex='1 1 auto'
-    minWidth={0}
-    {...props}
-  />
+  <Box flex='1 1 auto' {...props} />
 )
 
 Object.assign(MediaObject, {
