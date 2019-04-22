@@ -8680,7 +8680,7 @@ prismjs@1.6:
 private@^0.1.6, private@~0.1.5:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
-  integrity sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==
+  integrity sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/m==
 
 process-nextick-args@~2.0.0:
   version "2.0.0"
@@ -8784,10 +8784,10 @@ psl@^1.1.24, psl@^1.1.28:
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.31.tgz#e9aa86d0101b5b105cbe93ac6b784cd547276184"
   integrity sha512-/6pt4+C+T+wZUieKR620OpzN/LlnNKuWjy1iFLQ/UG35JqHlR/89MP1d96dUfkf6Dne3TuLQzOYEYshJ+Hx8mw==
 
-pss@^5.0.0-2:
-  version "5.0.0-2"
-  resolved "https://registry.yarnpkg.com/pss/-/pss-5.0.0-2.tgz#a4f0f7ba48c52a254716ba35ea7c9ea31e8703e6"
-  integrity sha512-1dJullYOi6al3SjbdLm23cCy5U7QyAQHLGzRE5qALaskee8WhEzg6pUJhna6dpcgpVQkmpJqw4iJgN2rMtZNqw==
+pss@^5.0.0-3:
+  version "5.0.0-3"
+  resolved "https://registry.yarnpkg.com/pss/-/pss-5.0.0-3.tgz#1c3672fbdd5bddd3aaad4351324c6183df443018"
+  integrity sha512-1WEO2kr3eok2Tg996K/XPddA32fPJ1xdsoqvdHWVrGqZcIcR0meN6Elum2TMOYx0Uux6OYeJ7OofHKgTSHWB/g==
   dependencies:
     "@exah/utils" "^2.0.0"
     prop-types "^15.6.2"

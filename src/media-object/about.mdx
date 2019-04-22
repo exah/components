@@ -44,11 +44,11 @@ import { MediaObject } from 'pss-components'
 ### Basic
 
 <Playground>
-  <MediaObject outline='debug' pd={1}>
-    <MediaObject.Side outline='debug' pd={1} mgr={1}>
+  <MediaObject outline='debug' p={1}>
+    <MediaObject.Side outline='debug' p={1} mr={1}>
       Side
     </MediaObject.Side>
-    <MediaObject.Content outline='debug' pd={1}>
+    <MediaObject.Content outline='debug' p={1}>
       Content
     </MediaObject.Content>
   </MediaObject>
@@ -58,7 +58,7 @@ import { MediaObject } from 'pss-components'
 
 <Playground>
   <MediaObject alignItems='center'>
-    <MediaObject.Side mgr>
+    <MediaObject.Side mr={1}>
       <InfoIcon style={{ display: 'block' }} />
     </MediaObject.Side>
     <MediaObject.Content>
@@ -70,8 +70,8 @@ import { MediaObject } from 'pss-components'
 ### Comment box
 
 <Playground>
-  <MediaObject outline='1px solid' pd={2}>
-    <MediaObject.Side mgr={2}>
+  <MediaObject outline='1px solid' p={2}>
+    <MediaObject.Side mr={2}>
       <Image src='http://placekitten.com/80' alt='' />
     </MediaObject.Side>
     <MediaObject.Content>
@@ -83,11 +83,11 @@ import { MediaObject } from 'pss-components'
 ### Side can be placed before and after Content
 
 <Playground>
-  <MediaObject outline='1px solid' pd={2}>
+  <MediaObject outline='1px solid' p={2}>
     <MediaObject.Content>
       <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu libero libero, sit amet commodo sem. Proin a quam vulputate enim consequat sollicitudin. Etiam vitae nunc augue. Sed ac arcu nibh. Suspendisse a lobortis nulla. Maecenas nunc erat, consectetur quis sagittis et, sodales ac nisl. Proin vitae nibh sed massa blandit commodo. Sed ornare tincidunt nibh, vel malesuada orci pellentesque sit amet. Pellentesque velit urna, porttitor a eleifend sit amet, feugiat ac velit. Nulla ut nunc sit amet lorem dictum suscipit. Maecenas ullamcorper feugiat erat nec ornare.</div>
     </MediaObject.Content>
-    <MediaObject.Side mgl={2}>
+    <MediaObject.Side ml={2}>
       <Image src='http://placekitten.com/80' alt='' />
     </MediaObject.Side>
   </MediaObject>
