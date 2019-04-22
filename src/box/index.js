@@ -14,7 +14,18 @@ import {
 
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import { createBase, blacklistOf } from '../utils'
+
+const reset = css`
+  box-sizing: border-box;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+`
+
+const initialCSS = (props) => props.initialCSS
 
 const styles = combineStyles(
   box,
@@ -34,8 +45,8 @@ const BoxBase = createBase('div', {
 })
 
 const Box = styled(BoxBase)(
-  { boxSizing: 'border-box' },
-  (props) => props.initialCSS,
+  reset,
+  initialCSS,
   styles
 )
 

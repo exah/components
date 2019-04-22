@@ -4,7 +4,7 @@ import isPropValid from '@emotion/is-prop-valid'
 import { createBaseFactory } from 'react-styled-base'
 
 export const createBase = createBaseFactory({ filter: isPropValid })
-export const blacklistOf = (styles) => Object.keys(styles.propTypes || {})
+export const blacklistOf = (styles) => Object.keys(Object(styles.propTypes))
 
 export const getDisplayName = (comp, fallback = 'Component') =>
   (isStr(comp) ? comp : (comp.displayName || comp.name || fallback))

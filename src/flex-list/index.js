@@ -5,8 +5,6 @@ import { FlexBox } from '../flex-box'
 const FlexList = (props) => (
   <FlexBox
     as='ul'
-    m={0}
-    p={0}
     flexDirection='column'
     initialCSS={{ listStyle: 'none' }}
     {...props}
