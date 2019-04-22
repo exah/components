@@ -8,7 +8,7 @@ import {
   margin,
   opacity,
   position,
-  radius,
+  borderRadius,
   sizes,
   transform
 } from 'pss'
@@ -25,7 +25,7 @@ const styles = combineStyles(
   margin,
   opacity,
   position,
-  radius,
+  borderRadius,
   sizes,
   transform
 )

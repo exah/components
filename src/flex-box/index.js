@@ -1,7 +1,7 @@
 import {
   boxContentAlignment,
   boxItemsAlignment,
-  flexBox,
+  flexContainer,
   gap
 } from 'pss'
 
@@ -11,7 +11,7 @@ import { Box } from '../box'
 
 const StyledFlexBox = styled(Box)(
   gap,
-  flexBox,
+  flexContainer,
   boxContentAlignment,
   boxItemsAlignment
 )
@@ -27,7 +27,7 @@ FlexBox.displayName = 'FlexBox'
 
 FlexBox.propTypes = {
   ...gap.propTypes,
-  ...flexBox.propTypes,
+  ...flexContainer.propTypes,
   ...boxContentAlignment.propTypes,
   ...boxItemsAlignment.propTypes,
   ...Box.propTypes

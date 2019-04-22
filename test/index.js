@@ -24,7 +24,7 @@ const renderJSON = (element) =>
 
 test('Box', () => {
   const result = renderJSON(
-    <Box height='300px' mgx='auto' bg='#000' fg='#fff'>
+    <Box height='300px' mx='auto' bg='#000' fg='#fff'>
       Box
     </Box>
   )
@@ -36,7 +36,7 @@ test('FlexBox', () => {
   const result = renderJSON(
     <FlexBox tm width={(1 / 2)} justifyContent='space-between'>
       <Box>Item</Box>
-      <Box mgx='auto'>Item</Box>
+      <Box mx='auto'>Item</Box>
       <Box flex='0 1'>Item</Box>
     </FlexBox>
   )

@@ -1,6 +1,6 @@
 import {
-  createGridStyle,
-  createGridItemStyle,
+  createGridContainer,
+  createGridItem,
   boxContentAlignment,
   boxItemsAlignment,
   gap
@@ -10,12 +10,12 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Box } from '../box'
 
-const gridStyle = createGridStyle()
-const gridItemStyle = createGridItemStyle()
+const gridContainer = createGridContainer()
+const gridItem = createGridItem()
 
 const StyledGrid = styled(Box)(
   gap,
-  gridStyle,
+  gridContainer,
   boxContentAlignment,
   boxItemsAlignment
 )
@@ -28,7 +28,7 @@ const Grid = (props) => (
 )
 
 Grid.propTypes = {
-  ...gridStyle.propTypes,
+  ...gridContainer.propTypes,
   ...boxContentAlignment.propTypes,
   ...boxItemsAlignment.propTypes,
   ...gap.propTypes,
@@ -36,7 +36,7 @@ Grid.propTypes = {
 }
 
 const GridItem = styled(Box)(
-  gridItemStyle
+  gridItem
 )
 
 Grid.Item = GridItem
@@ -44,7 +44,7 @@ Grid.Item = GridItem
 Grid.Item.displayName = 'Grid.Item'
 
 Grid.Item.propTypes = {
-  ...gridItemStyle.propTypes,
+  ...gridItem.propTypes,
   ...Box.propTypes
 }
 

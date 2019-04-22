@@ -68,7 +68,7 @@ const getItemsSpaceStyles = (axis, {
   rowSelector
 }) => createRule({
   getValue: createSpaceValue()(sizeValue(identity)),
-  getStyle (value, step, props) {
+  getStyle (value, props) {
     const [ num, unit = 'px' ] = splitUnit(value)
     const size = `${num / 2}${unit}`
 
