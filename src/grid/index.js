@@ -13,25 +13,18 @@ import { Box } from '../box'
 const gridContainer = createGridContainer()
 const gridItem = createGridItem()
 
-const StyledGrid = styled(Box)(
+const GridContainer = styled(Box)(
   gap,
   gridContainer,
   boxContentAlignment,
   boxItemsAlignment
 )
 
-const Grid = (props) => (
-  <StyledGrid
-    display='grid'
-    {...props}
-  />
-)
-
-Grid.propTypes = {
+const gridPropTypes = {
+  ...gap.propTypes,
   ...gridContainer.propTypes,
   ...boxContentAlignment.propTypes,
   ...boxItemsAlignment.propTypes,
-  ...gap.propTypes,
   ...Box.propTypes
 }
 
@@ -39,16 +32,31 @@ const GridItem = styled(Box)(
   gridItem
 )
 
-Grid.Item = GridItem
+GridItem.displayName = 'Grid.Item'
 
-Grid.Item.displayName = 'Grid.Item'
-
-Grid.Item.propTypes = {
+GridItem.propTypes = {
   ...gridItem.propTypes,
   ...Box.propTypes
 }
 
+const Grid = (props) => (
+  <GridContainer display='grid' {...props} />
+)
+
+Grid.displayName = 'Grid'
+Grid.propTypes = { ...gridPropTypes }
+Grid.Item = GridItem
+
+const InlineGrid = (props) => (
+  <GridContainer display='inline-grid' {...props} />
+)
+
+InlineGrid.displayName = 'InlineGrid'
+InlineGrid.propTypes = { ...gridPropTypes }
+InlineGrid.Item = GridItem
+
 export {
   Grid,
-  GridItem
+  GridItem,
+  InlineGrid
 }

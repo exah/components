@@ -16,16 +16,7 @@ const FlexContainer = styled(Box)(
   boxItemsAlignment
 )
 
-const Flex = (props) => (
-  <FlexContainer
-    display='flex'
-    {...props}
-  />
-)
-
-Flex.displayName = 'Flex'
-
-Flex.propTypes = {
+const flexPropTypes = {
   ...gap.propTypes,
   ...flexContainer.propTypes,
   ...boxContentAlignment.propTypes,
@@ -33,6 +24,21 @@ Flex.propTypes = {
   ...Box.propTypes
 }
 
+const Flex = (props) => (
+  <FlexContainer display='flex' {...props} />
+)
+
+Flex.displayName = 'Flex'
+Flex.propTypes = { ...flexPropTypes }
+
+const InlineFlex = (props) => (
+  <FlexContainer display='inline-flex' {...props} />
+)
+
+InlineFlex.displayName = 'InlineFlex'
+InlineFlex.propTypes = { ...flexPropTypes }
+
 export {
-  Flex
+  Flex,
+  InlineFlex
 }
