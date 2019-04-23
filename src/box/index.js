@@ -2,14 +2,13 @@ import {
   combineStyles,
   box,
   boxStyle,
-  cursor,
   display,
   hide,
-  opacity,
-  borderRadius,
-  ratio,
+  transition,
   transform,
-  transition
+  opacity,
+  cursor,
+  ratio
 } from 'pss'
 
 import PropTypes from 'prop-types'
@@ -30,14 +29,13 @@ const initialCSS = (props) => props.initialCSS
 const styles = combineStyles(
   box,
   boxStyle,
-  cursor,
   display,
   hide,
-  opacity,
-  borderRadius,
-  ratio,
+  transition,
   transform,
-  transition
+  opacity,
+  cursor,
+  ratio
 )
 
 const BoxBase = createBase('div', {
