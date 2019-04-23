@@ -1,44 +1,32 @@
+import styled from '@emotion/styled'
+
 import {
+  combineStyles,
+  gap,
+  flexContainer,
   boxContentAlignment,
   boxItemsAlignment,
-  flexContainer,
-  gap
+  themePath
 } from 'pss'
 
-import React from 'react'
-import styled from '@emotion/styled'
 import { Box } from '../box'
 
-const FlexContainer = styled(Box)(
+const styles = combineStyles(
   gap,
   flexContainer,
   boxContentAlignment,
   boxItemsAlignment
 )
 
-const flexPropTypes = {
-  ...gap.propTypes,
-  ...flexContainer.propTypes,
-  ...boxContentAlignment.propTypes,
-  ...boxItemsAlignment.propTypes,
-  ...Box.propTypes
-}
-
-const Flex = (props) => (
-  <FlexContainer display='flex' {...props} />
+const Flex = styled(Box)(
+  themePath('Flex'),
+  styles
 )
 
 Flex.displayName = 'Flex'
-Flex.propTypes = { ...flexPropTypes }
-
-const InlineFlex = (props) => (
-  <FlexContainer display='inline-flex' {...props} />
-)
-
-InlineFlex.displayName = 'InlineFlex'
-InlineFlex.propTypes = { ...flexPropTypes }
+Flex.propTypes = { ...styles.propTypes }
+Flex.defaultProps = { display: 'flex' }
 
 export {
-  Flex,
-  InlineFlex
+  Flex
 }

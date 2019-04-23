@@ -3,10 +3,9 @@
 exports[`Box 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   height: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -22,12 +21,11 @@ exports[`Box 1`] = `
 `;
 
 exports[`Feed basic 1`] = `
-.emotion-13 {
+.emotion-12 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -39,10 +37,9 @@ exports[`Feed basic 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -56,14 +53,13 @@ exports[`Feed basic 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
 }
 
 <div
-  className="emotion-12 emotion-13 emotion-14"
+  className="emotion-12 emotion-13"
 >
   <div
     className="emotion-2 emotion-3"
@@ -96,12 +92,11 @@ exports[`Feed basic 1`] = `
 `;
 
 exports[`Feed empty 1`] = `
-.emotion-1 {
+.emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -112,17 +107,16 @@ exports[`Feed empty 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1 emotion-2"
+  className="emotion-0 emotion-1"
 />
 `;
 
 exports[`Feed with theme 1`] = `
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -136,18 +130,16 @@ exports[`Feed with theme 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
 }
 
-.emotion-5 {
+.emotion-4 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,11 +153,11 @@ exports[`Feed with theme 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-4 + .emotion-5 {
+.emotion-5 + .emotion-4 {
   margin-top: 8px;
 }
 
-.emotion-5 > .emotion-3 > .emotion-1 {
+.emotion-4 > .emotion-3 > .emotion-1 {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 8px;
@@ -173,7 +165,7 @@ exports[`Feed with theme 1`] = `
 }
 
 <div
-  className="emotion-4 emotion-5 emotion-6"
+  className="emotion-4 emotion-5"
 >
   <div
     className="emotion-2 emotion-3"
@@ -190,15 +182,14 @@ exports[`Feed with theme 1`] = `
 exports[`Flex 1`] = `
 .emotion-6 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
+  width: 50%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -207,28 +198,25 @@ exports[`Flex 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
 }
 
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   margin-left: auto;
   margin-right: auto;
 }
 
 .emotion-4 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 0 1;
   -ms-flex: 0 1;
   flex: 0 1;
@@ -258,18 +246,16 @@ exports[`Flex 1`] = `
 exports[`FlexGrid basic 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
 }
 
-.emotion-49 {
+.emotion-48 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -281,10 +267,9 @@ exports[`FlexGrid basic 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -297,7 +282,7 @@ exports[`FlexGrid basic 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49 emotion-50"
+  className="emotion-48 emotion-49"
 >
   <div
     className="emotion-2 emotion-3"
@@ -413,18 +398,16 @@ exports[`FlexGrid basic 1`] = `
 exports[`FlexGrid non-integer rem spaces 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
 }
 
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -436,12 +419,11 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   max-width: 8.333333333333332%;
 }
 
-.emotion-49 {
+.emotion-48 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -455,11 +437,11 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   margin-bottom: -0.25rem;
 }
 
-.emotion-48 + .emotion-49 {
+.emotion-49 + .emotion-48 {
   margin-top: 0.25rem;
 }
 
-.emotion-49 > .emotion-3 {
+.emotion-48 > .emotion-3 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   padding-top: 0.25rem;
@@ -467,7 +449,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49 emotion-50"
+  className="emotion-48 emotion-49"
 >
   <div
     className="emotion-2 emotion-3"
@@ -583,18 +565,16 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
 exports[`FlexGrid non-integer space 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
 }
 
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -606,12 +586,11 @@ exports[`FlexGrid non-integer space 1`] = `
   max-width: 8.333333333333332%;
 }
 
-.emotion-49 {
+.emotion-48 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -625,11 +604,11 @@ exports[`FlexGrid non-integer space 1`] = `
   margin-bottom: -1px;
 }
 
-.emotion-48 + .emotion-49 {
+.emotion-49 + .emotion-48 {
   margin-top: 1px;
 }
 
-.emotion-49 > .emotion-3 {
+.emotion-48 > .emotion-3 {
   padding-left: 1px;
   padding-right: 1px;
   padding-top: 1px;
@@ -637,7 +616,7 @@ exports[`FlexGrid non-integer space 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49 emotion-50"
+  className="emotion-48 emotion-49"
 >
   <div
     className="emotion-2 emotion-3"
@@ -753,18 +732,16 @@ exports[`FlexGrid non-integer space 1`] = `
 exports[`FlexGrid rem spaces 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
 }
 
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -776,12 +753,11 @@ exports[`FlexGrid rem spaces 1`] = `
   max-width: 8.333333333333332%;
 }
 
-.emotion-49 {
+.emotion-48 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -795,11 +771,11 @@ exports[`FlexGrid rem spaces 1`] = `
   margin-bottom: -0.5rem;
 }
 
-.emotion-48 + .emotion-49 {
+.emotion-49 + .emotion-48 {
   margin-top: 0.5rem;
 }
 
-.emotion-49 > .emotion-3 {
+.emotion-48 > .emotion-3 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
@@ -807,7 +783,7 @@ exports[`FlexGrid rem spaces 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49 emotion-50"
+  className="emotion-48 emotion-49"
 >
   <div
     className="emotion-2 emotion-3"
@@ -923,18 +899,16 @@ exports[`FlexGrid rem spaces 1`] = `
 exports[`FlexGrid vertical and horizontal space 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
 }
 
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -946,12 +920,11 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   max-width: 8.333333333333332%;
 }
 
-.emotion-113 {
+.emotion-112 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -965,11 +938,11 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-112 + .emotion-113 {
+.emotion-113 + .emotion-112 {
   margin-top: 8px;
 }
 
-.emotion-113 > .emotion-3 {
+.emotion-112 > .emotion-3 {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 8px;
@@ -978,10 +951,9 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-50 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -995,10 +967,9 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-74 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1012,10 +983,9 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-90 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1029,10 +999,9 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-102 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1046,10 +1015,9 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-110 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1062,7 +1030,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 }
 
 <div
-  className="emotion-112 emotion-113 emotion-114"
+  className="emotion-112 emotion-113"
 >
   <div
     className="emotion-2 emotion-3"
@@ -1322,40 +1290,36 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 exports[`Grid basic 1`] = `
 .emotion-42 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: grid;
   grid-template-columns: repeat(12,1fr);
 }
 
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   grid-column: span 1;
   grid-row: 1;
 }
 
 .emotion-24 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   grid-column: span 2;
   grid-row: 2;
 }
 
 .emotion-36 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   grid-column: span 4;
   grid-row: 3;
 }
@@ -1501,23 +1465,21 @@ exports[`Image with image 1`] = `
 exports[`Layout 1`] = `
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
 }
 
 .emotion-6 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
+  min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100%;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1525,10 +1487,9 @@ exports[`Layout 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -1558,10 +1519,9 @@ exports[`Layout 1`] = `
 exports[`MediaObject 1`] = `
 .emotion-4 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1570,10 +1530,9 @@ exports[`MediaObject 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -1581,10 +1540,9 @@ exports[`MediaObject 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -1609,15 +1567,13 @@ exports[`MediaObject 1`] = `
 exports[`Text empty 1`] = `
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   color: inherit;
   font: inherit;
   -webkit-text-decoration: none;
@@ -1632,15 +1588,13 @@ exports[`Text empty 1`] = `
 exports[`Text with text 1`] = `
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   color: inherit;
   font: inherit;
   -webkit-text-decoration: none;
@@ -1657,15 +1611,13 @@ exports[`Text with text 1`] = `
 exports[`Text with theme 1`] = `
 .emotion-2 {
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   box-sizing: border-box;
-  min-width: 0;
   margin: 0;
   padding: 0;
-  border: 0;
+  min-width: 0;
   color: inherit;
   font: inherit;
   -webkit-text-decoration: none;
