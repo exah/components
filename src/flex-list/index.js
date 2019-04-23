@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import { Box } from '../box'
 import { Flex } from '../flex'
 
@@ -6,18 +7,15 @@ const FlexList = (props) => (
   <Flex
     as='ul'
     flexDirection='column'
-    initialCSS={{ listStyle: 'none' }}
     {...props}
   />
 )
 
-const FlexListItem = (props) => (
-  <Box
-    as='li'
-    {...props}
-  />
-)
+const FlexListItem = styled(Box)({
+  listStyle: 'none'
+})
 
+FlexListItem.defaultProps = { as: 'li' }
 FlexList.Item = FlexListItem
 
 export {
