@@ -24,9 +24,9 @@ export {
 } from './flex-grid'
 
 export {
-  FlexList,
-  FlexListItem
-} from './flex-list'
+  List,
+  ListItem
+} from './list'
 
 export {
   Feed,

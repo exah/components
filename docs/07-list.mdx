@@ -1,0 +1,54 @@
+---
+name: List
+route: /list
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { ThemeProvider } from 'emotion-theming'
+import { PropsTable } from '../.internal'
+import { List } from '../src'
+
+# List
+
+Based on [Flex](#/flex) with applied reset styles for `ul`, `ol`. For more information see [Flex](#/flex) docs.
+
+## Usage
+
+```js
+import { List } from 'pss-components'
+```
+
+```js
+<List>
+  <List.Item>Item</List.Item>
+</List>
+```
+
+## Example
+
+### Basic
+
+<Playground>
+  <List>
+    <List.Item>1</List.Item>
+    <List.Item>2</List.Item>
+    <List.Item>3</List.Item>
+    <List.Item>4</List.Item>
+    <List.Item>5</List.Item>
+    <List.Item>6</List.Item>
+  </List>
+</Playground>
+
+### Horizontal list
+
+<Playground>
+  <List flexDirection='row' justifyContent='space-between'>
+    <List.Item>1</List.Item>
+    <List.Item>2</List.Item>
+    <List.Item>3</List.Item>
+    <List.Item>4</List.Item>
+    <List.Item>5</List.Item>
+    <List.Item>6</List.Item>
+  </List>
+</Playground>
