@@ -1524,7 +1524,7 @@ exports[`Layout 1`] = `
 </div>
 `;
 
-exports[`MediaObject 1`] = `
+exports[`Media 1`] = `
 .emotion-4 {
   box-sizing: border-box;
   margin: 0;

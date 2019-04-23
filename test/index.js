@@ -15,7 +15,7 @@ import {
   Grid,
   Image,
   Layout,
-  MediaObject,
+  Media,
   Text
 } from '../src'
 
@@ -62,16 +62,16 @@ test('Layout', () => {
   expect(result).toMatchSnapshot()
 })
 
-test('MediaObject', () => {
+test('Media', () => {
   const result = renderJSON(
-    <MediaObject>
-      <MediaObject.Side>
+    <Media>
+      <Media.Side>
         Side
-      </MediaObject.Side>
-      <MediaObject.Content>
+      </Media.Side>
+      <Media.Content>
         Content
-      </MediaObject.Content>
-    </MediaObject>
+      </Media.Content>
+    </Media>
   )
 
   expect(result).toMatchSnapshot()
