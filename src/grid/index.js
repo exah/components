@@ -1,62 +1,45 @@
+import styled from '@emotion/styled'
+
 import {
+  combineStyles,
+  gap,
   createGridContainer,
   createGridItem,
   boxContentAlignment,
   boxItemsAlignment,
-  gap
+  themePath
 } from 'pss'
 
-import React from 'react'
-import styled from '@emotion/styled'
 import { Box } from '../box'
 
 const gridContainer = createGridContainer()
 const gridItem = createGridItem()
 
-const GridContainer = styled(Box)(
+const styles = combineStyles(
   gap,
   gridContainer,
   boxContentAlignment,
   boxItemsAlignment
 )
 
-const gridPropTypes = {
-  ...gap.propTypes,
-  ...gridContainer.propTypes,
-  ...boxContentAlignment.propTypes,
-  ...boxItemsAlignment.propTypes,
-  ...Box.propTypes
-}
+const Grid = styled(Box)(
+  themePath('Grid'),
+  styles
+)
+
+Grid.displayName = 'Grid'
+Grid.propTypes = { ...styles.propTypes }
+Grid.defaultProps = { display: 'grid' }
 
 const GridItem = styled(Box)(
   gridItem
 )
 
 GridItem.displayName = 'Grid.Item'
-
-GridItem.propTypes = {
-  ...gridItem.propTypes,
-  ...Box.propTypes
-}
-
-const Grid = (props) => (
-  <GridContainer display='grid' {...props} />
-)
-
-Grid.displayName = 'Grid'
-Grid.propTypes = { ...gridPropTypes }
+GridItem.propTypes = { ...gridItem.propTypes }
 Grid.Item = GridItem
-
-const InlineGrid = (props) => (
-  <GridContainer display='inline-grid' {...props} />
-)
-
-InlineGrid.displayName = 'InlineGrid'
-InlineGrid.propTypes = { ...gridPropTypes }
-InlineGrid.Item = GridItem
 
 export {
   Grid,
-  GridItem,
-  InlineGrid
+  GridItem
 }
