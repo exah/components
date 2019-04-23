@@ -1618,6 +1618,10 @@ exports[`Text empty 1`] = `
   margin: 0;
   padding: 0;
   border: 0;
+  color: inherit;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -1637,6 +1641,10 @@ exports[`Text with text 1`] = `
   margin: 0;
   padding: 0;
   border: 0;
+  color: inherit;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 <div
@@ -1658,6 +1666,10 @@ exports[`Text with theme 1`] = `
   margin: 0;
   padding: 0;
   border: 0;
+  color: inherit;
+  font: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   font-family: Helvetica,system-ui,sans-serif;
   font-size: 1rem;
   line-height: 1.2;
