@@ -1,6 +1,3 @@
-import { createElement } from 'react'
-import { ThemeProvider } from 'emotion-theming'
-
 const theme = {
   flexGridSize: 12,
   media: {
@@ -59,6 +56,3 @@ export {
   theme,
   themeWithRems
 }
-
-export default ({ children }) =>
-  createElement(ThemeProvider, { theme }, children)

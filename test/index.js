@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer'
 import { ThemeProvider } from 'emotion-theming'
 import React, { Fragment } from 'react'
 import { initArr } from '@exah/utils'
-import { theme, themeWithRems } from '../src/theme'
+import { theme, themeWithRems } from '../.internal/theme'
 
 import {
   Box,
