@@ -3,7 +3,8 @@ export {
 } from './box'
 
 export {
-  Flex
+  Flex,
+  InlineFlex
 } from './flex'
 
 export {
@@ -35,7 +36,8 @@ export {
 
 export {
   Grid,
-  GridItem
+  GridItem,
+  InlineGrid
 } from './grid/'
 
 export {
