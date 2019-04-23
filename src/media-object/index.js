@@ -1,9 +1,9 @@
 import React from 'react'
-import { FlexBox } from '../flex-box'
+import { Flex } from '../flex'
 import { Box } from '../box'
 
 const MediaObject = (props) => (
-  <FlexBox {...props} />
+  <Flex {...props} />
 )
 
 const MediaObjectSide = (props) => (

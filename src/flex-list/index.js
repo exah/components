@@ -1,9 +1,9 @@
 import React from 'react'
 import { Box } from '../box'
-import { FlexBox } from '../flex-box'
+import { Flex } from '../flex'
 
 const FlexList = (props) => (
-  <FlexBox
+  <Flex
     as='ul'
     flexDirection='column'
     initialCSS={{ listStyle: 'none' }}

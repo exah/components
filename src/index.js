@@ -3,8 +3,8 @@ export {
 } from './box'
 
 export {
-  FlexBox
-} from './flex-box'
+  Flex
+} from './flex'
 
 export {
   MediaObject,

@@ -10,7 +10,7 @@ import {
   Box,
   CurrentMediaProvider,
   Feed,
-  FlexBox,
+  Flex,
   FlexGrid,
   Grid,
   Image,
@@ -32,13 +32,13 @@ test('Box', () => {
   expect(result).toMatchSnapshot()
 })
 
-test('FlexBox', () => {
+test('Flex', () => {
   const result = renderJSON(
-    <FlexBox tm width={(1 / 2)} justifyContent='space-between'>
+    <Flex tm width={(1 / 2)} justifyContent='space-between'>
       <Box>Item</Box>
       <Box mx='auto'>Item</Box>
       <Box flex='0 1'>Item</Box>
-    </FlexBox>
+    </Flex>
   )
 
   expect(result).toMatchSnapshot()
