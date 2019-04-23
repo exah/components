@@ -7,15 +7,18 @@ import {
   createGridItem,
   boxContentAlignment,
   boxItemsAlignment,
-  themePath
+  themePath,
+  variant
 } from 'pss'
 
 import { Box } from '../box'
 
+const gridVariant = variant({ themeKey: 'gridStyle' })
 const gridContainer = createGridContainer()
 const gridItem = createGridItem()
 
 const styles = combineStyles(
+  gridVariant,
   gap,
   gridContainer,
   boxContentAlignment,
