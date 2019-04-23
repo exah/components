@@ -9,23 +9,23 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Box } from '../box'
 
-const StyledFlexBox = styled(Box)(
+const FlexContainer = styled(Box)(
   gap,
   flexContainer,
   boxContentAlignment,
   boxItemsAlignment
 )
 
-const FlexBox = (props) => (
-  <StyledFlexBox
+const Flex = (props) => (
+  <FlexContainer
     display='flex'
     {...props}
   />
 )
 
-FlexBox.displayName = 'FlexBox'
+Flex.displayName = 'Flex'
 
-FlexBox.propTypes = {
+Flex.propTypes = {
   ...gap.propTypes,
   ...flexContainer.propTypes,
   ...boxContentAlignment.propTypes,
@@ -34,5 +34,5 @@ FlexBox.propTypes = {
 }
 
 export {
-  FlexBox
+  Flex
 }

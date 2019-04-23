@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Box } from '../box'
-import { FlexBox } from '../flex-box'
+import { Flex } from '../flex'
 import { createFlexGridStyle, flexGridItemStyle } from './styles'
 
 const flexGridStyle = createFlexGridStyle({
@@ -11,7 +11,7 @@ const flexGridStyle = createFlexGridStyle({
     : `& > ${StyledFlexGridItem}`
 })
 
-const StyledFlexGrid = styled(FlexBox)(
+const StyledFlexGrid = styled(Flex)(
   flexGridStyle
 )
 
@@ -23,7 +23,7 @@ const FlexGrid = (props) => (
 )
 
 FlexGrid.propTypes = {
-  ...FlexBox.propTypes,
+  ...Flex.propTypes,
   ...flexGridStyle.propTypes
 }
 

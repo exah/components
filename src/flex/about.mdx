@@ -1,15 +1,15 @@
 ---
-name: FlexBox
-route: /flex-box
+name: Flex
+route: /flex
 order: -2
 ---
 
 import { Playground } from 'docz'
 import { PropsTable } from '../props-table'
 import { Box } from '../box'
-import { FlexBox } from './index'
+import { Flex } from './index'
 
-# FlexBox
+# Flex
 
 ## Description
 
@@ -19,20 +19,20 @@ Like [`Box`](#/box) component, but extended with [flexbox](https://developer.moz
 ## Usage
 
 ```js
-import { FlexBox, Box } from 'pss-components'
+import { Flex, Box } from 'pss-components'
 ```
 
 ```js
-<FlexBox>
+<Flex>
   <Box>Item</Box>
-</FlexBox>
+</Flex>
 ```
 
 
 ## Examples
 
 <Playground>
-  <FlexBox>
+  <Flex>
     <Box outline='debug' order={0}>
       Item
     </Box>
@@ -42,11 +42,11 @@ import { FlexBox, Box } from 'pss-components'
     <Box outline='debug' order={2}>
       Item
     </Box>
-  </FlexBox>
+  </Flex>
 </Playground>
 
 <Playground>
-  <FlexBox justifyContent='space-between'>
+  <Flex justifyContent='space-between'>
     <Box outline='debug' order={0}>
       Item
     </Box>
@@ -56,11 +56,11 @@ import { FlexBox, Box } from 'pss-components'
     <Box outline='debug' order={2}>
       Item
     </Box>
-  </FlexBox>
+  </Flex>
 </Playground>
 
 ## Props
 
-### FlexBox
+### Flex
 
-<PropsTable of={FlexBox} />
+<PropsTable of={Flex} />

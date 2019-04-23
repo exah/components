@@ -1,9 +1,9 @@
 import React from 'react'
-import { FlexBox } from '../flex-box'
+import { Flex } from '../flex'
 import { Box } from '../box'
 
 const Layout = (props) => (
-  <FlexBox
+  <Flex
     flexDirection='column'
     minHeight='100%'
     {...props}
@@ -18,7 +18,7 @@ const LayoutContent = (props) => (
 )
 
 const LayoutBody = (props) => (
-  <FlexBox
+  <Flex
     flexDirection='row'
     flex='1 1 100%'
     {...props}
