@@ -7,10 +7,10 @@ export {
 } from './flex'
 
 export {
-  MediaObject,
-  MediaObjectSide,
-  MediaObjectContent
-} from './media-object'
+  Media,
+  MediaSide,
+  MediaContent
+} from './media'
 
 export {
   Layout,
