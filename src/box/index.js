@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 
 import {
   combineStyles,
@@ -47,8 +46,7 @@ Box.displayName = 'Box'
 
 Box.propTypes = {
   ...BoxBase.propTypes,
-  ...styles.propTypes,
-  initialCSS: PropTypes.object
+  ...styles.propTypes
 }
 
 export {
