@@ -1,14 +1,28 @@
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
 import styled from '@emotion/styled'
-import { withTheme } from 'emotion-theming'
-import { compose, fallbackTo } from '@exah/utils'
-import { withCurrentMedia } from '../current-media-provider'
-import { useIsMounted, groupArr } from '../utils'
-import { FlexGrid, FlexGridItem } from '../flex-grid'
+import { fallbackTo, toArr, initArr } from '@exah/utils'
+import { useCurrentMedia } from '../current-media-provider'
+import { useIsMounted } from '../utils'
+import { DEFAULT_GRID } from '../flex-grid/constants'
+import { FlexGrid } from '../flex-grid'
 import { Box } from '../box'
 
-const DEFAULT_GRID = 12
+const groupChildren = (items = [], length = 3) =>
+  items.reduce((target, value, index) => {
+    const key = Math.floor(index % length)
+
+    if (target[key]) {
+      target[key].push(value)
+    }
+
+    return target
+  }, initArr(length, () => []))
+
+const getGroupKey = (input) =>
+  toArr(input)
+    .reduce((acc, item) => [ ...acc, item.key ], [])
+    .join('-')
 
 function useGroupChildren (size, children) {
   const isMounted = useIsMounted()
@@ -17,63 +31,49 @@ function useGroupChildren (size, children) {
     const childrenArr = React.Children.toArray(children)
 
     return isMounted && size > 1
-      ? groupArr(childrenArr, size)
+      ? groupChildren(childrenArr, size)
       : childrenArr
   }, [ isMounted, size, children ])
 }
 
-function FeedContainer ({
-  children,
-  currentMediaKey,
-  theme = {},
-  grid = theme.grid || DEFAULT_GRID,
-  column = DEFAULT_GRID,
-  item,
-  ...rest
-}) {
-  const itemCol = fallbackTo(
-    column && fallbackTo(column[currentMediaKey[0]], column.all, column),
-    grid
+function Feed ({ children, columns, itemColumn, item: itemProps, ...rest }) {
+  const { currentMediaKey } = useCurrentMedia()
+
+  const itemColumnNormalized = fallbackTo(
+    itemColumn && fallbackTo(itemColumn[currentMediaKey[0]], itemColumn.all, itemColumn),
+    columns
   )
-  const groupSize = (grid / itemCol)
+
+  const groupSize = columns / itemColumnNormalized
   const childrenGroups = useGroupChildren(groupSize, children)
 
   return (
-    <FlexGrid spaceTarget={FeedItem.toString()} {...rest}>
+    <FlexGrid spaceTarget={Feed.Item} columns={columns} {...rest}>
       {childrenGroups.map((child, index) => (
-        <FlexGridItem key={`feed-item-${index}`} {...item} column={itemCol}>
+        <FlexGrid.Item
+          key={getGroupKey(child)}
+          {...itemProps}
+          column={itemColumnNormalized}
+        >
           {child}
-        </FlexGridItem>
+        </FlexGrid.Item>
       ))}
     </FlexGrid>
   )
 }
 
-FeedContainer.propTypes = {
-  theme: PropTypes.shape({ grid: PropTypes.number }),
-  currentMediaKey: PropTypes.arrayOf(PropTypes.string)
-}
-
-FeedContainer.defaultProps = {
-  theme: {},
-  currentMediaKey: []
-}
-
-const Feed = compose(
-  withCurrentMedia,
-  withTheme
-)(FeedContainer)
-
 Feed.propTypes = {
-  grid: PropTypes.number,
-  column: PropTypes.oneOfType([ PropTypes.number, PropTypes.objectOf(PropTypes.number) ])
+  columns: PropTypes.number,
+  itemColumn: PropTypes.oneOfType([ PropTypes.number, PropTypes.objectOf(PropTypes.number) ])
 }
 
-const FeedItem = styled(Box)``
-FeedItem.propTypes = { ...Box.propTypes }
-Feed.Item = FeedItem
+Feed.defaultProps = {
+  columns: DEFAULT_GRID,
+  itemColumn: DEFAULT_GRID
+}
+
+Feed.Item = styled(Box)``
 
 export {
-  Feed,
-  FeedItem
+  Feed
 }

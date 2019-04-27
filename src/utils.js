@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { isFn, isStr, initArr } from '@exah/utils'
+import { isFn, isStr } from '@exah/utils'
 import isPropValid from '@emotion/is-prop-valid'
 import { createBaseFactory } from 'react-styled-base'
 
@@ -35,14 +35,3 @@ export function useIsMounted () {
 
   return isMounted
 }
-
-export const groupArr = (items = [], length = 3) =>
-  items.reduce((target, value, index) => {
-    const key = Math.floor(index % length)
-
-    if (target[key]) {
-      target[key].push(value)
-    }
-
-    return target
-  }, initArr(length, () => []))
