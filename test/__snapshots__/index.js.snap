@@ -40,15 +40,14 @@ exports[`Feed basic 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 25%;
-  -ms-flex-preferred-size: 25%;
-  flex-basis: 25%;
-  max-width: 25%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 100%;
 }
 
 .emotion-0 {
@@ -117,15 +116,14 @@ exports[`Feed with theme 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  max-width: 100%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 100%;
 }
 
 .emotion-0 {
@@ -153,11 +151,12 @@ exports[`Feed with theme 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-5 + .emotion-4 {
+.emotion-4 + .emotion-5 {
   margin-top: 8px;
 }
 
-.emotion-4 > .emotion-3 > .emotion-1 {
+.emotion-4 > .emotion-3 > .emotion-1,
+.emotion-4 > .emotion-1 {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 8px;
@@ -270,15 +269,14 @@ exports[`FlexGrid basic 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 8.333333333333332%;
-  -ms-flex-preferred-size: 8.333333333333332%;
-  flex-basis: 8.333333333333332%;
-  max-width: 8.333333333333332%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 8.333333333333332%;
 }
 
 <div
@@ -408,15 +406,14 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 8.333333333333332%;
-  -ms-flex-preferred-size: 8.333333333333332%;
-  flex-basis: 8.333333333333332%;
-  max-width: 8.333333333333332%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 8.333333333333332%;
 }
 
 .emotion-48 {
@@ -437,7 +434,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   margin-bottom: -0.25rem;
 }
 
-.emotion-49 + .emotion-48 {
+.emotion-48 + .emotion-49 {
   margin-top: 0.25rem;
 }
 
@@ -575,15 +572,14 @@ exports[`FlexGrid non-integer space 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 8.333333333333332%;
-  -ms-flex-preferred-size: 8.333333333333332%;
-  flex-basis: 8.333333333333332%;
-  max-width: 8.333333333333332%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 8.333333333333332%;
 }
 
 .emotion-48 {
@@ -604,7 +600,7 @@ exports[`FlexGrid non-integer space 1`] = `
   margin-bottom: -1px;
 }
 
-.emotion-49 + .emotion-48 {
+.emotion-48 + .emotion-49 {
   margin-top: 1px;
 }
 
@@ -742,15 +738,14 @@ exports[`FlexGrid rem spaces 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 8.333333333333332%;
-  -ms-flex-preferred-size: 8.333333333333332%;
-  flex-basis: 8.333333333333332%;
-  max-width: 8.333333333333332%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 8.333333333333332%;
 }
 
 .emotion-48 {
@@ -771,7 +766,7 @@ exports[`FlexGrid rem spaces 1`] = `
   margin-bottom: -0.5rem;
 }
 
-.emotion-49 + .emotion-48 {
+.emotion-48 + .emotion-49 {
   margin-top: 0.5rem;
 }
 
@@ -909,15 +904,14 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 8.333333333333332%;
-  -ms-flex-preferred-size: 8.333333333333332%;
-  flex-basis: 8.333333333333332%;
-  max-width: 8.333333333333332%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 8.333333333333332%;
 }
 
 .emotion-112 {
@@ -938,7 +932,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-113 + .emotion-112 {
+.emotion-112 + .emotion-113 {
   margin-top: 8px;
 }
 
@@ -954,15 +948,14 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 16.666666666666664%;
-  -ms-flex-preferred-size: 16.666666666666664%;
-  flex-basis: 16.666666666666664%;
-  max-width: 16.666666666666664%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 16.666666666666664%;
 }
 
 .emotion-74 {
@@ -970,15 +963,14 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 25%;
-  -ms-flex-preferred-size: 25%;
-  flex-basis: 25%;
-  max-width: 25%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 25%;
 }
 
 .emotion-90 {
@@ -986,15 +978,14 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 33.33333333333333%;
-  -ms-flex-preferred-size: 33.33333333333333%;
-  flex-basis: 33.33333333333333%;
-  max-width: 33.33333333333333%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 33.33333333333333%;
 }
 
 .emotion-102 {
@@ -1002,15 +993,14 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 50%;
-  -ms-flex-preferred-size: 50%;
-  flex-basis: 50%;
-  max-width: 50%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 50%;
 }
 
 .emotion-110 {
@@ -1018,15 +1008,14 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-height: 100%;
-  min-width: 0;
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
-  max-width: 100%;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 100%;
 }
 
 <div
