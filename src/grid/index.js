@@ -31,7 +31,7 @@ const Grid = styled(Box)(
 )
 
 Grid.displayName = 'Grid'
-Grid.propTypes = { ...styles.propTypes }
+Grid.propTypes = { ...styles.propTypes, ...Box.propTypes }
 Grid.defaultProps = { display: 'grid' }
 
 const GridItem = styled(Box)(
@@ -39,7 +39,7 @@ const GridItem = styled(Box)(
 )
 
 GridItem.displayName = 'Grid.Item'
-GridItem.propTypes = { ...gridItem.propTypes }
+GridItem.propTypes = { ...gridItem.propTypes, ...Box.propTypes }
 Grid.Item = GridItem
 
 export {

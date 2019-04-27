@@ -22,7 +22,7 @@ const Text = styled(TextBase)(
 )
 
 Text.displayName = 'Text'
-Text.propTypes = { ...styles.propTypes }
+Text.propTypes = { ...styles.propTypes, ...Box.propTypes }
 
 export {
   Text

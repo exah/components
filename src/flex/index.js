@@ -24,7 +24,7 @@ const Flex = styled(Box)(
 )
 
 Flex.displayName = 'Flex'
-Flex.propTypes = { ...styles.propTypes }
+Flex.propTypes = { ...styles.propTypes, ...Box.propTypes }
 Flex.defaultProps = { display: 'flex' }
 
 export {
