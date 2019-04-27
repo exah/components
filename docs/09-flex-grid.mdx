@@ -5,7 +5,6 @@ menu: Components
 ---
 
 import { Playground } from 'docz'
-import { ThemeProvider } from 'emotion-theming'
 import { PropsTable } from '../.internal'
 import { Box, FlexGrid } from '../src'
 
@@ -14,27 +13,25 @@ import { Box, FlexGrid } from '../src'
 
 ## Description
 
-Grid component based on [`FlexBox`](#/flex-box).
+Grid component based on [Flex](#/flex) and [Box](#/box).
 
-- Default to `12` columns. Can be defined in `theme.flexGridSize`
-- Item size conrolled with `col` or `size` prop in `FlexGrid.Item` component
-- Space between items conrolled with `space`, `spacex` and `spacey` props
 
 ### Components:
 
+#### `FlexGrid` — Container component:
 
-#### `FlexGrid` — Container component. Control space between items with props:
-
-- Possible values in `theme.space`. See [space docs](https://github.com/exah/pss/blob/master/docs/api.md#space)
+- `columns` - Number of columns in grid, default to `12`
 - `space` — horizontal and vertical space
 - `spacex` — horizontal space
 - `spacey` — vertical space
 
+Possible values for spacing is defined in `theme.space`. See [space docs](https://github.com/exah/pss/blob/master/docs/api.md#space)
+
+
 #### `FlexGrid.Item` — Item / column component, size can be set with props:
 
-- `column` — Number in range `1...theme.flexGridSize`
-- `size` — Number in range `0...1`, result is percentage (`0.5` is `50%`)
-- `offset` — Number in range `1...theme.flexGridSize` — move item by number of columns
+- `column` — Number in range `1...columns`
+- `offset` — Number in range `1...columns` — move item by number of columns
 
 
 ## Usage
@@ -44,32 +41,23 @@ import { FlexGrid } from 'pss-components'
 ```
 
 ```js
-const theme = {
-  flexGridSize: 12
-  // ...rest of theme
-}
-```
-
-```js
-<ThemeProvider theme={theme}>
-  <FlexGrid>
-    <FlexGrid.Item column={6}>
-      <Box>
-        Content
-      </Box>
-    </FlexGrid.Item>
-    <FlexGrid.Item column={4}>
-      <Box>
-        Content
-      </Box>
-    </FlexGrid.Item>
-    <FlexGrid.Item column={2}>
-      <Box>
-        Content
-      </Box>
-    </FlexGrid.Item>
-  </FlexGrid>
-</ThemeProvider>
+<FlexGrid columns={12}>
+  <FlexGrid.Item column={6}>
+    <Box>
+      Content
+    </Box>
+  </FlexGrid.Item>
+  <FlexGrid.Item column={4}>
+    <Box>
+      Content
+    </Box>
+  </FlexGrid.Item>
+  <FlexGrid.Item column={2}>
+    <Box>
+      Content
+    </Box>
+  </FlexGrid.Item>
+</FlexGrid>
 ```
 
 
@@ -78,7 +66,7 @@ const theme = {
 ### Basic
 
 <Playground>
-  <FlexGrid spacex={1}>
+  <FlexGrid columns={12} spacex={1}>
     <FlexGrid.Item column={2}>
       <Box outline='1px solid' p={1}>
         2
@@ -115,7 +103,7 @@ const theme = {
 ### Vertical and horizontal space between items
 
 <Playground>
-  <FlexGrid space={1}>
+  <FlexGrid columns={12} space={1}>
     <FlexGrid.Item column={1}>
       <Box outline='1px solid' p={1}>
         1
@@ -162,8 +150,11 @@ const theme = {
 ### Offset items
 
 <Playground>
-  <FlexGrid space={1}>
-    <FlexGrid.Item column={3} mr='75%'>
+  <FlexGrid columns={12} space={1}>
+    <FlexGrid.Item
+      column={3}
+      mr='75%' // force next item to be on next line
+    >
       <Box outline='1px solid' p={1}>
         3
       </Box>
@@ -190,95 +181,48 @@ const theme = {
 
 <Playground>
   <FlexGrid space={1}>
-    <FlexGrid.Item size={1 / 12}>
+    <FlexGrid.Item width={1 / 12}>
       <Box outline='1px solid' p={1}>
         1
       </Box>
     </FlexGrid.Item>
-    <FlexGrid.Item size={2 / 12}>
+    <FlexGrid.Item width={2 / 12}>
       <Box outline='1px solid' p={1}>
         2
       </Box>
     </FlexGrid.Item>
-    <FlexGrid.Item size={3 / 12}>
+    <FlexGrid.Item width={3 / 12}>
       <Box outline='1px solid' p={1}>
         3
       </Box>
     </FlexGrid.Item>
-    <FlexGrid.Item size={6 / 12}>
+    <FlexGrid.Item width={6 / 12}>
       <Box outline='1px solid' p={1}>
         6
       </Box>
     </FlexGrid.Item>
-    <FlexGrid.Item size={12 / 12}>
+    <FlexGrid.Item width={12 / 12}>
       <Box outline='1px solid' p={1}>
         12
       </Box>
     </FlexGrid.Item>
-    <FlexGrid.Item size={4 / 12}>
+    <FlexGrid.Item width={4 / 12}>
       <Box outline='1px solid' p={1}>
         4
       </Box>
     </FlexGrid.Item>
-    <FlexGrid.Item size={4 / 12}>
+    <FlexGrid.Item width={4 / 12}>
       <Box outline='1px solid' p={1}>
         4
       </Box>
     </FlexGrid.Item>
-    <FlexGrid.Item size={4 / 12}>
+    <FlexGrid.Item width={4 / 12}>
       <Box outline='1px solid' p={1}>
         4
       </Box>
     </FlexGrid.Item>
   </FlexGrid>
 </Playground>
-
-### Set defaults in `theme`
-
-`ThemeProvider` can be used to change defaults in runtime:
-
-<Playground>
-  <ThemeProvider theme={{ flexGridSize: 16 }}>
-    <FlexGrid space={1} justifyContent='flex-end'>
-      <FlexGrid.Item column={1}>
-        <Box outline='1px solid' p={1}>
-          1
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={2}>
-        <Box outline='1px solid' p={1}>
-          2
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={3}>
-        <Box outline='1px solid' p={1}>
-          3
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={4}>
-        <Box outline='1px solid' p={1}>
-          4
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={6}>
-        <Box outline='1px solid' p={1}>
-          6
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={16}>
-        <Box outline='1px solid' p={1}>
-          16
-        </Box>
-      </FlexGrid.Item>
-      <FlexGrid.Item column={8}>
-        <Box outline='1px solid' p={1}>
-          8
-        </Box>
-      </FlexGrid.Item>
-    </FlexGrid>
-  </ThemeProvider>
-</Playground>
-
 
 ## Props
 

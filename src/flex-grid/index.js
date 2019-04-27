@@ -1,51 +1,57 @@
-import React from 'react'
+import React, { useMemo, isValidElement } from 'react'
+import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { Box } from '../box'
 import { Flex } from '../flex'
-import { createFlexGridStyle, flexGridItemStyle } from './styles'
+import { createFlexGrid, flexGridItem } from './styles'
+import { DEFAULT_GRID } from './constants'
 
-const flexGridStyle = createFlexGridStyle({
-  rowSelector: () => `${StyledFlexGrid} + &`,
-  childSelector: (props) => props.spaceTarget
-    ? `& > ${StyledFlexGridItem} > ${props.spaceTarget}`
-    : `& > ${StyledFlexGridItem}`
+const flexGrid = createFlexGrid({
+  getRowSelector: () => `& + ${FlexGridBase}`,
+  getItemSelector: (props) => props.spaceTarget
+    ? `& > ${FlexGridItem} > ${props.spaceTarget}, & > ${props.spaceTarget}`
+    : `& > ${FlexGridItem}`
 })
 
-const StyledFlexGrid = styled(Flex)(
-  flexGridStyle
+const FlexGridBase = styled(Flex)(
+  { flexWrap: 'wrap' },
+  flexGrid
 )
 
-const FlexGrid = (props) => (
-  <StyledFlexGrid
-    flexWrap='wrap'
-    {...props}
-  />
-)
+function FlexGrid ({ columns, children, ...rest }) {
+  const clonedChildren = useMemo(() => (
+    React.Children
+      .toArray(children)
+      .map(child =>
+        isValidElement(child)
+          ? React.cloneElement(child, { columns })
+          : child
+      )
+  ), [ children ])
+
+  return (
+    <FlexGridBase {...rest}>
+      {clonedChildren}
+    </FlexGridBase>
+  )
+}
 
 FlexGrid.propTypes = {
-  ...Flex.propTypes,
-  ...flexGridStyle.propTypes
+  columns: PropTypes.number.isRequired,
+  ...flexGrid.propTypes
 }
 
-const StyledFlexGridItem = styled(Box)(
-  flexGridItemStyle
+FlexGrid.defaultProps = {
+  columns: DEFAULT_GRID
+}
+
+const FlexGridItem = styled(Box)(
+  { flex: '0 1 auto' },
+  flexGridItem
 )
 
-const FlexGridItem = (props) => (
-  <StyledFlexGridItem
-    flex='1 1 auto'
-    minHeight={1}
-    minWidth={0}
-    {...props}
-  />
-)
-
+FlexGridItem.propTypes = { ...flexGridItem.propTypes }
 FlexGrid.Item = FlexGridItem
-
-FlexGrid.Item.propTypes = {
-  ...Box.propTypes,
-  ...flexGridItemStyle.propTypes
-}
 
 export {
   FlexGrid,

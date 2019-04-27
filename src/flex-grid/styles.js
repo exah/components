@@ -1,34 +1,57 @@
-import { isNum, fallbackTo, identity } from '@exah/utils'
+import { isNum, fallbackTo, path } from '@exah/utils'
+import { createSpaceValue, createStyles, createRule, splitUnit } from 'pss'
+import { DEFAULT_GRID } from './constants'
 
-import {
-  createSpaceValue,
-  createStyles,
-  sizeValue,
-  sizeRule,
-  createRule,
-  themePath,
-  splitUnit
-} from 'pss'
+const createItemsSpace = (axis, selectors) => createRule({
+  getValue: createSpaceValue(),
+  getStyle (value, props) {
+    const [ num, unit = 'px' ] = splitUnit(value)
+    const size = `${num / 2}${unit}`
 
-import { THEME_KEY, DEFAULT_GRID } from './constants'
+    return {
+      ...(axis.x && {
+        marginLeft: `-${size}`,
+        marginRight: `-${size}`
+      }),
+      ...(axis.y && {
+        marginTop: `-${size}`,
+        marginBottom: `-${size}`,
+        [selectors.getRowSelector(props)]: {
+          marginTop: size
+        }
+      }),
+      [selectors.getItemSelector(props)]: {
+        ...(axis.x && {
+          paddingLeft: size,
+          paddingRight: size
+        }),
+        ...(axis.y && {
+          paddingTop: size,
+          paddingBottom: size
+        })
+      }
+    }
+  }
+})
+
+export const createFlexGrid = (selectors) => createStyles({
+  space: createItemsSpace({ x: true, y: true }, selectors),
+  spacex: createItemsSpace({ x: true }, selectors),
+  spacey: createItemsSpace({ y: true }, selectors)
+})
 
 function getSize (value, props) {
-  const grid = themePath(THEME_KEY, DEFAULT_GRID)(props)
+  const grid = path('columns', DEFAULT_GRID)(props)
+  const column = Number(fallbackTo(value, 1))
 
-  const cols = Number(fallbackTo(value, 1))
-
-  if (!isNum(cols) && !isNum(grid)) {
+  if (!isNum(column) && !isNum(grid)) {
     return null
   }
 
-  return ((cols / grid) * 100) + '%'
+  return ((column / grid) * 100) + '%'
 }
 
-const flexGridItemStyle = createStyles({
-  size: [
-    sizeRule('flexBasis', 'auto'),
-    sizeRule('maxWidth', '100%')
-  ],
+export const flexGridItem = createStyles({
   offset (value, props) {
     const size = getSize(value, props)
 
@@ -44,8 +67,6 @@ const flexGridItemStyle = createStyles({
     if (value === 'auto' || value === true) {
       return {
         flexGrow: 1,
-        flexShrink: 1,
-        flexBasis: 'auto',
         maxWidth: '100%'
       }
     }
@@ -57,54 +78,8 @@ const flexGridItemStyle = createStyles({
     }
 
     return {
-      flexBasis: size,
-      maxWidth: size
+      flexGrow: 0,
+      width: size
     }
   }
 })
-
-const getItemsSpaceStyles = (axis, {
-  childSelector,
-  rowSelector
-}) => createRule({
-  getValue: createSpaceValue()(sizeValue(identity)),
-  getStyle (value, props) {
-    const [ num, unit = 'px' ] = splitUnit(value)
-    const size = `${num / 2}${unit}`
-
-    return {
-      ...(axis.x && {
-        marginLeft: `-${size}`,
-        marginRight: `-${size}`
-      }),
-      ...(axis.y && {
-        marginTop: `-${size}`,
-        marginBottom: `-${size}`,
-        [rowSelector(props)]: {
-          marginTop: size
-        }
-      }),
-      [childSelector(props)]: {
-        ...(axis.x && {
-          paddingLeft: size,
-          paddingRight: size
-        }),
-        ...(axis.y && {
-          paddingTop: size,
-          paddingBottom: size
-        })
-      }
-    }
-  }
-})
-
-const createFlexGridStyle = (selectors) => createStyles({
-  space: getItemsSpaceStyles({ x: true, y: true }, selectors),
-  spacex: getItemsSpaceStyles({ x: true }, selectors),
-  spacey: getItemsSpaceStyles({ y: true }, selectors)
-})
-
-export {
-  createFlexGridStyle,
-  flexGridItemStyle
-}
