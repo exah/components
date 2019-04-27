@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import React, { createContext, useLayoutEffect, useState } from 'react'
-import { withTheme } from 'emotion-theming'
+import React, { createContext, useLayoutEffect, useState, useContext } from 'react'
+import { ThemeContext } from '@emotion/core'
 import { reduceObj } from '@exah/utils'
 
 const listenForChanges = (target, fn) => {
@@ -14,8 +14,8 @@ const INITIAL_STATE = {
   currentMediaKey: []
 }
 
-const Context = createContext(INITIAL_STATE)
-const { Provider, Consumer } = Context
+const CurrentMediaContext = createContext(INITIAL_STATE)
+const { Provider, Consumer } = CurrentMediaContext
 
 const updateCurrentMedia = (key, mql) => (currentMediaKey) => {
   if (mql.matches) {
@@ -25,12 +25,10 @@ const updateCurrentMedia = (key, mql) => (currentMediaKey) => {
   return currentMediaKey.filter((item) => item !== key)
 }
 
-function CurrentMediaProvider ({
-  theme = {},
-  media = theme.media || {},
-  children
-}) {
+function CurrentMediaProvider (props) {
+  const theme = useContext(ThemeContext)
   const [ currentMediaKey, setCurrentMedia ] = useState(INITIAL_STATE.currentMediaKey)
+  const media = props.media || theme.media
 
   useLayoutEffect(() => {
     const listeners = reduceObj((acc, key, query) => {
@@ -45,7 +43,7 @@ function CurrentMediaProvider ({
 
   return (
     <Provider value={{ currentMediaKey }}>
-      {children}
+      {props.children}
     </Provider>
   )
 }
@@ -55,13 +53,16 @@ CurrentMediaProvider.propTypes = {
   media: PropTypes.object
 }
 
-const CurrentMediaProviderWithTheme = withTheme(CurrentMediaProvider)
+function useCurrentMedia () {
+  return useContext(CurrentMediaContext)
+}
 
 const withCurrentMedia = (Comp) => {
   const HOC = (props) => (
-    <Consumer>
-      {(state) => <Comp {...state} {...props} />}
-    </Consumer>
+    <Comp
+      {...props}
+      {...useCurrentMedia()}
+    />
   )
 
   HOC.displayName = `withCurrentMedia(${Comp.displayName || 'Component'})`
@@ -69,8 +70,9 @@ const withCurrentMedia = (Comp) => {
 }
 
 export {
-  Context as CurrentMediaContext,
-  CurrentMediaProviderWithTheme as CurrentMediaProvider,
+  CurrentMediaContext,
+  CurrentMediaProvider,
   Consumer as CurrentMediaConsumer,
-  withCurrentMedia
+  withCurrentMedia,
+  useCurrentMedia
 }

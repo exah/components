@@ -29,8 +29,7 @@ export {
 } from './list'
 
 export {
-  Feed,
-  FeedItem
+  Feed
 } from './feed'
 
 export {
