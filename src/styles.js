@@ -41,10 +41,10 @@ export const createFlexGrid = (selectors) => createStyles({
 })
 
 function getSize (value, props) {
-  const grid = path('columns', DEFAULT_GRID)(props)
+  const grid = Number(path('columns', DEFAULT_GRID)(props))
   const column = Number(fallbackTo(value, 1))
 
-  if (!isNum(column) && !isNum(grid)) {
+  if (!isNum(column) || !isNum(grid)) {
     return null
   }
 
