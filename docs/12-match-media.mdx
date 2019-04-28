@@ -1,0 +1,61 @@
+---
+name: MatchMedia
+route: /match-media
+menu: Helpers
+---
+
+import { Playground } from 'docz'
+import { MatchMediaProvider, MatchMediaConsumer, Box } from '../src'
+
+# MatchMedia
+
+## Description
+
+Detect media query changes from `theme.media` and provide matches through context.
+
+
+## Usage
+
+```js
+import { MatchMediaProvider, MatchMediaConsumer } from 'pss-components'
+import { ThemeProvider } from 'emotion-theming'
+```
+
+```js
+<ThemeProvider theme={{ media: { sm: '(max-width: 600px)' } }}>
+  <MatchMediaProvider>
+    {/* components */}
+  </MatchMediaProvider>
+</ThemeProvider>
+```
+
+## Examples
+
+With values from `media` prop:
+
+<Playground>
+  <MatchMediaProvider media={{ mobile: '(max-width: 600px)', desktop: '(min-width: 601px)' }}>
+    <MatchMediaConsumer>
+      {(matchedMedia) => (
+        <Box>
+          Current media: {matchedMedia.key}
+        </Box>
+      )}
+    </MatchMediaConsumer>
+  </MatchMediaProvider>
+</Playground>
+
+From `theme`:
+
+<Playground>
+  <MatchMediaProvider>
+    <MatchMediaConsumer>
+      {(matchedMedia) => (
+        <Box>
+          Current media: {matchedMedia.key}
+        </Box>
+      )}
+    </MatchMediaConsumer>
+  </MatchMediaProvider>
+</Playground>
+

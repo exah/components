@@ -8,7 +8,7 @@ import { theme, themeWithRems } from '../.internal/theme'
 
 import {
   Box,
-  CurrentMediaProvider,
+  MatchMediaProvider,
   Feed,
   Flex,
   FlexGrid,
@@ -218,13 +218,13 @@ describe('Feed', () => {
   test('with theme', () => {
     const result = renderJSON(
       <ThemeProvider theme={theme}>
-        <CurrentMediaProvider>
+        <MatchMediaProvider>
           <Feed space={2} column={{ all: 3, md: 6, sm: 12 }}>
             <Feed.Item>
               Item
             </Feed.Item>
           </Feed>
-        </CurrentMediaProvider>
+        </MatchMediaProvider>
       </ThemeProvider>
     )
 

@@ -50,10 +50,12 @@ export {
 } from './theme-defaults'
 
 export {
-  CurrentMediaProvider,
-  CurrentMediaConsumer,
-  withCurrentMedia
-} from './current-media-provider'
+  MatchMediaContext,
+  MatchMediaProvider,
+  MatchMediaConsumer,
+  useMatchMedia,
+  useMatchMediaContext
+} from './match-media'
 
 export {
   createBase,

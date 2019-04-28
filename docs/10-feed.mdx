@@ -7,7 +7,7 @@ menu: Components
 import { Playground } from 'docz'
 import { ThemeProvider } from 'emotion-theming'
 import { PropsTable } from '../.internal'
-import { CurrentMediaProvider, Box, Feed } from '../src'
+import { MatchMediaProvider, Box, Feed } from '../src'
 
 # Feed
 
@@ -22,19 +22,19 @@ import { Feed } from 'pss-components'
 ```
 
 ```js
-<CurrentMediaProvider>
+<MatchMediaProvider>
   <Feed space={2} columns={12} itemColumn={{ all: 3, md: 6, sm: 12 }}>
     <Feed.Item>
       Item
     </Feed.Item>
   </Feed>
-</CurrentMediaProvider>
+</MatchMediaProvider>
 ```
 
 ## Examples
 
 <Playground>
-  <CurrentMediaProvider>
+  <MatchMediaProvider>
     <Feed space={2} columns={12} itemColumn={{ all: 3, md: 6, sm: 12 }}>
       <Feed.Item>
         <Box outline='1px solid' p={1} minHeight={200}>1</Box>
@@ -73,7 +73,7 @@ import { Feed } from 'pss-components'
         <Box outline='1px solid' p={1} minHeight={300}>12</Box>
       </Feed.Item>
     </Feed>
-  </CurrentMediaProvider>
+  </MatchMediaProvider>
 </Playground>
 
 ## Props
