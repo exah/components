@@ -2,8 +2,7 @@ import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
 import styled from '@emotion/styled'
 import { fallbackTo, toArr, initArr } from '@exah/utils'
-import { useCurrentMedia } from '../current-media-provider'
-import { useIsMounted } from '../utils'
+import { useMatchMediaContext } from '../match-media'
 import { DEFAULT_GRID } from '../flex-grid/constants'
 import { FlexGrid } from '../flex-grid'
 import { Box } from '../box'
@@ -19,32 +18,32 @@ const groupChildren = (items = [], length = 3) =>
     return target
   }, initArr(length, () => []))
 
+function useGroupChildren (size, children) {
+  return useMemo(() => {
+    const childrenArr = React.Children.toArray(children)
+
+    return size > 1
+      ? groupChildren(childrenArr, size)
+      : childrenArr
+  }, [ size, children ])
+}
+
 const getGroupKey = (input) =>
   toArr(input)
     .reduce((acc, item) => [ ...acc, item.key ], [])
     .join('-')
 
-function useGroupChildren (size, children) {
-  const isMounted = useIsMounted()
-
-  return useMemo(() => {
-    const childrenArr = React.Children.toArray(children)
-
-    return isMounted && size > 1
-      ? groupChildren(childrenArr, size)
-      : childrenArr
-  }, [ isMounted, size, children ])
-}
-
 function Feed ({ children, columns, itemColumn, item: itemProps, ...rest }) {
-  const { currentMediaKey } = useCurrentMedia()
+  const matchedMedia = useMatchMediaContext()
 
-  const itemColumnNormalized = fallbackTo(
-    itemColumn && fallbackTo(itemColumn[currentMediaKey[0]], itemColumn.all, itemColumn),
+  const itemColumnForMedia = fallbackTo(
+    itemColumn[matchedMedia.key],
+    itemColumn.all,
+    itemColumn,
     columns
   )
 
-  const groupSize = columns / itemColumnNormalized
+  const groupSize = columns / itemColumnForMedia
   const childrenGroups = useGroupChildren(groupSize, children)
 
   return (
@@ -53,7 +52,7 @@ function Feed ({ children, columns, itemColumn, item: itemProps, ...rest }) {
         <FlexGrid.Item
           key={getGroupKey(child)}
           {...itemProps}
-          column={itemColumnNormalized}
+          column={itemColumnForMedia}
         >
           {child}
         </FlexGrid.Item>
@@ -63,8 +62,11 @@ function Feed ({ children, columns, itemColumn, item: itemProps, ...rest }) {
 }
 
 Feed.propTypes = {
-  columns: PropTypes.number,
-  itemColumn: PropTypes.oneOfType([ PropTypes.number, PropTypes.objectOf(PropTypes.number) ])
+  columns: PropTypes.number.isRequired,
+  itemColumn: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.objectOf(PropTypes.number)
+  ]).isRequired
 }
 
 Feed.defaultProps = {
