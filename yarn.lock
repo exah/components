@@ -9243,13 +9243,13 @@ psl@^1.1.24, psl@^1.1.28:
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.1.31.tgz#e9aa86d0101b5b105cbe93ac6b784cd547276184"
   integrity sha512-/6pt4+C+T+wZUieKR620OpzN/LlnNKuWjy1iFLQ/UG35JqHlR/89MP1d96dUfkf6Dne3TuLQzOYEYshJ+Hx8mw==
 
-pss@^5.0.0-3:
-  version "5.0.0-3"
-  resolved "https://registry.yarnpkg.com/pss/-/pss-5.0.0-3.tgz#1c3672fbdd5bddd3aaad4351324c6183df443018"
-  integrity sha512-1WEO2kr3eok2Tg996K/XPddA32fPJ1xdsoqvdHWVrGqZcIcR0meN6Elum2TMOYx0Uux6OYeJ7OofHKgTSHWB/g==
+pss@^5.0.0-5:
+  version "5.0.0-5"
+  resolved "https://registry.yarnpkg.com/pss/-/pss-5.0.0-5.tgz#b0e82428883cfa4830cb9317090b92b2c13b7395"
+  integrity sha512-XVxwVD7elN/OL00V6uJCPh6B+UNQ/ChatkLzCK5xB63uphDyEJRkEoMSc7NCYKdPeJ2fmawFMlUM9GknwJBepg==
   dependencies:
     "@exah/utils" "^2.0.0"
-    prop-types "^15.6.2"
+    prop-types "^15.7.2"
 
 public-encrypt@^4.0.0:
   version "4.0.3"

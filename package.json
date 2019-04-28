@@ -124,7 +124,7 @@
     "@emotion/styled": "^10.0.10",
     "@exah/utils": "^2.0.0",
     "emotion-theming": "^10.0.10",
-    "pss": "^5.0.0-3",
+    "pss": "^5.0.0-5",
     "react-styled-base": "^3.0.0"
   }
 }
