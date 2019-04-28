@@ -35,7 +35,7 @@ export {
 export {
   Grid,
   GridItem
-} from './grid/'
+} from './grid'
 
 export {
   Text

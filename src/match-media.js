@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { createContext, useLayoutEffect, useState, useContext } from 'react'
 import { reduceObj } from '@exah/utils'
-import { useTheme } from '../utils'
+import { useTheme } from './utils'
 
 function listenForChanges (target, fn) {
   fn()

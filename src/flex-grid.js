@@ -1,8 +1,8 @@
 import React, { useMemo, isValidElement } from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
-import { Box } from '../box'
-import { Flex } from '../flex'
+import { Box } from './box'
+import { Flex } from './flex'
 import { createFlexGrid, flexGridItem } from './styles'
 import { DEFAULT_GRID } from './constants'
 

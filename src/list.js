@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Box } from '../box'
-import { Flex } from '../flex'
+import { Box } from './box'
+import { Flex } from './flex'
 
 const List = (props) => (
   <Flex

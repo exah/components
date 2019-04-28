@@ -2,10 +2,10 @@ import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
 import styled from '@emotion/styled'
 import { fallbackTo, toArr, initArr } from '@exah/utils'
-import { useMatchMediaContext } from '../match-media'
-import { DEFAULT_GRID } from '../flex-grid/constants'
-import { FlexGrid } from '../flex-grid'
-import { Box } from '../box'
+import { useMatchMediaContext } from './match-media'
+import { DEFAULT_GRID } from './constants'
+import { FlexGrid } from './flex-grid'
+import { Box } from './box'
 
 const groupChildren = (items = [], length = 3) =>
   items.reduce((target, value, index) => {
