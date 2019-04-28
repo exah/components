@@ -1514,11 +1514,24 @@ exports[`Layout 1`] = `
 `;
 
 exports[`Media 1`] = `
+.emotion-2 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
 .emotion-4 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   min-width: 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1533,16 +1546,6 @@ exports[`Media 1`] = `
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
 }
 
 <div
