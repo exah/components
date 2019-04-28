@@ -1,13 +1,13 @@
 ---
-name: ThemeDefaultsProvider
-route: /theme-defaults-provider
+name: ThemeDefaults
+route: /theme-defaults
 menu: Helpers
 ---
 
 import { Playground } from 'docz'
-import { ThemeDefaultsProvider, Box } from '../src'
+import { ThemeDefaults, Box } from '../src'
 
-# ThemeDefaultsProvider
+# ThemeDefaults
 
 ## Description
 
@@ -17,7 +17,7 @@ Change `theme.default` with props.
 ## Usage
 
 ```js
-import { ThemeDefaultsProvider } from 'pss-components'
+import { ThemeDefaults } from 'pss-components'
 ```
 
 ## Examples
@@ -27,10 +27,10 @@ import { ThemeDefaultsProvider } from 'pss-components'
     <Box tm={true} ratio={16 / 9} p={1} mb={1}>
       Content
     </Box>
-    <ThemeDefaultsProvider palette='inverted'>
+    <ThemeDefaults palette='inverted'>
       <Box tm={true} ratio={16 / 9} p={1}>
         Content
       </Box>
-    </ThemeDefaultsProvider>
+    </ThemeDefaults>
   </Box>
 </Playground>

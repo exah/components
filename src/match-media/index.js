@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { createContext, useLayoutEffect, useState, useContext } from 'react'
-import { ThemeContext } from '@emotion/core'
 import { reduceObj } from '@exah/utils'
+import { useTheme } from '../utils'
 
 function listenForChanges (target, fn) {
   fn()
@@ -42,7 +42,7 @@ export function useMatchMedia (media = {}) {
 }
 
 function MatchMediaProvider (props) {
-  const theme = useContext(ThemeContext)
+  const theme = useTheme()
   const match = useMatchMedia(props.media || theme.media)
 
   return (

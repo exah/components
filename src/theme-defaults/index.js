@@ -1,19 +1,16 @@
-import { ThemeProvider, withTheme } from 'emotion-theming'
-import { compose } from '@exah/utils'
-import { withProps } from '../utils'
+import React from 'react'
+import { ThemeProvider } from 'emotion-theming'
+import { useTheme } from '../utils'
 
-const mergeTheme = withProps(({ theme, children, ...rest }) => ({
-  theme: {
-    default: {
-      ...theme.default,
-      ...rest
-    }
-  }
-}))
+export function ThemeDefaults ({ children, ...rest }) {
+  const prev = useTheme()
+  const next = { default: { ...prev.default, ...rest } }
 
-export const ThemeDefaultsProvider = compose(
-  withTheme,
-  mergeTheme
-)(ThemeProvider)
+  return (
+    <ThemeProvider theme={next}>
+      {children}
+    </ThemeProvider>
+  )
+}
 
-ThemeDefaultsProvider.displayName = 'ThemeDefaultsProvider'
+ThemeDefaults.displayName = 'ThemeDefaults'
