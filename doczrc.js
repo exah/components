@@ -1,7 +1,5 @@
 export default {
   dest: './dist',
-  base: process.env.BASENAME || '/',
-  hashRouter: true,
   propsParser: false,
   codeSandbox: false,
   wrapper: '.internal/wrapper',
