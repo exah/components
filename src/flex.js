@@ -9,7 +9,7 @@ import {
   themePath
 } from 'pss'
 
-import { Box } from '../box'
+import { Box } from './box'
 
 const styles = combineStyles(
   gap,

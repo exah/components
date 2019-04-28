@@ -11,7 +11,7 @@ import {
   variant
 } from 'pss'
 
-import { Box } from '../box'
+import { Box } from './box'
 
 const gridVariant = variant({ themeKey: 'gridStyle' })
 const gridContainer = createGridContainer()

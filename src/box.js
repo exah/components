@@ -14,7 +14,7 @@ import {
   themePath
 } from 'pss'
 
-import { createBase, blacklistOf } from '../utils'
+import { createBase, blacklistOf } from './utils'
 
 const styles = combineStyles(
   box,
