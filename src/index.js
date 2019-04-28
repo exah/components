@@ -58,8 +58,5 @@ export {
 } from './match-media'
 
 export {
-  createBase,
-  mapProps,
-  defaultProps,
-  withProps
+  createBase
 } from './utils'
