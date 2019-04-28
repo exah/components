@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { isFn, isStr } from '@exah/utils'
 import isPropValid from '@emotion/is-prop-valid'
+import { ThemeContext } from '@emotion/core'
 import { createBaseFactory } from 'react-styled-base'
 
 export const createBase = createBaseFactory({ filter: isPropValid })
@@ -34,4 +35,8 @@ export function useIsMounted () {
   useEffect(() => setIsMounted(true), [])
 
   return isMounted
+}
+
+export function useTheme () {
+  return useContext(ThemeContext)
 }
