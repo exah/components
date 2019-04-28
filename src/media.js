@@ -3,7 +3,7 @@ import { Flex } from './flex'
 import { Box } from './box'
 
 const Media = (props) => (
-  <Flex {...props} />
+  <Flex flex='1 1 auto' {...props} />
 )
 
 const MediaSide = (props) => (
@@ -14,10 +14,8 @@ const MediaContent = (props) => (
   <Box flex='1 1 auto' {...props} />
 )
 
-Object.assign(Media, {
-  Side: MediaSide,
-  Content: MediaContent
-})
+Media.Side = MediaSide
+Media.Content = MediaContent
 
 export {
   Media,
