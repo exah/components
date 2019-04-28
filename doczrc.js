@@ -11,5 +11,5 @@ export default {
     showPlaygroundEditor: true
   },
   title: 'PSS Components',
-  menu: [ 'Getting Started', 'Primitives', 'Components', 'Helpers' ]
+  menu: [ 'Getting Started', 'Primitives', 'Layout', 'Helpers' ]
 }
