@@ -1487,9 +1487,9 @@ exports[`Layout 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 <div
