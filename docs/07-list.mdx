@@ -5,13 +5,15 @@ menu: Components
 ---
 
 import { Playground } from 'docz'
-import { ThemeProvider } from 'emotion-theming'
 import { PropsTable } from '../.internal'
 import { List } from '../src'
 
 # List
 
-Based on [Flex](#/flex) with applied reset styles for `ul`, `ol`. For more information see [Flex](#/flex) docs.
+Based on [Flex](#/flex) with reset styles for `ul`, `ol` and `flex-direction: column` by default.
+
+For more information see [Flex](#/flex) docs.
+
 
 ## Usage
 
@@ -52,3 +54,39 @@ import { List } from 'pss-components'
     <List.Item>6</List.Item>
   </List>
 </Playground>
+
+### Change `list-style`
+
+<Playground>
+  <List listStyle='square inside'>
+    <List.Item>1</List.Item>
+    <List.Item>2</List.Item>
+    <List.Item>3</List.Item>
+    <List.Item>4</List.Item>
+    <List.Item>5</List.Item>
+    <List.Item>6</List.Item>
+  </List>
+</Playground>
+
+### Ordered list
+
+<Playground>
+  <List as='ol' listStyle='decimal' pl='1em'>
+    <List.Item>First</List.Item>
+    <List.Item>Second</List.Item>
+    <List.Item>Third</List.Item>
+    <List.Item>Fourth</List.Item>
+    <List.Item>Fifth</List.Item>
+    <List.Item>Sixth</List.Item>
+  </List>
+</Playground>
+
+## Props
+
+### List ([Flex](#/flex))
+
+<PropsTable of={List} />
+
+### List.Item ([Box](#/box))
+
+<PropsTable of={List.Item} />
