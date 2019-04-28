@@ -14,7 +14,6 @@ export {
 
 export {
   Layout,
-  LayoutBody,
   LayoutContent
 } from './layout'
 

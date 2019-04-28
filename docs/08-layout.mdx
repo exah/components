@@ -6,7 +6,7 @@ menu: Components
 
 import { Playground } from 'docz'
 import { PropsTable } from '../.internal'
-import { Box, Layout } from '../src'
+import { Box, Layout, Media } from '../src'
 
 # Layout
 
@@ -17,13 +17,11 @@ Implements [Holy Grail Layout](https://en.wikipedia.org/wiki/Holy_grail_(web_des
 - Header is on top of page
 - Footer is stick to "bottom" of page
 - Content expands to take available space
-- Body can be used as container to equal height columns (like navs) and main Content
 
 Components:
 
-- `Layout` — Container that takes space of page (add `minHt='100vh'` prop, default to `100%`)
+- `Layout` — Container that takes space of page (add `minHeight='100vh'` prop, default to `100%`)
 - `Layout.Content` — Main component, that expands to take available space
-- `Layout.Body` — Can be used inside `Layout` as main container of vertical columns and content
 
 ## Usage
 
@@ -34,10 +32,7 @@ import { Layout, Box } from 'pss-components'
 ```js
 <Layout>
   <Box>Top</Box>
-  <Layout.Body>
-    <Layout.Content>Content</Layout.Content>
-    <Box>Side Nav</Box>
-  </Layout.Body>
+  <Layout.Content>Content</Layout.Content>
   <Box>Bottom</Box>
 </Layout>
 ```
@@ -46,7 +41,7 @@ import { Layout, Box } from 'pss-components'
 
 ### Basic
 
-<Playground style={{ height: '500px' }}>
+<Playground style={{ height: '500px', overflow: 'auto' }}>
   <Layout>
     <Box as='header'>
       Header
@@ -62,7 +57,7 @@ import { Layout, Box } from 'pss-components'
 
 ### All components
 
-<Playground style={{ height: '500px' }}>
+<Playground style={{ height: '500px', overflow: 'auto' }}>
   <Layout outline='1px solid' p={1}>
     <Box outline='debug' p={1} mb={1}>
       Header
@@ -70,17 +65,17 @@ import { Layout, Box } from 'pss-components'
     <Box outline='debug' p={1} mb={1}>
       Some / Breadcrumbs / Path
     </Box>
-    <Layout.Body outline='debug' p={1} mb={1}>
-      <Layout.Content outline='debug' p={1} mx={1}>
+    <Media outline='debug' p={1} mb={1}>
+      <Media.Content outline='debug' p={1} mx={1}>
         Content
-      </Layout.Content>
-      <Box outline='debug' p={1} width={( 1 / 6 )} order={-1}>
+      </Media.Content>
+      <Media.Side outline='debug' p={1} width={( 1 / 6 )} order={-1}>
         Left Nav
-      </Box>
-      <Box outline='debug' p={1} width={( 1 / 6 )}>
+      </Media.Side>
+      <Media.Side outline='debug' p={1} width={( 1 / 6 )}>
         Right Nav
-      </Box>
-    </Layout.Body>
+      </Media.Side>
+    </Media>
     <Box outline='debug' p={1}>
       Footer
     </Box>

@@ -12,26 +12,14 @@ const Layout = (props) => (
 
 const LayoutContent = (props) => (
   <Box
-    flex='1 1 100%'
+    flex='1 1 auto'
     {...props}
   />
 )
 
-const LayoutBody = (props) => (
-  <Flex
-    flexDirection='row'
-    flex='1 1 100%'
-    {...props}
-  />
-)
-
-Object.assign(Layout, {
-  Content: LayoutContent,
-  Body: LayoutBody
-})
+Layout.Content = LayoutContent
 
 export {
   Layout,
-  LayoutContent,
-  LayoutBody
+  LayoutContent
 }
