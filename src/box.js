@@ -1,35 +1,9 @@
 import styled from '@emotion/styled'
-
-import {
-  combineStyles,
-  box,
-  boxStyle,
-  display,
-  hide,
-  transition,
-  transform,
-  opacity,
-  cursor,
-  ratio,
-  themePath
-} from 'pss'
-
+import { box, boxStyle, themePath } from 'pss'
 import { createBase, blacklistOf } from './utils'
 
-const styles = combineStyles(
-  box,
-  boxStyle,
-  display,
-  hide,
-  transition,
-  transform,
-  opacity,
-  cursor,
-  ratio
-)
-
 const BoxBase = createBase('div', {
-  blacklist: blacklistOf(styles)
+  blacklist: blacklistOf(box)
 })
 
 const Box = styled(BoxBase)(
@@ -39,14 +13,16 @@ const Box = styled(BoxBase)(
     padding: 0,
     minWidth: 0
   }),
-  styles
+  boxStyle,
+  box
 )
 
 Box.displayName = 'Box'
 
 Box.propTypes = {
   ...BoxBase.propTypes,
-  ...styles.propTypes
+  ...boxStyle.propTypes,
+  ...box.propTypes
 }
 
 export {
