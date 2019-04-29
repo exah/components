@@ -1,9 +1,24 @@
 import styled from '@emotion/styled'
-import { box, boxStyle, themePath } from 'pss'
+
+import {
+  combineStyles,
+  box,
+  boxStyle,
+  position,
+  positionOffsets,
+  themePath
+} from 'pss'
+
 import { createBase, blacklistOf } from './utils'
 
+const styles = combineStyles(
+  box,
+  position,
+  positionOffsets
+)
+
 const BoxBase = createBase('div', {
-  blacklist: blacklistOf(box)
+  blacklist: blacklistOf(styles)
 })
 
 const Box = styled(BoxBase)(
@@ -14,7 +29,7 @@ const Box = styled(BoxBase)(
     minWidth: 0
   }),
   boxStyle,
-  box
+  styles
 )
 
 Box.displayName = 'Box'
@@ -22,7 +37,7 @@ Box.displayName = 'Box'
 Box.propTypes = {
   ...BoxBase.propTypes,
   ...boxStyle.propTypes,
-  ...box.propTypes
+  ...styles.propTypes
 }
 
 export {
