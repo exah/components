@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { createContext, useLayoutEffect, useState, useContext } from 'react'
+import React, { createContext, useEffect, useState, useContext } from 'react'
 import { reduceObj } from '@exah/utils'
 import { useTheme } from './utils'
 
@@ -22,7 +22,7 @@ export function useMatchMedia (media = {}) {
   const [ matches, setMatches ] = useState(INITIAL.matches)
   const [ key = INITIAL.key ] = matches
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const listeners = reduceObj((acc, mediaKey, query) => {
       const mql = window.matchMedia(query)
 
@@ -60,9 +60,16 @@ function useMatchMediaContext () {
   return useContext(MatchMediaContext)
 }
 
+const withMatchMedia = (Comp) => (props) => (
+  <MatchMediaConsumer>
+    {(matchMedia) => <Comp matchMedia={matchMedia} {...props} />}
+  </MatchMediaConsumer>
+)
+
 export {
   MatchMediaContext,
   MatchMediaProvider,
   MatchMediaConsumer,
-  useMatchMediaContext
+  useMatchMediaContext,
+  withMatchMedia
 }

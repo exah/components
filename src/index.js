@@ -53,7 +53,8 @@ export {
   MatchMediaProvider,
   MatchMediaConsumer,
   useMatchMedia,
-  useMatchMediaContext
+  useMatchMediaContext,
+  withMatchMedia
 } from './match-media'
 
 export {
