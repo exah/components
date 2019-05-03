@@ -1,13 +1,20 @@
+import use from 'reuse'
 import styled from '@emotion/styled'
 import { style } from 'pss'
+import { base } from './base'
 import { Box } from './box'
 import { Flex } from './flex'
+import { omitStyles } from './utils'
 
 const listStyle = style({
   cssProp: 'listStyle'
 })
 
-const List = styled(Flex)(
+const ListBase = base({
+  filter: omitStyles(listStyle)
+})
+
+const List = styled(use(ListBase, Flex, 'ul'))(
   listStyle
 )
 
@@ -17,18 +24,17 @@ List.propTypes = {
 }
 
 List.defaultProps = {
-  as: 'ul',
   flexDirection: 'column',
   listStyle: 'none',
   ...Flex.defaultProps
 }
 
-const ListItem = styled(Box)(
+const ListItem = styled(use(ListBase, Box, 'li'))(
   listStyle
 )
 
 ListItem.propTypes = { ...listStyle.propTypes, ...Box.propTypes }
-ListItem.defaultProps = { as: 'li' }
+ListItem.defaultProps = { ...Box.defaultProps }
 List.Item = ListItem
 
 export {

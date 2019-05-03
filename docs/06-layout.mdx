@@ -12,7 +12,7 @@ import { Box, Layout, Media } from '../src'
 
 ## Description
 
-Implements [Holy Grail Layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) with [`FlexBox`](#/flex-box).
+Implements [Holy Grail Layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) with [`FlexBox`](/flex-box).
 
 - Header is on top of page
 - Footer is stick to "bottom" of page
@@ -43,13 +43,13 @@ import { Layout, Box } from 'pss-components'
 
 <Playground style={{ height: '500px', overflow: 'auto' }}>
   <Layout>
-    <Box as='header'>
+    <Box use='header'>
       Header
     </Box>
-    <Layout.Content as='main'>
+    <Layout.Content use='main'>
       Main
     </Layout.Content>
-    <Box as='footer'>
+    <Box use='footer'>
       Footer
     </Box>
   </Layout>

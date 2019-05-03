@@ -1,19 +1,32 @@
-import React, { useMemo, isValidElement } from 'react'
+import use from 'reuse'
 import PropTypes from 'prop-types'
+import React, { useMemo, isValidElement } from 'react'
+import { pipe } from '@exah/utils'
 import styled from '@emotion/styled'
+import { base } from './base'
 import { Box } from './box'
 import { Flex } from './flex'
 import { createFlexGrid, flexGridItem } from './styles'
 import { DEFAULT_GRID } from './constants'
+import { omit, omitStyles } from './utils'
 
 const flexGrid = createFlexGrid({
-  getRowSelector: () => `& + ${FlexGridBase}`,
+  getRowSelector: () => `& + ${StyledFlexGrid}`,
   getItemSelector: (props) => props.spaceTarget
     ? `& > ${FlexGridItem} > ${props.spaceTarget}, & > ${props.spaceTarget}`
     : `& > ${FlexGridItem}`
 })
 
-const FlexGridBase = styled(Flex)(
+flexGrid.propTypes = {
+  ...flexGrid.propTypes,
+  spaceTarget: PropTypes.oneOfType([ PropTypes.elementType, PropTypes.string ])
+}
+
+const FlexGridBase = base({
+  filter: omitStyles(flexGrid)
+})
+
+const StyledFlexGrid = styled(use(FlexGridBase, Flex))(
   { flexWrap: 'wrap' },
   flexGrid
 )
@@ -30,9 +43,9 @@ function FlexGrid ({ columns, children, ...rest }) {
   ), [ children ])
 
   return (
-    <FlexGridBase {...rest}>
+    <StyledFlexGrid {...rest}>
       {clonedChildren}
-    </FlexGridBase>
+    </StyledFlexGrid>
   )
 }
 
@@ -45,7 +58,11 @@ FlexGrid.defaultProps = {
   columns: DEFAULT_GRID
 }
 
-const FlexGridItem = styled(Box)(
+const FlexGridItemBase = base({
+  filter: pipe(omit([ 'columns' ]), omitStyles(flexGridItem))
+})
+
+const FlexGridItem = styled(use(FlexGridItemBase, Box))(
   { flex: '0 1 auto' },
   flexGridItem
 )

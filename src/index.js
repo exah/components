@@ -56,7 +56,3 @@ export {
   useMatchMediaContext,
   withMatchMedia
 } from './match-media'
-
-export {
-  createBase
-} from './utils'

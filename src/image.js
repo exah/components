@@ -3,7 +3,7 @@ import { Box } from './box'
 
 const Image = (props) => (
   <Box
-    as='img'
+    use='img'
     display='block'
     maxWidth='100%'
     height='auto'

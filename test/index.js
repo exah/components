@@ -47,13 +47,13 @@ test('Flex', () => {
 test('Layout', () => {
   const result = renderJSON(
     <Layout>
-      <Box as='header'>
+      <Box use='header'>
         Header
       </Box>
-      <Layout.Content as='main'>
+      <Layout.Content use='main'>
         Main
       </Layout.Content>
-      <Box as='footer'>
+      <Box use='footer'>
         Footer
       </Box>
     </Layout>
