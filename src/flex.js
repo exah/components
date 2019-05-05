@@ -1,3 +1,4 @@
+import use from 'reuse'
 import styled from '@emotion/styled'
 
 import {
@@ -9,6 +10,7 @@ import {
   themePath
 } from 'pss'
 
+import { base, omitStyles } from './utils'
 import { Box } from './box'
 
 const styles = combineStyles(
@@ -18,7 +20,11 @@ const styles = combineStyles(
   boxItemsAlignment
 )
 
-const Flex = styled(Box)(
+const FlexBase = base({
+  filter: omitStyles(styles)
+})
+
+const Flex = styled(use(FlexBase, Box))(
   themePath('Flex'),
   styles
 )

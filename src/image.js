@@ -1,15 +1,16 @@
 import React from 'react'
 import { Box } from './box'
+import { extend } from './utils'
 
-const Image = (props) => (
+const Image = extend(props => (
   <Box
-    as='img'
+    use='img'
     display='block'
     maxWidth='100%'
     height='auto'
     {...props}
   />
-)
+))
 
 Image.displayName = 'Image'
 

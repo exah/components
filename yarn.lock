@@ -1155,13 +1155,6 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@7.3.4":
-  version "7.3.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.4.tgz#73d12ba819e365fcf7fd152aed56d6df97d21c83"
-  integrity sha512-IvfvnMdSaLBateu0jfsYIpZTxAc2cKEXEMiezGGN75QcBcecDUKd3PgLAncT0oOgxKy8dd8hrJKj9MfzgfZd6g==
-  dependencies:
-    regenerator-runtime "^0.12.0"
-
 "@babel/runtime@7.4.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.4.tgz#dc2e34982eb236803aa27a07fea6857af1b9171d"
@@ -1289,7 +1282,7 @@
     "@emotion/utils" "0.11.1"
     babel-plugin-emotion "^10.0.9"
 
-"@emotion/hash@0.7.1":
+"@emotion/hash@0.7.1", "@emotion/hash@^0.7.1":
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.1.tgz#9833722341379fb7d67f06a4b00ab3c37913da53"
   integrity sha512-OYpa/Sg+2GDX+jibUfpZVn1YqSVRpYmTLF2eyAfrFTIJSbwyIrc+YscayoykvaOME/wV4BV0Sa0yqdMrgse6mA==
@@ -9522,15 +9515,6 @@ react-simple-code-editor@^0.9.0:
   resolved "https://registry.yarnpkg.com/react-simple-code-editor/-/react-simple-code-editor-0.9.10.tgz#1ab5ea7215687ed918c6d0dae90736cf01890905"
   integrity sha512-80LJwRQS7Wi9Ugh/e6FRHWdcg4oQOpMBDFxyDpORILffrHdV3EIQ1IeX5x7488r05iFgLbVDV4nQ1LRKjgCm0g==
 
-react-styled-base@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-styled-base/-/react-styled-base-3.0.0.tgz#3791ae162fecc8ab33452e3fb4c371ba34757a00"
-  integrity sha512-MMta20XGpvkNT0r2CvT3BZbArmw7MI+qW2zpQMgc2j0rmQFRooNaeXCK25+R2N4Ha1ii68VBijLO3IGk5z1eQA==
-  dependencies:
-    "@babel/runtime" "7.3.4"
-    "@exah/utils" "^2.0.0"
-    prop-types "^15.7.2"
-
 react-test-renderer@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-16.8.6.tgz#188d8029b8c39c786f998aa3efd3ffe7642d5ba1"
@@ -10099,6 +10083,11 @@ ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
   integrity sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg==
+
+reuse@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/reuse/-/reuse-2.0.0.tgz#33f6ee7a966b146e0b1dce79fbbf6c54613fe579"
+  integrity sha512-y2HgChpsMdAQFwIPKTC3nRWnS0cQm+VoT9bvdp/av3yurEnhSh4PUN7QS5nnoawvV87uiKYQ00/Xb3/w0Xdk2g==
 
 rimraf@2.6.3, rimraf@^2.6.3:
   version "2.6.3"

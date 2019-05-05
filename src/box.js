@@ -9,16 +9,17 @@ import {
   themePath
 } from 'pss'
 
-import { createBase, blacklistOf } from './utils'
+import { base, omitStyles } from './utils'
 
 const styles = combineStyles(
+  boxStyle,
   box,
   position,
   positionOffsets
 )
 
-const BoxBase = createBase('div', {
-  blacklist: blacklistOf(styles)
+const BoxBase = base({
+  filter: omitStyles(styles)
 })
 
 const Box = styled(BoxBase)(
@@ -28,7 +29,6 @@ const Box = styled(BoxBase)(
     padding: 0,
     minWidth: 0
   }),
-  boxStyle,
   styles
 )
 

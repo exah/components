@@ -21,7 +21,7 @@ exports[`Box 1`] = `
 `;
 
 exports[`Feed basic 1`] = `
-.emotion-12 {
+.emotion-20 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ exports[`Feed basic 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -47,7 +47,7 @@ exports[`Feed basic 1`] = `
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  width: 100%;
+  width: 25%;
 }
 
 .emotion-0 {
@@ -58,10 +58,10 @@ exports[`Feed basic 1`] = `
 }
 
 <div
-  className="emotion-12 emotion-13"
+  className="emotion-18 emotion-19 emotion-20 emotion-4"
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-4"
   >
     <div
       className="emotion-0 emotion-1"
@@ -70,7 +70,7 @@ exports[`Feed basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-4"
   >
     <div
       className="emotion-0 emotion-1"
@@ -79,7 +79,7 @@ exports[`Feed basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-4"
   >
     <div
       className="emotion-0 emotion-1"
@@ -87,11 +87,14 @@ exports[`Feed basic 1`] = `
       Item
     </div>
   </div>
+  <div
+    className="emotion-2 emotion-3 emotion-4"
+  />
 </div>
 `;
 
 exports[`Feed empty 1`] = `
-.emotion-0 {
+.emotion-2 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -106,12 +109,12 @@ exports[`Feed empty 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
+  className="emotion-0 emotion-1 emotion-2 emotion-3"
 />
 `;
 
 exports[`Feed with theme 1`] = `
-.emotion-2 {
+.emotion-3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -123,7 +126,7 @@ exports[`Feed with theme 1`] = `
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  width: 100%;
+  width: 25%;
 }
 
 .emotion-0 {
@@ -133,7 +136,7 @@ exports[`Feed with theme 1`] = `
   min-width: 0;
 }
 
-.emotion-4 {
+.emotion-16 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -151,12 +154,12 @@ exports[`Feed with theme 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-4 + .emotion-5 {
+.emotion-16 + .emotion-14 {
   margin-top: 8px;
 }
 
-.emotion-4 > .emotion-3 > .emotion-1,
-.emotion-4 > .emotion-1 {
+.emotion-16 > .emotion-2 > .emotion-1,
+.emotion-16 > .emotion-1 {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 8px;
@@ -164,10 +167,10 @@ exports[`Feed with theme 1`] = `
 }
 
 <div
-  className="emotion-4 emotion-5"
+  className="emotion-14 emotion-15 emotion-16 emotion-4"
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-4"
   >
     <div
       className="emotion-0 emotion-1"
@@ -175,11 +178,20 @@ exports[`Feed with theme 1`] = `
       Item
     </div>
   </div>
+  <div
+    className="emotion-2 emotion-3 emotion-4"
+  />
+  <div
+    className="emotion-2 emotion-3 emotion-4"
+  />
+  <div
+    className="emotion-2 emotion-3 emotion-4"
+  />
 </div>
 `;
 
 exports[`Flex 1`] = `
-.emotion-6 {
+.emotion-7 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -222,7 +234,7 @@ exports[`Flex 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-6 emotion-7 emotion-1"
 >
   <div
     className="emotion-0 emotion-1"
@@ -250,7 +262,7 @@ exports[`FlexGrid basic 1`] = `
   min-width: 0;
 }
 
-.emotion-48 {
+.emotion-62 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -264,7 +276,7 @@ exports[`FlexGrid basic 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -280,10 +292,10 @@ exports[`FlexGrid basic 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49"
+  className="emotion-60 emotion-61 emotion-62 emotion-1"
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -292,7 +304,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -301,7 +313,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -310,7 +322,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -319,7 +331,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -328,7 +340,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -337,7 +349,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -346,7 +358,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -355,7 +367,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -364,7 +376,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -373,7 +385,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -382,7 +394,7 @@ exports[`FlexGrid basic 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -401,7 +413,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   min-width: 0;
 }
 
-.emotion-2 {
+.emotion-3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -416,7 +428,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   width: 8.333333333333332%;
 }
 
-.emotion-48 {
+.emotion-62 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -434,11 +446,11 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   margin-bottom: -0.25rem;
 }
 
-.emotion-48 + .emotion-49 {
+.emotion-62 + .emotion-60 {
   margin-top: 0.25rem;
 }
 
-.emotion-48 > .emotion-3 {
+.emotion-62 > .emotion-2 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   padding-top: 0.25rem;
@@ -446,10 +458,10 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49"
+  className="emotion-60 emotion-61 emotion-62 emotion-1"
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -458,7 +470,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -467,7 +479,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -476,7 +488,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -485,7 +497,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -494,7 +506,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -503,7 +515,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -512,7 +524,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -521,7 +533,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -530,7 +542,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -539,7 +551,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -548,7 +560,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -567,7 +579,7 @@ exports[`FlexGrid non-integer space 1`] = `
   min-width: 0;
 }
 
-.emotion-2 {
+.emotion-3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -582,7 +594,7 @@ exports[`FlexGrid non-integer space 1`] = `
   width: 8.333333333333332%;
 }
 
-.emotion-48 {
+.emotion-62 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -600,11 +612,11 @@ exports[`FlexGrid non-integer space 1`] = `
   margin-bottom: -1px;
 }
 
-.emotion-48 + .emotion-49 {
+.emotion-62 + .emotion-60 {
   margin-top: 1px;
 }
 
-.emotion-48 > .emotion-3 {
+.emotion-62 > .emotion-2 {
   padding-left: 1px;
   padding-right: 1px;
   padding-top: 1px;
@@ -612,10 +624,10 @@ exports[`FlexGrid non-integer space 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49"
+  className="emotion-60 emotion-61 emotion-62 emotion-1"
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -624,7 +636,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -633,7 +645,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -642,7 +654,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -651,7 +663,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -660,7 +672,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -669,7 +681,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -678,7 +690,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -687,7 +699,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -696,7 +708,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -705,7 +717,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -714,7 +726,7 @@ exports[`FlexGrid non-integer space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -733,7 +745,7 @@ exports[`FlexGrid rem spaces 1`] = `
   min-width: 0;
 }
 
-.emotion-2 {
+.emotion-3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -748,7 +760,7 @@ exports[`FlexGrid rem spaces 1`] = `
   width: 8.333333333333332%;
 }
 
-.emotion-48 {
+.emotion-62 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -766,11 +778,11 @@ exports[`FlexGrid rem spaces 1`] = `
   margin-bottom: -0.5rem;
 }
 
-.emotion-48 + .emotion-49 {
+.emotion-62 + .emotion-60 {
   margin-top: 0.5rem;
 }
 
-.emotion-48 > .emotion-3 {
+.emotion-62 > .emotion-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
@@ -778,10 +790,10 @@ exports[`FlexGrid rem spaces 1`] = `
 }
 
 <div
-  className="emotion-48 emotion-49"
+  className="emotion-60 emotion-61 emotion-62 emotion-1"
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -790,7 +802,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -799,7 +811,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -808,7 +820,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -817,7 +829,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -826,7 +838,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -835,7 +847,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -844,7 +856,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -853,7 +865,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -862,7 +874,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -871,7 +883,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -880,7 +892,7 @@ exports[`FlexGrid rem spaces 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -899,7 +911,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   min-width: 0;
 }
 
-.emotion-2 {
+.emotion-3 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -914,7 +926,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   width: 8.333333333333332%;
 }
 
-.emotion-112 {
+.emotion-142 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -932,18 +944,18 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-112 + .emotion-113 {
+.emotion-142 + .emotion-140 {
   margin-top: 8px;
 }
 
-.emotion-112 > .emotion-3 {
+.emotion-142 > .emotion-2 {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.emotion-50 {
+.emotion-63 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -958,7 +970,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   width: 16.666666666666664%;
 }
 
-.emotion-74 {
+.emotion-93 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -973,7 +985,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   width: 25%;
 }
 
-.emotion-90 {
+.emotion-113 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -988,7 +1000,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   width: 33.33333333333333%;
 }
 
-.emotion-102 {
+.emotion-128 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1003,7 +1015,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   width: 50%;
 }
 
-.emotion-110 {
+.emotion-138 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1019,10 +1031,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 }
 
 <div
-  className="emotion-112 emotion-113"
+  className="emotion-140 emotion-141 emotion-142 emotion-1"
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1031,7 +1043,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1040,7 +1052,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1049,7 +1061,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1058,7 +1070,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1067,7 +1079,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1076,7 +1088,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1085,7 +1097,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1094,7 +1106,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1103,7 +1115,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1112,7 +1124,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1121,7 +1133,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-2 emotion-3 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1130,7 +1142,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-50 emotion-3"
+    className="emotion-2 emotion-63 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1139,7 +1151,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-50 emotion-3"
+    className="emotion-2 emotion-63 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1148,7 +1160,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-50 emotion-3"
+    className="emotion-2 emotion-63 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1157,7 +1169,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-50 emotion-3"
+    className="emotion-2 emotion-63 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1166,7 +1178,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-50 emotion-3"
+    className="emotion-2 emotion-63 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1175,7 +1187,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-50 emotion-3"
+    className="emotion-2 emotion-63 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1184,7 +1196,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-74 emotion-3"
+    className="emotion-2 emotion-93 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1193,7 +1205,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-74 emotion-3"
+    className="emotion-2 emotion-93 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1202,7 +1214,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-74 emotion-3"
+    className="emotion-2 emotion-93 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1211,7 +1223,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-74 emotion-3"
+    className="emotion-2 emotion-93 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1220,7 +1232,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-90 emotion-3"
+    className="emotion-2 emotion-113 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1229,7 +1241,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-90 emotion-3"
+    className="emotion-2 emotion-113 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1238,7 +1250,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-90 emotion-3"
+    className="emotion-2 emotion-113 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1247,7 +1259,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-102 emotion-3"
+    className="emotion-2 emotion-128 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1256,7 +1268,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-102 emotion-3"
+    className="emotion-2 emotion-128 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1265,7 +1277,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
     </div>
   </div>
   <div
-    className="emotion-110 emotion-3"
+    className="emotion-2 emotion-138 emotion-1"
   >
     <div
       className="emotion-0 emotion-1"
@@ -1277,7 +1289,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 `;
 
 exports[`Grid basic 1`] = `
-.emotion-42 {
+.emotion-64 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1286,7 +1298,7 @@ exports[`Grid basic 1`] = `
   grid-template-columns: repeat(12,1fr);
 }
 
-.emotion-0 {
+.emotion-1 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1295,7 +1307,7 @@ exports[`Grid basic 1`] = `
   grid-row: 1;
 }
 
-.emotion-24 {
+.emotion-37 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1304,7 +1316,7 @@ exports[`Grid basic 1`] = `
   grid-row: 2;
 }
 
-.emotion-36 {
+.emotion-55 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1314,110 +1326,110 @@ exports[`Grid basic 1`] = `
 }
 
 <div
-  className="emotion-42 emotion-43"
+  className="emotion-63 emotion-64 emotion-2"
 >
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-0 emotion-1"
+    className="emotion-0 emotion-1 emotion-2"
   >
     span 1
   </div>
   <div
-    className="emotion-24 emotion-1"
+    className="emotion-0 emotion-37 emotion-2"
   >
     span 2
   </div>
   <div
-    className="emotion-24 emotion-1"
+    className="emotion-0 emotion-37 emotion-2"
   >
     span 2
   </div>
   <div
-    className="emotion-24 emotion-1"
+    className="emotion-0 emotion-37 emotion-2"
   >
     span 2
   </div>
   <div
-    className="emotion-24 emotion-1"
+    className="emotion-0 emotion-37 emotion-2"
   >
     span 2
   </div>
   <div
-    className="emotion-24 emotion-1"
+    className="emotion-0 emotion-37 emotion-2"
   >
     span 2
   </div>
   <div
-    className="emotion-24 emotion-1"
+    className="emotion-0 emotion-37 emotion-2"
   >
     span 2
   </div>
   <div
-    className="emotion-36 emotion-1"
+    className="emotion-0 emotion-55 emotion-2"
   >
     span 4
   </div>
   <div
-    className="emotion-36 emotion-1"
+    className="emotion-0 emotion-55 emotion-2"
   >
     span 4
   </div>
   <div
-    className="emotion-36 emotion-1"
+    className="emotion-0 emotion-55 emotion-2"
   >
     span 4
   </div>
@@ -1467,7 +1479,7 @@ exports[`Layout 1`] = `
   min-width: 0;
 }
 
-.emotion-6 {
+.emotion-7 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1493,7 +1505,7 @@ exports[`Layout 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-6 emotion-7 emotion-1"
 >
   <header
     className="emotion-0 emotion-1"
@@ -1524,7 +1536,7 @@ exports[`Media 1`] = `
   flex: 1 1 auto;
 }
 
-.emotion-4 {
+.emotion-5 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1549,7 +1561,7 @@ exports[`Media 1`] = `
 }
 
 <div
-  className="emotion-4 emotion-5"
+  className="emotion-4 emotion-5 emotion-1"
 >
   <div
     className="emotion-0 emotion-1"
@@ -1565,11 +1577,7 @@ exports[`Media 1`] = `
 `;
 
 exports[`Text empty 1`] = `
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  min-width: 0;
+.emotion-1 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1581,16 +1589,12 @@ exports[`Text empty 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1 emotion-2 emotion-1"
+  className="emotion-0 emotion-1 emotion-2"
 />
 `;
 
 exports[`Text with text 1`] = `
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  min-width: 0;
+.emotion-1 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1602,18 +1606,14 @@ exports[`Text with text 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1 emotion-2 emotion-1"
+  className="emotion-0 emotion-1 emotion-2"
 >
   Hello
 </div>
 `;
 
 exports[`Text with theme 1`] = `
-.emotion-2 {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  min-width: 0;
+.emotion-1 {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -1628,7 +1628,7 @@ exports[`Text with theme 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1 emotion-2 emotion-1"
+  className="emotion-0 emotion-1 emotion-2"
 >
   Hello
 </div>

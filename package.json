@@ -120,11 +120,12 @@
   "dependencies": {
     "@babel/runtime": "7.4.4",
     "@emotion/core": "^10.0.10",
+    "@emotion/hash": "^0.7.1",
     "@emotion/is-prop-valid": "^0.7.3",
     "@emotion/styled": "^10.0.10",
     "@exah/utils": "^2.0.0",
     "emotion-theming": "^10.0.10",
     "pss": "^5.0.0-5",
-    "react-styled-base": "^3.0.0"
+    "reuse": "^2.0.0"
   }
 }

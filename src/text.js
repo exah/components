@@ -1,18 +1,19 @@
+import use from 'reuse'
 import styled from '@emotion/styled'
 import { combineStyles, text, textStyle, themePath } from 'pss'
-import { createBase, blacklistOf } from './utils'
 import { Box } from './box'
+import { base, omitStyles } from './utils'
 
 const styles = combineStyles(
   textStyle.variant,
   text
 )
 
-const TextBase = createBase(Box, {
-  blacklist: blacklistOf(styles)
+const TextBase = base({
+  filter: omitStyles(styles)
 })
 
-const Text = styled(TextBase)(
+const Text = styled(use(TextBase, Box))(
   themePath('Text', {
     color: 'inherit',
     font: 'inherit',
