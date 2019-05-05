@@ -49,6 +49,13 @@ export {
 } from './theme-defaults'
 
 export {
+  ThemeContext,
+  ThemeProvider,
+  useTheme,
+  withTheme
+} from './theme'
+
+export {
   MatchMediaContext,
   MatchMediaProvider,
   MatchMediaConsumer,
