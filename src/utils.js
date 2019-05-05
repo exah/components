@@ -29,19 +29,21 @@ export function base ({
   return Base
 }
 
-export const extend = ((id = 0) => (render) => {
-  const targetClassName = 'pss-' + id
+const generateClassName = ((id) => () => {
+  id++
+  return 'pss-' + id
+})(-1)
+
+export function extend (render) {
+  const className = generateClassName()
 
   const Comp = withRef((props) =>
-    render({ ...props, className: cx(props.className, targetClassName) })
+    render({ ...props, className: cx(props.className, className) })
   )
 
-  Object.defineProperty(Comp, 'toString', {
-    value () {
-      return `.${targetClassName}`
+  return Object.defineProperties(Comp, {
+    toString: {
+      value: () => `.${className}`
     }
   })
-
-  id++
-  return Comp
-})()
+}
