@@ -120,7 +120,6 @@
   "dependencies": {
     "@babel/runtime": "7.4.4",
     "@emotion/core": "^10.0.10",
-    "@emotion/hash": "^0.7.1",
     "@emotion/is-prop-valid": "^0.7.3",
     "@emotion/styled": "^10.0.10",
     "@exah/utils": "^2.0.0",
