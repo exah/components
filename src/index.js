@@ -68,3 +68,8 @@ export {
   base,
   extend
 } from './utils'
+
+export {
+  ThemeDefaultsForColorScheme,
+  usePrefersColorScheme
+} from './prefers-color-scheme'
