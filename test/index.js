@@ -199,7 +199,7 @@ describe('Feed', () => {
 
   test('basic', () => {
     const result = renderJSON(
-      <Feed itemColumn={3}>
+      <Feed column={3}>
         <Feed.Item>
           Item
         </Feed.Item>
@@ -219,7 +219,7 @@ describe('Feed', () => {
     const result = renderJSON(
       <ThemeProvider theme={theme}>
         <MatchMediaProvider>
-          <Feed space={2} itemColumn={{ all: 3, md: 6, sm: 12 }}>
+          <Feed space={2} column={{ all: 3, md: 6, sm: 12 }}>
             <Feed.Item>
               Item
             </Feed.Item>
