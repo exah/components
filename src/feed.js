@@ -28,26 +28,26 @@ function useGroupChildren (size, children) {
   }, [ size, children ])
 }
 
-function Feed ({ children, columns, itemColumn, item: itemProps, ...rest }) {
+function Feed ({ children, grid, column, item: itemProps, ...rest }) {
   const matchedMedia = useMatchMediaContext()
 
-  const itemColumnForMedia = fallbackTo(
-    itemColumn[matchedMedia.key],
-    itemColumn.all,
-    itemColumn,
-    columns
+  const columnForMedia = fallbackTo(
+    column[matchedMedia.key],
+    column.all,
+    column,
+    grid
   )
 
-  const groupSize = columns / itemColumnForMedia
+  const groupSize = grid / columnForMedia
   const childrenGroups = useGroupChildren(groupSize, children)
 
   return (
-    <FlexGrid spaceTarget={Feed.Item} columns={columns} {...rest}>
+    <FlexGrid spaceTarget={Feed.Item} {...rest} columns={grid}>
       {childrenGroups.map((child, index) => (
         <FlexGrid.Item
           key={index}
           {...itemProps}
-          column={itemColumnForMedia}
+          column={columnForMedia}
         >
           {child}
         </FlexGrid.Item>
@@ -57,19 +57,19 @@ function Feed ({ children, columns, itemColumn, item: itemProps, ...rest }) {
 }
 
 Feed.propTypes = {
-  columns: PropTypes.number.isRequired,
-  itemColumn: PropTypes.oneOfType([
+  grid: PropTypes.number.isRequired,
+  column: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.objectOf(PropTypes.number)
   ]).isRequired
 }
 
 Feed.defaultProps = {
-  columns: DEFAULT_GRID,
-  itemColumn: DEFAULT_GRID
+  grid: DEFAULT_GRID,
+  column: DEFAULT_GRID
 }
 
-Feed.Item = styled(Box)``
+Feed.Item = styled(Box)()
 
 export {
   Feed
