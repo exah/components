@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
-import { useTheme } from './utils'
+import { useTheme } from './theme'
 
 export function ThemeDefaults ({ children, ...rest }) {
   const prev = useTheme()
