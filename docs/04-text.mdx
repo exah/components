@@ -8,7 +8,7 @@ import { Playground } from 'docz'
 import { ThemeProvider } from 'emotion-theming'
 import { PropsTable } from '../.internal/props-table'
 import { theme } from '../.internal/theme'
-import { Text } from '../src'
+import { Text, Box } from '../src'
 
 # Text
 
@@ -25,7 +25,7 @@ import { Text } from 'pss-components'
 ```
 
 ```js
-<Text as='p' textAlign='center'>
+<Text use='p' textAlign='center'>
   Text
 </Text>
 ```
@@ -60,7 +60,7 @@ const theme = {
 ## Examples
 
 <Playground>
-  <Text as='p' textAlign='center'>
+  <Text use='p' textAlign='center'>
     Text
   </Text>
 </Playground>
@@ -68,7 +68,7 @@ const theme = {
 
 <Playground>
   <ThemeProvider theme={theme}>
-    <Text as='h1' variant='heading' fontFamily='serif' textAlign='center'>
+    <Text use='h1' variant='heading' fontFamily='serif' textAlign='center'>
       Text
     </Text>
   </ThemeProvider>

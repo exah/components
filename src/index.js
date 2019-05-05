@@ -65,5 +65,6 @@ export {
 } from './match-media'
 
 export {
-  createBase
+  base,
+  extend
 } from './utils'
