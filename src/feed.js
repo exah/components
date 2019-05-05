@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { useMemo } from 'react'
 import styled from '@emotion/styled'
-import { fallbackTo, toArr, initArr } from '@exah/utils'
+import { fallbackTo, initArr } from '@exah/utils'
 import { useMatchMediaContext } from './match-media'
 import { DEFAULT_GRID } from './constants'
 import { FlexGrid } from './flex-grid'
@@ -28,11 +28,6 @@ function useGroupChildren (size, children) {
   }, [ size, children ])
 }
 
-const getGroupKey = (input) =>
-  toArr(input)
-    .reduce((acc, item) => [ ...acc, item.key ], [])
-    .join('-')
-
 function Feed ({ children, columns, itemColumn, item: itemProps, ...rest }) {
   const matchedMedia = useMatchMediaContext()
 
@@ -50,7 +45,7 @@ function Feed ({ children, columns, itemColumn, item: itemProps, ...rest }) {
     <FlexGrid spaceTarget={Feed.Item} columns={columns} {...rest}>
       {childrenGroups.map((child, index) => (
         <FlexGrid.Item
-          key={getGroupKey(child)}
+          key={index}
           {...itemProps}
           column={itemColumnForMedia}
         >
