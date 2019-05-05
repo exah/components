@@ -1448,7 +1448,7 @@ exports[`Image empty 1`] = `
 }
 
 <img
-  className="emotion-0 emotion-1"
+  className="pss-5 emotion-0 emotion-1"
 />
 `;
 
@@ -1466,7 +1466,7 @@ exports[`Image with image 1`] = `
 
 <img
   alt=""
-  className="emotion-0 emotion-1"
+  className="pss-5 emotion-0 emotion-1"
   src="http://placekitten.com/500"
 />
 `;
@@ -1505,7 +1505,7 @@ exports[`Layout 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7 emotion-1"
+  className="pss-3 emotion-6 emotion-7 emotion-1"
 >
   <header
     className="emotion-0 emotion-1"
@@ -1513,7 +1513,7 @@ exports[`Layout 1`] = `
     Header
   </header>
   <main
-    className="emotion-2 emotion-1"
+    className="pss-4 emotion-2 emotion-1"
   >
     Main
   </main>
@@ -1561,15 +1561,15 @@ exports[`Media 1`] = `
 }
 
 <div
-  className="emotion-4 emotion-5 emotion-1"
+  className="pss-0 emotion-4 emotion-5 emotion-1"
 >
   <div
-    className="emotion-0 emotion-1"
+    className="pss-1 emotion-0 emotion-1"
   >
     Side
   </div>
   <div
-    className="emotion-2 emotion-1"
+    className="pss-2 emotion-2 emotion-1"
   >
     Content
   </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import hash from '@emotion/hash'
 import { filterObj, isStr, flatten, identity } from '@exah/utils'
 
 export const omit = (blacklist = []) => filterObj((key) => !blacklist.includes(key))
@@ -31,7 +30,7 @@ export function base ({
 }
 
 export const extend = ((id = 0) => (render) => {
-  const targetClassName = hash(`pss-${id}`)
+  const targetClassName = 'pss-' + id
 
   const Comp = withRef((props) =>
     render({ ...props, className: cx(props.className, targetClassName) })
