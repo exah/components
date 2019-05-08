@@ -15,11 +15,12 @@ const TextBase = base({
 })
 
 const Text = styled(use(TextBase, Box))(
-  themePath('Text', {
+  {
     color: 'inherit',
     font: 'inherit',
     textDecoration: 'none'
-  }),
+  },
+  themePath('Text'),
   styles
 )
 

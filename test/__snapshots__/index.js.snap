@@ -3,6 +3,7 @@
 exports[`Box 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -23,6 +24,7 @@ exports[`Box 1`] = `
 exports[`Feed basic 1`] = `
 .emotion-20 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -37,6 +39,7 @@ exports[`Feed basic 1`] = `
 
 .emotion-3 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -52,6 +55,7 @@ exports[`Feed basic 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -96,6 +100,7 @@ exports[`Feed basic 1`] = `
 exports[`Feed empty 1`] = `
 .emotion-2 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -116,6 +121,7 @@ exports[`Feed empty 1`] = `
 exports[`Feed with theme 1`] = `
 .emotion-3 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -131,6 +137,7 @@ exports[`Feed with theme 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -138,6 +145,7 @@ exports[`Feed with theme 1`] = `
 
 .emotion-16 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -193,6 +201,7 @@ exports[`Feed with theme 1`] = `
 exports[`Flex 1`] = `
 .emotion-7 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -209,6 +218,7 @@ exports[`Flex 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -216,6 +226,7 @@ exports[`Flex 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -225,6 +236,7 @@ exports[`Flex 1`] = `
 
 .emotion-4 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -257,6 +269,7 @@ exports[`Flex 1`] = `
 exports[`FlexGrid basic 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -264,6 +277,7 @@ exports[`FlexGrid basic 1`] = `
 
 .emotion-62 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -278,6 +292,7 @@ exports[`FlexGrid basic 1`] = `
 
 .emotion-3 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -408,6 +423,7 @@ exports[`FlexGrid basic 1`] = `
 exports[`FlexGrid non-integer rem spaces 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -415,6 +431,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
 
 .emotion-3 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -430,6 +447,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
 
 .emotion-62 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -574,6 +592,7 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
 exports[`FlexGrid non-integer space 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -581,6 +600,7 @@ exports[`FlexGrid non-integer space 1`] = `
 
 .emotion-3 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -596,6 +616,7 @@ exports[`FlexGrid non-integer space 1`] = `
 
 .emotion-62 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -740,6 +761,7 @@ exports[`FlexGrid non-integer space 1`] = `
 exports[`FlexGrid rem spaces 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -747,6 +769,7 @@ exports[`FlexGrid rem spaces 1`] = `
 
 .emotion-3 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -762,6 +785,7 @@ exports[`FlexGrid rem spaces 1`] = `
 
 .emotion-62 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -906,6 +930,7 @@ exports[`FlexGrid rem spaces 1`] = `
 exports[`FlexGrid vertical and horizontal space 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -913,6 +938,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-3 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -928,6 +954,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-142 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -957,6 +984,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-63 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -972,6 +1000,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-93 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -987,6 +1016,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-113 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1002,6 +1032,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-128 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1017,6 +1048,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 
 .emotion-138 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1291,6 +1323,7 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
 exports[`Grid basic 1`] = `
 .emotion-64 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1300,6 +1333,7 @@ exports[`Grid basic 1`] = `
 
 .emotion-1 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1309,6 +1343,7 @@ exports[`Grid basic 1`] = `
 
 .emotion-37 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1318,6 +1353,7 @@ exports[`Grid basic 1`] = `
 
 .emotion-55 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1439,6 +1475,7 @@ exports[`Grid basic 1`] = `
 exports[`Image empty 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1455,6 +1492,7 @@ exports[`Image empty 1`] = `
 exports[`Image with image 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1474,6 +1512,7 @@ exports[`Image with image 1`] = `
 exports[`Layout 1`] = `
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1481,6 +1520,7 @@ exports[`Layout 1`] = `
 
 .emotion-7 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1496,6 +1536,7 @@ exports[`Layout 1`] = `
 
 .emotion-2 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1528,6 +1569,7 @@ exports[`Layout 1`] = `
 exports[`Media 1`] = `
 .emotion-2 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1538,6 +1580,7 @@ exports[`Media 1`] = `
 
 .emotion-5 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1552,6 +1595,7 @@ exports[`Media 1`] = `
 
 .emotion-0 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1579,6 +1623,7 @@ exports[`Media 1`] = `
 exports[`Text empty 1`] = `
 .emotion-1 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1596,6 +1641,7 @@ exports[`Text empty 1`] = `
 exports[`Text with text 1`] = `
 .emotion-1 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
@@ -1615,6 +1661,7 @@ exports[`Text with text 1`] = `
 exports[`Text with theme 1`] = `
 .emotion-1 {
   box-sizing: border-box;
+  border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
