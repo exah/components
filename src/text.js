@@ -10,6 +10,7 @@ const styles = combineStyles(
 )
 
 const TextBase = base({
+  name: 'Base(Text)',
   filter: omitStyles(styles)
 })
 

@@ -21,6 +21,7 @@ const styles = combineStyles(
 )
 
 const FlexBase = base({
+  name: 'Base(Flex)',
   filter: omitStyles(styles)
 })
 

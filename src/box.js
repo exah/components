@@ -19,6 +19,7 @@ const styles = combineStyles(
 )
 
 const BoxBase = base({
+  name: 'Base(Box)',
   filter: omitStyles(styles)
 })
 

@@ -22,6 +22,7 @@ flexGrid.propTypes = {
 }
 
 const FlexGridBase = base({
+  name: 'Base(FlexGrid)',
   filter: omitStyles(flexGrid)
 })
 
@@ -48,6 +49,8 @@ function FlexGrid ({ columns, children, ...rest }) {
   )
 }
 
+FlexGrid.displayName = 'FlexGrid'
+
 FlexGrid.propTypes = {
   columns: PropTypes.number.isRequired,
   ...flexGrid.propTypes
@@ -58,6 +61,7 @@ FlexGrid.defaultProps = {
 }
 
 const FlexGridItemBase = base({
+  name: 'Base(FlexGrid.Item)',
   filter: pipe(omit([ 'columns' ]), omitStyles(flexGridItem))
 })
 
@@ -66,6 +70,7 @@ const FlexGridItem = styled(use(FlexGridItemBase, Box))(
   flexGridItem
 )
 
+FlexGridItem.displayName = 'FlexGrid.Item'
 FlexGridItem.propTypes = { ...flexGridItem.propTypes }
 FlexGrid.Item = FlexGridItem
 

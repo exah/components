@@ -10,6 +10,7 @@ const listStyle = style({
 })
 
 const ListBase = base({
+  name: 'Base(List)',
   filter: omitStyles(listStyle)
 })
 
