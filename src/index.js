@@ -7,13 +7,8 @@ export {
 } from './flex'
 
 export {
-  Media,
-  MediaSide,
-  MediaContent
-} from './media'
-
-export {
   Layout,
+  LayoutSide,
   LayoutContent
 } from './layout'
 

@@ -1485,7 +1485,7 @@ exports[`Image empty 1`] = `
 }
 
 <img
-  className="pss-5 emotion-0 emotion-1"
+  className="pss-3 emotion-0 emotion-1"
 />
 `;
 
@@ -1504,12 +1504,12 @@ exports[`Image with image 1`] = `
 
 <img
   alt=""
-  className="pss-5 emotion-0 emotion-1"
+  className="pss-3 emotion-0 emotion-1"
   src="http://placekitten.com/500"
 />
 `;
 
-exports[`Layout 1`] = `
+exports[`Layout Holy Grail 1`] = `
 .emotion-0 {
   box-sizing: border-box;
   border: 0;
@@ -1524,6 +1524,9 @@ exports[`Layout 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1546,7 +1549,7 @@ exports[`Layout 1`] = `
 }
 
 <div
-  className="pss-3 emotion-6 emotion-7 emotion-1"
+  className="pss-0 emotion-6 emotion-7 emotion-1"
 >
   <header
     className="emotion-0 emotion-1"
@@ -1554,7 +1557,7 @@ exports[`Layout 1`] = `
     Header
   </header>
   <main
-    className="pss-4 emotion-2 emotion-1"
+    className="pss-2 emotion-2 emotion-1"
   >
     Main
   </main>
@@ -1566,7 +1569,7 @@ exports[`Layout 1`] = `
 </div>
 `;
 
-exports[`Media 1`] = `
+exports[`Layout Media Object 1`] = `
 .emotion-2 {
   box-sizing: border-box;
   border: 0;

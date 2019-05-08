@@ -15,7 +15,6 @@ import {
   Grid,
   Image,
   Layout,
-  Media,
   Text
 } from '../src'
 
@@ -44,37 +43,39 @@ test('Flex', () => {
   expect(result).toMatchSnapshot()
 })
 
-test('Layout', () => {
-  const result = renderJSON(
-    <Layout>
-      <Box use='header'>
-        Header
-      </Box>
-      <Layout.Content use='main'>
-        Main
-      </Layout.Content>
-      <Box use='footer'>
-        Footer
-      </Box>
-    </Layout>
-  )
+describe('Layout', () => {
+  test('Holy Grail', () => {
+    const result = renderJSON(
+      <Layout flexDirection='column' minHeight='100%'>
+        <Box use='header'>
+          Header
+        </Box>
+        <Layout.Content use='main'>
+          Main
+        </Layout.Content>
+        <Box use='footer'>
+          Footer
+        </Box>
+      </Layout>
+    )
 
-  expect(result).toMatchSnapshot()
-})
+    expect(result).toMatchSnapshot()
+  })
 
-test('Media', () => {
-  const result = renderJSON(
-    <Media>
-      <Media.Side>
-        Side
-      </Media.Side>
-      <Media.Content>
-        Content
-      </Media.Content>
-    </Media>
-  )
+  test('Media Object', () => {
+    const result = renderJSON(
+      <Layout>
+        <Layout.Side>
+          Side
+        </Layout.Side>
+        <Layout.Content>
+          Content
+        </Layout.Content>
+      </Layout>
+    )
 
-  expect(result).toMatchSnapshot()
+    expect(result).toMatchSnapshot()
+  })
 })
 
 describe('FlexGrid', () => {
