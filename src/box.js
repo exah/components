@@ -25,12 +25,14 @@ const BoxBase = base({
 })
 
 const Box = styled(use(BoxBase))(
-  themePath('Box', {
+  {
     boxSizing: 'border-box',
+    border: 0,
     margin: 0,
     padding: 0,
     minWidth: 0
-  }),
+  },
+  themePath('Box'),
   styles
 )
 
