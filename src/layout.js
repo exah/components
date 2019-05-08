@@ -1,17 +1,17 @@
 import React from 'react'
 import { Flex } from './flex'
 import { Box } from './box'
-import { extend } from './utils'
+import { withRef } from './utils'
 
-const Layout = extend(props => (
+const Layout = withRef((props) => (
   <Flex flex='1 1 auto' {...props} />
 ))
 
-const LayoutSide = extend(props => (
+const LayoutSide = withRef((props) => (
   <Box flex='0 0 auto' {...props} />
 ))
 
-const LayoutContent = extend(props => (
+const LayoutContent = withRef((props) => (
   <Box flex='1 1 auto' {...props} />
 ))
 

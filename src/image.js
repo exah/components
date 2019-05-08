@@ -1,18 +1,20 @@
-import React from 'react'
+import use from 'reuse'
+import styled from '@emotion/styled'
+import { themePath } from 'pss'
 import { Box } from './box'
-import { extend } from './utils'
 
-const Image = extend(props => (
-  <Box
-    use='img'
-    display='block'
-    maxWidth='100%'
-    height='auto'
-    {...props}
-  />
-))
+const Image = styled(use(Box, 'img'))(
+  themePath('image')
+)
 
 Image.displayName = 'Image'
+Image.propTypes = { ...Box.propTypes }
+
+Image.defaultProps = {
+  display: 'block',
+  maxWidth: '100%',
+  height: 'auto'
+}
 
 export {
   Image
