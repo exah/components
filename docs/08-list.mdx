@@ -6,11 +6,11 @@ menu: Layout
 
 import { Playground } from 'docz'
 import { PropsTable } from '../.internal/props-table'
-import { List } from '../src'
+import { List, Flex } from '../src'
 
 # List
 
-Based on [Flex](/flex) with reset styles for `ul`, `ol` and `flex-direction: column` by default.
+Based on [Box](/box) with reset styles for `ul`, `ol`. By default renders `<ul>`.
 
 For more information see [Flex](/flex) docs.
 
@@ -42,10 +42,10 @@ import { List } from 'pss-components'
   </List>
 </Playground>
 
-### Horizontal list
+### Make `horizontal` list with [Flex](/flex)
 
 <Playground>
-  <List flexDirection='row' justifyContent='space-between'>
+  <List use={Flex} justifyContent='space-between'>
     <List.Item>1</List.Item>
     <List.Item>2</List.Item>
     <List.Item>3</List.Item>
@@ -83,7 +83,7 @@ import { List } from 'pss-components'
 
 ## Props
 
-### List ([Flex](/flex))
+### List ([Box](/box))
 
 <PropsTable of={List} />
 
