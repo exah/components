@@ -1,3 +1,4 @@
+import use from 'reuse'
 import styled from '@emotion/styled'
 
 import {
@@ -23,7 +24,7 @@ const BoxBase = base({
   filter: omitStyles(styles)
 })
 
-const Box = styled(BoxBase)(
+const Box = styled(use(BoxBase))(
   themePath('Box', {
     boxSizing: 'border-box',
     margin: 0,
