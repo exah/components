@@ -28,6 +28,7 @@ const styles = combineStyles(
 )
 
 const GridBase = base({
+  name: 'Base(Grid)',
   filter: omitStyles(styles)
 })
 
@@ -41,6 +42,7 @@ Grid.propTypes = { ...styles.propTypes, ...Box.propTypes }
 Grid.defaultProps = { display: 'grid' }
 
 const GridItemBase = base({
+  name: 'Base(Grid.Item)',
   filter: omitStyles(gridItem)
 })
 
