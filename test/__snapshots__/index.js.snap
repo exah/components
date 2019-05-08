@@ -1473,7 +1473,7 @@ exports[`Grid basic 1`] = `
 `;
 
 exports[`Image empty 1`] = `
-.emotion-0 {
+.emotion-1 {
   box-sizing: border-box;
   border: 0;
   margin: 0;
@@ -1485,26 +1485,26 @@ exports[`Image empty 1`] = `
 }
 
 <img
-  className="pss-3 emotion-0 emotion-1"
+  className="emotion-0 emotion-1 emotion-2"
 />
 `;
 
 exports[`Image with image 1`] = `
-.emotion-0 {
+.emotion-1 {
   box-sizing: border-box;
   border: 0;
   margin: 0;
   padding: 0;
   min-width: 0;
+  width: 50%;
   display: block;
   max-width: 100%;
   height: auto;
-  width: 50%;
 }
 
 <img
   alt=""
-  className="pss-3 emotion-0 emotion-1"
+  className="emotion-0 emotion-1 emotion-2"
   src="http://placekitten.com/500"
 />
 `;
@@ -1549,7 +1549,7 @@ exports[`Layout Holy Grail 1`] = `
 }
 
 <div
-  className="pss-0 emotion-6 emotion-7 emotion-1"
+  className="emotion-6 emotion-7 emotion-1"
 >
   <header
     className="emotion-0 emotion-1"
@@ -1557,7 +1557,7 @@ exports[`Layout Holy Grail 1`] = `
     Header
   </header>
   <main
-    className="pss-2 emotion-2 emotion-1"
+    className="emotion-2 emotion-1"
   >
     Main
   </main>
@@ -1608,15 +1608,15 @@ exports[`Layout Media Object 1`] = `
 }
 
 <div
-  className="pss-0 emotion-4 emotion-5 emotion-1"
+  className="emotion-4 emotion-5 emotion-1"
 >
   <div
-    className="pss-1 emotion-0 emotion-1"
+    className="emotion-0 emotion-1"
   >
     Side
   </div>
   <div
-    className="pss-2 emotion-2 emotion-1"
+    className="emotion-2 emotion-1"
   >
     Content
   </div>
