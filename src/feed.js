@@ -28,7 +28,7 @@ function useGroupChildren (size, children) {
   }, [ size, children ])
 }
 
-function Feed ({ children, grid, column, item: itemProps, ...rest }) {
+function Feed ({ children, grid, column, ...rest }) {
   const matchedMedia = useMatchMediaContext()
 
   const columnForMedia = fallbackTo(
@@ -44,11 +44,7 @@ function Feed ({ children, grid, column, item: itemProps, ...rest }) {
   return (
     <FlexGrid spaceTarget={Feed.Item} {...rest} columns={grid}>
       {childrenGroups.map((child, index) => (
-        <FlexGrid.Item
-          key={index}
-          {...itemProps}
-          column={columnForMedia}
-        >
+        <FlexGrid.Item key={index} column={columnForMedia}>
           {child}
         </FlexGrid.Item>
       ))}
