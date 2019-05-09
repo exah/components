@@ -1,54 +1,11 @@
-export {
-  Box
-} from './box'
-
-export {
-  Flex
-} from './flex'
-
-export {
-  Layout,
-  LayoutSide,
-  LayoutContent
-} from './layout'
-
-export {
-  FlexGrid,
-  FlexGridItem
-} from './flex-grid'
-
-export {
-  List,
-  ListItem
-} from './list'
-
-export {
-  Feed
-} from './feed'
-
-export {
-  Grid,
-  GridItem
-} from './grid'
-
-export {
-  Text
-} from './text'
-
-export {
-  Image
-} from './image'
-
-export {
-  ThemeDefaults
-} from './theme-defaults'
-
-export {
-  ThemeContext,
-  ThemeProvider,
-  useTheme,
-  withTheme
-} from './theme'
+export { Box } from './box'
+export { Feed } from './feed'
+export { Flex } from './flex'
+export { FlexGrid } from './flex-grid'
+export { Grid } from './grid'
+export { Image } from './image'
+export { Layout } from './layout'
+export { List } from './list'
 
 export {
   MatchMediaContext,
@@ -59,6 +16,14 @@ export {
   withMatchMedia
 } from './match-media'
 
+export { Text } from './text'
+
 export {
-  base
-} from './utils'
+  ThemeDefaults,
+  ThemeContext,
+  ThemeProvider,
+  useTheme,
+  withTheme
+} from './theme'
+
+export { base } from './utils'
