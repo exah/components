@@ -17,25 +17,17 @@ const List = styled(use(ListBase, Box))(
   listStyle
 )
 
-List.propTypes = {
-  ...listStyle.propTypes,
-  ...Box.propTypes
-}
+List.displayName = 'List'
+List.propTypes = { ...listStyle.propTypes, ...Box.propTypes }
+List.defaultProps = { listStyle: 'none', baseElement: 'ul' }
 
-List.defaultProps = {
-  listStyle: 'none',
-  baseElement: 'ul'
-}
-
-const ListItem = styled(use('li'))(
+const ListItem = styled(use(Box, 'li'))(
   listStyle
 )
 
-ListItem.propTypes = {
-  ...listStyle.propTypes,
-  ...Box.propTypes
-}
 List.Item = ListItem
+List.Item.displayName = 'List.Item'
+List.Item.propTypes = { ...listStyle.propTypes, ...Box.propTypes }
 
 export {
   List,
