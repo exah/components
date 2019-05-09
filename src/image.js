@@ -4,7 +4,7 @@ import { themePath } from 'pss'
 import { Box } from './box'
 
 const Image = styled(use(Box, 'img'))(
-  themePath('image')
+  themePath('Image')
 )
 
 Image.displayName = 'Image'
