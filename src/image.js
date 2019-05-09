@@ -8,8 +8,17 @@ const Image = styled(use(Box, 'img'))(
 )
 
 Image.displayName = 'Image'
-Image.propTypes = { ...Box.propTypes }
-Image.defaultProps = { display: 'block', maxWidth: '100%', height: 'auto' }
+
+Image.propTypes = {
+  ...Box.propTypes
+}
+
+Image.defaultProps = {
+  display: 'block',
+  maxWidth: '100%',
+  minWidth: 'auto',
+  height: 'auto'
+}
 
 export {
   Image
