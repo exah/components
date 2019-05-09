@@ -1,22 +1,11 @@
 import use from 'reuse'
 import styled from '@emotion/styled'
-
-import {
-  combineStyles,
-  box,
-  boxStyle,
-  position,
-  positionOffsets,
-  themePath
-} from 'pss'
-
+import { combineStyles, box, boxStyle, themePath } from 'pss'
 import { base, omitStyles } from './utils'
 
 const styles = combineStyles(
   boxStyle,
-  box,
-  position,
-  positionOffsets
+  box
 )
 
 const BoxBase = base({
