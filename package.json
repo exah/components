@@ -58,7 +58,7 @@
     ],
     "rules": {
       "no-shadow": 2,
-      "react/prop-types": 0
+      "react/prop-types": [ 2, { "ignore": [ "children" ] } ]
     }
   },
   "auto-changelog": {
