@@ -7,23 +7,18 @@ const Layout = withRef((props) => (
   <Flex flex='1 1 auto' {...props} />
 ))
 
-const LayoutSide = withRef((props) => (
+Layout.Side = withRef((props) => (
   <Box flex='0 0 auto' {...props} />
 ))
 
-const LayoutContent = withRef((props) => (
+Layout.Content = withRef((props) => (
   <Box flex='1 1 auto' {...props} />
 ))
 
 Layout.displayName = 'Layout'
-LayoutSide.displayName = 'Layout.Side'
-LayoutContent.displayName = 'Layout.Content'
-
-Layout.Side = LayoutSide
-Layout.Content = LayoutContent
+Layout.Side.displayName = 'Layout.Side'
+Layout.Content.displayName = 'Layout.Content'
 
 export {
-  Layout,
-  LayoutSide,
-  LayoutContent
+  Layout
 }

@@ -12,8 +12,8 @@ import { base, omit, omitStyles } from './utils'
 const flexGrid = createFlexGrid({
   getRowSelector: () => `& + ${StyledFlexGrid}`,
   getItemSelector: (props) => props.spaceTarget
-    ? `& > ${FlexGridItem} > ${props.spaceTarget}, & > ${props.spaceTarget}`
-    : `& > ${FlexGridItem}`
+    ? `& > ${FlexGrid.Item} > ${props.spaceTarget}, & > ${props.spaceTarget}`
+    : `& > ${FlexGrid.Item}`
 })
 
 flexGrid.propTypes = {
@@ -65,16 +65,14 @@ const FlexGridItemBase = base({
   filter: pipe(omit([ 'columns' ]), omitStyles(flexGridItem))
 })
 
-const FlexGridItem = styled(use(FlexGridItemBase, Box))(
+FlexGrid.Item = styled(use(FlexGridItemBase, Box))(
   { flex: '0 1 auto' },
   flexGridItem
 )
 
-FlexGridItem.displayName = 'FlexGrid.Item'
-FlexGridItem.propTypes = { ...flexGridItem.propTypes }
-FlexGrid.Item = FlexGridItem
+FlexGrid.Item.displayName = 'FlexGrid.Item'
+FlexGrid.Item.propTypes = { ...flexGridItem.propTypes }
 
 export {
-  FlexGrid,
-  FlexGridItem
+  FlexGrid
 }
