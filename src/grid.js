@@ -46,15 +46,13 @@ const GridItemBase = base({
   filter: omitStyles(gridItem)
 })
 
-const GridItem = styled(use(GridItemBase, Box))(
+Grid.Item = styled(use(GridItemBase, Box))(
   gridItem
 )
 
-GridItem.displayName = 'Grid.Item'
-GridItem.propTypes = { ...gridItem.propTypes, ...Box.propTypes }
-Grid.Item = GridItem
+Grid.Item.displayName = 'Grid.Item'
+Grid.Item.propTypes = { ...gridItem.propTypes, ...Box.propTypes }
 
 export {
-  Grid,
-  GridItem
+  Grid
 }
