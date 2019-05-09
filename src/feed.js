@@ -56,6 +56,8 @@ function Feed ({ children, grid, column, item: itemProps, ...rest }) {
   )
 }
 
+Feed.displayName = 'Feed'
+
 Feed.propTypes = {
   grid: PropTypes.number.isRequired,
   column: PropTypes.oneOfType([
@@ -70,6 +72,7 @@ Feed.defaultProps = {
 }
 
 Feed.Item = styled(Box)()
+Feed.Item.displayName = 'Feed.Item'
 
 export {
   Feed
