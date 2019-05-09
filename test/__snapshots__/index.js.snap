@@ -1481,6 +1481,7 @@ exports[`Image empty 1`] = `
   min-width: 0;
   display: block;
   max-width: 100%;
+  min-width: auto;
   height: auto;
 }
 
@@ -1499,6 +1500,7 @@ exports[`Image with image 1`] = `
   width: 50%;
   display: block;
   max-width: 100%;
+  min-width: auto;
   height: auto;
 }
 
