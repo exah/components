@@ -19,7 +19,7 @@ const List = styled(use(ListBase, Box))(
 
 List.displayName = 'List'
 List.propTypes = { ...listStyle.propTypes, ...Box.propTypes }
-List.defaultProps = { listStyle: 'none', baseElement: 'ul' }
+List.defaultProps = { listStyle: 'none', element: 'ul' }
 
 List.Item = styled(use(Box, 'li'))(
   listStyle

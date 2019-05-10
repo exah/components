@@ -128,6 +128,7 @@
     "rimraf": "^2.6.3"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^0.7.3",
     "@exah/utils": "^2.0.0",
     "pss": "^5.0.0-6",
     "reuse": "^2.0.0"
