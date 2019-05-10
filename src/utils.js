@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { filterObj, isStr, identity } from '@exah/utils'
+import isPropValid from '@emotion/is-prop-valid'
+import { filterObj, isStr, identity, pipe } from '@exah/utils'
 
 export const omit = (blacklist = []) => filterObj((key) => !blacklist.includes(key))
 export const omitStyles = (styles) => omit(Object.keys(Object(styles.propTypes)))
@@ -17,23 +18,39 @@ const dedupeClassName = (input = '') =>
 
 export function base ({
   name = 'Base',
-  element = 'div',
-  filter = identity
+  element: defaultElement = 'div',
+  filter = identity,
+  attributes
 } = {}) {
+  const strictFilter = pipe(filter, filterObj(isPropValid))
+
   const Base = withRef(
-    ({ baseElement = element, use: Comp = baseElement, className, ...rest }) => (
-      <Comp
-        className={dedupeClassName(className)}
-        {...!isStr(Comp) && { baseElement }}
-        {...filter(rest)}
-      />
-    )
+    ({ element = defaultElement, use: Comp = element, className, ...rest }) => {
+      if (isStr(Comp)) {
+        return (
+          <Comp
+            className={dedupeClassName(className)}
+            {...attributes}
+            {...strictFilter(rest)}
+          />
+        )
+      }
+
+      return (
+        <Comp
+          className={className}
+          element={element}
+          {...attributes}
+          {...filter(rest)}
+        />
+      )
+    }
   )
 
   return Object.assign(Base, {
     displayName: name,
     propTypes: {
-      baseElement: PropTypes.elementType,
+      element: PropTypes.elementType,
       use: PropTypes.oneOfType([
         PropTypes.elementType,
         PropTypes.arrayOf(PropTypes.elementType)
