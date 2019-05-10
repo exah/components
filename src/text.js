@@ -15,17 +15,14 @@ const TextBase = base({
 })
 
 const Text = styled(use(TextBase, Box))(
-  {
-    color: 'inherit',
-    font: 'inherit',
-    textDecoration: 'none'
-  },
+  { font: 'inherit' },
   themePath('Text'),
   styles
 )
 
 Text.displayName = 'Text'
 Text.propTypes = { ...styles.propTypes, ...Box.propTypes }
+Text.defaultProps = {}
 
 export {
   Text

@@ -5,6 +5,7 @@ export { FlexGrid } from './flex-grid'
 export { Grid } from './grid'
 export { Image } from './image'
 export { Layout } from './layout'
+export { Link } from './link'
 export { List } from './list'
 
 export {
