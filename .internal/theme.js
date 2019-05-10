@@ -1,3 +1,11 @@
+import { css } from '@emotion/core'
+
+const Link = css`
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
 const theme = {
   media: {
     sm: '(max-width: 600px)',
@@ -13,7 +21,8 @@ const theme = {
   palette: {
     default: {
       bg: '#fff',
-      fg: '#000'
+      fg: '#000',
+      link: 'royalblue'
     },
     gray: {
       bg: '#eee',
@@ -40,10 +49,12 @@ const theme = {
       lineHeight: 1.2
     },
     heading: {
-      fontSize: '1.5rem',
+      fontFamily: 'athelas, georgia, times, serif',
+      fontSize: '2.5rem',
       fontWeight: 'bold'
     }
-  }
+  },
+  Link
 }
 
 const themeWithRems = {

@@ -1,0 +1,35 @@
+---
+name: Link
+route: /link
+menu: Primitives
+---
+
+import { Playground } from 'docz'
+import { ThemeProvider } from 'emotion-theming'
+import { PropsTable } from '../.internal/props-table'
+import { theme } from '../.internal/theme'
+import { Link, Box } from '../src'
+
+# Link
+
+## Description
+
+Based on [Text](/text). Renders `<a>` element.
+
+
+## Usage
+
+```js
+import { Link } from 'pss-components'
+```
+
+<Playground>
+  <Link href='http://example.com' target='_blank'>
+    Link
+  </Link>
+</Playground>
+
+
+## Props
+
+<PropsTable of={Link} />

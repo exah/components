@@ -14,62 +14,64 @@ import { Text, Box } from '../src'
 
 ## Description
 
-Text component, that renders as `<div>` with [typography prop styles](https://github.com/exah/pss/blob/master/docs/api.md#typography) and [base prop styles](https://github.com/exah/pss/blob/master/docs/api.md#base). Component inside can be changed with `as` prop.
+Based on [Box](/box) with [text system](https://github.com/exah/pss/blob/master/docs/api.md#text). Element inside can be changed with `use` prop, default to `<div>`,
 
 ## Usage
-
-### Basic
 
 ```js
 import { Text } from 'pss-components'
 ```
 
-```js
-<Text use='p' textAlign='center'>
-  Text
-</Text>
-```
+<Playground>
+  <Text use='p'>Text</Text>
+</Playground>
 
-### Add Text Styles to theme
 
-See [textStyle](https://github.com/exah/pss/blob/master/docs/api.md#textstyle) docs.
+## Examples
+
+### Change style with [text](https://github.com/exah/pss/blob/master/docs/api.md#text) props
+
+<Playground>
+  <Text 
+    use='p' 
+    textAlign='center' 
+    fontFamily='default' 
+    fontSize={24}
+    lineHeight={2}
+    fontWeight={300}
+    letterSpacing='0.2px'
+    color='tomato'
+  >
+    Text
+  </Text>
+</Playground>
+
+
+### Set variant
+
+See [textStyle docs](https://github.com/exah/pss/blob/master/docs/api.md#textstyle).
 
 ```js
 const theme = {
-  fontFamily: {
-    default: 'Helvetica, system-ui, sans-serif',
-    serif: 'Times New Roman, serif'
-  },
   textStyle: {
-    root: {
-      fontFamily: 'Helvetica, system-ui, sans-serif',
-      fontSize: 16,
-      lineHeight: 1.2
-    },
     default: {
-      fontSize: '1rem'
+      fontFamily: 'system-ui, sans-serif',
+      fontSize: '1rem',
+      fontWeight: 'normal'
     },
     heading: {
-      fontSize: '1.5rem',
+      fontFamily: 'athelas, georgia, times, serif',
+      fontSize: '2rem',
       fontWeight: 'bold'
     }
   }
 }
 ```
 
-## Examples
-
-<Playground>
-  <Text use='p' textAlign='center'>
-    Text
-  </Text>
-</Playground>
-
-
 <Playground>
   <ThemeProvider theme={theme}>
-    <Text use='h1' variant='heading' fontFamily='serif' textAlign='center'>
-      Text
+    <Text use='h1' variant='heading'>
+      Heading
     </Text>
   </ThemeProvider>
 </Playground>
