@@ -1,13 +1,11 @@
-import use from 'reuse'
 import PropTypes from 'prop-types'
 import React, { useMemo, isValidElement } from 'react'
-import { pipe } from '@exah/utils'
 import styled from '@emotion/styled'
 import { DEFAULT_GRID } from './constants'
 import { Box } from './box'
 import { Flex } from './flex'
 import { createFlexGrid, flexGridItem } from './styles'
-import { base, omit, omitStyles } from './utils'
+import { useBase, omitStyles } from './utils'
 
 const flexGrid = createFlexGrid({
   getRowSelector: () => `& + ${StyledFlexGrid}`,
@@ -21,12 +19,12 @@ flexGrid.propTypes = {
   spaceTarget: PropTypes.oneOfType([ PropTypes.elementType, PropTypes.string ])
 }
 
-const FlexGridBase = base({
-  name: 'Base(FlexGrid)',
+const FlexGridBase = useBase({
+  name: 'FlexGrid',
   filter: omitStyles(flexGrid)
-})
+}, Flex)
 
-const StyledFlexGrid = styled(use(FlexGridBase, Flex))(
+const StyledFlexGrid = styled(FlexGridBase)(
   { flexWrap: 'wrap' },
   flexGrid
 )
@@ -60,12 +58,12 @@ FlexGrid.defaultProps = {
   columns: DEFAULT_GRID
 }
 
-const FlexGridItemBase = base({
-  name: 'Base(FlexGrid.Item)',
-  filter: pipe(omit([ 'columns' ]), omitStyles(flexGridItem))
-})
+const FlexGridItemBase = useBase({
+  name: 'FlexGrid.Item',
+  filter: omitStyles(flexGridItem)
+}, Box)
 
-FlexGrid.Item = styled(use(FlexGridItemBase, Box))(
+FlexGrid.Item = styled(FlexGridItemBase)(
   { flex: '0 1 auto' },
   flexGridItem
 )
