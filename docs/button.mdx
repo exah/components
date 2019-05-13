@@ -1,0 +1,45 @@
+---
+name: Button
+route: /button
+menu: Primitives
+---
+
+import { Playground } from 'docz'
+import { ThemeProvider } from 'emotion-theming'
+import { PropsTable } from '../.internal/props-table'
+import { theme } from '../.internal/theme'
+import { Button, Link } from '../src'
+
+# Button
+
+## Description
+
+Based on [Box](/box). Renders `<button>` element.
+
+
+## Usage
+
+```js
+import { Button } from 'pss-components'
+```
+
+<Playground>
+  <Button>Button</Button>
+  <Button variant='auto'>Button</Button>
+  <Button bg='red' ml={1}>Button</Button>
+</Playground>
+
+## Examples
+
+### Change element
+
+<Playground>
+  <Button variant='auto' use='a' href='http://example.com' target='_blank'>
+    Button
+  </Button>
+</Playground>
+
+
+## Props
+
+<PropsTable of={Button} />
