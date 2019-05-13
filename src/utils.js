@@ -1,3 +1,4 @@
+import use from 'reuse'
 import React from 'react'
 import PropTypes from 'prop-types'
 import isPropValid from '@emotion/is-prop-valid'
@@ -17,10 +18,8 @@ const dedupeClassName = (input = '') =>
   dedupe(input.split(' ')).join(' ')
 
 export function base ({
-  name = 'Base',
   element: defaultElement = 'div',
-  filter = identity,
-  attributes
+  filter = identity
 } = {}) {
   const strictFilter = pipe(filter, filterObj(isPropValid))
 
@@ -30,7 +29,6 @@ export function base ({
         return (
           <Comp
             className={dedupeClassName(className)}
-            {...attributes}
             {...strictFilter(rest)}
           />
         )
@@ -40,21 +38,34 @@ export function base ({
         <Comp
           className={className}
           element={element}
-          {...attributes}
           {...filter(rest)}
         />
       )
     }
   )
 
-  return Object.assign(Base, {
-    displayName: name,
-    propTypes: {
-      element: PropTypes.elementType,
-      use: PropTypes.oneOfType([
-        PropTypes.elementType,
-        PropTypes.arrayOf(PropTypes.elementType)
-      ])
-    }
-  })
+  Base.displayName = 'Base'
+  Base.propTypes = {
+    element: PropTypes.elementType,
+    use: PropTypes.oneOfType([
+      PropTypes.elementType,
+      PropTypes.arrayOf(PropTypes.elementType)
+    ])
+  }
+
+  return Base
+}
+
+const getDisplayName = (comp) =>
+  (isStr(comp) ? comp : (comp.displayName || comp.name || 'Component'))
+
+export function useBase ({ name, ...options }, ...uses) {
+  const BaseComp = base(options)
+  const UseComp = use(BaseComp, ...uses)
+
+  BaseComp.displayName = `Base(${name})`
+  UseComp.displayName = `Use(${[ BaseComp, ...uses ].map(getDisplayName).join(', ')})`
+  UseComp.propTypes = { ...BaseComp.propTypes }
+
+  return UseComp
 }

@@ -1,27 +1,30 @@
-import use from 'reuse'
 import styled from '@emotion/styled'
 import { combineStyles, box, boxStyle, themePath } from 'pss'
-import { base, omitStyles } from './utils'
+import { useBase, omitStyles } from './utils'
 
 const styles = combineStyles(
   boxStyle,
   box
 )
 
-const BoxBase = base({
-  name: 'Base(Box)',
+const boxDefaultStyles = {
+  font: 'inherit',
+  color: 'inherit',
+  background: 'transparent',
+  border: 0,
+  margin: 0,
+  padding: 0,
+  minWidth: 0
+}
+
+const BoxBase = useBase({
+  name: 'Box',
   filter: omitStyles(styles)
 })
 
-const Box = styled(use(BoxBase))(
-  {
-    boxSizing: 'border-box',
-    border: 0,
-    margin: 0,
-    padding: 0,
-    minWidth: 0
-  },
-  themePath('Box'),
+const Box = styled(BoxBase)(
+  { boxSizing: 'border-box' },
+  themePath('Box', boxDefaultStyles),
   styles
 )
 

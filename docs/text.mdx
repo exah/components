@@ -23,7 +23,7 @@ import { Text } from 'pss-components'
 ```
 
 <Playground>
-  <Text use='p'>Text</Text>
+  <Text>Text</Text>
 </Playground>
 
 
@@ -35,7 +35,7 @@ import { Text } from 'pss-components'
   <Text 
     use='p' 
     textAlign='center' 
-    fontFamily='default' 
+    fontFamily='system-ui' 
     fontSize={24}
     lineHeight={2}
     fontWeight={300}
@@ -70,7 +70,7 @@ const theme = {
 
 <Playground>
   <ThemeProvider theme={theme}>
-    <Text use='h1' variant='heading'>
+    <Text use='h2' variant='heading'>
       Heading
     </Text>
   </ThemeProvider>

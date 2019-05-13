@@ -1,6 +1,8 @@
 import { css } from '@emotion/core'
 
 const Link = css`
+  text-decoration: none;
+
   &:hover {
     text-decoration: underline;
   }
@@ -34,7 +36,18 @@ const theme = {
     }
   },
   fontFamily: {
-    default: 'Helvetica, system-ui, sans-serif',
+    default: 'system-ui, sans-serif',
+    'system-ui': [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      'Segoe UI',
+      'Roboto',
+      'Oxygen-Sans',
+      'Ubuntu',
+      'Cantarell',
+      'Helvetica Neue',
+      'sans-serif',
+    ].join(),
     serif: 'Times New Roman, serif'
   },
   textStyle: {

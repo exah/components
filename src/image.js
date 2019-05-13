@@ -1,9 +1,8 @@
-import use from 'reuse'
 import styled from '@emotion/styled'
 import { themePath } from 'pss'
 import { Box } from './box'
 
-const Image = styled(use(Box, 'img'))(
+const Image = styled(Box)(
   themePath('Image')
 )
 
@@ -14,6 +13,7 @@ Image.propTypes = {
 }
 
 Image.defaultProps = {
+  element: 'img',
   display: 'block',
   maxWidth: '100%',
   minWidth: 'auto',
