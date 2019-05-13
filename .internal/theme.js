@@ -8,6 +8,11 @@ const Link = css`
   }
 `
 
+const Button = css`
+  border-radius: 5px;
+  padding: 10px 20px;
+`
+
 const theme = {
   media: {
     sm: '(max-width: 600px)',
@@ -67,7 +72,14 @@ const theme = {
       fontWeight: 'bold'
     }
   },
-  Link
+  Link,
+  Button,
+  buttonVariant: {
+    default: {
+      background: 'royalblue',
+      color: 'white'
+    }
+  }
 }
 
 const themeWithRems = {

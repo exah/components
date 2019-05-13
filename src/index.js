@@ -1,4 +1,5 @@
 export { Box } from './box'
+export { Button } from './button'
 export { Feed } from './feed'
 export { Flex } from './flex'
 export { FlexGrid } from './flex-grid'
