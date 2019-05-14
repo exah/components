@@ -7,10 +7,6 @@ import { filterObj, isStr, identity, pipe } from '@exah/utils'
 export const omit = (blacklist = []) => filterObj((key) => !blacklist.includes(key))
 export const omitStyles = (styles) => omit(Object.keys(Object(styles.propTypes)))
 
-export const withRef = (render) => React.forwardRef(
-  (props, ref) => render({ ref, ...props })
-)
-
 const dedupe = (input = []) =>
   input.filter((item, index) => input.indexOf(item) === index)
 
@@ -23,11 +19,12 @@ export function base ({
 } = {}) {
   const strictFilter = pipe(filter, filterObj(isPropValid))
 
-  const Base = withRef(
-    ({ element = defaultElement, use: Comp = element, className, ...rest }) => {
+  const Base = React.forwardRef(
+    ({ element = defaultElement, use: Comp = element, className, ...rest }, ref) => {
       if (isStr(Comp)) {
         return (
           <Comp
+            ref={ref}
             className={dedupeClassName(className)}
             {...strictFilter(rest)}
           />
@@ -36,6 +33,7 @@ export function base ({
 
       return (
         <Comp
+          ref={ref}
           className={className}
           element={element}
           {...filter(rest)}
@@ -46,6 +44,7 @@ export function base ({
 
   Base.displayName = 'Base'
   Base.propTypes = {
+    className: PropTypes.string,
     element: PropTypes.elementType,
     use: PropTypes.oneOfType([
       PropTypes.elementType,

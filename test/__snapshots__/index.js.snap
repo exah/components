@@ -1646,14 +1646,14 @@ exports[`Layout Holy Grail 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
   min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1682,7 +1682,7 @@ exports[`Layout Holy Grail 1`] = `
     Header
   </header>
   <main
-    className="emotion-2 emotion-1"
+    className="emotion-2 emotion-3"
   >
     Main
   </main>
@@ -1718,13 +1718,13 @@ exports[`Layout Media Object 1`] = `
   margin: 0;
   padding: 0;
   min-width: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .emotion-0 {
@@ -1750,7 +1750,7 @@ exports[`Layout Media Object 1`] = `
     Side
   </div>
   <div
-    className="emotion-2 emotion-1"
+    className="emotion-2 emotion-3"
   >
     Content
   </div>
