@@ -35,15 +35,16 @@ Grid.displayName = 'Grid'
 Grid.propTypes = { ...styles.propTypes, ...Box.propTypes }
 Grid.defaultProps = { display: 'grid' }
 
-const UseGridItem = useBase({
+const BaseGridItem = useBase({
   name: 'Grid.Item',
   filter: omitStyles(gridItem)
 }, Box)
 
-Grid.Item = styled(UseGridItem)(
+const GridItem = styled(BaseGridItem)(
   gridItem
 )
 
+Grid.Item = GridItem
 Grid.Item.displayName = 'Grid.Item'
 Grid.Item.propTypes = { ...gridItem.propTypes, ...Box.propTypes }
 
