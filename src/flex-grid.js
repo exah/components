@@ -65,10 +65,6 @@ FlexGrid.propTypes = {
   ...Flex.propTypes
 }
 
-FlexGrid.defaultProps = {
-  ...FlexGridContainer.defaultProps
-}
-
 const FlexGridItemBase = useBase({
   name: 'FlexGrid.Item',
   filter: omitStyles(flexGridItem)

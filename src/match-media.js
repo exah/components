@@ -20,7 +20,6 @@ const { Provider, Consumer: MatchMediaConsumer } = MatchMediaContext
 
 export function useMatchMedia (media = {}) {
   const [ matches, setMatches ] = useState(INITIAL.matches)
-  const [ key = INITIAL.key ] = matches
 
   useEffect(() => {
     const listeners = reduceObj((acc, mediaKey, query) => {
@@ -38,7 +37,7 @@ export function useMatchMedia (media = {}) {
     return () => listeners.map((fn) => fn())
   }, [ media ])
 
-  return { matches, key }
+  return { matches }
 }
 
 function MatchMediaProvider (props) {

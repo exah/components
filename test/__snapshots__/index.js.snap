@@ -25,24 +25,6 @@ exports[`Box 1`] = `
 `;
 
 exports[`Feed basic 1`] = `
-.emotion-19 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  min-width: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
 .emotion-3 {
   box-sizing: border-box;
   font: inherit;
@@ -62,6 +44,24 @@ exports[`Feed basic 1`] = `
   width: 25%;
 }
 
+.emotion-20 {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .emotion-0 {
   box-sizing: border-box;
   font: inherit;
@@ -74,7 +74,7 @@ exports[`Feed basic 1`] = `
 }
 
 <div
-  className="emotion-18 emotion-19 emotion-20"
+  className="emotion-18 emotion-19 emotion-20 emotion-21"
 >
   <div
     className="emotion-2 emotion-3 emotion-4"
@@ -110,7 +110,7 @@ exports[`Feed basic 1`] = `
 `;
 
 exports[`Feed empty 1`] = `
-.emotion-1 {
+.emotion-2 {
   box-sizing: border-box;
   font: inherit;
   color: inherit;
@@ -129,7 +129,7 @@ exports[`Feed empty 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1 emotion-2"
+  className="emotion-0 emotion-1 emotion-2 emotion-3"
 />
 `;
 
@@ -164,7 +164,7 @@ exports[`Feed with theme 1`] = `
   min-width: 0;
 }
 
-.emotion-15 {
+.emotion-16 {
   box-sizing: border-box;
   font: inherit;
   color: inherit;
@@ -186,12 +186,12 @@ exports[`Feed with theme 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-15 + .emotion-14 {
+.emotion-16 + .emotion-15 {
   margin-top: 8px;
 }
 
-.emotion-15 > .emotion-2 > .emotion-1,
-.emotion-15 > .emotion-1 {
+.emotion-16 > .emotion-2 > .emotion-1,
+.emotion-16 > .emotion-1 {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 8px;
@@ -199,7 +199,7 @@ exports[`Feed with theme 1`] = `
 }
 
 <div
-  className="emotion-14 emotion-15 emotion-16"
+  className="emotion-14 emotion-15 emotion-16 emotion-17"
 >
   <div
     className="emotion-2 emotion-3 emotion-4"
