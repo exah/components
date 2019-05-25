@@ -14,7 +14,7 @@ import { Text, Box } from '../src'
 
 ## Description
 
-Based on [Box](/box) with [text system](https://github.com/exah/pss/blob/master/docs/api.md#text). Element inside can be changed with `use` prop, default to `<div>`,
+Based on [Box](/box) with [text system](https://github.com/exah/pss/blob/master/docs/api.md#text). Element inside can be changed with `as` prop, default to `<div>`,
 
 ## Usage
 
@@ -32,10 +32,10 @@ import { Text } from 'pss-components'
 ### Change style with [text](https://github.com/exah/pss/blob/master/docs/api.md#text) props
 
 <Playground>
-  <Text 
-    use='p' 
-    textAlign='center' 
-    fontFamily='system-ui' 
+  <Text
+    as='p'
+    textAlign='center'
+    fontFamily='system-ui'
     fontSize={24}
     lineHeight={2}
     fontWeight={300}
@@ -70,7 +70,7 @@ const theme = {
 
 <Playground>
   <ThemeProvider theme={theme}>
-    <Text use='h2' variant='heading'>
+    <Text as='h2' variant='heading'>
       Heading
     </Text>
   </ThemeProvider>
