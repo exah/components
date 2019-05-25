@@ -29,7 +29,7 @@ const FlexGridContainer = forwardRef(({ columns, children, ...rest }, ref) => {
     React.Children
       .toArray(children)
       .map(child =>
-        isValidElement(child)
+        (isValidElement(child) && child.type === FlexGridItem)
           ? React.cloneElement(child, { columns })
           : child
       )
