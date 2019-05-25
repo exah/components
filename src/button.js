@@ -29,7 +29,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  element: 'button',
+  as: 'button',
   display: 'inline-block'
 }
 

@@ -14,13 +14,13 @@ const dedupeClassName = (input = '') =>
   dedupe(input.split(' ')).join(' ')
 
 export function base ({
-  element: defaultElement = 'div',
+  as: defaultElement = 'div',
   filter = identity
 } = {}) {
   const strictFilter = pipe(filter, filterObj(isPropValid))
 
   const Base = React.forwardRef(
-    ({ element = defaultElement, use: Comp = element, className, ...rest }, ref) => {
+    ({ as = defaultElement, use: Comp = as, className, ...rest }, ref) => {
       if (isStr(Comp)) {
         return (
           <Comp
@@ -33,9 +33,9 @@ export function base ({
 
       return (
         <Comp
+          as={as}
           ref={ref}
           className={className}
-          element={element}
           {...filter(rest)}
         />
       )
@@ -45,7 +45,7 @@ export function base ({
   Base.displayName = 'Base'
   Base.propTypes = {
     className: PropTypes.string,
-    element: PropTypes.elementType,
+    as: PropTypes.elementType,
     use: PropTypes.oneOfType([
       PropTypes.elementType,
       PropTypes.arrayOf(PropTypes.elementType)

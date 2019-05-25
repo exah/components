@@ -13,7 +13,7 @@ Image.propTypes = {
 }
 
 Image.defaultProps = {
-  element: 'img',
+  as: 'img',
   display: 'block',
   maxWidth: '100%',
   minWidth: 'auto',
