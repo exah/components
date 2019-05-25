@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { combineStyles, box, boxStyle, themePath } from 'pss'
-import { useBase, omitStyles } from './utils'
+import { base, omitStyles } from './utils'
 
 const styles = combineStyles(
   boxStyle,
@@ -17,12 +17,12 @@ const boxDefaultStyles = {
   minWidth: 0
 }
 
-const BoxBase = useBase({
+const BaseBox = base({
   name: 'Box',
   filter: omitStyles(styles)
 })
 
-const Box = styled(BoxBase)(
+const Box = styled(BaseBox)(
   { boxSizing: 'border-box' },
   themePath('Box', boxDefaultStyles),
   styles
@@ -31,7 +31,7 @@ const Box = styled(BoxBase)(
 Box.displayName = 'Box'
 
 Box.propTypes = {
-  ...BoxBase.propTypes,
+  ...BaseBox.propTypes,
   ...boxStyle.propTypes,
   ...styles.propTypes
 }

@@ -1,4 +1,3 @@
-import use from 'reuse'
 import React from 'react'
 import PropTypes from 'prop-types'
 import isPropValid from '@emotion/is-prop-valid'
@@ -15,56 +14,46 @@ const dedupeClassName = (input = '') =>
 
 export function base ({
   as: defaultElement = 'div',
-  filter = identity
+  use: BaseComp,
+  filter = identity,
+  name
 } = {}) {
   const strictFilter = pipe(filter, filterObj(isPropValid))
 
-  const Base = React.forwardRef(
-    ({ as = defaultElement, use: Comp = as, className, ...rest }, ref) => {
-      if (isStr(Comp)) {
-        return (
-          <Comp
-            ref={ref}
-            className={dedupeClassName(className)}
-            {...strictFilter(rest)}
-          />
-        )
-      }
+  const Base = React.forwardRef((props, ref) => {
+    const {
+      as: Element = defaultElement,
+      use: Comp = (BaseComp || Element),
+      className,
+      ...rest
+    } = props
 
+    if (isStr(Comp)) {
       return (
         <Comp
-          as={as}
           ref={ref}
-          className={className}
-          {...filter(rest)}
+          className={dedupeClassName(className)}
+          {...strictFilter(rest)}
         />
       )
     }
-  )
 
-  Base.displayName = 'Base'
+    return (
+      <Comp
+        ref={ref}
+        as={Element === Comp ? undefined : Element}
+        className={className}
+        {...filter(rest)}
+      />
+    )
+  })
+
+  Base.displayName = name ? `Base(${name})` : 'Base'
   Base.propTypes = {
     className: PropTypes.string,
     as: PropTypes.elementType,
-    use: PropTypes.oneOfType([
-      PropTypes.elementType,
-      PropTypes.arrayOf(PropTypes.elementType)
-    ])
+    use: PropTypes.elementType
   }
 
   return Base
-}
-
-const getDisplayName = (comp) =>
-  (isStr(comp) ? comp : (comp.displayName || comp.name || 'Component'))
-
-export function useBase ({ name, ...options }, ...uses) {
-  const BaseComp = base(options)
-  const UseComp = use(BaseComp, ...uses)
-
-  BaseComp.displayName = `Base(${name})`
-  UseComp.displayName = `Use(${[ BaseComp, ...uses ].map(getDisplayName).join(', ')})`
-  UseComp.propTypes = { ...BaseComp.propTypes }
-
-  return UseComp
 }

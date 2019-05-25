@@ -1,17 +1,18 @@
 import styled from '@emotion/styled'
 import { combineStyles, text, textStyle, themePath } from 'pss'
 import { Box } from './box'
-import { useBase, omitStyles } from './utils'
+import { base, omitStyles } from './utils'
 
 const styles = combineStyles(
   textStyle.variant,
   text
 )
 
-const BaseText = useBase({
+const BaseText = base({
+  use: Box,
   name: 'Text',
   filter: omitStyles(styles)
-}, Box)
+})
 
 const Text = styled(BaseText)(
   themePath('Text'),

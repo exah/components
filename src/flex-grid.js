@@ -5,7 +5,7 @@ import { DEFAULT_GRID } from './constants'
 import { Box } from './box'
 import { Flex } from './flex'
 import { createFlexGrid, flexGridItem } from './styles'
-import { useBase, omitStyles } from './utils'
+import { base, omitStyles } from './utils'
 
 const flexGrid = createFlexGrid({
   getRowSelector: () => `& + ${FlexGrid}`,
@@ -19,10 +19,11 @@ flexGrid.propTypes = {
   spaceTarget: PropTypes.oneOfType([ PropTypes.elementType, PropTypes.string ])
 }
 
-const FlexGridBase = useBase({
+const FlexGridBase = base({
+  use: Flex,
   name: 'FlexGrid',
   filter: omitStyles(flexGrid)
-}, Flex)
+})
 
 const FlexGridContainer = forwardRef(({ columns, children, ...rest }, ref) => {
   const clonedChildren = useMemo(() => (
@@ -65,10 +66,11 @@ FlexGrid.propTypes = {
   ...Flex.propTypes
 }
 
-const FlexGridItemBase = useBase({
+const FlexGridItemBase = base({
+  use: Box,
   name: 'FlexGrid.Item',
   filter: omitStyles(flexGridItem)
-}, Box)
+})
 
 const FlexGridItem = styled(FlexGridItemBase)(
   flexGridItem
