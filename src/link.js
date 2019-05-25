@@ -8,7 +8,7 @@ const Link = styled(Text)(
 
 Link.displayName = 'Link'
 Link.propTypes = { ...Text.propTypes }
-Link.defaultProps = { element: 'a' }
+Link.defaultProps = { as: 'a' }
 
 export {
   Link

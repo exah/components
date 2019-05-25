@@ -12,7 +12,7 @@ const List = styled(Box)(
 
 List.displayName = 'List'
 List.propTypes = { ...listStyle.propTypes, ...Box.propTypes }
-List.defaultProps = { listStyle: 'none', element: 'ul' }
+List.defaultProps = { listStyle: 'none', as: 'ul' }
 
 List.Item = styled(Box)(
   listStyle
@@ -20,7 +20,7 @@ List.Item = styled(Box)(
 
 List.Item.displayName = 'List.Item'
 List.Item.propTypes = { ...listStyle.propTypes, ...Box.propTypes }
-List.Item.defaultProps = { element: 'li' }
+List.Item.defaultProps = { as: 'li' }
 
 export {
   List
