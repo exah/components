@@ -9,7 +9,6 @@ exports[`Box 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   height: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -33,10 +32,10 @@ exports[`Feed basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -52,7 +51,6 @@ exports[`Feed basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,7 +68,6 @@ exports[`Feed basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 <div
@@ -118,7 +115,6 @@ exports[`Feed empty 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,10 +138,10 @@ exports[`Feed with theme 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -161,7 +157,6 @@ exports[`Feed with theme 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 .emotion-16 {
@@ -172,7 +167,6 @@ exports[`Feed with theme 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -231,7 +225,6 @@ exports[`Flex 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   width: 50%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -251,7 +244,6 @@ exports[`Flex 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 .emotion-2 {
@@ -262,7 +254,6 @@ exports[`Flex 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -275,7 +266,6 @@ exports[`Flex 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1;
   -ms-flex: 0 1;
   flex: 0 1;
@@ -311,7 +301,6 @@ exports[`FlexGrid basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 .emotion-61 {
@@ -322,7 +311,6 @@ exports[`FlexGrid basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -340,10 +328,10 @@ exports[`FlexGrid basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -474,7 +462,6 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 .emotion-3 {
@@ -485,10 +472,10 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -504,7 +491,6 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -652,7 +638,6 @@ exports[`FlexGrid non-integer space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 .emotion-3 {
@@ -663,10 +648,10 @@ exports[`FlexGrid non-integer space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -682,7 +667,6 @@ exports[`FlexGrid non-integer space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -830,7 +814,6 @@ exports[`FlexGrid rem spaces 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 .emotion-3 {
@@ -841,10 +824,10 @@ exports[`FlexGrid rem spaces 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -860,7 +843,6 @@ exports[`FlexGrid rem spaces 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1008,7 +990,6 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 .emotion-3 {
@@ -1019,10 +1000,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -1038,7 +1019,6 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1071,10 +1051,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -1090,10 +1070,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -1109,10 +1089,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -1128,10 +1108,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -1147,10 +1127,10 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  min-width: 0;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
   -ms-flex-positive: 0;
@@ -1425,7 +1405,6 @@ exports[`Grid basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: grid;
   grid-template-columns: repeat(12,1fr);
 }
@@ -1438,7 +1417,6 @@ exports[`Grid basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   grid-column: span 1;
   grid-row: 1;
 }
@@ -1451,7 +1429,6 @@ exports[`Grid basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   grid-column: span 2;
   grid-row: 2;
 }
@@ -1464,7 +1441,6 @@ exports[`Grid basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   grid-column: span 4;
   grid-row: 3;
 }
@@ -1589,10 +1565,8 @@ exports[`Image empty 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: block;
   max-width: 100%;
-  min-width: auto;
   height: auto;
 }
 
@@ -1610,11 +1584,9 @@ exports[`Image with image 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   width: 50%;
   display: block;
   max-width: 100%;
-  min-width: auto;
   height: auto;
 }
 
@@ -1634,7 +1606,6 @@ exports[`Layout Holy Grail 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 .emotion-6 {
@@ -1645,7 +1616,6 @@ exports[`Layout Holy Grail 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1654,6 +1624,7 @@ exports[`Layout Holy Grail 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  min-width: 0;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1667,10 +1638,10 @@ exports[`Layout Holy Grail 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  min-width: 0;
 }
 
 <div
@@ -1703,10 +1674,10 @@ exports[`Layout Media Object 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  min-width: 0;
 }
 
 .emotion-4 {
@@ -1717,7 +1688,6 @@ exports[`Layout Media Object 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1725,6 +1695,7 @@ exports[`Layout Media Object 1`] = `
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  min-width: 0;
 }
 
 .emotion-0 {
@@ -1735,10 +1706,10 @@ exports[`Layout Media Object 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  min-width: 0;
 }
 
 <div
@@ -1766,7 +1737,6 @@ exports[`Text empty 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 <div
@@ -1783,7 +1753,6 @@ exports[`Text with text 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
 }
 
 <div
@@ -1802,7 +1771,6 @@ exports[`Text with theme 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   font-family: Helvetica,system-ui,sans-serif;
   font-size: 1rem;
   line-height: 1.2;

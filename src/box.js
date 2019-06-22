@@ -14,8 +14,7 @@ const boxDefaultStyles = {
   background: 'transparent',
   border: 0,
   margin: 0,
-  padding: 0,
-  minWidth: 0
+  padding: 0
 }
 
 const BaseBox = base({
