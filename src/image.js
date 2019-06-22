@@ -16,7 +16,6 @@ Image.defaultProps = {
   as: 'img',
   display: 'block',
   maxWidth: '100%',
-  minWidth: 'auto',
   height: 'auto'
 }
 
