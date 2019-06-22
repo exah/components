@@ -4,7 +4,6 @@ import isPropValid from '@emotion/is-prop-valid'
 import { filterObj, isStr, identity, pipe } from '@exah/utils'
 
 export const omit = (blacklist = []) => filterObj((key) => !blacklist.includes(key))
-export const omitStyles = (styles) => omit(Object.keys(Object(styles.propTypes)))
 
 const dedupe = (input = []) =>
   input.filter((item, index) => input.indexOf(item) === index)

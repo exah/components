@@ -2,18 +2,18 @@ import { isNum, fallbackTo, path } from '@exah/utils'
 import { createSpaceValue, createStyles, createRule, splitUnit } from 'pss'
 import { DEFAULT_GRID } from './constants'
 
-const createItemsSpace = (axis, selectors) => createRule({
+const createItemsSpace = (axes, selectors) => createRule({
   getValue: createSpaceValue(),
   getStyle (value, props) {
     const [ num, unit = 'px' ] = splitUnit(value)
     const size = `${num / 2}${unit}`
 
     return {
-      ...(axis.x && {
+      ...(axes.x && {
         marginLeft: `-${size}`,
         marginRight: `-${size}`
       }),
-      ...(axis.y && {
+      ...(axes.y && {
         marginTop: `-${size}`,
         marginBottom: `-${size}`,
         [selectors.getRowSelector(props)]: {
@@ -21,11 +21,11 @@ const createItemsSpace = (axis, selectors) => createRule({
         }
       }),
       [selectors.getItemSelector(props)]: {
-        ...(axis.x && {
+        ...(axes.x && {
           paddingLeft: size,
           paddingRight: size
         }),
-        ...(axis.y && {
+        ...(axes.y && {
           paddingTop: size,
           paddingBottom: size
         })

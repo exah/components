@@ -74,7 +74,7 @@ const theme = {
   },
   Link,
   Button,
-  buttonVariant: {
+  buttonStyle: {
     default: {
       background: 'royalblue',
       color: 'white'
