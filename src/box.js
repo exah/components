@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
+import { getPropTypes } from 'pss/prop-type'
 import { combineStyles, box, boxStyle, themePath } from 'pss'
-import { base, omitStyles } from './utils'
+import { base, omit } from './utils'
 
 const styles = combineStyles(
   boxStyle,
@@ -19,7 +20,7 @@ const boxDefaultStyles = {
 
 const BaseBox = base({
   name: 'Box',
-  filter: omitStyles(styles)
+  filter: omit(styles.props)
 })
 
 const Box = styled(BaseBox)(
@@ -32,8 +33,7 @@ Box.displayName = 'Box'
 
 Box.propTypes = {
   ...BaseBox.propTypes,
-  ...boxStyle.propTypes,
-  ...styles.propTypes
+  ...getPropTypes(styles)
 }
 
 export {

@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
+import { getPropTypes } from 'pss/prop-type'
 import { combineStyles, text, textStyle, themePath } from 'pss'
 import { Box } from './box'
-import { base, omitStyles } from './utils'
+import { base, omit } from './utils'
 
 const styles = combineStyles(
   textStyle.variant,
@@ -11,7 +12,7 @@ const styles = combineStyles(
 const BaseText = base({
   use: Box,
   name: 'Text',
-  filter: omitStyles(styles)
+  filter: omit(styles.props)
 })
 
 const Text = styled(BaseText)(
@@ -22,7 +23,7 @@ const Text = styled(BaseText)(
 Text.displayName = 'Text'
 
 Text.propTypes = {
-  ...styles.propTypes,
+  ...getPropTypes(styles),
   ...Box.propTypes
 }
 

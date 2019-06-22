@@ -3,7 +3,7 @@ import { themePath, variant } from 'pss'
 import { Box } from './box'
 
 const buttonVariant = variant({
-  themeKey: 'buttonVariant'
+  themeKey: 'buttonStyle'
 })
 
 const Button = styled(Box)(

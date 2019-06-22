@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { getPropTypes } from 'pss/prop-type'
 
 import {
   combineStyles,
@@ -12,7 +13,7 @@ import {
 } from 'pss'
 
 import { Box } from './box'
-import { omitStyles, base } from './utils'
+import { omit, base } from './utils'
 
 const gridVariant = variant({ themeKey: 'gridStyle' })
 const gridContainer = createGridContainer()
@@ -32,13 +33,13 @@ const Grid = styled(Box)(
 )
 
 Grid.displayName = 'Grid'
-Grid.propTypes = { ...styles.propTypes, ...Box.propTypes }
+Grid.propTypes = { ...getPropTypes(styles), ...Box.propTypes }
 Grid.defaultProps = { display: 'grid' }
 
 const BaseGridItem = base({
   use: Box,
   name: 'Grid.Item',
-  filter: omitStyles(gridItem)
+  filter: omit(gridItem.props)
 })
 
 const GridItem = styled(BaseGridItem)(
@@ -47,7 +48,7 @@ const GridItem = styled(BaseGridItem)(
 
 Grid.Item = GridItem
 Grid.Item.displayName = 'Grid.Item'
-Grid.Item.propTypes = { ...gridItem.propTypes, ...Box.propTypes }
+Grid.Item.propTypes = { ...getPropTypes(gridItem), ...Box.propTypes }
 
 export {
   Grid
