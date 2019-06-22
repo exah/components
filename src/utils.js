@@ -22,7 +22,7 @@ export function base ({
   const Base = React.forwardRef((props, ref) => {
     const {
       as: Element = defaultElement,
-      use: Comp = (BaseComp || Element),
+      base: Comp = (BaseComp || Element),
       className,
       ...rest
     } = props
@@ -51,7 +51,7 @@ export function base ({
   Base.propTypes = {
     className: PropTypes.string,
     as: PropTypes.elementType,
-    use: PropTypes.elementType
+    base: PropTypes.elementType
   }
 
   return Base
