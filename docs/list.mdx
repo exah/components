@@ -12,8 +12,6 @@ import { List, Flex } from '../src'
 
 Based on [Box](/box) with reset styles for `ul`, `ol`. By default renders `<ul>`.
 
-For more information see [Flex](/flex) docs.
-
 
 ## Usage
 
@@ -42,18 +40,6 @@ import { List } from 'pss-components'
   </List>
 </Playground>
 
-### Make `horizontal` list with [Flex](/flex)
-
-<Playground>
-  <List use={Flex} justifyContent='space-between'>
-    <List.Item>1</List.Item>
-    <List.Item>2</List.Item>
-    <List.Item>3</List.Item>
-    <List.Item>4</List.Item>
-    <List.Item>5</List.Item>
-    <List.Item>6</List.Item>
-  </List>
-</Playground>
 
 ### Change `list-style`
 
@@ -68,6 +54,7 @@ import { List } from 'pss-components'
   </List>
 </Playground>
 
+
 ### Ordered list
 
 <Playground>
@@ -80,6 +67,21 @@ import { List } from 'pss-components'
     <List.Item>Sixth</List.Item>
   </List>
 </Playground>
+
+
+### Replace [Box](/box) inside with [Flex](/flex)
+
+<Playground>
+  <List as='ol' base={Flex} justifyContent='space-between'>
+    <List.Item>1</List.Item>
+    <List.Item>2</List.Item>
+    <List.Item>3</List.Item>
+    <List.Item>4</List.Item>
+    <List.Item>5</List.Item>
+    <List.Item>6</List.Item>
+  </List>
+</Playground>
+
 
 ## Props
 

@@ -1,12 +1,18 @@
 import styled from '@emotion/styled'
-import { style } from 'pss'
+import pss from 'pss'
 import { Box } from './box'
+import { base } from './utils'
 
-const listStyle = style({
-  cssProp: 'listStyle'
+const listStyle = pss({
+  listStyle: true
 })
 
-const List = styled(Box)(
+const BaseList = base({
+  use: Box,
+  name: 'List'
+})
+
+const List = styled(BaseList)(
   listStyle
 )
 

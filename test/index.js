@@ -47,13 +47,13 @@ describe('Layout', () => {
   test('Holy Grail', () => {
     const result = renderJSON(
       <Layout flexDirection='column' minHeight='100%'>
-        <Box use='header'>
+        <Box as='header'>
           Header
         </Box>
-        <Layout.Content use='main'>
+        <Layout.Content as='main'>
           Main
         </Layout.Content>
-        <Box use='footer'>
+        <Box as='footer'>
           Footer
         </Box>
       </Layout>
