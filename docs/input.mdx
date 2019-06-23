@@ -1,0 +1,43 @@
+---
+name: Input
+route: /input
+menu: Primitives
+---
+
+import { Playground } from 'docz'
+import { ThemeProvider } from 'emotion-theming'
+import { PropsTable } from '../.internal/props-table'
+import { theme } from '../.internal/theme'
+import { Input, Link } from '../src'
+
+# Input
+
+## Description
+
+Based on [Box](/box). Renders `<input>` or `<textarea>` element.
+
+
+## Usage
+
+```js
+import { Input } from 'pss-components'
+```
+
+<Playground>
+  <Input defaultValue='Input' />
+  <Input defaultValue='Input' variant='auto' mt={1} />
+  <Input defaultValue='Input' bg='red' mt={1} />
+</Playground>
+
+## Examples
+
+### Change element
+
+<Playground>
+  <Input as='textarea' defaultValue='TextArea' variant='auto' rows={3} />
+</Playground>
+
+
+## Props
+
+<PropsTable of={Input} />

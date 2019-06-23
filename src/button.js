@@ -3,7 +3,7 @@ import { themePath, variant } from 'pss'
 import { getPropTypes } from 'pss/prop-type'
 import { Box } from './box'
 
-const buttonVariant = variant({
+const buttonStyle = variant({
   themeKey: 'buttonStyle'
 })
 
@@ -19,13 +19,13 @@ const Button = styled(Box)(
     }
   },
   themePath('Button'),
-  buttonVariant
+  buttonStyle
 )
 
 Button.displayName = 'Button'
 
 Button.propTypes = {
-  ...getPropTypes(buttonVariant),
+  ...getPropTypes(buttonStyle),
   ...Box.propTypes
 }
 
