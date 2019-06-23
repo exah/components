@@ -38,7 +38,7 @@ With values from `media` prop:
     <MatchMediaConsumer>
       {(matchedMedia) => (
         <Box>
-          Current media: {matchedMedia.key}
+          Current media: {matchedMedia.matches.join(', ')}
         </Box>
       )}
     </MatchMediaConsumer>
@@ -52,7 +52,7 @@ From `theme`:
     <MatchMediaConsumer>
       {(matchedMedia) => (
         <Box>
-          Current media: {matchedMedia.key}
+          Current media: {matchedMedia.matches.join(', ')}
         </Box>
       )}
     </MatchMediaConsumer>
