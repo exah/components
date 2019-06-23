@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import pss from 'pss'
+import { getPropTypes } from 'pss/prop-type'
 import { Box } from './box'
 import { base } from './utils'
 
@@ -17,7 +18,7 @@ const List = styled(BaseList)(
 )
 
 List.displayName = 'List'
-List.propTypes = { ...listStyle.propTypes, ...BaseList.propTypes }
+List.propTypes = { ...getPropTypes(listStyle), ...BaseList.propTypes }
 List.defaultProps = { ...BaseList.defaultProps, listStyle: 'none', as: 'ul' }
 
 List.Item = styled(Box)(
@@ -25,7 +26,7 @@ List.Item = styled(Box)(
 )
 
 List.Item.displayName = 'List.Item'
-List.Item.propTypes = { ...listStyle.propTypes, ...Box.propTypes }
+List.Item.propTypes = { ...getPropTypes(listStyle), ...Box.propTypes }
 List.Item.defaultProps = { ...Box.defaultProps, as: 'li' }
 
 export {

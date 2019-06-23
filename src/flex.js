@@ -9,6 +9,7 @@ import {
   themePath
 } from 'pss'
 
+import { getPropTypes } from 'pss/prop-type'
 import { Box } from './box'
 
 const styles = combineStyles(
@@ -24,7 +25,7 @@ const Flex = styled(Box)(
 )
 
 Flex.displayName = 'Flex'
-Flex.propTypes = { ...styles.propTypes, ...Box.propTypes }
+Flex.propTypes = { ...getPropTypes(styles), ...Box.propTypes }
 Flex.defaultProps = { ...Box.defaultProps, display: 'flex' }
 
 export {
