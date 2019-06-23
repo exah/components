@@ -12,13 +12,13 @@ const LayoutSide = styled(Box)()
 
 LayoutSide.displayName = 'Layout.Side'
 LayoutSide.propTypes = { ...Box.propTypes }
-LayoutSide.defaultProps = { flex: '0 0 auto', minWidth: 0 }
+LayoutSide.defaultProps = { ...Box.defaultProps, flex: '0 0 auto', minWidth: 0 }
 
 const LayoutContent = styled(Box)()
 
 LayoutContent.displayName = 'Layout.Content'
 LayoutContent.propTypes = { ...Box.propTypes }
-LayoutContent.defaultProps = { flex: '1 1 auto', minWidth: 0 }
+LayoutContent.defaultProps = { ...Box.defaultProps, flex: '1 1 auto', minWidth: 0 }
 
 Layout.Side = LayoutSide
 Layout.Content = LayoutContent

@@ -22,7 +22,7 @@ export function base ({
   const Base = React.forwardRef((props, ref) => {
     const {
       as: Element = defaultElement,
-      base: Comp = (BaseComp || Element),
+      base: Comp = Element,
       className,
       ...rest
     } = props
@@ -48,10 +48,19 @@ export function base ({
   })
 
   Base.displayName = name ? `Base(${name})` : 'Base'
+
   Base.propTypes = {
     className: PropTypes.string,
     as: PropTypes.elementType,
-    base: PropTypes.elementType
+    ...BaseComp !== undefined && {
+      base: PropTypes.elementType,
+      ...BaseComp.propTypes
+    }
+  }
+
+  Base.defaultProps = {
+    as: defaultElement,
+    base: BaseComp
   }
 
   return Base

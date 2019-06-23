@@ -24,7 +24,7 @@ Text.displayName = 'Text'
 
 Text.propTypes = {
   ...getPropTypes(styles),
-  ...Box.propTypes
+  ...BaseText.propTypes
 }
 
 export {

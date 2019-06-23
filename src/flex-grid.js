@@ -79,8 +79,8 @@ const FlexGridItem = styled(FlexGridItemBase)(
 
 FlexGrid.Item = FlexGridItem
 FlexGrid.Item.displayName = 'FlexGrid.Item'
-FlexGrid.Item.propTypes = { ...getPropTypes(flexGridItem), ...Box.propTypes }
-FlexGrid.Item.defaultProps = { flex: '0 1 auto', minWidth: 0 }
+FlexGrid.Item.propTypes = { ...getPropTypes(flexGridItem), ...FlexGridItemBase.propTypes }
+FlexGrid.Item.defaultProps = { ...FlexGridItemBase.defaultProps, flex: '0 1 auto', minWidth: 0 }
 
 export {
   FlexGrid
