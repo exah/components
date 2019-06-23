@@ -13,6 +13,11 @@ const Button = css`
   padding: 10px 20px;
 `
 
+const Input = css`
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+`
+
 const theme = {
   media: {
     sm: '(max-width: 600px)',
@@ -78,6 +83,12 @@ const theme = {
     default: {
       background: 'royalblue',
       color: 'white'
+    }
+  },
+  Input,
+  inputStyle: {
+    default: {
+      background: '#2e3440',
     }
   }
 }
