@@ -1,6 +1,9 @@
+import { isValidElementType } from 'react-is'
+import { isStr } from '@exah/utils'
+
 const RE_OBJECTOF = /(?:React\.)?(?:PropTypes\.)?objectOf\((?:React\.)?(?:PropTypes\.)?(\w+)\)/
 
-function getTypeStr ({
+export function getTypeStr ({
   name = '',
   raw = '',
   value,
@@ -50,4 +53,16 @@ function getTypeStr ({
   }
 }
 
-export const humanize = (type) => getTypeStr(type)
+const getDisplayName = (value) => isStr(value)
+  ? value
+  : value.displayName || value.name || 'Component'
+
+export const getDefaultValue = (value) => {
+  if (isStr(value)) {
+    return JSON.stringify(value.replace(/'/g, ''))
+  }
+
+  return isValidElementType(value)
+    ? getDisplayName(value)
+    : JSON.stringify(value)
+}

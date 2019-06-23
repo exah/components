@@ -5,7 +5,7 @@ export const parse = (Comp) => Comp.propTypes == null ? null : (
   parsePropTypes({
     propTypes: Comp.propTypes,
     defaultProps: mapObj(
-      (key, value) => ({ [key]: String(value) }),
+      (key, value) => ({ [key]: value }),
       Object(Comp.defaultProps)
     )
   })
