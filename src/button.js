@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { themePath, variant } from 'pss'
+import { getPropTypes } from 'pss/prop-type'
 import { Box } from './box'
 
 const buttonVariant = variant({
@@ -24,7 +25,7 @@ const Button = styled(Box)(
 Button.displayName = 'Button'
 
 Button.propTypes = {
-  ...buttonVariant.propTypes,
+  ...getPropTypes(buttonVariant),
   ...Box.propTypes
 }
 
