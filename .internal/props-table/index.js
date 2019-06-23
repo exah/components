@@ -1,6 +1,6 @@
 import React from 'react'
 import { useComponents } from 'docz'
-import { humanize } from './humanize'
+import { getTypeStr, getDefaultValue } from './humanize'
 import { parse } from './parse'
 
 export const PropsTable = ({ of: Comp, ...rest }) => {
@@ -37,7 +37,7 @@ export const PropsTable = ({ of: Comp, ...rest }) => {
               <Tr key={name}>
                 <Td>{name}</Td>
                 <Td>
-                  {humanize(prop.type)}
+                  {getTypeStr(prop.type)}
                 </Td>
                 <Td>{String(prop.required)}</Td>
                 {prop.defaultValue === undefined ? (
@@ -46,12 +46,9 @@ export const PropsTable = ({ of: Comp, ...rest }) => {
                   </Td>
                 ) : (
                   <Td>
-                    {prop.defaultValue.value === "''" ? (
-                      <em>[Empty String]</em>
-                    ) : (
-                      prop.defaultValue &&
-                      JSON.stringify(prop.defaultValue.value.replace(/'/g, ''))
-                    )}
+                    {prop.defaultValue.value === "''"
+                      ? (<em>[Empty String]</em>)
+                      : getDefaultValue(prop.defaultValue.value)}
                   </Td>
                 )}
               </Tr>
