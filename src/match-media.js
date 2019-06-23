@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { createContext, useEffect, useState, useContext } from 'react'
+import React, { createContext, useEffect, useState, useContext, useMemo } from 'react'
 import { reduceObj } from '@exah/utils'
 import { useTheme } from './theme'
 
@@ -11,14 +11,13 @@ function listenForChanges (target, fn) {
 }
 
 const INITIAL = {
-  matches: [],
-  key: null
+  matches: []
 }
 
 const MatchMediaContext = createContext(INITIAL)
 const { Provider, Consumer: MatchMediaConsumer } = MatchMediaContext
 
-export function useMatchMedia (media = {}) {
+function useMatchMedia (media = {}) {
   const [ matches, setMatches ] = useState(INITIAL.matches)
 
   useEffect(() => {
@@ -37,15 +36,16 @@ export function useMatchMedia (media = {}) {
     return () => listeners.map((fn) => fn())
   }, [ media ])
 
-  return { matches }
+  return matches
 }
 
 function MatchMediaProvider (props) {
   const theme = useTheme()
-  const match = useMatchMedia(props.media || theme.media)
+  const matches = useMatchMedia(props.media || theme.media)
+  const value = useMemo(() => ({ matches }), [ matches ])
 
   return (
-    <Provider value={match}>
+    <Provider value={value}>
       {props.children}
     </Provider>
   )
@@ -69,6 +69,7 @@ export {
   MatchMediaContext,
   MatchMediaProvider,
   MatchMediaConsumer,
+  useMatchMedia,
   useMatchMediaContext,
   withMatchMedia
 }

@@ -36,9 +36,9 @@ With values from `media` prop:
 <Playground>
   <MatchMediaProvider media={{ mobile: '(max-width: 600px)', desktop: '(min-width: 601px)' }}>
     <MatchMediaConsumer>
-      {(matchedMedia) => (
+      {(value) => (
         <Box>
-          Current media: {matchedMedia.matches.join(', ')}
+          Current media: {value.matches.join(', ')}
         </Box>
       )}
     </MatchMediaConsumer>
@@ -50,9 +50,9 @@ From `theme`:
 <Playground>
   <MatchMediaProvider>
     <MatchMediaConsumer>
-      {(matchedMedia) => (
+      {(value) => (
         <Box>
-          Current media: {matchedMedia.matches.join(', ')}
+          Current media: {value.matches.join(', ')}
         </Box>
       )}
     </MatchMediaConsumer>
