@@ -34,7 +34,7 @@ const Grid = styled(Box)(
 
 Grid.displayName = 'Grid'
 Grid.propTypes = { ...getPropTypes(styles), ...Box.propTypes }
-Grid.defaultProps = { display: 'grid' }
+Grid.defaultProps = { ...Box.defaultProps, display: 'grid' }
 
 const BaseGridItem = base({
   use: Box,

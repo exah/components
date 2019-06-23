@@ -13,6 +13,7 @@ Image.propTypes = {
 }
 
 Image.defaultProps = {
+  ...Box.defaultProps,
   as: 'img',
   display: 'block',
   maxWidth: '100%',
