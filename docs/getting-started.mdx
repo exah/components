@@ -3,90 +3,127 @@ name: Getting Started
 route: /
 ---
 
+import Wrapper from '../.internal/wrapper-empty-theme'
+import { theme as myTheme } from '../.internal/demo-theme'
+import { Playground } from 'docz'
+import { Flex, Box, Text, Button, ThemeProvider } from '../src'
+
 # Getting Started
 
-## Install
+## 1. Install
 
 ```sh
-$ yarn add pss-components
+$ yarn add @emotion/core @emotion/styled pss-components
 ```
 
-This package is based on [`pss`](https://github.com/exah/pss) and [`emotion`](https://emotion.sh).
+## 2. Import components
 
-
-## Import components
-
-```
-import React from 'react'
-import { Layout } from 'pss-components'
-
-const MyApp = () => (
-  <Layout>
-    <Layout.Item>
-      Header
-    </Layout.Item>
-    <Layout.Content>
-      Content
-    </Layout.Content>
-    <Layout.Item>
-      Footer
-    </Layout.Item>
-  </Layout>
-)
+```js
+import { Flex, Box, Text, Button } from 'pss-components'
 ```
 
+<Playground wrapper={Wrapper}>
+  <Flex alignItems='center' fg='royalblue'>
+    <Text as='h2' fontSize='1.5rem'>
+      Interactive playground
+    </Text>
+    <Box ml='auto'>
+      <Button bg='royalblue' fg='white' borderRadius={4} px={2} py={1}>
+        Push me
+      </Button>
+    </Box>
+  </Flex>
+</Playground>
 
-## Provide custom theme
+
+## 3. Provide theme
+
+```js
+import { ThemeProvider } from 'pss-components'
+```
+
+### Space
+
+[📖 Docs](https://github.com/exah/pss/blob/master/docs/api.md#space)
 
 ```
-import React from 'react'
-import { ThemeProvider } from 'emotion-theming'
-
 const myTheme = {
-  grid: 12,
-  media: {
-    M: '(max-width: 600px)',
-    T: '(min-width: 601px) and (max-width: 1024px)',
-    D: '(min-width: 1025px)'
-  },
-  space: {
-    default: [ 0, 8, 16, 32, 64 ]
-  },
+  space: [ 0, 8, 16, 32, 64, 128 ]
+}
+```
+
+<Playground>
+  <ThemeProvider theme={myTheme}>
+    <Flex alignItems='center' justifyContent='center'>
+      <Box p={1} m={1} outline='debug'>
+        <Box width={4} height={4} bg='white' />
+      </Box>
+      <Box p={2} m={2} outline='debug'>
+        <Box width={4} height={4} bg='white' />
+      </Box>
+      <Box p={3} m={3} outline='debug'>
+        <Box width={4} height={4} bg='white' />
+      </Box>
+      <Box p={4} m={4} outline='debug'>
+        <Box width={4} height={4} bg='white' />
+      </Box>
+    </Flex>
+  </ThemeProvider>
+</Playground>
+
+### Sizes
+
+[📖 Docs](https://github.com/exah/pss/blob/master/docs/api.md#sizes)
+
+```
+const myTheme = {
+  size: {
+    large: 128,
+    medium: 56,
+    small: 42
+  }
+}
+```
+
+<Playground>
+  <ThemeProvider theme={myTheme}>
+    <Box height='medium' outline='debug'>
+      Box
+    </Box>
+  </ThemeProvider>
+</Playground>
+
+
+### Colors
+
+[📖 Docs](https://github.com/exah/pss/blob/master/docs/api.md#colors)
+
+```
+const myTheme = {
   color: {
     black: '#000',
-    gray: [ '#eee', '#ddd', '#ccc', '#bbb', '#aaa' ],
+    grey: [ '#eee', '#ddd', '#ccc', '#bbb', '#aaa' ],
     white: '#fff'
   },
   palette: {
     default: {
-      bg: '#fff',
-      fg: '#000'
-    },
-    gray: {
-      bg: '#eee',
-      fg: '#000'
-    },
-    inverted: {
-      bg: '#000',
-      fg: '#fff'
+      bg: '#fff', // default background color
+      fg: '#000', // default text color
+      primary: '#ff0',
+      positive: '#0f0',
+      negative: '#f00'
     }
   }
 }
-
-const MyApp = () => (
-  <ThemeProvider theme={myTheme}>
-    <Layout>
-      <Layout.Item>
-        Header
-      </Layout.Item>
-      <Layout.Content>
-        Content
-      </Layout.Content>
-      <Layout.Item>
-        Footer
-      </Layout.Item>
-    </Layout>
-  </ThemeProvider>
-)
 ```
 
+<Playground>
+  <ThemeProvider theme={myTheme}>
+    <Flex border='1px solid' borderColor='grey.4'>
+      <Box m={1} width={1 / 4} ratio={1} bg='primary' />
+      <Box m={1} width={1 / 4} ratio={1} bg='positive' />
+      <Box m={1} width={1 / 4} ratio={1} bg='negative' />
+      <Box m={1} width={1 / 4} ratio={1} bg='auto' /* enable default */ />
+    </Flex>
+  </ThemeProvider>
+</Playground>
