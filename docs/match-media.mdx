@@ -34,7 +34,14 @@ import { ThemeProvider } from 'emotion-theming'
 With values from `media` prop:
 
 <Playground>
-  <MatchMediaProvider media={{ mobile: '(max-width: 600px)', desktop: '(min-width: 601px)' }}>
+  <MatchMediaProvider
+    media={{
+      // definition order matter
+      mobile: '(min-width: 0px)',
+      tablet: '(min-width: 600px)',
+      desktop: '(min-width: 1024px)'
+    }}
+  >
     <MatchMediaConsumer>
       {(value) => (
         <Box>
@@ -45,7 +52,28 @@ With values from `media` prop:
   </MatchMediaProvider>
 </Playground>
 
-From `theme`:
+Mobile-first with array:
+
+<Playground>
+  <MatchMediaProvider
+    media={[
+      '(min-width: 0px)',
+      '(min-width: 600px)',
+      '(min-width: 1024px)'
+    ]}
+  >
+    <MatchMediaConsumer>
+      {(value) => (
+        <Box>
+          Current media: {value.matches.join(', ')}
+        </Box>
+      )}
+    </MatchMediaConsumer>
+  </MatchMediaProvider>
+</Playground>
+
+
+Using `theme.media`:
 
 <Playground>
   <MatchMediaProvider>
