@@ -10,14 +10,13 @@ function listenForChanges (target, fn) {
   return () => target.removeListener(fn)
 }
 
-const INITIAL = {
-  matches: []
-}
+const DEFAULT_MEDIA = {}
+const INITIAL = { matches: [] }
 
 const MatchMediaContext = createContext(INITIAL)
 const { Provider, Consumer: MatchMediaConsumer } = MatchMediaContext
 
-function useMatchMedia (media = {}) {
+function useMatchMedia (media = DEFAULT_MEDIA) {
   const [ matches, setMatches ] = useState(INITIAL.matches)
 
   useEffect(() => {
