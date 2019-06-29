@@ -1,308 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Box 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #000;
-  color: #fff;
-}
-
-<div
-  className="emotion-0 emotion-1"
->
-  Box
-</div>
-`;
-
-exports[`Feed basic 1`] = `
-.emotion-3 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  width: 25%;
-}
-
-.emotion-20 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-<div
-  className="emotion-18 emotion-19 emotion-20 emotion-21"
->
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  >
-    <div
-      className="emotion-0 emotion-1"
-    >
-      Item
-    </div>
-  </div>
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  >
-    <div
-      className="emotion-0 emotion-1"
-    >
-      Item
-    </div>
-  </div>
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  >
-    <div
-      className="emotion-0 emotion-1"
-    >
-      Item
-    </div>
-  </div>
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  />
-</div>
-`;
-
-exports[`Feed empty 1`] = `
-.emotion-2 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-<div
-  className="emotion-0 emotion-1 emotion-2 emotion-3"
-/>
-`;
-
-exports[`Feed with theme 1`] = `
-.emotion-3 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  width: 25%;
-}
-
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-16 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -8px;
-  margin-right: -8px;
-  margin-top: -8px;
-  margin-bottom: -8px;
-}
-
-.emotion-16 + .emotion-15 {
-  margin-top: 8px;
-}
-
-.emotion-16 > .emotion-2 > .emotion-1,
-.emotion-16 > .emotion-1 {
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-<div
-  className="emotion-14 emotion-15 emotion-16 emotion-17"
->
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  >
-    <div
-      className="emotion-0 emotion-1"
-    >
-      Item
-    </div>
-  </div>
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  />
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  />
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  />
-</div>
-`;
-
-exports[`Flex 1`] = `
-.emotion-6 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  width: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  -webkit-flex: 0 1;
-  -ms-flex: 0 1;
-  flex: 0 1;
-}
-
-<div
-  className="emotion-6 emotion-7"
->
-  <div
-    className="emotion-0 emotion-1"
-  >
-    Item
-  </div>
-  <div
-    className="emotion-2 emotion-1"
-  >
-    Item
-  </div>
-  <div
-    className="emotion-4 emotion-1"
-  >
-    Item
-  </div>
-</div>
-`;
-
 exports[`FlexGrid basic 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
 .emotion-61 {
   box-sizing: border-box;
   font: inherit;
@@ -337,6 +35,16 @@ exports[`FlexGrid basic 1`] = `
   -ms-flex-positive: 0;
   flex-grow: 0;
   width: 8.333333333333332%;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 <div
@@ -454,16 +162,6 @@ exports[`FlexGrid basic 1`] = `
 `;
 
 exports[`FlexGrid non-integer rem spaces 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
 .emotion-3 {
   box-sizing: border-box;
   font: inherit;
@@ -481,6 +179,16 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
   -ms-flex-positive: 0;
   flex-grow: 0;
   width: 8.333333333333332%;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .emotion-61 {
@@ -630,16 +338,6 @@ exports[`FlexGrid non-integer rem spaces 1`] = `
 `;
 
 exports[`FlexGrid non-integer space 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
 .emotion-3 {
   box-sizing: border-box;
   font: inherit;
@@ -657,6 +355,16 @@ exports[`FlexGrid non-integer space 1`] = `
   -ms-flex-positive: 0;
   flex-grow: 0;
   width: 8.333333333333332%;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .emotion-61 {
@@ -806,16 +514,6 @@ exports[`FlexGrid non-integer space 1`] = `
 `;
 
 exports[`FlexGrid rem spaces 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
 .emotion-3 {
   box-sizing: border-box;
   font: inherit;
@@ -833,6 +531,16 @@ exports[`FlexGrid rem spaces 1`] = `
   -ms-flex-positive: 0;
   flex-grow: 0;
   width: 8.333333333333332%;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .emotion-61 {
@@ -982,16 +690,6 @@ exports[`FlexGrid rem spaces 1`] = `
 `;
 
 exports[`FlexGrid vertical and horizontal space 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
 .emotion-3 {
   box-sizing: border-box;
   font: inherit;
@@ -1009,6 +707,16 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   -ms-flex-positive: 0;
   flex-grow: 0;
   width: 8.333333333333332%;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .emotion-141 {
@@ -1393,392 +1101,5 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
       12
     </div>
   </div>
-</div>
-`;
-
-exports[`Grid basic 1`] = `
-.emotion-63 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(12,1fr);
-}
-
-.emotion-1 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  grid-column: span 1;
-  grid-row: 1;
-}
-
-.emotion-37 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  grid-column: span 2;
-  grid-row: 2;
-}
-
-.emotion-55 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  grid-column: span 4;
-  grid-row: 3;
-}
-
-<div
-  className="emotion-63 emotion-64"
->
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-1 emotion-2"
-  >
-    span 1
-  </div>
-  <div
-    className="emotion-0 emotion-37 emotion-2"
-  >
-    span 2
-  </div>
-  <div
-    className="emotion-0 emotion-37 emotion-2"
-  >
-    span 2
-  </div>
-  <div
-    className="emotion-0 emotion-37 emotion-2"
-  >
-    span 2
-  </div>
-  <div
-    className="emotion-0 emotion-37 emotion-2"
-  >
-    span 2
-  </div>
-  <div
-    className="emotion-0 emotion-37 emotion-2"
-  >
-    span 2
-  </div>
-  <div
-    className="emotion-0 emotion-37 emotion-2"
-  >
-    span 2
-  </div>
-  <div
-    className="emotion-0 emotion-55 emotion-2"
-  >
-    span 4
-  </div>
-  <div
-    className="emotion-0 emotion-55 emotion-2"
-  >
-    span 4
-  </div>
-  <div
-    className="emotion-0 emotion-55 emotion-2"
-  >
-    span 4
-  </div>
-</div>
-`;
-
-exports[`Image empty 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-<img
-  className="emotion-0 emotion-1"
-/>
-`;
-
-exports[`Image with image 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  width: 50%;
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-<img
-  alt=""
-  className="emotion-0 emotion-1"
-  src="http://placekitten.com/500"
-/>
-`;
-
-exports[`Layout Holy Grail 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-6 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-width: 0;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-2 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-<div
-  className="emotion-6 emotion-7"
->
-  <header
-    className="emotion-0 emotion-1"
-  >
-    Header
-  </header>
-  <main
-    className="emotion-2 emotion-3"
-  >
-    Main
-  </main>
-  <footer
-    className="emotion-0 emotion-1"
-  >
-    Footer
-  </footer>
-</div>
-`;
-
-exports[`Layout Media Object 1`] = `
-.emotion-2 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.emotion-4 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.emotion-0 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  min-width: 0;
-}
-
-<div
-  className="emotion-4 emotion-5"
->
-  <div
-    className="emotion-0 emotion-1"
-  >
-    Side
-  </div>
-  <div
-    className="emotion-2 emotion-3"
-  >
-    Content
-  </div>
-</div>
-`;
-
-exports[`Text empty 1`] = `
-.emotion-1 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-<div
-  className="emotion-0 emotion-1 emotion-2"
-/>
-`;
-
-exports[`Text with text 1`] = `
-.emotion-1 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-<div
-  className="emotion-0 emotion-1 emotion-2"
->
-  Hello
-</div>
-`;
-
-exports[`Text with theme 1`] = `
-.emotion-1 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  font-family: Helvetica,system-ui,sans-serif;
-  font-size: 1rem;
-  line-height: 1.2;
-}
-
-<div
-  className="emotion-0 emotion-1 emotion-2"
->
-  Hello
 </div>
 `;
