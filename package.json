@@ -45,15 +45,6 @@
     {
       "limit": "10.5 KB",
       "path": "./esm/index.js"
-    },
-    {
-      "limit": "5 KB",
-      "path": "./esm/index.js",
-      "ignore": [
-        "@emotion/is-prop-valid",
-        "pss",
-        "@exah/utils"
-      ]
     }
   ],
   "publishConfig": {
