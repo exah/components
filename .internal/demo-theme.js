@@ -18,25 +18,33 @@ const Input = css`
   padding: 10px 20px;
 `
 
-const theme = {
+export const theme = {
   media: {
     sm: '(max-width: 600px)',
     md: '(min-width: 601px) and (max-width: 1024px)',
     lg: '(min-width: 1025px)'
   },
-  space: [ 0, 8, 16, 32, 64 ],
+  space: [ 0, 8, 16, 32, 64, 128 ],
+  size: {
+    large: 128,
+    medium: 56,
+    small: 42
+  },
   color: {
     black: '#000',
-    gray: [ '#eee', '#ddd', '#ccc', '#bbb', '#aaa' ],
+    grey: [ '#eee', '#ddd', '#ccc', '#bbb', '#aaa' ],
     white: '#fff'
   },
   palette: {
     default: {
       bg: '#fff',
       fg: '#000',
-      link: 'royalblue'
+      link: 'royalblue',
+      primary: '#ff0',
+      positive: '#0f0',
+      negative: '#f00'
     },
-    gray: {
+    grey: {
       bg: '#eee',
       fg: '#000'
     },
@@ -91,8 +99,4 @@ const theme = {
       background: '#2e3440',
     }
   }
-}
-
-export {
-  theme
 }

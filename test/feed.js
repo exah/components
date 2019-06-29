@@ -1,8 +1,7 @@
 import React from 'react'
-import { ThemeProvider } from 'emotion-theming'
 import { renderJSON, anyClassName } from '../.internal/helpers'
-import { theme } from '../.internal/theme'
-import { Feed, MatchMediaProvider } from '../src'
+import { theme } from '../.internal/demo-theme'
+import { Feed, MatchMediaProvider, ThemeProvider } from '../src'
 
 describe('Feed', () => {
   beforeAll(() => {

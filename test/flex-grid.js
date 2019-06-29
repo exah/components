@@ -1,9 +1,8 @@
 import React, { Fragment } from 'react'
-import { ThemeProvider } from 'emotion-theming'
 import { initArr } from '@exah/utils'
 import { renderJSON, anyClassName } from '../.internal/helpers'
-import { theme } from '../.internal/theme'
-import { Box, FlexGrid } from '../src'
+import { theme } from '../.internal/demo-theme'
+import { Box, FlexGrid, ThemeProvider } from '../src'
 
 describe('FlexGrid', () => {
   const renderFlexGridItems = (length, col) => initArr(length, (index) => (

@@ -1,9 +1,8 @@
-import { ThemeProvider } from 'emotion-theming'
 import React from 'react'
 import { initArr } from '@exah/utils'
 import { renderJSON, anyClassName } from '../.internal/helpers'
-import { theme } from '../.internal/theme'
-import { Grid } from '../src'
+import { theme } from '../.internal/demo-theme'
+import { Grid, ThemeProvider } from '../src'
 
 describe('Grid', () => {
   const renderGridItems = (length, col, row) => initArr(length, (index) => (
