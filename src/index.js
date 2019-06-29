@@ -23,10 +23,8 @@ export { Text } from './text'
 
 export {
   ThemeDefaults,
-  ThemeContext,
   ThemeProvider,
-  useTheme,
-  withTheme
+  useTheme
 } from './theme'
 
 export { base } from './utils'

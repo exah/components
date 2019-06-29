@@ -49,7 +49,11 @@
     {
       "limit": "5 KB",
       "path": "./esm/index.js",
-      "ignore": [ "@emotion/is-prop-valid", "pss", "@exah/utils" ]
+      "ignore": [
+        "@emotion/is-prop-valid",
+        "pss",
+        "@exah/utils"
+      ]
     }
   ],
   "publishConfig": {
@@ -95,7 +99,6 @@
   "peerDependencies": {
     "@emotion/core": "^10.0.0",
     "@emotion/styled": "^10.0.0",
-    "emotion-theming": "^10.0.0",
     "prop-types": "^15.0.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
@@ -116,7 +119,6 @@
     "cross-env": "5.2.0",
     "docz": "1.2.0",
     "docz-theme-default": "^1.2.0",
-    "emotion-theming": "^10.0.10",
     "eslint": "^6.0.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",

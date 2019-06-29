@@ -1,8 +1,7 @@
-import { ThemeProvider } from 'emotion-theming'
 import React from 'react'
 import { renderJSON, anyClassName } from '../.internal/helpers'
-import { theme } from '../.internal/theme'
-import { Text } from '../src'
+import { theme } from '../.internal/demo-theme'
+import { Text, ThemeProvider } from '../src'
 
 describe('Text', () => {
   test('empty', () => {
