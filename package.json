@@ -31,7 +31,7 @@
     "test": "run-s test:*",
     "test:unit": "jest",
     "test:lint": "eslint src test",
-    "test:size": "size-limit",
+    "test:size": "npm run build:esm && size-limit",
     "release": "np --no-cleanup",
     "postrelease": "npm run deploy",
     "deploy": "npm run docs && cp dist/index.html dist/200.html && surge dist pss-components.surge.sh",
