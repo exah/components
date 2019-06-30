@@ -6,7 +6,7 @@ route: /
 import Wrapper from '../.internal/wrapper-empty-theme'
 import { theme as myTheme } from '../.internal/demo-theme'
 import { Playground } from 'docz'
-import { Flex, Box, Text, Button, ThemeProvider } from '../src'
+import { Flex, Box, Text, Button, Image, ThemeProvider } from '../src'
 
 # Getting Started
 
@@ -19,7 +19,7 @@ $ yarn add @emotion/core @emotion/styled pss-components
 ## 2. Import components
 
 ```js
-import { Flex, Box, Text, Button } from 'pss-components'
+import { Flex, Box, Text, Button, Image } from 'pss-components'
 ```
 
 <Playground wrapper={Wrapper}>
@@ -27,12 +27,13 @@ import { Flex, Box, Text, Button } from 'pss-components'
     <Text as='h2' fontSize='1.5rem'>
       Interactive playground
     </Text>
-    <Box ml='auto'>
-      <Button bg='royalblue' fg='white' borderRadius={4} px={2} py={1}>
-        Push me
-      </Button>
-    </Box>
+    <Image src='http://placekitten.com/128' borderRadius={64} width={64} ml='auto' />
   </Flex>
+  <Box mt='1rem'>
+    <Button bg='royalblue' fg='white' borderRadius={4} px={3} py={2}>
+      Press me
+    </Button>
+  </Box>
 </Playground>
 
 
