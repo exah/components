@@ -10,9 +10,18 @@ import { Button, Link } from '../src'
 
 # Button
 
-## Description
+Based on [Box](/box). Renders `<button>` element with reset styles:
 
-Based on [Box](/box). Renders `<button>` element.
+```css
+appearance: none;
+textAlign: center;
+textDecoration: none;
+cursor: pointer;
+[disabled] {
+  cursor: auto;
+  pointerEvents: none;
+}
+```
 
 
 ## Usage
@@ -22,7 +31,7 @@ import { Button } from 'pss-components'
 ```
 
 <Playground>
-  <Button>Button</Button>
+  <Button mr={1}>Button</Button>
   <Button variant='auto'>Button</Button>
   <Button bg='red' ml={1}>Button</Button>
 </Playground>
