@@ -10,9 +10,12 @@ import { Box, Flex } from '../src'
 
 # Flex
 
-## Description
+[Box](/box) with `display: flex` and additional `pss` styles:
 
-Based on [Box](/box) with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) styles.
+- [flexContainer](https://github.com/exah/pss/blob/master/docs/api.md#flexcontainer) - `flexWrap`, `flexDirection`
+- [boxContentAlignment](https://github.com/exah/pss/blob/master/docs/api.md#boxcontentalignment) - `justifyContent`, `alignContent`
+- [boxItemsAlignment](https://github.com/exah/pss/blob/master/docs/api.md#boxitemsalignment) - `alignItems`, `justifyItems`
+- [gap](https://github.com/exah/pss/blob/master/docs/api.md#gap) - `gap`, `rowGap`, `columnGap`
 
 
 ## Usage
@@ -21,11 +24,12 @@ Based on [Box](/box) with [flexbox](https://developer.mozilla.org/en-US/docs/Web
 import { Flex, Box } from 'pss-components'
 ```
 
-```js
-<Flex>
-  <Box>Item</Box>
-</Flex>
-```
+<Playground>
+  <Flex>
+    <Box>Item</Box>
+    <Box>Item</Box>
+  </Flex>
+</Playground>
 
 
 ## Examples
