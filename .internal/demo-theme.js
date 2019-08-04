@@ -32,7 +32,7 @@ export const theme = {
   },
   color: {
     black: '#000',
-    grey: [ '#eee', '#ddd', '#ccc', '#bbb', '#aaa' ],
+    grey: [ '#eee', '#ddd', '#ccc', '#bbb', '#aaa', '#555' ],
     white: '#fff'
   },
   palette: {
@@ -109,6 +109,23 @@ export const theme = {
   inputStyle: {
     default: {
       background: '#2e3440',
+    }
+  },
+  gridStyle: {
+    'default': {
+      gridTemplateColumns: 'repeat(12, 1fr)',
+      gridGap: '1rem'
+    },
+    '16cols': {
+      gridTemplateColumns: 'repeat(16, 1fr)',
+      gridGap: '0.5rem'
+    },
+    'page-layout': {
+      gridTemplate: `
+       "head head" 30px
+       "nav  main" 1fr
+       "nav  foot" 30px / 120px 1fr
+     `
     }
   }
 }
