@@ -99,6 +99,10 @@ export const theme = {
     success: {
       background: 'lime',
       color: 'white'
+    },
+    inverted: {
+      background: 'white',
+      color: 'black',
     }
   },
   Input,
