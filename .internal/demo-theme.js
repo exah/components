@@ -91,6 +91,14 @@ export const theme = {
     default: {
       background: 'royalblue',
       color: 'white'
+    },
+    danger: {
+      background: 'red',
+      color: 'white'
+    },
+    success: {
+      background: 'lime',
+      color: 'white'
     }
   },
   Input,
