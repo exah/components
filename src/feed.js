@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { forwardRef, useMemo } from 'react'
 import styled from '@emotion/styled'
-import { fallbackTo, initArr } from '@exah/utils'
+import { fallbackTo, initArr, isNum } from '@exah/utils'
 import { DEFAULT_GRID } from './constants'
 import { useMatchMediaContext } from './match-media'
 import { FlexGrid } from './flex-grid'
@@ -35,8 +35,7 @@ const FeedContainer = forwardRef(({ children, grid, column, ...rest }, ref) => {
   const columnForMedia = fallbackTo(
     column[mediaKey],
     column.all,
-    column,
-    grid
+    isNum(column) ? column : grid
   )
 
   const childrenGroups = useGroupChildren(grid / columnForMedia, children)
