@@ -13,16 +13,16 @@ import { Box, Grid } from '../src'
 
 ## Description
 
-[Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
+[Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) component, based on [Box](/box) with `display: 'grid'`.
 
 - Item conrolled with `column`, `row` prop in `Grid.Item` component
 - [Space](https://github.com/exah/pss/blob/master/docs/api.md#space) between items conrolled with `gap`, `columnGap` and `rowGap` props
 - [Box alignment](https://rachelandrew.co.uk/css/cheatsheets/box-alignment) styles
 
 
-### Components:
+### Components props:
 
-#### `Grid` — Grid layout container
+#### `Grid`
 
 - `gap` — `grid-gap`
 - `columnGap` — `grid-column-gap`
@@ -55,19 +55,19 @@ import { Box, Grid } from '../src'
 import { Grid } from 'pss-components'
 ```
 
-```js
+<Playground>
 <Grid gap={2}>
-  <Grid.Item column='span 6'>
+  <Grid.Item column='span 6' outline="1px solid">
     Content
   </Grid.Item>
-  <Grid.Item column='span 4'>
+  <Grid.Item column='span 4' outline="1px solid">
     Content
   </Grid.Item>
-  <Grid.Item column='span 2'>
+  <Grid.Item column='span 2' outline="1px solid">
     Content
   </Grid.Item>
 </Grid>
-```
+</Playground>
 
 
 ## Examples
@@ -97,7 +97,7 @@ import { Grid } from 'pss-components'
   </Grid>
 </Playground>
 
-### Vertical and horizontal space between items
+### Space between items
 
 <Playground>
   <Grid templateColumns='repeat(12, 1fr)' gap={1}>
@@ -148,10 +148,9 @@ import { Grid } from 'pss-components'
 </Playground>
 
 
-### Create your own `Grid`
+### Create your own grid
 
 ```js
-
 const MyGrid = (props) => (
   <Grid
     templateColumns='repeat(12, 1fr)'
@@ -159,8 +158,101 @@ const MyGrid = (props) => (
     {...props}
   />
 )
-
 ```
+
+
+### Variants
+
+Specify pre-defined variants in your theme:
+
+```js
+const myTheme = {
+  gridStyle: {
+    'default': {
+      gridTemplateColumns: 'repeat(12, 1fr)',
+      gridGap: '1rem'
+    },
+    '16cols': {
+      gridTemplateColumns: 'repeat(16, 1fr)',
+      gridGap: '0.5rem'
+    }
+  }
+}
+```
+
+<Playground>
+  <Grid variant='default'>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+  </Grid>
+  <Grid variant='16cols' mt={2}>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+    <Grid.Item column='span 2' p={1} outline='1px solid'>
+      2
+    </Grid.Item>
+  </Grid>
+</Playground>
+
+Or areas for really complex layouts:
+
+```js
+const myTheme = {
+  gridStyle: {
+    'page-layout': {
+      gridTemplate: `
+       "head head" 30px
+       "nav  main" 1fr
+       "nav  foot" 30px / 120px 1fr
+     `
+    }
+  }
+}
+```
+
+<Playground>
+  <Grid as='section' variant='page-layout' gap={1} minHeight='300px'>
+    <Grid.Item as='header' area='head' outline='debug'>Header</Grid.Item>
+    <Grid.Item as='nav' area='nav' outline='debug'>Navigation</Grid.Item>
+    <Grid.Item as='main' area='main' outline='debug'>Main</Grid.Item>
+    <Grid.Item as='footer' area='foot' outline='debug'>Footer</Grid.Item>
+  </Grid>
+</Playground>
 
 ## Props
 
