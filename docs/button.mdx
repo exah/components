@@ -6,7 +6,7 @@ menu: Primitives
 
 import { Playground } from 'docz'
 import { PropsTable } from '../.internal/props-table'
-import { Button, Link } from '../src'
+import { Button, ThemeDefaults, Link } from '../src'
 
 # Button
 
@@ -108,14 +108,6 @@ const myTheme = {
   </Button>
 </Playground>
 
-Auto is same as `default`, but dynamic (see [ThemeDefaults](/theme-defaults))
-
-<Playground>
-  <Button variant='auto'>
-    Auto
-  </Button>
-</Playground>
-
 <Playground>
   <Button variant='danger'>
     Danger
@@ -126,6 +118,20 @@ Auto is same as `default`, but dynamic (see [ThemeDefaults](/theme-defaults))
   <Button variant='success'>
     Success
   </Button>
+</Playground>
+
+Variant `'auto'` is dynamic, by default same as `'default'` (see [ThemeDefaults](/theme-defaults))
+
+<Playground>
+  <Button variant='auto' mr={1}>
+    Auto
+  </Button>
+  
+  <ThemeDefaults buttonStyle='inverted'>
+    <Button variant='auto'>
+      Auto
+    </Button>
+  </ThemeDefaults>
 </Playground>
 
 ## Props
