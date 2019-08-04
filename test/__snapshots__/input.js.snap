@@ -23,7 +23,7 @@ exports[`Input snapshot 1`] = `
 
 .emotion-0[disabled] {
   -webkit-text-fill-color: currentColor;
-  -webkit-opacity: 1px;
+  -webkit-opacity: 1;
 }
 
 <input
