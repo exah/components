@@ -11,8 +11,8 @@ const Input = styled(Box)(
   {
     appearance: 'none',
     '&[disabled]': {
-      '-webkit-text-fill-color': 'currentColor',
-      '-webkit-opacity': 1
+      WebkitTextFillColor: 'currentColor',
+      WebkitOpacity: '1'
     }
   },
   themePath('Input'),
