@@ -14,7 +14,6 @@ const Button = css`
 `
 
 const Input = css`
-  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px 20px;
 `
 
@@ -108,8 +107,20 @@ export const theme = {
   Input,
   inputStyle: {
     default: {
+      color: 'white',
       background: '#2e3440',
-    }
+      border: '1px solid rgba(255, 255, 255, 0.3)',
+    },
+    underline: {
+      color: 'white',
+      padding: '10px 0',
+      borderBottom: '1px solid rgba(255, 255, 255, 0.3)',
+    },
+    inverted: {
+      color: 'black',
+      background: 'white',
+      border: '1px solid lime',
+    },
   },
   gridStyle: {
     'default': {
