@@ -9,7 +9,7 @@ function useTheme () {
 
 function ThemeProvider ({ theme, ...rest }) {
   const prev = useTheme()
-  const next = useMemo(() => ({ ...prev, ...theme }), [ prev, theme ])
+  const next = useMemo(() => ({ ...prev, ...theme }), [prev, theme])
 
   return (
     <ThemeContext.Provider value={next} {...rest} />
@@ -22,8 +22,8 @@ ThemeProvider.propTypes = { theme: PropTypes.shape({}) }
 function ThemeDefaults (props) {
   const prev = useTheme().default
   const next = useMemo(
-    () => ({ default: { ...prev, ...omit([ 'children' ])(props) } }),
-    [ prev, props ]
+    () => ({ default: { ...prev, ...omit(['children'])(props) } }),
+    [prev, props]
   )
 
   return (

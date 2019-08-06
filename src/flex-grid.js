@@ -17,7 +17,7 @@ const flexGrid = createFlexGrid({
 
 flexGrid.propTypes = {
   ...getPropTypes(flexGrid),
-  spaceTarget: PropTypes.oneOfType([ PropTypes.elementType, PropTypes.string ])
+  spaceTarget: PropTypes.oneOfType([PropTypes.elementType, PropTypes.string])
 }
 
 const FlexGridBase = base({
@@ -35,7 +35,7 @@ const FlexGridContainer = forwardRef(({ columns, children, ...rest }, ref) => {
           ? React.cloneElement(child, { columns })
           : child
       )
-  ), [ children ])
+  ), [children])
 
   return (
     <FlexGridBase ref={ref} {...rest}>

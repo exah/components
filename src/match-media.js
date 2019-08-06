@@ -17,7 +17,7 @@ const MatchMediaContext = createContext(INITIAL)
 const { Provider, Consumer: MatchMediaConsumer } = MatchMediaContext
 
 function useMatchMedia (media = DEFAULT_MEDIA) {
-  const [ matches, setMatches ] = useState(INITIAL.matches)
+  const [matches, setMatches] = useState(INITIAL.matches)
 
   useEffect(() => {
     const listeners = reduceObj((acc, mediaKey, query) => {
@@ -25,15 +25,15 @@ function useMatchMedia (media = DEFAULT_MEDIA) {
 
       const listener = () => setMatches((prev) =>
         mql.matches
-          ? [ mediaKey, ...prev ]
+          ? [mediaKey, ...prev]
           : prev.filter((item) => item !== mediaKey)
       )
 
-      return [ ...acc, listenForChanges(mql, listener) ]
+      return [...acc, listenForChanges(mql, listener)]
     }, [], media)
 
     return () => listeners.map((fn) => fn())
-  }, [ media ])
+  }, [media])
 
   return matches
 }
@@ -41,7 +41,7 @@ function useMatchMedia (media = DEFAULT_MEDIA) {
 function MatchMediaProvider (props) {
   const theme = useTheme()
   const matches = useMatchMedia(props.media || theme.media)
-  const value = useMemo(() => ({ matches }), [ matches ])
+  const value = useMemo(() => ({ matches }), [matches])
 
   return (
     <Provider value={value}>
