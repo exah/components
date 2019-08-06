@@ -26,7 +26,7 @@ function useGroupChildren (size, children) {
     return size > 1
       ? groupChildren(childrenArr, size)
       : childrenArr
-  }, [ size, children ])
+  }, [size, children])
 }
 
 const FeedContainer = forwardRef(({ children, grid, column, ...rest }, ref) => {
@@ -59,7 +59,7 @@ FeedContainer.propTypes = {
     PropTypes.number,
     PropTypes.objectOf(PropTypes.number)
   ]).isRequired,
-  ...omit([ 'columns' ])(FlexGrid.propTypes)
+  ...omit(['columns'])(FlexGrid.propTypes)
 }
 
 FeedContainer.defaultProps = {

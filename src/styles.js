@@ -5,7 +5,7 @@ import { DEFAULT_GRID } from './constants'
 const createItemsSpace = (axes, selectors) => createRule({
   getValue: createSpaceValue(),
   getStyle (value, props) {
-    const [ num, unit = 'px' ] = splitUnit(value)
+    const [num, unit = 'px'] = splitUnit(value)
     const size = `${num / 2}${unit}`
 
     return {
