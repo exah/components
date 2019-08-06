@@ -82,6 +82,17 @@ export const theme = {
       fontFamily: 'athelas, georgia, times, serif',
       fontSize: '2.5rem',
       fontWeight: 'bold'
+    },
+    responsive: {
+      all: {
+        fontSize: '1rem'
+      },
+      lg: {
+        fontSize: '2rem'
+      },
+      md: {
+        fontSize: '1.5rem'
+      }
     }
   },
   Link,

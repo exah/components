@@ -11,8 +11,6 @@ import { Text, Box, ThemeProvider } from '../src'
 
 # Text
 
-## Description
-
 Based on [Box](/box) with [text system](https://github.com/exah/pss/blob/master/docs/api.md#text). Element inside can be changed with `as` prop, default to `<div>`,
 
 ## Usage
@@ -46,7 +44,7 @@ import { Text } from 'pss-components'
 </Playground>
 
 
-### Set variant
+## Variants
 
 See [textStyle docs](https://github.com/exah/pss/blob/master/docs/api.md#textstyle).
 
@@ -71,6 +69,45 @@ const theme = {
   <ThemeProvider theme={theme}>
     <Text as='h2' variant='heading'>
       Heading
+    </Text>
+    <Text as='p' variant='auto'>
+      Description
+    </Text>
+  </ThemeProvider>
+</Playground>
+
+
+### Responsive
+
+```js
+const theme = {
+  media: {
+    md: '(min-width: 601px) and (max-width: 1024px)',
+    lg: '(min-width: 1025px)'
+  },
+  textStyle: {
+    responsive: {
+      all: {
+        fontSize: '1rem'
+      },
+      lg: {
+        fontSize: '2rem'
+      },
+      md: {
+        fontSize: '1.5rem'
+      }
+    }
+  }
+}
+```
+
+<Playground>
+  <ThemeProvider theme={theme}>
+    <Text as='p' variant='responsive'>
+      Description
+    </Text>
+    <Text as='p' variant={{ all: 'heading', lg: 'responsive' }}>
+      Description
     </Text>
   </ThemeProvider>
 </Playground>
