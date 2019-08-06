@@ -37,7 +37,7 @@ import { Input } from 'pss-components'
 
 ### Default styles
 
-You can't change reset styles in `Input`, as in [Box](/box), but you can provide additional default styles for all buttons:
+You can't change reset styles in `Input`, as in [Box](/box), but you can provide additional default styles for all inputs:
 
 ```js
 import { css } from '@emotion/core'
@@ -51,10 +51,10 @@ const myTheme = {
 ```
 
 
-Please note that if you provide default style, you will not be able to change it with props, so I will recommend to create your own button instead:
+Please note that if you provide default style, you will not be able to change it with props, so I will recommend to create your own input instead:
 
 ```js
-// /my/components/button.js
+// /my/components/input.js
 import { Input as InputBase } from 'pss-components'
 
 const Input = (props) => (
