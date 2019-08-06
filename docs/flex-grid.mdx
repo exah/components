@@ -11,9 +11,10 @@ import { Box, FlexGrid } from '../src'
 
 # FlexGrid
 
-## Description
+Grid component based on [Flex](/flex) and [Box](/box). 
 
-Grid component based on [Flex](/flex) and [Box](/box).
+Useful if you need to support old browsers without `display: grid`, 
+if don't: use [Grid](/grid) instead.
 
 
 ### Components:
@@ -25,7 +26,7 @@ Grid component based on [Flex](/flex) and [Box](/box).
 - `spacex` — horizontal space
 - `spacey` — vertical space
 
-Possible values for spacing is defined in `theme.space`. See [space docs](https://github.com/exah/pss/blob/master/docs/api.md#space)
+For possible values for spacing see [space docs](https://github.com/exah/pss/blob/master/docs/api.md#space).
 
 
 #### `FlexGrid.Item` — Item / column component, size can be set with props:
@@ -223,6 +224,19 @@ import { FlexGrid } from 'pss-components'
     </FlexGrid.Item>
   </FlexGrid>
 </Playground>
+
+### Create your own grid
+
+```js
+const MyGrid = (props) => (
+  <FlexGrid
+    columns={16}
+    space={1}
+    {...props}
+  />
+)
+```
+
 
 ## Props
 
