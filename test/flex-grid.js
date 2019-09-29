@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { initArr } from '@exah/utils'
 import { renderJSON, anyClassName } from '../.internal/helpers'
 import { theme } from '../.internal/demo-theme'
@@ -21,11 +21,9 @@ describe('FlexGrid', () => {
   test('basic', () => {
     const result = renderJSON(
       <ThemeProvider theme={theme}>
-        <Fragment>
-          <FlexGrid>
-            {renderFlexGridItems(12, 1)}
-          </FlexGrid>
-        </Fragment>
+        <FlexGrid>
+          {renderFlexGridItems(12, 1)}
+        </FlexGrid>
       </ThemeProvider>
     )
 
