@@ -9,8 +9,8 @@
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "files": [
-    "./esm",
-    "./cjs"
+    "esm",
+    "cjs"
   ],
   "tags": [
     "css-in-js",
@@ -43,7 +43,7 @@
   },
   "size-limit": [
     {
-      "limit": "10.5 KB",
+      "limit": "11 KB",
       "path": "./esm/index.js"
     }
   ],
@@ -65,6 +65,7 @@
     ],
     "rules": {
       "no-shadow": 2,
+      "array-bracket-spacing": 0,
       "react/prop-types": [
         2,
         {
@@ -95,48 +96,47 @@
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.5.5",
-    "@emotion/core": "^10.0.15",
-    "@emotion/styled": "^10.0.15",
-    "auto-changelog": "1.14.1",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^24.8.0",
-    "babel-plugin-emotion": "^10.0.15",
-    "cross-env": "5.2.0",
-    "docz": "1.2.0",
+    "@babel/register": "^7.6.2",
+    "@emotion/core": "^10.0.17",
+    "@emotion/styled": "^10.0.17",
+    "@size-limit/preset-small-lib": "^2.1.6",
+    "auto-changelog": "1.16.1",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-emotion": "^10.0.19",
+    "cross-env": "6.0.0",
+    "docz": "1.3.2",
     "docz-theme-default": "^1.2.0",
-    "eslint": "^6.1.0",
-    "eslint-config-standard": "^13.0.1",
-    "eslint-config-standard-react": "^8.0.0",
+    "eslint": "6.4.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-standard": "^4.0.0",
-    "husky": "^3.0.2",
-    "jest": "^24.8.0",
-    "jest-emotion": "^10.0.10",
-    "lint-staged": "^9.2.1",
-    "np": "5.0.3",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^3.0.7",
+    "jest": "^24.9.0",
+    "jest-emotion": "^10.0.17",
+    "lint-staged": "^9.4.0",
+    "np": "5.1.0",
     "npm-run-all": "^4.1.5",
     "parse-prop-types": "^0.3.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
     "react-feather": "^2.0.3",
-    "react-is": "^16.8.6",
-    "react-test-renderer": "^16.8.6",
-    "rimraf": "^2.6.3",
-    "size-limit": "^1.3.7"
+    "react-is": "^16.10.1",
+    "react-test-renderer": "^16.10.1",
+    "rimraf": "^3.0.0"
   },
   "dependencies": {
-    "@emotion/is-prop-valid": "^0.8.2",
+    "@emotion/is-prop-valid": "^0.8.3",
     "@exah/utils": "^2.0.0",
-    "pss": "^5.0.0-9"
+    "pss": "^5.0.1"
   }
 }
