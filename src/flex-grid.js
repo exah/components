@@ -10,15 +10,8 @@ import { base, omit } from './utils'
 
 const flexGrid = createFlexGrid({
   getRowSelector: () => `& + ${FlexGrid}`,
-  getItemSelector: (props) => props.spaceTarget
-    ? `& > ${FlexGrid.Item} > ${props.spaceTarget}, & > ${props.spaceTarget}`
-    : `& > ${FlexGrid.Item}`
+  getItemSelector: () => `& > ${FlexGrid.Item}`
 })
-
-flexGrid.propTypes = {
-  ...getPropTypes(flexGrid),
-  spaceTarget: PropTypes.oneOfType([PropTypes.elementType, PropTypes.string])
-}
 
 const FlexGridBase = base({
   use: Flex,
@@ -83,8 +76,16 @@ const FlexGridItem = styled(FlexGridItemBase)(
 
 FlexGrid.Item = FlexGridItem
 FlexGrid.Item.displayName = 'FlexGrid.Item'
-FlexGrid.Item.propTypes = { ...getPropTypes(flexGridItem), ...FlexGridItemBase.propTypes }
-FlexGrid.Item.defaultProps = { ...FlexGridItemBase.defaultProps, flex: '0 1 auto', minWidth: 0 }
+FlexGrid.Item.propTypes = {
+  ...getPropTypes(flexGridItem),
+  ...FlexGridItemBase.propTypes
+}
+
+FlexGrid.Item.defaultProps = {
+  ...FlexGridItemBase.defaultProps,
+  flex: '0 1 auto',
+  minWidth: 0
+}
 
 export {
   FlexGrid
