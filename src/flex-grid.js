@@ -26,7 +26,11 @@ const FlexGridBase = base({
   filter: omit(flexGrid.props)
 })
 
-const FlexGridContainer = React.forwardRef(({ columns, children, ...rest }, ref) => {
+const FlexGridContainer = React.forwardRef(({
+  columns,
+  children,
+  ...rest
+}, ref) => {
   const clonedChildren = useMemo(() => (
     React.Children
       .toArray(children)
@@ -35,7 +39,7 @@ const FlexGridContainer = React.forwardRef(({ columns, children, ...rest }, ref)
           ? React.cloneElement(child, { columns })
           : child
       )
-  ), [children])
+  ), [columns, children])
 
   return (
     <FlexGridBase ref={ref} {...rest}>
