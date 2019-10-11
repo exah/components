@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { getPropTypes } from 'pss/prop-type'
-import React, { forwardRef, useMemo, isValidElement } from 'react'
+import React, { useMemo } from 'react'
 import styled from '@emotion/styled'
 import { DEFAULT_GRID } from './constants'
 import { Box } from './box'
@@ -26,12 +26,12 @@ const FlexGridBase = base({
   filter: omit(flexGrid.props)
 })
 
-const FlexGridContainer = forwardRef(({ columns, children, ...rest }, ref) => {
+const FlexGridContainer = React.forwardRef(({ columns, children, ...rest }, ref) => {
   const clonedChildren = useMemo(() => (
     React.Children
       .toArray(children)
       .map(child =>
-        (isValidElement(child) && child.type === FlexGridItem)
+        (React.isValidElement(child) && child.type === FlexGridItem)
           ? React.cloneElement(child, { columns })
           : child
       )
