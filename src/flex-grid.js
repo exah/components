@@ -8,17 +8,6 @@ import { Flex } from './flex'
 import { createFlexGrid, flexGridItem } from './styles'
 import { base, omit } from './utils'
 
-const flexGrid = createFlexGrid({
-  getRowSelector: () => `& + ${FlexGrid}`,
-  getItemSelector: () => `& > ${FlexGrid.Item}`
-})
-
-const FlexGridBase = base({
-  use: Flex,
-  name: 'FlexGrid',
-  filter: omit(flexGrid.props)
-})
-
 const FlexGridContainer = React.forwardRef(({
   columns,
   children,
@@ -35,22 +24,26 @@ const FlexGridContainer = React.forwardRef(({
   ), [columns, children])
 
   return (
-    <FlexGridBase ref={ref} {...rest}>
+    <Flex ref={ref} {...rest}>
       {clonedChildren}
-    </FlexGridBase>
+    </Flex>
   )
 })
 
-FlexGridContainer.displayName = 'FlexGridContainer'
+FlexGridContainer.displayName = 'FlexGrid.Container'
 
 FlexGridContainer.propTypes = {
-  columns: PropTypes.number.isRequired,
-  ...getPropTypes(flexGrid)
+  columns: PropTypes.number.isRequired
 }
 
 FlexGridContainer.defaultProps = {
   columns: DEFAULT_GRID
 }
+
+const flexGrid = createFlexGrid({
+  getRowSelector: () => `& + ${FlexGrid}`,
+  getItemSelector: () => `& > ${FlexGrid.Item}`
+})
 
 const FlexGrid = styled(FlexGridContainer)(
   { flexWrap: 'wrap' },
@@ -61,13 +54,14 @@ FlexGrid.displayName = 'FlexGrid'
 
 FlexGrid.propTypes = {
   ...FlexGridContainer.propTypes,
+  ...getPropTypes(flexGrid),
   ...Flex.propTypes
 }
 
 const FlexGridItemBase = base({
   use: Box,
   name: 'FlexGrid.Item',
-  filter: omit(flexGridItem.props)
+  filter: omit(['offset', 'column'])
 })
 
 const FlexGridItem = styled(FlexGridItemBase)(
@@ -83,7 +77,7 @@ FlexGrid.Item.propTypes = {
 
 FlexGrid.Item.defaultProps = {
   ...FlexGridItemBase.defaultProps,
-  flex: '0 1 auto',
+  flex: '1 1 auto',
   minWidth: 0
 }
 

@@ -26,14 +26,13 @@ exports[`FlexGrid basic 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
   width: 8.333333333333332%;
 }
 
@@ -170,14 +169,13 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
   width: 8.333333333333332%;
 }
 
@@ -231,14 +229,13 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
   width: 16.666666666666664%;
 }
 
@@ -250,14 +247,13 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
   width: 25%;
 }
 
@@ -269,14 +265,13 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
   width: 33.33333333333333%;
 }
 
@@ -288,14 +283,13 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
   width: 50%;
 }
 
@@ -307,14 +301,13 @@ exports[`FlexGrid vertical and horizontal space 1`] = `
   border: 0;
   margin: 0;
   padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
   width: 100%;
 }
 

@@ -64,13 +64,6 @@ export const flexGridItem = createStyles({
     }
   },
   column (value, props) {
-    if (value === 'auto' || value === true) {
-      return {
-        flexGrow: 1,
-        maxWidth: '100%'
-      }
-    }
-
     const size = getSize(value, props)
 
     if (size == null) {
@@ -78,8 +71,13 @@ export const flexGridItem = createStyles({
     }
 
     return {
-      flexGrow: 0,
+      flex: 'none',
       width: size
+    }
+  },
+  width () {
+    return {
+      flex: 'none'
     }
   }
 })
