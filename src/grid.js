@@ -13,7 +13,7 @@ import {
 } from 'pss'
 
 import { Box } from './box'
-import { omit, base } from './utils'
+import { base } from './base'
 
 const gridVariant = variant({ themeKey: 'gridStyle' })
 const gridContainer = createGridContainer()
@@ -39,7 +39,7 @@ Grid.defaultProps = { ...Box.defaultProps, display: 'grid' }
 const BaseGridItem = base({
   use: Box,
   name: 'Grid.Item',
-  filter: omit(gridItem.props)
+  blacklist: gridItem.props
 })
 
 const GridItem = styled(BaseGridItem)(

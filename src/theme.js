@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { useContext, useMemo } from 'react'
 import { ThemeContext } from '@emotion/core'
-import { omit } from './utils'
 
 function useTheme () {
   return useContext(ThemeContext)
@@ -21,10 +20,10 @@ ThemeProvider.propTypes = { theme: PropTypes.shape({}) }
 
 function ThemeDefaults (props) {
   const prev = useTheme().default
-  const next = useMemo(
-    () => ({ default: { ...prev, ...omit(['children'])(props) } }),
-    [prev, props]
-  )
+  const next = useMemo(() => {
+    const { children, ...rest } = props
+    return { default: { ...prev, ...rest } }
+  }, [prev, props])
 
   return (
     <ThemeProvider theme={next}>

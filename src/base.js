@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import isPropValid from '@emotion/is-prop-valid'
-import { filterObj, isStr, identity, pipe } from '@exah/utils'
+import { filterObj, isStr, pipe } from '@exah/utils'
 
-export const omit = (blacklist = []) => filterObj((key) => !blacklist.includes(key))
+const omit = (blacklist = []) => filterObj((key) => !blacklist.includes(key))
 
 const dedupe = (input = []) =>
   input.filter((item, index) => input.indexOf(item) === index)
@@ -14,9 +14,10 @@ const dedupeClassName = (input = '') =>
 export function base ({
   as: defaultElement = 'div',
   use: BaseComp,
-  filter = identity,
+  blacklist = [],
   name
 } = {}) {
+  const filter = omit(blacklist)
   const strictFilter = pipe(filter, filterObj(isPropValid))
 
   const Base = React.forwardRef((props, ref) => {

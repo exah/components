@@ -6,7 +6,7 @@ import { DEFAULT_GRID } from './constants'
 import { Box } from './box'
 import { Flex } from './flex'
 import { createFlexGrid, flexGridItem } from './styles'
-import { base, omit } from './utils'
+import { base } from './base'
 
 const FlexGridContainer = React.forwardRef(({
   columns,
@@ -61,7 +61,7 @@ FlexGrid.propTypes = {
 const FlexGridItemBase = base({
   use: Box,
   name: 'FlexGrid.Item',
-  filter: omit(['offset', 'column'])
+  blacklist: ['offset', 'column']
 })
 
 const FlexGridItem = styled(FlexGridItemBase)(
