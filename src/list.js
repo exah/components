@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import pss from 'pss'
 import { getPropTypes } from 'pss/prop-type'
 import { Box } from './box'
-import { base } from './utils'
+import { base } from './base'
 
 const listStyle = pss({
   listStyle: true

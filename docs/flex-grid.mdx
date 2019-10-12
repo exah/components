@@ -1,7 +1,7 @@
 ---
 name: FlexGrid
 route: /flex-grid
-menu: Containers
+menu: Components
 ---
 
 import { Playground } from 'docz'
@@ -96,6 +96,33 @@ import { FlexGrid } from 'pss-components'
     <FlexGrid.Item column={2}>
       <Box outline='1px solid' p={1}>
         2
+      </Box>
+    </FlexGrid.Item>
+  </FlexGrid>
+</Playground>
+
+### Auto
+
+<Playground>
+  <FlexGrid spacex={1}>
+    <FlexGrid.Item>
+      <Box outline='1px solid' p={1}>
+        auto
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item>
+      <Box outline='1px solid' p={1}>
+        auto
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item>
+      <Box outline='1px solid' p={1}>
+        auto
+      </Box>
+    </FlexGrid.Item>
+    <FlexGrid.Item>
+      <Box outline='1px solid' p={1}>
+        auto
       </Box>
     </FlexGrid.Item>
   </FlexGrid>

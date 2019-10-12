@@ -1,7 +1,7 @@
 ---
 name: ThemeDefaults
 route: /theme-defaults
-menu: Helpers
+menu: Components
 ---
 
 import { Playground } from 'docz'
@@ -31,4 +31,14 @@ import { ThemeDefaults } from 'pss-components'
       </Box>
     </ThemeDefaults>
   </Box>
+</Playground>
+
+## Dark Mode
+
+<Playground>
+  <ThemeDefaults mediaQuery='(prefers-color-scheme: dark)' palette='inverted'>
+    <Box tm='auto' ratio={16 / 9} p={1}>
+      Content
+    </Box>
+  </ThemeDefaults>
 </Playground>

@@ -4,7 +4,7 @@ import { DEFAULT_GRID } from './constants'
 
 const createItemsSpace = (axes, selectors) => createRule({
   getValue: createSpaceValue(),
-  getStyle (value, props) {
+  getStyle (value) {
     const [num, unit = 'px'] = splitUnit(value)
     const size = `${num / 2}${unit}`
 
@@ -16,11 +16,11 @@ const createItemsSpace = (axes, selectors) => createRule({
       ...(axes.y && {
         marginTop: `-${size}`,
         marginBottom: `-${size}`,
-        [selectors.getRowSelector(props)]: {
+        [selectors.getRowSelector()]: {
           marginTop: size
         }
       }),
-      [selectors.getItemSelector(props)]: {
+      [selectors.getItemSelector()]: {
         ...(axes.x && {
           paddingLeft: size,
           paddingRight: size
@@ -64,13 +64,6 @@ export const flexGridItem = createStyles({
     }
   },
   column (value, props) {
-    if (value === 'auto' || value === true) {
-      return {
-        flexGrow: 1,
-        maxWidth: '100%'
-      }
-    }
-
     const size = getSize(value, props)
 
     if (size == null) {
@@ -78,8 +71,13 @@ export const flexGridItem = createStyles({
     }
 
     return {
-      flexGrow: 0,
+      flex: 'none',
       width: size
+    }
+  },
+  width () {
+    return {
+      flex: 'none'
     }
   }
 })

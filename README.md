@@ -5,7 +5,7 @@
 - [x] Only essential components, suitable for most projects
 - [x] Customizable with `theme`
 - [x] Responsive
-- [x] Only 10.5 KB (5 KB excluding deps) gziped
+- [x] Only 10 KB (5 KB excluding deps) gziped
 
 Created with [`pss`](https://github.com/exah/pss).
 
