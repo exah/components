@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { useContext, useMemo } from 'react'
 import { ThemeContext } from '@emotion/core'
+import { useMatchMedia } from './use-match-media'
 
 function useTheme () {
   return useContext(ThemeContext)
@@ -19,17 +20,21 @@ ThemeProvider.displayName = 'ThemeProvider'
 ThemeProvider.propTypes = { theme: PropTypes.shape({}) }
 
 function ThemeDefaults (props) {
-  const prev = useTheme().default
-  const next = useMemo(() => {
-    const { children, ...rest } = props
-    return { default: { ...prev, ...rest } }
-  }, [prev, props])
+  const { children, mediaQuery, ...rest } = props
 
-  return (
-    <ThemeProvider theme={next}>
-      {props.children}
-    </ThemeProvider>
-  )
+  const prev = useTheme().default
+  const next = useMemo(() => ({ default: { ...prev, ...rest } }), [prev, props])
+  const isMediaQueryMatched = useMatchMedia(mediaQuery)
+
+  if (mediaQuery == null || isMediaQueryMatched) {
+    return (
+      <ThemeProvider theme={next}>
+        {props.children}
+      </ThemeProvider>
+    )
+  }
+
+  return props.children
 }
 
 ThemeDefaults.displayName = 'ThemeDefaults'
