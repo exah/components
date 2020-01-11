@@ -6,7 +6,7 @@ import { DEFAULT_GRID } from './constants'
 import { useMatchMediaContext } from './match-media'
 import { FlexGrid } from './flex-grid'
 import { Box } from './box'
-import { omit } from './utils'
+import { omit, useIsMounted } from './utils'
 
 const groupChildren = (items = [], length = 3) =>
   items.reduce((target, value, index) => {
@@ -31,12 +31,13 @@ function useGroupChildren (size, children) {
 
 const FeedContainer = forwardRef(({ children, grid, column, ...rest }, ref) => {
   const mediaKey = useMatchMediaContext().matches.find((key) => column[key])
+  const isMounted = useIsMounted()
 
-  const columnForMedia = fallbackTo(
+  const columnForMedia = isMounted() ? fallbackTo(
     column[mediaKey],
     column.all,
     isNum(column) ? column : grid
-  )
+  ) : column
 
   const childrenGroups = useGroupChildren(grid / columnForMedia, children)
 

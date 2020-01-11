@@ -107,25 +107,6 @@ exports[`Feed empty 1`] = `
 `;
 
 exports[`Feed with theme 1`] = `
-.emotion-3 {
-  box-sizing: border-box;
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  min-width: 0;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  width: 25%;
-}
-
 .emotion-0 {
   box-sizing: border-box;
   font: inherit;
@@ -136,7 +117,7 @@ exports[`Feed with theme 1`] = `
   padding: 0;
 }
 
-.emotion-16 {
+.emotion-7 {
   box-sizing: border-box;
   font: inherit;
   color: inherit;
@@ -157,20 +138,59 @@ exports[`Feed with theme 1`] = `
   margin-bottom: -8px;
 }
 
-.emotion-16 + .emotion-15 {
+.emotion-7 + .emotion-6 {
   margin-top: 8px;
 }
 
-.emotion-16 > .emotion-2 > .emotion-1,
-.emotion-16 > .emotion-1 {
+.emotion-7 > .emotion-2 > .emotion-1,
+.emotion-7 > .emotion-1 {
   padding-left: 8px;
   padding-right: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
+.emotion-3 {
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  min-width: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  width: 25%;
+}
+
+@media (min-width:601px) and (max-width:1024px) {
+  .emotion-3 {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    width: 50%;
+  }
+}
+
+@media (max-width:600px) {
+  .emotion-3 {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    width: 100%;
+  }
+}
+
 <div
-  className="emotion-14 emotion-15 emotion-16 emotion-17"
+  className="emotion-5 emotion-6 emotion-7 emotion-8"
 >
   <div
     className="emotion-2 emotion-3 emotion-4"
@@ -181,14 +201,5 @@ exports[`Feed with theme 1`] = `
       Item
     </div>
   </div>
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  />
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  />
-  <div
-    className="emotion-2 emotion-3 emotion-4"
-  />
 </div>
 `;
