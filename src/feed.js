@@ -33,7 +33,7 @@ const FeedContainer = forwardRef(({ children, grid, column, ...rest }, ref) => {
   const mediaKey = useMatchMediaContext().matches.find((key) => column[key])
   const isMounted = useIsMounted()
 
-  const columnForMedia = isMounted() ? fallbackTo(
+  const columnForMedia = isMounted ? fallbackTo(
     column[mediaKey],
     column.all,
     isNum(column) ? column : grid

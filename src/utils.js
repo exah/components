@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import isPropValid from '@emotion/is-prop-valid'
 import { filterObj, isStr, identity, pipe } from '@exah/utils'
@@ -67,14 +67,11 @@ export function base ({
 }
 
 export function useIsMounted () {
-  const ref = useRef(false)
+  const [isMounted, setMounted] = useState(false)
 
   useEffect(() => {
-    ref.current = true
-    return () => {
-      ref.current = false
-    }
-  }, [ref])
+    setMounted(true)
+  }, [])
 
-  return useCallback(() => ref.current, [ref])
+  return isMounted
 }
